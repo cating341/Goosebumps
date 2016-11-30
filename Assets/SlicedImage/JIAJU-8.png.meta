@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: cf3009f2d41b3194ba80b56eec1a5a9e
+timeCreated: 1480513322
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: JIAJU-8_0
+    21300002: JIAJU-8_1
+    21300004: JIAJU-8_2
+    21300006: JIAJU-8_3
+    21300008: JIAJU-8_4
+    21300010: JIAJU-8_5
+    21300012: JIAJU-8_6
+    21300014: JIAJU-8_7
+    21300016: JIAJU-8_8
+    21300018: JIAJU-8_9
+    21300020: JIAJU-8_10
+    21300022: JIAJU-8_11
+    21300024: JIAJU-8_12
+    21300026: JIAJU-8_13
+    21300028: JIAJU-8_14
+    21300030: JIAJU-8_15
+    21300032: JIAJU-8_16
+    21300034: JIAJU-8_17
+    21300036: JIAJU-8_18
+    21300038: JIAJU-8_19
+    21300040: JIAJU-8_20
+    21300042: JIAJU-8_21
+    21300044: JIAJU-8_22
+    21300046: JIAJU-8_23
+    21300048: JIAJU-8_24
+    21300050: JIAJU-8_25
+    21300052: JIAJU-8_26
+    21300054: JIAJU-8_27
+    21300056: JIAJU-8_28
+    21300058: JIAJU-8_29
+    21300060: JIAJU-8_30
+    21300062: JIAJU-8_31
+    21300064: JIAJU-8_32
+    21300066: JIAJU-8_33
+    21300068: JIAJU-8_34
+    21300070: JIAJU-8_35
+    21300072: JIAJU-8_36
+    21300074: JIAJU-8_37
+    21300076: JIAJU-8_38
+    21300078: JIAJU-8_39
+    21300080: JIAJU-8_40
+    21300082: JIAJU-8_41
+    21300084: JIAJU-8_42
+    21300086: JIAJU-8_43
+    21300088: JIAJU-8_44
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JIAJU-8_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 413
+        width: 82
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_1
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 414
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_2
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 414
+        width: 82
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_3
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 414
+        width: 50
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_4
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 414
+        width: 80
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_5
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 414
+        width: 50
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 310
+        width: 58
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 310
+        width: 24
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_8
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 310
+        width: 49
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_9
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 310
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_10
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 310
+        width: 49
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_11
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 310
+        width: 55
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_12
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 310
+        width: 50
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_13
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 310
+        width: 50
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_14
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 229
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_15
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 229
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_16
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 229
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_17
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 229
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_18
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 229
+        width: 61
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_19
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 229
+        width: 11
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_20
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 229
+        width: 73
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_21
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 229
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_22
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 152
+        width: 78
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_23
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 152
+        width: 79
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_24
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 152
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_25
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 152
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_26
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 152
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_27
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 152
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_28
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 152
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_29
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 152
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_30
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 88
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_31
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 88
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_32
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 88
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 88
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_34
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 88
+        width: 73
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_35
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 88
+        width: 73
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_36
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 88
+        width: 77
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_37
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 88
+        width: 78
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_38
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 19
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_39
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 20
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_40
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 19
+        width: 48
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_41
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 20
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_42
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 20
+        width: 68
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_43
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 20
+        width: 69
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JIAJU-8_44
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 3
+        width: 96
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

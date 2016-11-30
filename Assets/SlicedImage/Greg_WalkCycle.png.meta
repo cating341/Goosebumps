@@ -1,0 +1,395 @@
+fileFormatVersion: 2
+guid: eb3ba2d02ad6d9448bd71d17b4e29982
+timeCreated: 1480512393
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Greg_WalkCycle_0
+    21300002: Greg_WalkCycle_1
+    21300004: Greg_WalkCycle_2
+    21300006: Greg_WalkCycle_3
+    21300008: Greg_WalkCycle_4
+    21300010: Greg_WalkCycle_5
+    21300012: Greg_WalkCycle_6
+    21300014: Greg_WalkCycle_7
+    21300016: Greg_WalkCycle_8
+    21300018: Greg_WalkCycle_9
+    21300020: Greg_WalkCycle_10
+    21300022: Greg_WalkCycle_11
+    21300024: Greg_WalkCycle_12
+    21300026: Greg_WalkCycle_13
+    21300028: Greg_WalkCycle_14
+    21300030: Greg_WalkCycle_15
+    21300032: Greg_WalkCycle_16
+    21300034: Greg_WalkCycle_17
+    21300036: Greg_WalkCycle_18
+    21300038: Greg_WalkCycle_19
+    21300040: Greg_WalkCycle_20
+    21300042: Greg_WalkCycle_21
+    21300044: Greg_WalkCycle_22
+    21300046: Greg_WalkCycle_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Greg_WalkCycle_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 526
+        width: 97
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 526
+        width: 90
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_2
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 525
+        width: 83
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_3
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 525
+        width: 75
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_4
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 525
+        width: 69
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_5
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 525
+        width: 64
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_6
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 526
+        width: 58
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_7
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 525
+        width: 54
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_8
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 331
+        width: 54
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 330
+        width: 56
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_10
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 330
+        width: 71
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_11
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 331
+        width: 89
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_12
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 334
+        width: 103
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_13
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 334
+        width: 95
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_14
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 335
+        width: 86
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_15
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 336
+        width: 78
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_16
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 145
+        width: 68
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_17
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 144
+        width: 62
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_18
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 144
+        width: 56
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_19
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 142
+        width: 58
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_20
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 137
+        width: 62
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_21
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 135
+        width: 66
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_22
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 138
+        width: 71
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Greg_WalkCycle_23
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 141
+        width: 84
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
