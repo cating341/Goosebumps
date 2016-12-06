@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pink
-  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: test
+  m_Shader: {fileID: 4800000, guid: c52459f97f7e64e7b8e470d9527b450a, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -15,6 +15,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
+    - first:
+        name: _AlphaMask
+      second:
+        m_Texture: {fileID: 2800000, guid: b6944b8ec29ad124c9ebbe7b111fdfd5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - first:
         name: _BumpMap
       second:
@@ -48,7 +54,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 801a59b4e3d724ecda1b4904547f9e16, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -107,6 +113,15 @@ Material:
         name: _OcclusionStrength
       second: 1
     - first:
+        name: _OutLineSpreadX
+      second: 0.012
+    - first:
+        name: _OutLineSpreadY
+      second: 0.0071
+    - first:
+        name: _OutlineWidth
+      second: 0.005
+    - first:
         name: _Parallax
       second: 0.02
     - first:
@@ -127,10 +142,13 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.9264706, g: 0.82428634, b: 0.8783752, a: 1}
+      second: {r: 1, g: 1, b: 0, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _OutlineColor
+      second: {r: 0.9378803, g: 0.99264705, b: 0, a: 1}
     - first:
         name: _SpecColor
       second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
