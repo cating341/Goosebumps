@@ -22,7 +22,8 @@ public class Character : MonoBehaviour
     {
         //get references
         groundCheck = transform.Find("GroundCheck");
-       // anim = GetComponent<Animator>();
+        anim = transform.Find("Canvas/Image").GetComponent<Animator>();
+        
     }
 
     // Use this for initialization
@@ -37,7 +38,7 @@ public class Character : MonoBehaviour
     {
         
          //change the character animation by onGround state
-       // anim.SetBool("onGround", onGround);
+       anim.SetBool("onGround", onGround);
     }
 
     public void Move(float movingSpeed, bool jump)
@@ -46,8 +47,7 @@ public class Character : MonoBehaviour
         if (onGround || airControl)
         {
             //change the character animation by moving speed
-            // anim.SetFloat("Speed", Mathf.Abs(movingSpeed));
-
+            anim.SetFloat("Speed", Mathf.Abs(movingSpeed));
             //move the character
             //only change its velocity on x axis
             transform.position += new Vector3(movingSpeed * maxSpeed, GetComponent<Rigidbody>().velocity.y * Time.deltaTime, 0);
@@ -60,7 +60,7 @@ public class Character : MonoBehaviour
         //let character jump when it's on the ground and player hits jump button
         if (onGround && jump)
         {
-            //anim.SetBool("onGround", false);
+            anim.SetBool("onGround", false);
 
             //make character jump by adding force
             GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
