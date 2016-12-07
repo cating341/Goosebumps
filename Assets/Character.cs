@@ -8,19 +8,28 @@ public class Character : MonoBehaviour
     public float jumpForce = 800.0f;
 
     public bool airControl = true;
+	public bool climbing = false;
+	public bool grounded = true;
+
 
     bool facingRight;
 
-    public LayerMask groundLayer;
+    
+
+	const int playerLayer = 11;
+	const int groundLayer = 8;
 
     Transform groundCheck;
     float groundRadius;
     bool onGround;
 	bool onLadder;
-	bool reEnableFloorCol;
+	bool belowFloorCol;
+	bool aboveFloorCol;
 
+	public LayerMask layer;
     Animator anim;
-	Collision floor;
+	Collision aboveFloor;
+	Collision belowFloor;
 
     void Awake()
     {
@@ -47,9 +56,26 @@ public class Character : MonoBehaviour
 
 	void Update() 
 	{
-		if (reEnableFloorCol && transform.position.y > floor.transform.position.y + 0.8) {
-			floor.collider.enabled = true;
-		}
+//		if (climbing) {
+//			
+//			grounded = Physics.CheckSphere (groundCheck.position, groundRadius, layer);
+//		} else {
+//			grounded = false;
+//		}
+		Physics.IgnoreLayerCollision (playerLayer, groundLayer, climbing);
+
+		print (climbing);
+
+
+
+
+//		if (aboveFloorCol && transform.position.y > aboveFloor.transform.position.y + 0.8) {
+//			aboveFloor.collider.enabled = true;
+//			aboveFloorCol = false;
+//		} else if (aboveFloorCol && transform.position.y < belowFloor.transform.position.y - 1) {
+//			belowFloor.collider.enabled = true;
+//			belowFloorCol = false;
+//		}
 	}
 
     public void Move(float movingSpeed, bool jump)
@@ -101,18 +127,32 @@ public class Character : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
+		print (col);
 		if (col.gameObject.tag == "Ground") {
 			if (col.transform.position.y < transform.position.y) {
 				onGround = true;
+				climbing = false;
 			}
 			else if (col.transform.position.y > transform.position.y) {
-				col.collider.enabled = false;	
-				floor = col;
-				reEnableFloorCol = true;
+//				Physics.IgnoreCollision (col.collider, GetComponent<Collider> ());
+				aboveFloor = col;
+				aboveFloorCol = true;
+
 			}
 		} 
 
     }
 
+	void OnCollisionStay(Collision col)
+	{
+		if (col.gameObject.tag == "Ground") {
+			if (col.transform.position.y < transform.position.y && climbing) {
+//				print ("takeoffCollider");
+//				col.collider.enabled = false;
+				belowFloorCol = true;
+				belowFloor = col;
+			}
+		}
+	}
 
 }
