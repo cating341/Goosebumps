@@ -2640,7 +2640,7 @@ GameObject:
   - 212: {fileID: 651761697}
   - 114: {fileID: 651761696}
   m_Layer: 15
-  m_Name: door
+  m_Name: phone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4443,7 +4443,7 @@ GameObject:
   - 114: {fileID: 1215114531}
   - 82: {fileID: 1215114537}
   m_Layer: 15
-  m_Name: Phone2
+  m_Name: phone
   m_TagString: Phone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5151,14 +5151,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d33287be1b6524e4aa3eb9e65acd3b24, type: 2}
   m_IsPrefabParent: 0
-
 --- !u!4 &1322805454 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011419490554, guid: d33287be1b6524e4aa3eb9e65acd3b24,
     type: 2}
   m_PrefabInternal: {fileID: 1322805453}
 --- !u!1001 &1338345626
-
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
