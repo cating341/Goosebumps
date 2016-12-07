@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Refrigerator
-  m_Shader: {fileID: 4800000, guid: c52459f97f7e64e7b8e470d9527b450a, type: 3}
+  m_Shader: {fileID: 4800000, guid: bbfa842bcede4c5499fb142742f4f941, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -102,10 +102,10 @@ Material:
       second: 1
     - first:
         name: _OutLineSpreadX
-      second: 0.0196
+      second: 0.0254
     - first:
         name: _OutLineSpreadY
-      second: 0.0207
+      second: 0.0259
     - first:
         name: _Parallax
       second: 0.02

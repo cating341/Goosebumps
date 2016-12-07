@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - New Tag
+  - Door
+  - Phone
   layers:
   - Default
   - TransparentFX
@@ -17,12 +18,12 @@ TagManager:
   - 
   - Ground
   - shootable
+  - Player
+  - Floor
+  - 
+  - 
+  - 
   - Outline
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 
