@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
+  - Ground
+  - New Tag
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Ground
   - shootable
-  - 
+  - Outline
   - 
   - 
   - 
