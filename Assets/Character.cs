@@ -4,6 +4,7 @@ using System.Collections;
 public class Character : MonoBehaviour
 {
     public float maxSpeed = 10.0f;
+	public float climbSpeed = 0.1f;
     public float jumpForce = 800.0f;
 
     public bool airControl = true;
@@ -15,8 +16,11 @@ public class Character : MonoBehaviour
     Transform groundCheck;
     float groundRadius;
     bool onGround;
+	bool onLadder;
+	bool reEnableFloorCol;
 
     Animator anim;
+	Collision floor;
 
     void Awake()
     {
@@ -40,6 +44,13 @@ public class Character : MonoBehaviour
          //change the character animation by onGround state
        anim.SetBool("onGround", onGround);
     }
+
+	void Update() 
+	{
+		if (reEnableFloorCol && transform.position.y > floor.transform.position.y + 0.8) {
+			floor.collider.enabled = true;
+		}
+	}
 
     public void Move(float movingSpeed, bool jump)
     {
@@ -67,6 +78,16 @@ public class Character : MonoBehaviour
         }
     }
 
+	public void Climb()
+	{
+		if (onLadder) {
+			anim.SetFloat ("ClimbSpeed", Mathf.Abs (climbSpeed));
+			print ("Climb");
+			// transform.position = new Vector3 (ladder.position.x, transform.position.y, transform.position.z);
+			transform.position += new Vector3 (0, climbSpeed, 0);
+		}
+	}
+
     void Flip()
     {
         //reverse the direction
@@ -80,9 +101,18 @@ public class Character : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Ground")
-        {
-            onGround = true;
-        }
+		if (col.gameObject.tag == "Ground") {
+			if (col.transform.position.y < transform.position.y) {
+				onGround = true;
+			}
+			else if (col.transform.position.y > transform.position.y) {
+				col.collider.enabled = false;	
+				floor = col;
+				reEnableFloorCol = true;
+			}
+		} 
+
     }
+
+
 }
