@@ -23,7 +23,7 @@ public class DoorController : MonoBehaviour {
             {
                 if (!Vector3.Equals(door.transform.position, gameObject.transform.position))
                 {
-                    player.transform.position = new Vector3(door.transform.position.x, door.transform.position.y, player.transform.position.z);
+                    player.transform.position = new Vector3(door.transform.position.x, door.transform.position.y+1.0f, player.transform.position.z);
                 }
             }
         }
