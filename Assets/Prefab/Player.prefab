@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012365536452}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - 114: {fileID: 114000013838788480}
   - 212: {fileID: 212000011400355860}
   - 95: {fileID: 95000013585105726}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - 223: {fileID: 223000013357608154}
   - 114: {fileID: 114000013847353746}
   - 114: {fileID: 114000013607345280}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,9 +77,9 @@ GameObject:
   - 54: {fileID: 54000010428570734}
   - 114: {fileID: 114000012979430842}
   - 114: {fileID: 114000010315261816}
-  m_Layer: 0
-  m_Name: Player 1
-  m_TagString: Untagged
+  m_Layer: 11
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

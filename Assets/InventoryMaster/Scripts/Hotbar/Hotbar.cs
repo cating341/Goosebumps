@@ -14,6 +14,8 @@ public class Hotbar : MonoBehaviour
     [SerializeField]
     public int slotsInTotal;
 
+	Transform selectedItem;
+
 #if UNITY_EDITOR
     [MenuItem("Master System/Create/Hotbar")]        //creating the menu item
     public static void menuItemCreateInventory()       //create the inventory at start
@@ -60,11 +62,13 @@ public class Hotbar : MonoBehaviour
             {
                 if (transform.GetChild(1).GetChild(i).childCount != 0 && transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ItemOnObject>().item.itemType != ItemType.UFPS_Ammo)
                 {
-                    if (transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().duplication != null && transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ItemOnObject>().item.maxStack == 1)
-                    {
-                        Destroy(transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().duplication);
-                    }
-                    transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().consumeIt();
+					selectedItem = transform.GetChild (1).GetChild (i).GetChild (0);
+//                    if (transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().duplication != null && transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ItemOnObject>().item.maxStack == 1)
+//                    {
+//                        Destroy(transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().duplication);
+//                    }
+//                    transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().consumeIt();
+
                 }
             }
         }
