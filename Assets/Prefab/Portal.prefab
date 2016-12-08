@@ -57,9 +57,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011878027658}
   - 33: {fileID: 33000012081470866}
+  - 114: {fileID: 114000010076874368}
+  - 65: {fileID: 65000012409326298}
   m_Layer: 0
   m_Name: Portal
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014152160212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.81, y: -2.99, z: -2.42}
+  m_LocalPosition: {x: -2.93, y: -4.4937963, z: -2.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -85,6 +87,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014152160212}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65000012409326298
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014152160212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5049646, y: 3.5261693, z: 2.7791743}
+  m_Center: {x: 0.055363894, y: 1.7658751, z: -0.8895874}
 --- !u!95 &95000010444564934
 Animator:
   serializedVersion: 3
@@ -102,6 +116,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010076874368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014152160212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1fede51809070499d5abf1ed89c6bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011935983838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,7 +265,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.06}
+  m_AnchoredPosition: {x: 0, y: 1.581}
   m_SizeDelta: {x: 2, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000013081707542
