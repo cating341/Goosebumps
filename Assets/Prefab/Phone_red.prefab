@@ -39,6 +39,7 @@ GameObject:
   - 4: {fileID: 4000012994687824}
   - 33: {fileID: 33000013904099848}
   - 65: {fileID: 65000014143483600}
+  - 95: {fileID: 95000013999160616}
   m_Layer: 0
   m_Name: Phone_red
   m_TagString: Untagged
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011828495314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.04, y: 0.47, z: -2.86}
+  m_LocalPosition: {x: -1.04, y: 0.43, z: -2.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -97,6 +98,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2139106, y: 0.9260154, z: 1}
   m_Center: {x: 0.014895558, y: 0.041651517, z: 0}
+--- !u!95 &95000013999160616
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011828495314}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 04bebdec67affe544b82608607b0e99d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000010682171162
 MonoBehaviour:
   m_ObjectHideFlags: 1
