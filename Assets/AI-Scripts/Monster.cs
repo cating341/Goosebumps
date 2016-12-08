@@ -12,7 +12,7 @@ public class Monster : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        GetComponent<Rigidbody>().velocity = new Vector3(2 * movingForward, 0, 0);
+        //GetComponent<Rigidbody>().velocity = new Vector3(2 * movingForward, 0, 0);
         if (GetComponent<Rigidbody>().position.x > 10)
         {
             movingForward = -1;
