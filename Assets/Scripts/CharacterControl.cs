@@ -27,8 +27,9 @@ public class CharacterControl : MonoBehaviour
 
         //pass parameters to character script, and then it can move
         character.Move(movingSpeed, jump);
-
+	
         //jump is reset after each time that physical engine updated
         jump = false;
+
     }
 }
