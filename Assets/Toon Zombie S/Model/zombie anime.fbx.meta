@@ -136,10 +136,19 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Default Take' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'chin' has translation animation that will
+      be discarded.\n\t'body2' is inbetween humanoid transforms and has rotation animation
+      that will be discarded.\n\t'leg1_R' has translation animation that will be discarded.\n\nClip
+      'ArmatureAction' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'chin'
+      has translation animation that will be discarded.\n\t'body2' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'leg1_R' has
+      translation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
