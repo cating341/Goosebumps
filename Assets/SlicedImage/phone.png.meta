@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 9150c25720b00184e9aa4a1b6ed2c60b
-timeCreated: 1481170655
+guid: 48a57dfe8c1f5fa4a96d75ef130f1884
+timeCreated: 1481120903
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ladder_0
-    21300002: ladder_1
+    21300000: phone_0
+    21300002: phone_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -46,7 +46,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 180
+  spritePixelsToUnits: 110
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -55,28 +55,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ladder_0
+      name: phone_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 5
-        width: 174
-        height: 791
+        x: 58
+        y: 56
+        width: 121
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ladder_1
+      name: phone_1
       rect:
         serializedVersion: 2
-        x: 268
-        y: 0
-        width: 227
-        height: 800
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 221
+        y: 49
+        width: 126
+        height: 114
+      alignment: 9
+      pivot: {x: 0.51426554, y: 0.46497867}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
