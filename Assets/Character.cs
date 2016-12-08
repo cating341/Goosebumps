@@ -31,6 +31,8 @@ public class Character : MonoBehaviour
 	Collision aboveFloor;
 	Collision belowFloor;
 
+	public Transform ladder;
+
     void Awake()
     {
         //get references
@@ -62,7 +64,11 @@ public class Character : MonoBehaviour
 //		} else {
 //			grounded = false;
 //		}
-		Physics.IgnoreLayerCollision (playerLayer, groundLayer, climbing);
+		grounded = Physics.CheckSphere (groundCheck.position, groundRadius, layer);
+		if (ladder && transform.position.y < ladder.position.y && grounded)
+			Physics.IgnoreLayerCollision (playerLayer, groundLayer, false);
+		else
+			Physics.IgnoreLayerCollision (playerLayer, groundLayer, climbing);
 
 		print (climbing);
 

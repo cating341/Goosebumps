@@ -13,6 +13,8 @@ public class Ladder : MonoBehaviour {
 	
 	}
 
+
+
 	void OnTriggerStay(Collider col) 
 	{
 		print (col);
@@ -23,6 +25,7 @@ public class Ladder : MonoBehaviour {
 			col.transform.position += new Vector3 (0, climbSpeed, 0);
 		} else if (col.gameObject.tag == "Player" && Input.GetKey (KeyCode.S)) {
 			col.GetComponent<Character> ().climbing = true;
+			col.GetComponent<Character> ().ladder = this.transform;
 			col.gameObject.GetComponent<Rigidbody> ().useGravity = false;
 			col.transform.position = new Vector3 (transform.position.x, col.transform.position.y, col.transform.position.z);
 			col.transform.position -= new Vector3 (0, climbSpeed, 0);
