@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - New Tag
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -18,7 +18,7 @@ TagManager:
   - Ground
   - shootable
   - Outline
-  - 
+  - Player
   - 
   - 
   - 

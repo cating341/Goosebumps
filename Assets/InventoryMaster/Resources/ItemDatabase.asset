@@ -1,0 +1,508 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4c29ddb3cf21d4e9b0596a8ba26af7, type: 3}
+  m_Name: ItemDatabase
+  m_EditorClassIdentifier: 
+  itemList:
+  - itemName: 
+    itemID: 0
+    itemDesc: 496620796f75206472696e6b2074686973206e69636520626f74746c6520796f752077696c6c2067657420736f6d65206865616c7468206261636b2e0a0a2b203230204865616c7468
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 0
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: 4c6561746865722048656c6d6574
+    itemID: 1
+    itemDesc: 546869732068656c6d65742069732063726561746564206f7574206f66206c6561746865722e0a2b203130204865616c74680a2b2031302041726d6f72
+    itemIcon: {fileID: 21300000, guid: 63dca6d4e4e873a4cb09997656d54082, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 4
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 23
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 10
+    - attributeName: 41726d6f72
+      attributeValue: 10
+  - itemName: 49726f6e2048656c6d6574
+    itemID: 2
+    itemDesc: 546869732068656c6d65742069732063726561746564206f7574206f662069726f6e2e0a2b203230204865616c74680a2b2032302041726d6f72
+    itemIcon: {fileID: 21300000, guid: 52b1e3fc60614e446b61e1c6bb148f57, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 4
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 62
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 20
+    - attributeName: 41726d6f72
+      attributeValue: 20
+  - itemName: 4c656174686572204368657374
+    itemID: 3
+    itemDesc: 546869732063686573742069732063726561746564206f7574206f66206c6561746865722e0a2b203130204865616c74680a2b2031302041726d6f72
+    itemIcon: {fileID: 21300000, guid: fcd8bd2db18e92d42a7d14fc0e395888, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 6
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 10
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 10
+    - attributeName: 41726d6f72
+      attributeValue: 10
+  - itemName: 49726f6e204368657374
+    itemID: 4
+    itemDesc: 546869732063686573742069732063726561746564206f7574206f662069726f6e2e0a2b203230204865616c74680a2b2032302041726d6f72
+    itemIcon: {fileID: 21300000, guid: f5e3bff24c9077445a126833256147bd, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 6
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 80
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 20
+    - attributeName: 41726d6f72
+      attributeValue: 20
+  - itemName: 426f77
+    itemID: 5
+    itemDesc: 5468697320626f7720697320707265747479207261722e0a2b2031302044616d616765
+    itemIcon: {fileID: 21300000, guid: fe403a17b83e26d418073d2720f0e3c0, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 1
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 91
+    itemAttributes:
+    - attributeName: 44616d616765
+      attributeValue: 10
+  - itemName: 476f6c64656e20426f77
+    itemID: 6
+    itemDesc: 5468697320626f77206973206c6567656e6461727920616e64206861732061206c6f772064726f7020726174652e0a2b2034302044616d616765
+    itemIcon: {fileID: 21300000, guid: ea8c1dc6581654b4a9e7d6257135fbe9, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 1
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 96
+    itemAttributes:
+    - attributeName: 44616d616765
+      attributeValue: 40
+  - itemName: 4c6561746865722053686f6573
+    itemID: 7
+    itemDesc: 546869732073686f6573206172652063726561746564206f7574206f66206c6561746865722e0a2b203130204865616c74680a2b2031302041726d6f72
+    itemIcon: {fileID: 21300000, guid: 3677eacbc4390644e97df27f50b96587, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 5
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 1
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 10
+    - attributeName: 41726d6f72
+      attributeValue: 10
+  - itemName: 49726f6e2053686f6573
+    itemID: 8
+    itemDesc: 546869732073686f6573206172652063726561746564206f7574206f662069726f6e2e0a2b203230204865616c74680a2b2032302041726d6f72
+    itemIcon: {fileID: 21300000, guid: ce2f65d4a0c353b409f2821db15cce5e, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 5
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 21
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 20
+    - attributeName: 41726d6f72
+      attributeValue: 20
+  - itemName: 53776f7264
+    itemID: 9
+    itemDesc: 546869732073776f72642069732063726561746564206f7574206f6620776f6f642e0a2b2031302044616d616765
+    itemIcon: {fileID: 21300000, guid: 5bfa49903411b43448e6a525c69fc1fc, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 1
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 25
+    itemAttributes:
+    - attributeName: 44616d616765
+      attributeValue: 10
+  - itemName: 485020426f74746c65
+    itemID: 10
+    itemDesc: 4472696e6b20697420746f2067657420736f6d65206865616c7468206261636b2e0a2b203130204865616c7468
+    itemIcon: {fileID: 21300000, guid: 3ac254c0fa6214047a1df59938ba786f, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 100
+    indexItemInList: 999
+    rarity: 84
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 10
+  - itemName: 4d616e6120426f74746c65
+    itemID: 11
+    itemDesc: 54686973206d616e6120626f74746c6520676976657320796f75206d616e61206261636b2e0a2b203130204d616e61
+    itemIcon: {fileID: 21300000, guid: f1de9e836c79fde4aab8a740ec51eb32, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 5
+    itemType: 2
+    itemWeight: 0
+    maxStack: 10
+    indexItemInList: 999
+    rarity: 12
+    itemAttributes:
+    - attributeName: 4d616e61
+      attributeValue: 10
+  - itemName: 4170706c65
+    itemID: 12
+    itemDesc: 54686973206170706c6520636f756c6420626520676f6f6420666f72206170706c656a756963652e0a2b203130204865616c7468
+    itemIcon: {fileID: 21300000, guid: a4d3f378d1a88f346af15ee906321f2a, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 100
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 10
+  - itemName: 456d70747920426f74746c65
+    itemID: 13
+    itemDesc: 596f752063616e2066696c6c20736f6d65206a7569636520696e746f2074686520626f74746c652e
+    itemIcon: {fileID: 21300000, guid: a9893eef89a9a0742b835e8296428609, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 13
+    itemAttributes: []
+  - itemName: 526177204d656174
+    itemID: 14
+    itemDesc: 596f752063616e2063726561746520736f6d65206e69636520636f6f6b6564206d656174206f7574206f662069742e0a2b2035204865616c7468
+    itemIcon: {fileID: 21300000, guid: b29cbbd10ecf3fd40991d4734d556c17, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 35
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 5
+  - itemName: 436f6f6b6564204d656174
+    itemID: 15
+    itemDesc: 56657279206e69636520636f6f6b6564206d6561742e0a2b203230204865616c7468
+    itemIcon: {fileID: 21300000, guid: bb168a366e12e314ca3e7cec990092fe, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 72
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 20
+  - itemName: 4272656164
+    itemID: 16
+    itemDesc: 54616b6520736f6d65206d65617420746f20697420616e6420796f752077696c6c206765742061206e6963652068616d6275726765722e0a2b203130204865616c7468
+    itemIcon: {fileID: 21300000, guid: 0288dbaa9a46b7a4fa8f0b0b773b6024, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 30
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 10
+  - itemName: 48616d627572676572
+    itemID: 17
+    itemDesc: 546869732068616d62757267657220676976657320796f75206865616c746820616e64206d616e61206261636b2e0a2b203230204865616c74680a2b203230204d616e61
+    itemIcon: {fileID: 21300000, guid: bad82843ddb69514c9b6b8e381d175f3, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 30
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 20
+    - attributeName: 4d616e61
+      attributeValue: 20
+  - itemName: 4170706c656a75696365
+    itemID: 18
+    itemDesc: 54686973206170706c656a7569636520676976657320796f7520616c6f74206f66206865616c7468206261636b2e0a2b203530204865616c7468
+    itemIcon: {fileID: 21300000, guid: 6dc5762501dd2df4da399f6c16a85907, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 31
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 50
+  - itemName: 477265656e204170706c65
+    itemID: 19
+    itemDesc: 54686973206973206120677265656e206170706c652e0a2b203130204865616c7468
+    itemIcon: {fileID: 21300000, guid: 982145252540309429f63b70f4ac08d0, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 4
+    itemType: 2
+    itemWeight: 0
+    maxStack: 10
+    indexItemInList: 999
+    rarity: 60
+    itemAttributes:
+    - attributeName: 4865616c7468
+      attributeValue: 10
+  - itemName: 4261636b7061636b
+    itemID: 20
+    itemDesc: 54686973206261636b7061636b20697320707265747479206269672e0a333020536c6f7473
+    itemIcon: {fileID: 21300000, guid: d484447c07683e045a964b5c96ef5417, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 13
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 35
+    itemAttributes:
+    - attributeName: 536c6f7473
+      attributeValue: 30
+  - itemName: 4261636b7061636b32
+    itemID: 21
+    itemDesc: 546869732069732061206e696365206261636b7061636b2e0a333620536c6f7473
+    itemIcon: {fileID: 21300000, guid: a1fde3cbf081fbc4cbae9a28818c2a04, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 13
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 61
+    itemAttributes:
+    - attributeName: 536c6f7473
+      attributeValue: 36
+  - itemName: 42756c6c6574
+    itemID: 22
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: 5f0f88702fe3baa4793a297bced9d8c0, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 15
+    itemType: 17
+    itemWeight: 0
+    maxStack: 999
+    indexItemInList: 999
+    rarity: 1
+    itemAttributes: []
+  - itemName: 506973746f6c3031
+    itemID: 23
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: 435211a123255834d8dbd986692317b8, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 16
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 1
+    itemAttributes: []
+  - itemName: 4d616368696e6567756e
+    itemID: 24
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: dd0061a2f7a74a04ebeb40c4b85e2557, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 16
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 1
+    itemAttributes: []
+  - itemName: 4d616368696e6567756e2042756c6c6574
+    itemID: 25
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: 9cd40a53b397dab4e8815b43f4c04be4, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 50
+    itemType: 17
+    itemWeight: 0
+    maxStack: 999
+    indexItemInList: 999
+    rarity: 1
+    itemAttributes: []
+  - itemName: 4772656e616465
+    itemID: 26
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: 61133c9d383f3764bb714ef99ae8dc37, type: 3}
+    itemModel: {fileID: 100000, guid: 4cb7c2a50f87abf459d60c25eedc60b7, type: 2}
+    itemValue: 1
+    itemType: 15
+    itemWeight: 0
+    maxStack: 99
+    indexItemInList: 999
+    rarity: 1
+    itemAttributes: []
+  - itemName: 41737361756c74205269666c65
+    itemID: 27
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: dd0061a2f7a74a04ebeb40c4b85e2557, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 16
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: 53686f7467756e
+    itemID: 28
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: 7ca0a8f6c1c45884f8d3a9d234506a24, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 16
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: 53686f7467756e205368656c6c
+    itemID: 29
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: 7f16cada731089d46a6d936d91bd8958, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 17
+    itemWeight: 0
+    maxStack: 999
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: 4d616365
+    itemID: 30
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: a225d3715e468b04ca832c017dfbcc0a, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 16
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: 536d616c6c204261636b7061636b
+    itemID: 31
+    itemDesc: 3620536c6f7473
+    itemIcon: {fileID: 21300000, guid: a1fde3cbf081fbc4cbae9a28818c2a04, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 13
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: 536c6f7473
+      attributeValue: 6
+  - itemName: 4d656469756d204261636b7061636b
+    itemID: 32
+    itemDesc: 313220536c6f7473
+    itemIcon: {fileID: 21300000, guid: a1fde3cbf081fbc4cbae9a28818c2a04, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 13
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: 536c6f7473
+      attributeValue: 12
+  - itemName: 4c61726765204261636b7061636b
+    itemID: 33
+    itemDesc: 313620536c6f7473
+    itemIcon: {fileID: 21300000, guid: a1fde3cbf081fbc4cbae9a28818c2a04, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 13
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: 536c6f7473
+      attributeValue: 16
+  - itemName: 4d696c6974617279204261636b7061636b
+    itemID: 34
+    itemDesc: 323020536c6f7473
+    itemIcon: {fileID: 21300000, guid: a1fde3cbf081fbc4cbae9a28818c2a04, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 13
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: 536c6f7473
+      attributeValue: 24
+  - itemName: 506973746f6c3031
+    itemID: 35
+    itemDesc: 544849532049532041205546505320504953544f4c
+    itemIcon: {fileID: 21300000, guid: 435211a123255834d8dbd986692317b8, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 16
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
