@@ -14,7 +14,11 @@ public class Hotbar : MonoBehaviour
     [SerializeField]
     public int slotsInTotal;
 
+	private GameObject _player;
 	Transform selectedItem;
+
+//	public delegate void ItemDelegate();
+//	public static event ItemDelegate updateInventoryList;
 
 #if UNITY_EDITOR
     [MenuItem("Master System/Create/Hotbar")]        //creating the menu item
@@ -53,6 +57,11 @@ public class Hotbar : MonoBehaviour
         }
     }
 #endif
+	void Start()
+	{
+		_player = GameObject.FindGameObjectWithTag("Player");
+	}
+
 
     void Update()
     {
@@ -72,6 +81,13 @@ public class Hotbar : MonoBehaviour
                 }
             }
         }
+
+		if (Input.GetKeyDown (KeyCode.Z) && selectedItem) 
+		{
+//			if (updateInventoryList != null)
+//				updateInventoryList();
+			putItem (selectedItem);
+		}
     }
 
     public int getSlotsInTotal()
@@ -79,4 +95,16 @@ public class Hotbar : MonoBehaviour
         Inventory inv = GetComponent<Inventory>();
         return slotsInTotal = inv.width * inv.height;
     }
+
+	void putItem(Transform selectedItem)
+	{
+		GameObject dropItem = (GameObject)Instantiate(selectedItem.GetComponent<ItemOnObject>().item.itemModel);
+		dropItem.AddComponent<PickUpItem>();
+		dropItem.GetComponent<PickUpItem>().item = selectedItem.GetComponent<ItemOnObject>().item;   
+		dropItem.transform.localPosition = _player.transform.localPosition;
+		Inventory inv = GetComponent<Inventory> ();
+
+		Destroy (selectedItem.gameObject);
+		inv.OnUpdateItemList();
+	}
 }

@@ -885,6 +885,60 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 207840831}
+--- !u!1001 &212193896
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.1477132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013086491682, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: Ladder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: LadderClimbable (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &228707514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,6 +1116,60 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 258714681}
+--- !u!1001 &258872464
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.1477132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013086491682, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: Ladder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: LadderClimbable (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &295585048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,11 +1638,69 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011046743032, guid: 1238da40397ef9d428b6d3212674e684,
     type: 2}
   m_PrefabInternal: {fileID: 546591534}
+--- !u!1 &356205914 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 212193896}
+--- !u!114 &356205915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 356205914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2579761e16114d94d874d2a9a06887e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
 --- !u!4 &392204741 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011298121576, guid: 2fe85e6b53467fa4ab15c063fbd4d24a,
     type: 2}
   m_PrefabInternal: {fileID: 186376080}
+--- !u!1 &395568475 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1165700560}
+--- !u!114 &395568476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 395568475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2579761e16114d94d874d2a9a06887e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
 --- !u!1 &403877785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,6 +1871,64 @@ Transform:
   m_PrefabParentObject: {fileID: 4000014112438746, guid: 959725da582aa9c4191ee51ee55fcaaa,
     type: 2}
   m_PrefabInternal: {fileID: 306686685}
+--- !u!1001 &467681050
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.1477132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013086491682, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: Ladder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: LadderClimbable (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.59
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &470850779
 Prefab:
   m_ObjectHideFlags: 0
@@ -2199,6 +2423,35 @@ Transform:
   - {fileID: 1486924066}
   m_Father: {fileID: 616623304}
   m_RootOrder: 2
+--- !u!1 &630834826 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1957952792}
+--- !u!114 &630834831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 630834826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2579761e16114d94d874d2a9a06887e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
 --- !u!1 &631387865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,6 +2692,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 30
+--- !u!1 &705483003 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 258872464}
+--- !u!114 &705483004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 705483003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2579761e16114d94d874d2a9a06887e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
 --- !u!1 &717563587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,6 +3228,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
+--- !u!1 &786883715 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 894994139}
+--- !u!114 &786883716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 786883715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2579761e16114d94d874d2a9a06887e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
 --- !u!4 &795528192 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013747989324, guid: 738c078743e37d34baf164992215b776,
@@ -3216,6 +3527,114 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 873927637}
+--- !u!1001 &878974458
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.1477132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013086491682, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: Ladder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: LadderClimbable (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &894994139
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.1477132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013086491682, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: Ladder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: LadderClimbable (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &911432717
 GameObject:
   m_ObjectHideFlags: 0
@@ -3518,6 +3937,89 @@ Transform:
   - {fileID: 203285081}
   m_Father: {fileID: 0}
   m_RootOrder: 13
+--- !u!1001 &1067769014
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.1477132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013086491682, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: Ladder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: LadderClimbable (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1072200022 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 467681050}
+--- !u!114 &1072200023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1072200022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2579761e16114d94d874d2a9a06887e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
 --- !u!1 &1122683941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3586,6 +4088,114 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122683941}
+--- !u!1001 &1165700560
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.1477132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013086491682, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: Ladder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: LadderClimbable (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1181448763
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.1477132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012786931580, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013086491682, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: Ladder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: LadderClimbable (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1201810929
 GameObject:
   m_ObjectHideFlags: 0
@@ -4258,6 +4868,7 @@ GameObject:
   - 114: {fileID: 1427595682}
   - 114: {fileID: 1427595681}
   - 114: {fileID: 1427595680}
+  - 114: {fileID: 1427595687}
   m_Layer: 0
   m_Name: Item(Clone)
   m_TagString: Item
@@ -4395,6 +5006,46 @@ MonoBehaviour:
     itemWeight: 0
     maxStack: 1
     indexItemInList: -1
+    rarity: 0
+    itemAttributes: []
+--- !u!114 &1427595687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1427595678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed857bbaf6dc44734af24b8988875aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1430104536 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1181448763}
+--- !u!114 &1430104537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430104536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2579761e16114d94d874d2a9a06887e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
     rarity: 0
     itemAttributes: []
 --- !u!1001 &1444040154
@@ -5260,6 +5911,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
+--- !u!1 &1820358871 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 878974458}
+--- !u!114 &1820358872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1820358871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2579761e16114d94d874d2a9a06887e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
 --- !u!1 &1893381914
 GameObject:
   m_ObjectHideFlags: 0
@@ -5488,6 +6168,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
+--- !u!1 &2006928259 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1067769014}
+--- !u!114 &2006928260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2006928259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2579761e16114d94d874d2a9a06887e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
 --- !u!1 &2028719457
 GameObject:
   m_ObjectHideFlags: 0
