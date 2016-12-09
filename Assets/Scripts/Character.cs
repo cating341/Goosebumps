@@ -16,6 +16,7 @@ public class Character : MonoBehaviour
     bool facingRight;
 
 
+
 	LayerMask playerLayer;
 	LayerMask groundLayer;
 

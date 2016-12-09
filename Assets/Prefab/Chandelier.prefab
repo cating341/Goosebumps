@@ -21,6 +21,8 @@ GameObject:
   - 4: {fileID: 4000012345547750}
   - 33: {fileID: 33000010949178464}
   - 65: {fileID: 65000012141957766}
+  - 114: {fileID: 114000012534896232}
+  - 95: {fileID: 95000010378313012}
   m_Layer: 0
   m_Name: Chandelier
   m_TagString: Untagged
@@ -71,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010986923192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.68, y: -1.7, z: -2.86}
+  m_LocalPosition: {x: -7.86, y: -2, z: -1.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -95,8 +97,25 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2181163, y: 1.6849904, z: 1}
-  m_Center: {x: 0.02727127, y: 0.38311505, z: 0}
+  m_Size: {x: 2.2181163, y: 1.9947997, z: 1}
+  m_Center: {x: 0.027270794, y: 0.5380175, z: -0.00000035762787}
+--- !u!95 &95000010378313012
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010986923192}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 851d7ae6f954e6741a81c5fdbd5372a5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000011852084682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,6 +153,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114000012534896232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010986923192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b01a21b4353f24d9a1cae6f254cd89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013528225644
 MonoBehaviour:
   m_ObjectHideFlags: 1
