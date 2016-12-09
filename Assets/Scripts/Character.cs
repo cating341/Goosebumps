@@ -14,7 +14,6 @@ public class Character : MonoBehaviour
 
     bool facingRight;
 
-    
 
 	LayerMask playerLayer;
 	LayerMask groundLayer;
@@ -22,20 +21,14 @@ public class Character : MonoBehaviour
     Transform groundCheck;
     float groundRadius;
     bool onGround;
-	bool onLadder;
-	bool belowFloorCol;
-	bool aboveFloorCol;
 
     Animator anim;
-	Collision aboveFloor;
-	Collision belowFloor;
 
 	public Transform ladder;
 
     void Awake()
     {
         //get references
-
         groundCheck = transform.Find("GroundCheck");
         anim = transform.Find("Canvas/Image").GetComponent<Animator>();
         
@@ -54,37 +47,19 @@ public class Character : MonoBehaviour
 
     void FixedUpdate()
     {
-        
          //change the character animation by onGround state
        anim.SetBool("onGround", onGround);
     }
 
 	void Update() 
 	{
-//		if (climbing) {
-//			
-//			grounded = Physics.CheckSphere (groundCheck.position, groundRadius, layer);
-//		} else {
-//			grounded = false;
-//		}
 		grounded = Physics.CheckSphere (groundCheck.position, groundRadius, 1 << groundLayer.value);
 		if (ladder && transform.position.y < ladder.position.y && grounded)
 			Physics.IgnoreLayerCollision (playerLayer.value, groundLayer.value, false);
 		else
 			Physics.IgnoreLayerCollision ( playerLayer.value, groundLayer.value, climbing);
+		print ("CLIMBING: " + climbing);
 
-		print (climbing);
-
-
-
-
-//		if (aboveFloorCol && transform.position.y > aboveFloor.transform.position.y + 0.8) {
-//			aboveFloor.collider.enabled = true;
-//			aboveFloorCol = false;
-//		} else if (aboveFloorCol && transform.position.y < belowFloor.transform.position.y - 1) {
-//			belowFloor.collider.enabled = true;
-//			belowFloorCol = false;
-//		}
 	}
 
     public void Move(float movingSpeed, bool jump)
@@ -112,16 +87,7 @@ public class Character : MonoBehaviour
             GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
         }
     }
-
-	public void Climb()
-	{
-		if (onLadder) {
-			anim.SetFloat ("ClimbSpeed", Mathf.Abs (climbSpeed));
-			print ("Climb");
-			// transform.position = new Vector3 (ladder.position.x, transform.position.y, transform.position.z);
-			transform.position += new Vector3 (0, climbSpeed, 0);
-		}
-	}
+		
 
     void Flip()
     {
@@ -142,26 +108,10 @@ public class Character : MonoBehaviour
 				onGround = true;
 				climbing = false;
 			}
-			else if (col.transform.position.y > transform.position.y) {
-//				Physics.IgnoreCollision (col.collider, GetComponent<Collider> ());
-				aboveFloor = col;
-				aboveFloorCol = true;
-
-			}
 		} 
 
     }
 
-	void OnCollisionStay(Collision col)
-	{
-		if (col.gameObject.tag == "Ground") {
-			if (col.transform.position.y < transform.position.y && climbing) {
-//				print ("takeoffCollider");
-//				col.collider.enabled = false;
-				belowFloorCol = true;
-				belowFloor = col;
-			}
-		}
-	}
+
 
 }
