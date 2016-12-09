@@ -77,8 +77,7 @@ GameObject:
   - 54: {fileID: 54000010428570734}
   - 114: {fileID: 114000012979430842}
   - 114: {fileID: 114000010315261816}
-  - 114: {fileID: 114000011253744482}
-  - 114: {fileID: 114000011658880522}
+  - 114: {fileID: 114000012450443774}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -93,7 +92,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011021389682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.98, z: 0}
+  m_LocalPosition: {x: 0.09, y: -1.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -210,26 +209,9 @@ MonoBehaviour:
   jumpForce: 100
   airControl: 1
   climbing: 0
-  grounded: 0
-  floor: 2
+  grounded: 1
   ladder: {fileID: 0}
---- !u!114 &114000011253744482
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012285829334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db4493228a4ba442a891316e3ee246f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
-  characterSystem: {fileID: 0}
-  craftSystem: {fileID: 0}
-  HPMANACanvas: {fileID: 0}
-  currentHealth: 60
---- !u!114 &114000011658880522
+--- !u!114 &114000012450443774
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -412,6 +394,6 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.06}
   m_SizeDelta: {x: 2, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
