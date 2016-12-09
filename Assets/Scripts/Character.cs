@@ -16,7 +16,7 @@ public class Character : MonoBehaviour
 
     
 
-	const int playerLayer = 11;
+	const int playerLayer = 10;
 	const int groundLayer = 8;
 
     Transform groundCheck;

@@ -3,27 +3,49 @@ using System.Collections;
 
 public class Ladder : MonoBehaviour {
 	public float climbSpeed = 0.1f;
+    public GameObject Temp;
+    public GameObject NormalLadder;
+    public GameObject IceLadder;
+
+    private TempController tempController;
+    private const float ICE_TEMP = 13.0f;
+    private float pre_temp;
 	// Use this for initialization
 	void Start () {
-	
+        tempController = Temp.GetComponent<TempController>();
+        pre_temp = tempController.GetTemp();
+        IceLadder.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+        if (pre_temp != tempController.GetTemp())
+        {
+            pre_temp = tempController.GetTemp();
+            if (tempController.GetTemp() < ICE_TEMP)
+            {
+                IceLadder.SetActive(true); NormalLadder.SetActive(false);
+            }
+            else
+            {
+                NormalLadder.SetActive(true); IceLadder.SetActive(false);
+            }
+        }
 	}
 
 
 
 	void OnTriggerStay(Collider col) 
-	{
-		print (col);
-		if (col.gameObject.tag == "Player" && Input.GetKey (KeyCode.W)) {
+	{ 
+        if (col.gameObject.tag == "Player" && Input.GetKey(KeyCode.W) && NormalLadder.active)
+        {
 			col.GetComponent<Character> ().climbing = true;
 			col.gameObject.GetComponent<Rigidbody> ().useGravity = false;
 			col.transform.position = new Vector3 (transform.position.x, col.transform.position.y, col.transform.position.z);
 			col.transform.position += new Vector3 (0, climbSpeed, 0);
-		} else if (col.gameObject.tag == "Player" && Input.GetKey (KeyCode.S)) {
+        }
+        else if (col.gameObject.tag == "Player" && Input.GetKey(KeyCode.S) && NormalLadder.active)
+        {
 			col.GetComponent<Character> ().climbing = true;
 			col.GetComponent<Character> ().ladder = this.transform;
 			col.gameObject.GetComponent<Rigidbody> ().useGravity = false;
@@ -34,7 +56,7 @@ public class Ladder : MonoBehaviour {
 
 	void OnTriggerExit(Collider col)
 	{
-		if (col.gameObject.tag == "Player") 
+        if (col.gameObject.tag == "Player" && NormalLadder.active) 
 		{
 			print ("exit");
 			col.GetComponent<Character> ().climbing = false;
