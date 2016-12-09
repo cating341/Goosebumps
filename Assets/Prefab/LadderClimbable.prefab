@@ -60,7 +60,7 @@ GameObject:
   - 65: {fileID: 65000013356461548}
   - 114: {fileID: 114000013512322250}
   m_Layer: 0
-  m_Name: Ladder
+  m_Name: LadderClimbable
   m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

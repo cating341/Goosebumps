@@ -52,7 +52,7 @@ public class Monster : MonoBehaviour {
 	private void MonsterMovement(float movingSpeed) {
 		transform.position += new Vector3(movingSpeed * maxSpeed, GetComponent<Rigidbody>().velocity.y * Time.deltaTime, 0);
 
-		print (transform.position.x);
+		print (GameObject.Find("Character").transform.position.x);
 
 	}
 
