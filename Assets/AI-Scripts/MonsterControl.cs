@@ -9,8 +9,8 @@ public class MonsterControl : MonoBehaviour {
     private string ground1name = "Floor";
     private string ground2name = "Floor (1)";
     private string ground3name = "Floor (2)";
-    private string ladder1name = "LadderClimbable";
-    private string ladder2name = "LadderClimbable (1)";
+    private string ladder1name = "LadderClimbable1";
+    private string ladder2name = "LadderClimbable2";
 
     // Use this for initialization
     void Start()
