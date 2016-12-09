@@ -51,6 +51,7 @@ public class Character : MonoBehaviour
     {
          //change the character animation by onGround state
        anim.SetBool("onGround", onGround);
+        anim.SetBool("climbing", climbing);
     }
 
 	void Update() 
