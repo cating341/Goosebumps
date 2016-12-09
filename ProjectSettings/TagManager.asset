@@ -9,6 +9,8 @@ TagManager:
   - Phone
   - Water
   - Chandelier
+  - Ladder
+  - Monster
   layers:
   - Default
   - TransparentFX

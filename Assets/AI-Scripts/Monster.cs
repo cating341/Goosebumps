@@ -5,39 +5,80 @@ public class Monster : MonoBehaviour {
 
     public float maxSpeed = 0.1f;
 
-    public LayerMask groundLayer;
-    float groundRadius;
-    bool onGround;
-    Animator anim;
+    private int upDown;
+    public float climbSpeed = 0.1f;
 
-    void Awake()
+    private int floor;
+    public int Floor
     {
-
+        get
+        {
+            return this.floor;
+        }
+        set
+        {
+            this.floor = value;
+        }
     }
 
-    // Use this for initialization
+    private bool onGround;
+    public bool OnGround
+    {
+        get
+        {
+            return this.onGround;
+        }
+        set
+        {
+            this.onGround = value;
+        }
+    }
+
+    private bool climbing;
+    public bool Climbing
+    {
+        get
+        {
+            return this.climbing;
+        }
+        set
+        {
+            this.climbing = value;
+        }
+    }
+
+    Animator anim;
     void Start ()
     {
+        this.upDown = 0;
         this.anim = GetComponent<Animator>();
-        this.groundRadius = 0.1f;
-        this.onGround = false;
+        this.OnGround = false;
+        this.Climbing = false;
     }
 
-    public void Move(float movingSpeed, bool jump)
+    public void MoveHor(Vector3 target)
     {
-        if (this.onGround)
+        float xDifference = target.x - transform.position.x;
+        float way = Mathf.Abs(xDifference) < 0.5 ? 0 : xDifference / Mathf.Abs(xDifference);
+        this.Climbing = Mathf.Abs(xDifference) < 0.5 ? true : false;
+        if (this.OnGround)
         {
-            this.anim.SetFloat("speed", Mathf.Abs(movingSpeed));
-			MonsterMovement (movingSpeed);
-			CheckFacingSide (movingSpeed);
+            this.anim.SetFloat("speed", Mathf.Abs(way));
+			MonsterMovement (way);
+			CheckFacingSide (way);
         }
+    }
+
+    public void Climb(int upDown, Collider ladder)
+    {
+        transform.position = new Vector3(ladder.transform.position.x, transform.position.y, transform.position.z);
+        transform.position += new Vector3(0, climbSpeed * upDown, 0);
     }
 
     void Update () {
 
     }
-
-
+    
 	private void CheckFacingSide(float movingSpeed)
     {
 		if (movingSpeed > 0) {
@@ -49,19 +90,7 @@ public class Monster : MonoBehaviour {
 		}
     }
 
-	private void MonsterMovement(float movingSpeed) {
-		transform.position += new Vector3(movingSpeed * maxSpeed, GetComponent<Rigidbody>().velocity.y * Time.deltaTime, 0);
-
-		print (GameObject.Find("Character").transform.position.x);
-
+	private void MonsterMovement(float way) {
+		transform.position += new Vector3(way * maxSpeed, GetComponent<Rigidbody>().velocity.y * Time.deltaTime, 0);
 	}
-
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.tag == "Ground")
-        {
-			print ("hi");
-            onGround = true;
-        }
-    }
 }
