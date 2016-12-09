@@ -16,8 +16,8 @@ public class Character : MonoBehaviour
 
     
 
-	const int playerLayer = 11;
-	const int groundLayer = 8;
+	LayerMask playerLayer;
+	LayerMask groundLayer;
 
     Transform groundCheck;
     float groundRadius;
@@ -26,7 +26,6 @@ public class Character : MonoBehaviour
 	bool belowFloorCol;
 	bool aboveFloorCol;
 
-	public LayerMask layer;
     Animator anim;
 	Collision aboveFloor;
 	Collision belowFloor;
@@ -36,6 +35,7 @@ public class Character : MonoBehaviour
     void Awake()
     {
         //get references
+
         groundCheck = transform.Find("GroundCheck");
         anim = transform.Find("Canvas/Image").GetComponent<Animator>();
         
@@ -44,6 +44,9 @@ public class Character : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		playerLayer = LayerMask.NameToLayer("Player");
+		groundLayer = LayerMask.NameToLayer ("Ground");
+		print (playerLayer.value);
         facingRight = true;
         groundRadius = 0.1f;
         onGround = false;
@@ -64,11 +67,11 @@ public class Character : MonoBehaviour
 //		} else {
 //			grounded = false;
 //		}
-		grounded = Physics.CheckSphere (groundCheck.position, groundRadius, layer);
+		grounded = Physics.CheckSphere (groundCheck.position, groundRadius, 1 << groundLayer.value);
 		if (ladder && transform.position.y < ladder.position.y && grounded)
-			Physics.IgnoreLayerCollision (playerLayer, groundLayer, false);
+			Physics.IgnoreLayerCollision (playerLayer.value, groundLayer.value, false);
 		else
-			Physics.IgnoreLayerCollision (playerLayer, groundLayer, climbing);
+			Physics.IgnoreLayerCollision ( playerLayer.value, groundLayer.value, climbing);
 
 		print (climbing);
 
