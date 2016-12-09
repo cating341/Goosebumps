@@ -21,7 +21,7 @@ public class MonsterControl : MonoBehaviour {
     void FixedUpdate()
     {
         //get input by Axis set in input setting
-        movingSpeed = Input.GetAxis("Horizontal");
+        movingSpeed = 0.5f;
 
         //pass parameters to character script, and then it can move
         monster.Move(movingSpeed, jump);

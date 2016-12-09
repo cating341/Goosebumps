@@ -2665,6 +2665,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.601521
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011203398166, guid: d33287be1b6524e4aa3eb9e65acd3b24, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d33287be1b6524e4aa3eb9e65acd3b24, type: 2}
   m_IsPrefabParent: 0
@@ -2908,6 +2912,10 @@ Prefab:
     - target: {fileID: 4000011419490554, guid: d33287be1b6524e4aa3eb9e65acd3b24, type: 2}
       propertyPath: m_LocalScale.z
       value: 2.601521
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011203398166, guid: d33287be1b6524e4aa3eb9e65acd3b24, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d33287be1b6524e4aa3eb9e65acd3b24, type: 2}
@@ -3741,6 +3749,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.601521
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011203398166, guid: d33287be1b6524e4aa3eb9e65acd3b24, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d33287be1b6524e4aa3eb9e65acd3b24, type: 2}
   m_IsPrefabParent: 0
@@ -3798,8 +3810,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 0.1
-  jumpForce: 100
-  airControl: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
