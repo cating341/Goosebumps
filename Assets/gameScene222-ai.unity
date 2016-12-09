@@ -4054,6 +4054,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   climbSpeed: 0.1
+  Temp: {fileID: 0}
+  NormalLadder: {fileID: 0}
+  IceLadder: {fileID: 0}
 --- !u!65 &1147041438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4650,15 +4653,6 @@ Prefab:
     - target: {fileID: 4000013751881560, guid: bd6fb601bbc314e18bdfd8aa47bba41e, type: 2}
       propertyPath: m_RootOrder
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012870984950, guid: bd6fb601bbc314e18bdfd8aa47bba41e, type: 2}
-      propertyPath: m_TagString
-      value: Monster
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000012337340428, guid: bd6fb601bbc314e18bdfd8aa47bba41e,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd6fb601bbc314e18bdfd8aa47bba41e, type: 2}
@@ -5531,6 +5525,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   climbSpeed: 0.1
+  Temp: {fileID: 0}
+  NormalLadder: {fileID: 0}
+  IceLadder: {fileID: 0}
 --- !u!65 &1805238744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6351,6 +6348,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   climbSpeed: 0.1
+  Temp: {fileID: 0}
+  NormalLadder: {fileID: 0}
+  IceLadder: {fileID: 0}
 --- !u!65 &2110791271
 BoxCollider:
   m_ObjectHideFlags: 0
