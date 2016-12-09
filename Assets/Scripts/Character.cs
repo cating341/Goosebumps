@@ -50,7 +50,7 @@ public class Character : MonoBehaviour
     void FixedUpdate()
     {
          //change the character animation by onGround state
-       anim.SetBool("onGround", onGround);
+        anim.SetBool("onGround", onGround);
         anim.SetBool("climbing", climbing);
     }
 
@@ -65,7 +65,7 @@ public class Character : MonoBehaviour
 
 	}
 
-    public void Move(float movingSpeed, bool jump)
+    public void Move(float movingSpeed, bool jump, float upSpeed)
     {
         //left / right moving actived only when the character is on the ground or air control is premitted
         if (onGround || airControl)
@@ -80,6 +80,10 @@ public class Character : MonoBehaviour
             //flip the character image if player input direction is different with character's facing direction
             if (movingSpeed > 0 && !facingRight || movingSpeed < 0 && facingRight) Flip();
         }
+        if (climbing)
+        {
+            anim.SetFloat("UpSpeed", Mathf.Abs(upSpeed));
+        }
 
         //let character jump when it's on the ground and player hits jump button
         if (onGround && jump)
@@ -89,6 +93,7 @@ public class Character : MonoBehaviour
             //make character jump by adding force
             GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
         }
+       
     }
 		
 

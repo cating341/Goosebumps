@@ -77,7 +77,7 @@ GameObject:
   - 65: {fileID: 65000014168337766}
   - 114: {fileID: 114000013731500454}
   m_Layer: 0
-  m_Name: Water
+  m_Name: Water 1
   m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
