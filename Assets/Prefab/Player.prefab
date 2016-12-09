@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012365536452}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - 114: {fileID: 114000013838788480}
   - 212: {fileID: 212000011400355860}
   - 95: {fileID: 95000013585105726}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - 223: {fileID: 223000013357608154}
   - 114: {fileID: 114000013847353746}
   - 114: {fileID: 114000013607345280}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,8 @@ GameObject:
   - 54: {fileID: 54000010428570734}
   - 114: {fileID: 114000012979430842}
   - 114: {fileID: 114000010315261816}
-  m_Layer: 11
+  - 114: {fileID: 114000012450443774}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -209,10 +210,23 @@ MonoBehaviour:
   airControl: 1
   climbing: 0
   grounded: 1
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
   ladder: {fileID: 0}
+--- !u!114 &114000012450443774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012285829334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db4493228a4ba442a891316e3ee246f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  characterSystem: {fileID: 0}
+  craftSystem: {fileID: 0}
+  HPMANACanvas: {fileID: 0}
+  currentHealth: 60
 --- !u!114 &114000012979430842
 MonoBehaviour:
   m_ObjectHideFlags: 1
