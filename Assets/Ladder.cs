@@ -12,12 +12,10 @@ public class Ladder : MonoBehaviour {
 	void Update () {
 	
 	}
-
-
-
+    
 	void OnTriggerStay(Collider col) 
 	{
-		print (col);
+		//print (col);
 		if (col.gameObject.tag == "Player" && Input.GetKey (KeyCode.W)) {
 			col.GetComponent<Character> ().climbing = true;
 			col.gameObject.GetComponent<Rigidbody> ().useGravity = false;

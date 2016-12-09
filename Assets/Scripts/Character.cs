@@ -11,6 +11,7 @@ public class Character : MonoBehaviour
 	public bool climbing = false;
 	public bool grounded = true;
 
+    public int floor;
 
     bool facingRight;
 
@@ -39,7 +40,7 @@ public class Character : MonoBehaviour
     {
 		playerLayer = LayerMask.NameToLayer("Player");
 		groundLayer = LayerMask.NameToLayer ("Ground");
-		print (playerLayer.value);
+		//print (playerLayer.value);
         facingRight = true;
         groundRadius = 0.1f;
         onGround = false;
@@ -58,7 +59,7 @@ public class Character : MonoBehaviour
 			Physics.IgnoreLayerCollision (playerLayer.value, groundLayer.value, false);
 		else
 			Physics.IgnoreLayerCollision ( playerLayer.value, groundLayer.value, climbing);
-		print ("CLIMBING: " + climbing);
+		//print ("CLIMBING: " + climbing);
 
 	}
 
@@ -102,13 +103,27 @@ public class Character : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-		print (col);
+		//print (col);
 		if (col.gameObject.tag == "Ground") {
 			if (col.transform.position.y < transform.position.y) {
 				onGround = true;
 				climbing = false;
 			}
-		} 
+
+
+            if (col.gameObject.name == "Floor")
+            {
+                this.floor = 1;
+            }
+            else if (col.gameObject.name == "Floor (1)")
+            {
+                this.floor = 2;
+            }
+            else if(col.gameObject.name == "Floor (2)")
+            {
+                this.floor = 3;
+            }
+        }
 
     }
 
