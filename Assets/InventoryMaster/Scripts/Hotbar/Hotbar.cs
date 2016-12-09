@@ -84,9 +84,19 @@ public class Hotbar : MonoBehaviour
 
 		if (Input.GetKeyDown (KeyCode.Z) && selectedItem) 
 		{
-//			if (updateInventoryList != null)
-//				updateInventoryList();
-			putItem (selectedItem);
+			float y = 0;
+			string tag = selectedItem.GetComponent<ItemOnObject> ().item.itemModel.tag;
+			switch (tag) {
+			case "Ladder":
+				y = 1.02f;
+				break;
+			case "Door":
+				y = -1.2f;
+				break;
+			default:
+				break;
+			}
+			putItem (selectedItem, y);
 		}
     }
 
@@ -96,12 +106,12 @@ public class Hotbar : MonoBehaviour
         return slotsInTotal = inv.width * inv.height;
     }
 
-	void putItem(Transform selectedItem)
+	void putItem(Transform selectedItem, float offSetY)
 	{
 		GameObject dropItem = (GameObject)Instantiate(selectedItem.GetComponent<ItemOnObject>().item.itemModel);
 		dropItem.AddComponent<PickUpItem>();
 		dropItem.GetComponent<PickUpItem>().item = selectedItem.GetComponent<ItemOnObject>().item;   
-		dropItem.transform.localPosition = _player.transform.localPosition;
+		dropItem.transform.localPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + offSetY, _player.transform.localPosition.z);
 		Inventory inv = GetComponent<Inventory> ();
 
 		Destroy (selectedItem.gameObject);
