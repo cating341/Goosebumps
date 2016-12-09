@@ -5,7 +5,7 @@ public class CharacterControl : MonoBehaviour
 {
     private Character character;
     private bool jump;
-    private float movingSpeed;
+    private float movingSpeed, upSpeed;
 
     // Use this for initialization
     void Start()
@@ -24,9 +24,9 @@ public class CharacterControl : MonoBehaviour
     {
         //get input by Axis set in input setting
         movingSpeed = Input.GetAxis("Horizontal");
-
+        upSpeed = Input.GetAxis("Vertical");
         //pass parameters to character script, and then it can move
-        character.Move(movingSpeed, jump);
+        character.Move(movingSpeed, jump, upSpeed);
 	
         //jump is reset after each time that physical engine updated
         jump = false;

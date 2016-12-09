@@ -5,12 +5,13 @@ public class PhoneController : MonoBehaviour {
     
     public AudioClip effect;
     private AudioSource audioSource;
+    private Animator animation;
     private bool enable = true;
 
 	// Use this for initialization
 	void Start () {
         audioSource = GetComponent<AudioSource>();
-        
+        animation = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -42,11 +43,13 @@ public class PhoneController : MonoBehaviour {
             Debug.Log("Phone ring: " + gameObject.name);
             audioSource.PlayOneShot(effect, 1);
             enable = false;
-            Invoke("ReEnable", 10.0f);
+            animation.SetBool("ring", true);
+            Invoke("ReEnable", 5.0f);
         } 
     }
 
     void ReEnable(){
         enable = true;
+        animation.SetBool("ring", false);
     }
 }
