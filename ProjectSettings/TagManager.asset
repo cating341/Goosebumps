@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Ladder
+  - Door
+  - Phone
+  - Water
+  - Chandelier
   layers:
   - Default
   - TransparentFX
@@ -17,12 +20,12 @@ TagManager:
   - 
   - Ground
   - shootable
-  - Outline
   - Player
+  - Floor
   - 
   - 
   - 
-  - 
+  - Outline
   - 
   - 
   - 
