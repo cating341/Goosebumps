@@ -66,6 +66,7 @@ public class Tooltip : MonoBehaviour
 
     void Start()
     {
+		setImportantVariables ();
         deactivateTooltip();
     }
 
