@@ -16,6 +16,7 @@ public class Hotbar : MonoBehaviour
     public int slotsInTotal;
 
 	private GameObject _player;
+	private ItemDataBaseList itemDataBase;
 	Transform selectedItem;
 
 //	public delegate void ItemDelegate();
@@ -60,6 +61,9 @@ public class Hotbar : MonoBehaviour
 #endif
 	void Start()
 	{
+		if (itemDataBase == null) {
+			itemDataBase = (ItemDataBaseList)Resources.Load("ItemDatabase");
+		}
 		_player = GameObject.FindGameObjectWithTag("Player");
 	}
 
@@ -113,7 +117,8 @@ public class Hotbar : MonoBehaviour
 	{
 		GameObject dropItem = (GameObject)Instantiate(selectedItem.GetComponent<ItemOnObject>().item.itemModel);
 		dropItem.AddComponent<PickUpItem>();
-		dropItem.GetComponent<PickUpItem>().item = selectedItem.GetComponent<ItemOnObject>().item;   
+		dropItem.GetComponent<PickUpItem>().item = itemDataBase.getItemByID (selectedItem.GetComponent<ItemOnObject> ().item.itemID);
+//		dropItem.GetComponent<PickUpItem>().item = selectedItem.GetComponent<ItemOnObject>().item;   
 		dropItem.transform.localPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + offSetY, _player.transform.localPosition.z+1.3f);
 		Inventory inv = GetComponent<Inventory> ();
 
