@@ -117,7 +117,12 @@ public class Hotbar : MonoBehaviour
 		dropItem.transform.localPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + offSetY, _player.transform.localPosition.z+1.3f);
 		Inventory inv = GetComponent<Inventory> ();
 
-		Destroy (selectedItem.gameObject);
+		selectedItem.GetComponent<ItemOnObject> ().item.itemValue--;
+
+		if (selectedItem.GetComponent<ItemOnObject> ().item.itemValue == 0) {
+			selectedItem.GetComponentInParent<Outline> ().enabled = false;
+			Destroy (selectedItem.gameObject);
+		}
 		inv.OnUpdateItemList();
 	}
 }
