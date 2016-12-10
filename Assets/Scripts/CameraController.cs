@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	    
+        player = GameObject.Find("Player");
 	}
 	
 	// Update is called once per frame
@@ -21,8 +21,8 @@ public class CameraController : MonoBehaviour {
 
         if (player.transform.position.y <= -0.32f)
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, -0.32f, -15.97f);
-        else if (player.transform.position.y >= 3.64f)
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, 3.64f, -15.97f);
+        else if (player.transform.position.y >= 3.3f)
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, 3.3f, -15.97f);
         else
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, player.transform.position.y, -15.97f);
         
