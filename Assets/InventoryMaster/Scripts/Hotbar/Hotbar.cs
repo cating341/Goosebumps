@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -15,6 +16,7 @@ public class Hotbar : MonoBehaviour
     public int slotsInTotal;
 
 	private GameObject _player;
+	private ItemDataBaseList itemDataBase;
 	Transform selectedItem;
 
 //	public delegate void ItemDelegate();
@@ -59,6 +61,9 @@ public class Hotbar : MonoBehaviour
 #endif
 	void Start()
 	{
+		if (itemDataBase == null) {
+			itemDataBase = (ItemDataBaseList)Resources.Load("ItemDatabase");
+		}
 		_player = GameObject.FindGameObjectWithTag("Player");
 	}
 
@@ -67,19 +72,21 @@ public class Hotbar : MonoBehaviour
     {
         for (int i = 0; i < slotsInTotal; i++)
         {
-            if (Input.GetKeyDown(keyCodesForSlots[i]))
-            {
-                if (transform.GetChild(1).GetChild(i).childCount != 0 && transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ItemOnObject>().item.itemType != ItemType.UFPS_Ammo)
-                {
+			if (Input.GetKeyDown (keyCodesForSlots [i])) {
+				if (transform.GetChild (1).GetChild (i).childCount != 0 && transform.GetChild (1).GetChild (i).GetChild (0).GetComponent<ItemOnObject> ().item.itemType != ItemType.UFPS_Ammo) {
+					if (selectedItem) {
+						selectedItem.GetComponentInParent<Outline> ().enabled = false;
+					}
 					selectedItem = transform.GetChild (1).GetChild (i).GetChild (0);
+					transform.GetChild (1).GetChild (i).gameObject.GetComponent<Outline> ().enabled = true;
 //                    if (transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().duplication != null && transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ItemOnObject>().item.maxStack == 1)
 //                    {
 //                        Destroy(transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().duplication);
 //                    }
 //                    transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().consumeIt();
 
-                }
-            }
+				}
+			}
         }
 
 		if (Input.GetKeyDown (KeyCode.Z) && selectedItem) 
@@ -110,11 +117,17 @@ public class Hotbar : MonoBehaviour
 	{
 		GameObject dropItem = (GameObject)Instantiate(selectedItem.GetComponent<ItemOnObject>().item.itemModel);
 		dropItem.AddComponent<PickUpItem>();
-		dropItem.GetComponent<PickUpItem>().item = selectedItem.GetComponent<ItemOnObject>().item;   
+		dropItem.GetComponent<PickUpItem>().item = itemDataBase.getItemByID (selectedItem.GetComponent<ItemOnObject> ().item.itemID);
+//		dropItem.GetComponent<PickUpItem>().item = selectedItem.GetComponent<ItemOnObject>().item;   
 		dropItem.transform.localPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + offSetY, _player.transform.localPosition.z+1.0f);
 		Inventory inv = GetComponent<Inventory> ();
 
-		Destroy (selectedItem.gameObject);
+		selectedItem.GetComponent<ItemOnObject> ().item.itemValue--;
+
+		if (selectedItem.GetComponent<ItemOnObject> ().item.itemValue == 0) {
+			selectedItem.GetComponentInParent<Outline> ().enabled = false;
+			Destroy (selectedItem.gameObject);
+		}
 		inv.OnUpdateItemList();
 	}
 }

@@ -617,7 +617,10 @@ public class Inventory : MonoBehaviour
                     itemOnObject.item.itemValue = 1;
                 item.transform.SetParent(SlotContainer.transform.GetChild(i));
                 item.GetComponent<RectTransform>().localPosition = Vector3.zero;
-                item.transform.GetChild(0).GetComponent<Image>().sprite = itemOnObject.item.itemIcon;
+
+				item.transform.localScale = new Vector3 (1, 1, 1);
+                
+				item.transform.GetChild(0).GetComponent<Image>().sprite = itemOnObject.item.itemIcon;
                 itemOnObject.item.indexItemInList = ItemsInInventory.Count - 1;
                 if (inputManagerDatabase == null)
                     inputManagerDatabase = (InputManager)Resources.Load("InputManager");

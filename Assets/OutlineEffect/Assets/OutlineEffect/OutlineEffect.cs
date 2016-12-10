@@ -30,7 +30,7 @@ using System.Linq;
 [RequireComponent(typeof(Camera))]
 public class OutlineEffect : MonoBehaviour
 {
-	List<Outline> outlines = new List<Outline>();
+	List<OutlineCustom> outlines = new List<OutlineCustom>();
 
     public Camera sourceCamera;
     public Camera outlineCamera;
@@ -241,14 +241,14 @@ public class OutlineEffect : MonoBehaviour
 		outlineCamera.targetTexture = renderTexture;
 	}
 
-    public void AddOutline(Outline outline)
+    public void AddOutline(OutlineCustom outline)
     {
         if (!outlines.Contains(outline))
         {
 			outlines.Add(outline);
         }
     }
-    public void RemoveOutline(Outline outline)
+    public void RemoveOutline(OutlineCustom outline)
 	{
 		outlines.Remove(outline);
     }

@@ -19,9 +19,9 @@ public class PickUpItem : MonoBehaviour
     {
         if (_inventory != null && Input.GetKeyDown(KeyCode.E))
         {
-            float distance = Vector3.Distance(this.gameObject.transform.position, _player.transform.position);
-
-            if (distance <= 3)
+//            float distance = Vector3.Distance(this.gameObject.transform.position, _player.transform.position);
+			float distance = Mathf.Abs(this.gameObject.transform.position.x - _player.transform.position.x);
+            if (distance <= 0.5)
             {
                 bool check = _inventory.checkIfItemAllreadyExist(item.itemID, item.itemValue);
                 if (check)
