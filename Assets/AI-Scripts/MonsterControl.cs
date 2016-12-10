@@ -3,8 +3,16 @@ using System.Collections;
 
 public class MonsterControl : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject ground1;
+    [SerializeField]
+    private GameObject ground2;
+    [SerializeField]
+    private GameObject ground3;
+
     private Monster monster;
     private int upDown;
+
 
     private string ground1name = "Floor";
     private string ground2name = "Floor (1)";
@@ -38,7 +46,7 @@ public class MonsterControl : MonoBehaviour {
         }
         else
         {
-            target = GameObject.Find("Character").transform.position;
+            target = GameObject.Find("Player").transform.position;
         }
         return target;
     }
@@ -74,7 +82,7 @@ public class MonsterControl : MonoBehaviour {
 
     private void CheckUpDown()
     {
-        int characterFloor = GameObject.Find("Character").GetComponent<Character>().floor;
+        int characterFloor = GameObject.Find("Player").GetComponent<Character>().floor;
         int floor = this.monster.Floor;
         if (floor > characterFloor)
         {
@@ -161,6 +169,10 @@ public class MonsterControl : MonoBehaviour {
             else if (col.gameObject.name == ground3name)
             {
                 this.monster.Floor = 3;
+            }
+            if (col.gameObject == ground3)
+            {
+                print("hi");
             }
         }
     }
