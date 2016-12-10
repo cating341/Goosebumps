@@ -60,7 +60,7 @@ public class Monster : MonoBehaviour {
     {
         float xDifference = target.x - transform.position.x;
         float way = Mathf.Abs(xDifference) < 0.5 ? 0 : xDifference / Mathf.Abs(xDifference);
-        this.Climbing = Mathf.Abs(xDifference) < 0.5 ? true : false;
+        //this.Climbing = Mathf.Abs(xDifference) < 0.5 ? true : false;
         if (this.OnGround)
         {
             this.anim.SetFloat("speed", Mathf.Abs(way));

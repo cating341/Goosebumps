@@ -31,7 +31,6 @@ public class PhoneController : MonoBehaviour {
                     audioSource.Stop();
                     p.PlaySoundEffect();
                 }
-
             }
         }
     }
@@ -43,6 +42,7 @@ public class PhoneController : MonoBehaviour {
             audioSource.Play();
             enable = false;
             animation.SetBool("ring", true);
+            GameObject.Find("monster").GetComponent<MonsterControl>().NewAttraction(gameObject);
             Invoke("ReEnable", 5.0f);
         } 
     }

@@ -11,7 +11,25 @@ public class Character : MonoBehaviour
 	public bool climbing = false;
 	public bool grounded = true;
 
-    public int floor;
+    [SerializeField]
+    private GameObject ground1;
+    [SerializeField]
+    private GameObject ground2;
+    [SerializeField]
+    private GameObject ground3;
+
+    private int floor;
+    public int Floor
+    {
+        get
+        {
+            return this.floor;
+        }
+        set
+        {
+            this.floor = value;
+        }
+    }
 
     bool facingRight;
 
@@ -116,24 +134,19 @@ public class Character : MonoBehaviour
 				onGround = true;
 				climbing = false;
 			}
-
-
-            if (col.gameObject.name == "Floor")
-            {
-                this.floor = 1;
-            }
-            else if (col.gameObject.name == "Floor (1)")
-            {
-                this.floor = 2;
-            }
-            else if(col.gameObject.name == "Floor (2)")
-            {
-                this.floor = 3;
-            }
         }
-
+        if (col.gameObject == ground1)
+        {
+            this.Floor = 1;
+        }
+        else if (col.gameObject == ground2)
+        {
+            this.Floor = 2;
+        }
+        else if (col.gameObject == ground3)
+        {
+            this.Floor = 3;
+        }
     }
-
-
 
 }

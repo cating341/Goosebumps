@@ -100,7 +100,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.24
+      value: 3.62
       objectReference: {fileID: 0}
     - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -144,6 +144,10 @@ Prefab:
         type: 2}
       propertyPath: m_Center.y
       value: 0.32325375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: LadderClimbable1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
@@ -408,6 +412,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012851317952, guid: 96d76332c1bd3284bb98ae175ad3163a,
     type: 2}
   m_PrefabInternal: {fileID: 97055125}
+--- !u!1 &111293182 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012285829334, guid: a414e06a6c53a418389e50c687ae3186,
+    type: 2}
+  m_PrefabInternal: {fileID: 151886226}
 --- !u!1001 &147379398
 Prefab:
   m_ObjectHideFlags: 0
@@ -472,7 +481,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013949618068, guid: a414e06a6c53a418389e50c687ae3186, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.16
+      value: 5.71
       objectReference: {fileID: 0}
     - target: {fileID: 4000013949618068, guid: a414e06a6c53a418389e50c687ae3186, type: 2}
       propertyPath: m_LocalPosition.z
@@ -508,6 +517,21 @@ Prefab:
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010315261816, guid: a414e06a6c53a418389e50c687ae3186,
+        type: 2}
+      propertyPath: ground1
+      value: 
+      objectReference: {fileID: 701414205}
+    - target: {fileID: 114000010315261816, guid: a414e06a6c53a418389e50c687ae3186,
+        type: 2}
+      propertyPath: ground2
+      value: 
+      objectReference: {fileID: 1256833601}
+    - target: {fileID: 114000010315261816, guid: a414e06a6c53a418389e50c687ae3186,
+        type: 2}
+      propertyPath: ground3
+      value: 
+      objectReference: {fileID: 1912766517}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a414e06a6c53a418389e50c687ae3186, type: 2}
   m_IsPrefabParent: 0
@@ -1108,7 +1132,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013751881560, guid: bd6fb601bbc314e18bdfd8aa47bba41e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.34
+      value: -4.12
       objectReference: {fileID: 0}
     - target: {fileID: 4000013751881560, guid: bd6fb601bbc314e18bdfd8aa47bba41e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1149,6 +1173,16 @@ Prefab:
       propertyPath: ground3
       value: 
       objectReference: {fileID: 1912766517}
+    - target: {fileID: 114000011783507130, guid: bd6fb601bbc314e18bdfd8aa47bba41e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 111293182}
+    - target: {fileID: 114000012719135504, guid: bd6fb601bbc314e18bdfd8aa47bba41e,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd6fb601bbc314e18bdfd8aa47bba41e, type: 2}
   m_IsPrefabParent: 0
@@ -1709,6 +1743,10 @@ Prefab:
       propertyPath: m_Center.y
       value: 0.12765259
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013480181294, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
+      propertyPath: m_Name
+      value: LadderClimbable2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
   m_IsPrefabParent: 0
@@ -2136,6 +2174,23 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224000011660553550, guid: 8e7de89935fe0c346963e953aaea755e,
     type: 2}
   m_PrefabInternal: {fileID: 1685180688}
+--- !u!1 &1136790645 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011828495314, guid: e008379690c52274eb2165ae3e2e1fd8,
+    type: 2}
+  m_PrefabInternal: {fileID: 297670539}
+--- !u!114 &1136790651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1136790645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floor: 3
 --- !u!1 &1153976277 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013380918064, guid: d5caceff9d562493a869d00e1658d1a4,

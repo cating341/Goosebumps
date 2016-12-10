@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using System.Collections.Generic;
 
 public class MonsterControl : MonoBehaviour {
 
@@ -9,21 +11,21 @@ public class MonsterControl : MonoBehaviour {
     private GameObject ground2;
     [SerializeField]
     private GameObject ground3;
+    [SerializeField]
+    private GameObject player;
 
     private Monster monster;
     private int upDown;
-
-
-    private string ground1name = "Floor";
-    private string ground2name = "Floor (1)";
-    private string ground3name = "Floor (2)";
     private string ladder1name = "LadderClimbable1";
     private string ladder2name = "LadderClimbable2";
+
+    private Queue<GameObject> attractions;
 
     // Use this for initialization
     void Start()
     {
-        monster = GetComponent<Monster>();
+        this.monster = GetComponent<Monster>();
+        this.attractions = new Queue<GameObject> ();
 	}
 	
 	// Update is called once per frame
@@ -46,7 +48,7 @@ public class MonsterControl : MonoBehaviour {
         }
         else
         {
-            target = GameObject.Find("Player").transform.position;
+            target = this.player.transform.position;
         }
         return target;
     }
@@ -82,13 +84,21 @@ public class MonsterControl : MonoBehaviour {
 
     private void CheckUpDown()
     {
-        int characterFloor = GameObject.Find("Player").GetComponent<Character>().floor;
+        int targetFloor = new int();
+        if (this.attractions.Count == 0)
+        {
+            targetFloor = this.player.GetComponent<Character> ().Floor;
+        }
+        else
+        {
+            targetFloor = this.attractions.Peek().GetComponent<AIInformation> ().Floor;
+        }
         int floor = this.monster.Floor;
-        if (floor > characterFloor)
+        if (floor > targetFloor)
         {
             this.upDown = -1;
         }
-        else if (floor < characterFloor)
+        else if (floor < targetFloor)
         {
             this.upDown = 1;
         }
@@ -109,15 +119,14 @@ public class MonsterControl : MonoBehaviour {
                 if ((this.upDown == 1 && col.gameObject.name == ladder1name && this.monster.Floor != 2) 
                     || (this.upDown == -1 && col.gameObject.name == ladder1name && this.monster.Floor != 1))
                 {
-                    print("errrrr");
-                    ground = GameObject.Find(ground2name).GetComponent<Collider>();
+                    ground = ground2.GetComponent<Collider>();
                     Physics.IgnoreCollision(GetComponent<Collider>(), ground);
                     this.monster.Climb(this.upDown, col);
                 }
                 else if ((this.upDown == 1 && col.gameObject.name == ladder2name && this.monster.Floor != 3) 
                     || (this.upDown == -1 && col.gameObject.name == ladder2name && this.monster.Floor != 2))
                 {
-                    ground = GameObject.Find(ground3name).GetComponent<Collider>();
+                    ground = ground3.GetComponent<Collider>();
                     Physics.IgnoreCollision(GetComponent<Collider>(), ground);
                     this.monster.Climb(this.upDown, col);
                 }
@@ -129,28 +138,17 @@ public class MonsterControl : MonoBehaviour {
     {
         if (col.gameObject.tag == "Ladder")
         {
-            Collider ground = new Collider();
-            if ((this.upDown == 1 && col.gameObject.name == ladder1name) || (this.upDown == -1 && col.gameObject.name == ladder1name))
-            {
-                print("oh no");
-                ground = GameObject.Find(ground2name).GetComponent<Collider>();
-                Physics.IgnoreCollision(GetComponent<Collider>(), ground, false);
-                GetComponent<Rigidbody>().useGravity = true;
-            }
-            else if ((this.upDown == 1 && col.gameObject.name == ladder2name) || (this.upDown == -1 && col.gameObject.name == ladder2name))
-            {
-                print("oh hey");
-                ground = GameObject.Find(ground3name).GetComponent<Collider>();
-                Physics.IgnoreCollision(GetComponent<Collider>(), ground, false);
-                GetComponent<Rigidbody>().useGravity = true;
-            }
+            Physics.IgnoreCollision(GetComponent<Collider>(), ground2.GetComponent<Collider>(), false);
+            Physics.IgnoreCollision(GetComponent<Collider>(), ground3.GetComponent<Collider>(), false);
+            GetComponent<Rigidbody>().useGravity = true;
         }
+
     }
-
-
+    
 
     void OnCollisionEnter(Collision col)
     {
+        print(col.gameObject.name);
         if (col.gameObject.tag == "Ground")
         {
             if (col.transform.position.y < transform.position.y)
@@ -158,22 +156,24 @@ public class MonsterControl : MonoBehaviour {
                 this.monster.OnGround = true;
                 this.monster.Climbing = false;
             }
-            if (col.gameObject.name == ground1name)
+            if (col.gameObject == ground1)
             {
                 this.monster.Floor = 1;
             }
-            else if (col.gameObject.name == ground2name)
+            else if (col.gameObject == ground2)
             {
                 this.monster.Floor = 2;
             }
-            else if (col.gameObject.name == ground3name)
+            else if (col.gameObject == ground3)
             {
                 this.monster.Floor = 3;
             }
-            if (col.gameObject == ground3)
-            {
-                print("hi");
-            }
         }
+    }
+
+    public void NewAttraction(GameObject obj)
+    {
+        this.attractions.Enqueue(obj);
+        print(attractions.Peek());
     }
 }
