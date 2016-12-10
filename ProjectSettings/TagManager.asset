@@ -20,6 +20,7 @@ TagManager:
   - Item
   - ItemIcon
   - boundwall
+  - Refrigerator
   layers:
   - Default
   - TransparentFX
