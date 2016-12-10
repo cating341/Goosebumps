@@ -32,9 +32,7 @@ public class Ladder : MonoBehaviour {
             }
         }
 	}
-
-
-
+    
 	void OnTriggerStay(Collider col) 
 	{ 
         if (col.gameObject.tag == "Player" && Input.GetKey(KeyCode.W) && NormalLadder.active)
