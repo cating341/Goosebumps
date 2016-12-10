@@ -53,6 +53,7 @@ public class Ladder : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Player" && !NormalLadder.active)
         {
+			col.GetComponent<Character>().ladder = this.transform;
             col.gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
 	}
