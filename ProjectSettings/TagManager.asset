@@ -11,6 +11,15 @@ TagManager:
   - Chandelier
   - Ladder
   - Monster
+  - Canvas
+  - DraggingItem
+  - Hotbar
+  - Slots
+  - Slot
+  - Panel
+  - Item
+  - ItemIcon
+  - boundwall
   layers:
   - Default
   - TransparentFX

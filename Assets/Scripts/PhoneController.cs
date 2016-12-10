@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PhoneController : MonoBehaviour {
     
-    public AudioClip effect;
     private AudioSource audioSource;
     private Animator animation;
     private bool enable = true;
@@ -41,7 +40,7 @@ public class PhoneController : MonoBehaviour {
         if (enable)
         {
             Debug.Log("Phone ring: " + gameObject.name);
-            audioSource.PlayOneShot(effect, 1);
+            audioSource.Play();
             enable = false;
             animation.SetBool("ring", true);
             Invoke("ReEnable", 5.0f);
@@ -50,6 +49,7 @@ public class PhoneController : MonoBehaviour {
 
     void ReEnable(){
         enable = true;
+        audioSource.Stop();
         animation.SetBool("ring", false);
     }
 }

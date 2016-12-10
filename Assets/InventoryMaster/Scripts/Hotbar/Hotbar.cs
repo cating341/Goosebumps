@@ -111,7 +111,7 @@ public class Hotbar : MonoBehaviour
 		GameObject dropItem = (GameObject)Instantiate(selectedItem.GetComponent<ItemOnObject>().item.itemModel);
 		dropItem.AddComponent<PickUpItem>();
 		dropItem.GetComponent<PickUpItem>().item = selectedItem.GetComponent<ItemOnObject>().item;   
-		dropItem.transform.localPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + offSetY, _player.transform.localPosition.z);
+		dropItem.transform.localPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + offSetY, _player.transform.localPosition.z+1.3f);
 		Inventory inv = GetComponent<Inventory> ();
 
 		Destroy (selectedItem.gameObject);

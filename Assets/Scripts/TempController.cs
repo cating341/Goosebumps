@@ -5,17 +5,21 @@ public class TempController : MonoBehaviour {
 
     public RectTransform tempBar;
 
-    private const float maxTemp = 75.0f;
-    private const float minTemp = 1.0f;
-    private const float middleTemp = 40.0f;
+    public float maxTemp = 73.0f;
+    public float speed = 2;
+    private const float minTemp = 2.0f;
+    private float middleTemp ;
 
     private float timer = 0;
-    private float currentTemp = middleTemp;
+    private float currentTemp ;
     private int currentState; // 3:hot 2:normal 1:cold
 
 	// Use this for initialization
 	void Start () {
         currentState = 2;
+        middleTemp = (maxTemp + minTemp) / 2;
+        currentTemp = middleTemp;
+        tempBar.sizeDelta = new Vector2(currentTemp * (120 / middleTemp / 2), tempBar.sizeDelta.y);
 	}
 	
 	// Update is called once per frame
@@ -24,14 +28,14 @@ public class TempController : MonoBehaviour {
         timer += Time.deltaTime;
         if (timer > 1.0f)
         {
-            if (currentState == 3 && currentTemp <= maxTemp) currentTemp ++;
-            else if (currentState == 1 && currentTemp >= minTemp) currentTemp --;
+            if (currentState == 3 && currentTemp <= maxTemp) currentTemp += speed;
+            else if (currentState == 1 && currentTemp >= minTemp) currentTemp -= speed;
             else if (currentState == 2) {
-                currentTemp = (currentTemp > middleTemp) ? currentTemp - 1 : currentTemp;
-                currentTemp = (currentTemp < middleTemp) ? currentTemp + 1 : currentTemp ;
+                currentTemp = (currentTemp > middleTemp) ? currentTemp - speed : currentTemp;
+                currentTemp = (currentTemp < middleTemp) ? currentTemp + speed : currentTemp;
             }
             timer = 0;
-            tempBar.sizeDelta = new Vector2(currentTemp*2, tempBar.sizeDelta.y);
+            tempBar.sizeDelta = new Vector2(currentTemp * (120 / middleTemp / 2), tempBar.sizeDelta.y);
         }
         
 

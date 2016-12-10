@@ -41,6 +41,7 @@ GameObject:
   - 222: {fileID: 222000010849416818}
   - 114: {fileID: 114000013528225644}
   - 212: {fileID: 212000010454562118}
+  - 114: {fileID: 114000010373746758}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -72,9 +73,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010986923192}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.86, y: -2, z: -1.82}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0000000055879354, w: 1}
+  m_LocalPosition: {x: -9.907098, y: -1.9510295, z: -1.1417074}
+  m_LocalScale: {x: 0.9155641, y: 0.9155633, z: 0.9155633}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224000011105657056}
@@ -97,8 +98,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2181163, y: 1.9947997, z: 1}
-  m_Center: {x: 0.027270794, y: 0.5380175, z: -0.00000035762787}
+  m_Size: {x: 2.2181163, y: 2.0331192, z: 1.4583793}
+  m_Center: {x: 0.027270794, y: 0.5571772, z: -0.22919011}
 --- !u!95 &95000010378313012
 Animator:
   serializedVersion: 3
@@ -116,6 +117,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010373746758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012376769930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineEffect: {fileID: 0}
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterial: {fileID: 0}
 --- !u!114 &114000011852084682
 MonoBehaviour:
   m_ObjectHideFlags: 1

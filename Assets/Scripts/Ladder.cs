@@ -6,12 +6,13 @@ public class Ladder : MonoBehaviour {
     public GameObject Temp;
     public GameObject NormalLadder;
     public GameObject IceLadder;
+    public float ICE_TEMP = 13.0f;
 
     private TempController tempController;
-    private const float ICE_TEMP = 13.0f;
     private float pre_temp;
 	// Use this for initialization
 	void Start () {
+        Temp = GameObject.Find("TempHandle");
         tempController = Temp.GetComponent<TempController>();
         pre_temp = tempController.GetTemp();
         IceLadder.SetActive(false);
@@ -44,12 +45,16 @@ public class Ladder : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Player" && Input.GetKey(KeyCode.S) && NormalLadder.active)
         {
-			col.GetComponent<Character> ().climbing = true;
-			col.GetComponent<Character> ().ladder = this.transform;
-			col.gameObject.GetComponent<Rigidbody> ().useGravity = false;
-			col.transform.position = new Vector3 (transform.position.x, col.transform.position.y, col.transform.position.z);
-			col.transform.position -= new Vector3 (0, climbSpeed, 0);
-		}
+            col.GetComponent<Character>().climbing = true;
+            col.GetComponent<Character>().ladder = this.transform;
+            col.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            col.transform.position = new Vector3(transform.position.x, col.transform.position.y, col.transform.position.z);
+            col.transform.position -= new Vector3(0, climbSpeed, 0);
+        }
+        else if (col.gameObject.tag == "Player" && !NormalLadder.active)
+        {
+            col.gameObject.GetComponent<Rigidbody>().useGravity = true;
+        }
 	}
 
 	void OnTriggerExit(Collider col)
