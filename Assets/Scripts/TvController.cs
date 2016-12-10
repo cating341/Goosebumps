@@ -2,11 +2,13 @@
 using System.Collections;
 
 public class TvController : MonoBehaviour {
-
+ 
     private bool open = false;
     private Animator animation;
+    private AudioSource audioSource;
 	// Use this for initialization
 	void Start () {
+        audioSource = GetComponent<AudioSource>();
         animation = GetComponent<Animator>();
 	}
 	
@@ -17,11 +19,13 @@ public class TvController : MonoBehaviour {
 
     public void TrunOnTV(){
         open = true;
+        audioSource.Play();
         Invoke("TrunOffTV", 5.0f);
     }
 
     void TrunOffTV() {
         open = false;
+        audioSource.Stop();
     }
 
     void OnTriggerStay(Collider other)

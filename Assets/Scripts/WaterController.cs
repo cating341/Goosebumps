@@ -5,9 +5,9 @@ public class WaterController : MonoBehaviour {
     public GameObject Temp;
     public GameObject Water;
     public GameObject Ice;
+    public float ICE_TEMP = 13.0f;
 
     private TempController tempController;
-    private const float ICE_TEMP = 13.0f;
     private float pre_temp;
 	// Use this for initialization
 	void Start () {

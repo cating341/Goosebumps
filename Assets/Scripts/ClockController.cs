@@ -6,10 +6,9 @@ public class ClockController : MonoBehaviour {
     public GameObject ClockCanvas;
     public GameObject ClockVal;
     public GameObject ClockSlider;
-    public AudioClip clockAlarm;
 
     private int timer;
-    private bool enable;
+    private bool enable = true;
     private Animator animation;
     private AudioSource audioSource;
 	// Use this for initialization
@@ -43,23 +42,33 @@ public class ClockController : MonoBehaviour {
         ClockCanvas.SetActive(false);
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.tag == "Player" && Input.GetKey("z"))
+        if (other.gameObject.tag == "Player" && enable)
         {
             OpenCanvas();
         }
     }
 
+    void OnTriggerExit(Collider other)
+    {
+
+        if (other.gameObject.tag == "Player")
+        {
+            CloseCanvas();
+        }
+    }
+
     void ClockRing() {
         animation.SetBool("ring", true);
-        audioSource.PlayOneShot(clockAlarm); 
+        audioSource.Play(); 
         Invoke("StopAnimation", 5.0f);
     }
 
     void StopAnimation() {
         enable = true;
+        audioSource.Stop(); 
         animation.SetBool("ring", false);
     }
 }

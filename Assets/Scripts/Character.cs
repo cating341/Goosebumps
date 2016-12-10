@@ -97,7 +97,7 @@ public class Character : MonoBehaviour
     }
 		
 
-    void Flip()
+    public void Flip()
     {
         //reverse the direction
         facingRight = !facingRight;
