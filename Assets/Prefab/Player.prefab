@@ -79,6 +79,7 @@ GameObject:
   - 114: {fileID: 114000012979430842}
   - 114: {fileID: 114000010315261816}
   - 114: {fileID: 114000012450443774}
+  - 114: {fileID: 114000011890627928}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -106,8 +107,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012285829334}
   m_LocalRotation: {x: -0.00000010692012, y: 0.0001006892, z: 0.00000003869832, w: 1}
-  m_LocalPosition: {x: -4.34, y: 1.16, z: -3.92}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.34, y: 0.827, z: -3.92}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224000013432273068}
@@ -175,8 +176,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.1516438, z: 1}
-  m_Center: {x: 0, y: -0.016942263, z: 0}
+  m_Size: {x: 1, y: 2.1516438, z: 1.3998692}
+  m_Center: {x: 0.0000044631033, y: -0.016942414, z: 0.07846504}
 --- !u!95 &95000013585105726
 Animator:
   serializedVersion: 3
@@ -213,6 +214,17 @@ MonoBehaviour:
   grounded: 1
   floor: 0
   ladder: {fileID: 0}
+--- !u!114 &114000011890627928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012285829334}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f2b6b802878d34db7c1b35f37328d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012450443774
 MonoBehaviour:
   m_ObjectHideFlags: 1

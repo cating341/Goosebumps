@@ -119,7 +119,7 @@ public class Hotbar : MonoBehaviour
 		dropItem.AddComponent<PickUpItem>();
 		dropItem.GetComponent<PickUpItem>().item = itemDataBase.getItemByID (selectedItem.GetComponent<ItemOnObject> ().item.itemID);
 //		dropItem.GetComponent<PickUpItem>().item = selectedItem.GetComponent<ItemOnObject>().item;   
-		dropItem.transform.localPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + offSetY, _player.transform.localPosition.z+1.3f);
+		dropItem.transform.localPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + offSetY, _player.transform.localPosition.z+1.0f);
 		Inventory inv = GetComponent<Inventory> ();
 
 		selectedItem.GetComponent<ItemOnObject> ().item.itemValue--;

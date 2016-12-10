@@ -294,6 +294,8 @@ GameObject:
   - 114: {fileID: 114000012690371908}
   - 114: {fileID: 114000011201887508}
   - 114: {fileID: 114000012273542380}
+  - 212: {fileID: 212000010912692722}
+  - 114: {fileID: 114000013957281482}
   m_Layer: 0
   m_Name: Panel - Hotbar(Clone)
   m_TagString: Hotbar

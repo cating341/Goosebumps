@@ -11,6 +11,7 @@ public class ClockController : MonoBehaviour {
     private bool enable = true;
     private Animator animation;
     private AudioSource audioSource;
+
 	// Use this for initialization
 	void Start () {
         ClockCanvas.SetActive(false);

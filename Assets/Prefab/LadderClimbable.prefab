@@ -92,7 +92,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013480181294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24, y: -4.12, z: 6.62}
+  m_LocalPosition: {x: -0.24, y: -4.46, z: 6.62}
   m_LocalScale: {x: 1, y: 0.9341106, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -116,8 +116,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.12860048, y: 4.5675063, z: 2.5920906}
-  m_Center: {x: 0.19999999, y: 0.17653903, z: -0.7960453}
+  m_Size: {x: 0.12860048, y: 4.744357, z: 2.5920906}
+  m_Center: {x: 0.19999993, y: 0.4178881, z: -0.7960453}
 --- !u!114 &114000010571980732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,6 +256,7 @@ MonoBehaviour:
   Temp: {fileID: 0}
   NormalLadder: {fileID: 1000011291479528}
   IceLadder: {fileID: 1000013308757086}
+  ICE_TEMP: 13
 --- !u!212 &212000011070018600
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -388,7 +389,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.27}
+  m_AnchoredPosition: {x: 0, y: 0.14}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000011157369664
@@ -406,6 +407,6 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.27}
+  m_AnchoredPosition: {x: 0, y: 0.14}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
