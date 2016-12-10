@@ -10,15 +10,21 @@ public class CameraController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+
         if (player.transform.position.x <= -4.58f)
             gameObject.transform.position = new Vector3(-4.58f, gameObject.transform.position.y, -15.97f);
         else if (player.transform.position.x >= 3.53f)
             gameObject.transform.position = new Vector3(3.53f, gameObject.transform.position.y, -15.97f);
+        else
+            gameObject.transform.position = new Vector3(player.transform.position.x, gameObject.transform.position.y, -15.97f);
+
         if (player.transform.position.y <= -0.32f)
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, -0.32f, -15.97f);
         else if (player.transform.position.y >= 3.64f)
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, 3.64f, -15.97f);
+        else
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, player.transform.position.y, -15.97f);
         
 	}
 }
