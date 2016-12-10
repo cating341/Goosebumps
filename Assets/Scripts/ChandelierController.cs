@@ -6,10 +6,10 @@ public class ChandelierController : MonoBehaviour {
     private const int MAXHITTIMES = 10;
     private Animator animation;
     int hitting = 0;
-    bool enable = true;
+    bool enable = true; 
 	// Use this for initialization
 	void Start () {
-        animation = GetComponent<Animator>();
+        animation = GetComponent<Animator>(); 
 	}
 	
 	// Update is called once per frame
