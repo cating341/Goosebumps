@@ -2,7 +2,7 @@
 using System.Collections;
 
 [RequireComponent(typeof(Renderer))]
-public class Outline : MonoBehaviour
+public class OutlineCustom : MonoBehaviour
 {
     public OutlineEffect outlineEffect;
 

@@ -33,6 +33,6 @@ public class ChandelierController : MonoBehaviour {
 
     void takeoffOutline()
     {
-        Destroy(gameObject.GetComponentInChildren<Outline>());
+        Destroy(gameObject.GetComponentInChildren<OutlineCustom>());
     }
 }

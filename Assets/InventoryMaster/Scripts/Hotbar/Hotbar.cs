@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -67,19 +68,21 @@ public class Hotbar : MonoBehaviour
     {
         for (int i = 0; i < slotsInTotal; i++)
         {
-            if (Input.GetKeyDown(keyCodesForSlots[i]))
-            {
-                if (transform.GetChild(1).GetChild(i).childCount != 0 && transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ItemOnObject>().item.itemType != ItemType.UFPS_Ammo)
-                {
+			if (Input.GetKeyDown (keyCodesForSlots [i])) {
+				if (transform.GetChild (1).GetChild (i).childCount != 0 && transform.GetChild (1).GetChild (i).GetChild (0).GetComponent<ItemOnObject> ().item.itemType != ItemType.UFPS_Ammo) {
+					if (selectedItem) {
+						selectedItem.GetComponentInParent<Outline> ().enabled = false;
+					}
 					selectedItem = transform.GetChild (1).GetChild (i).GetChild (0);
+					transform.GetChild (1).GetChild (i).gameObject.GetComponent<Outline> ().enabled = true;
 //                    if (transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().duplication != null && transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ItemOnObject>().item.maxStack == 1)
 //                    {
 //                        Destroy(transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().duplication);
 //                    }
 //                    transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().consumeIt();
 
-                }
-            }
+				}
+			}
         }
 
 		if (Input.GetKeyDown (KeyCode.Z) && selectedItem) 
