@@ -9,8 +9,7 @@ public class MonsterControl : MonoBehaviour {
     private List<GameObject> ground;
     [SerializeField]
     private List<GameObject> ladder;
-    [SerializeField]
-    private GameObject player;
+	private GameObject player;
 
     private Monster monster;
 
@@ -23,6 +22,7 @@ public class MonsterControl : MonoBehaviour {
     {
         this.monster = GetComponent<Monster>();
         this.attractions = new Queue<GameObject> ();
+		this.player = GameObject.Find ("Player");
 	}
 	
 	// Update is called once per frame

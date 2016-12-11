@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using System.Collections.Generic;
 
 public class Character : MonoBehaviour
 {
@@ -12,11 +14,7 @@ public class Character : MonoBehaviour
 	public bool grounded = true;
 
     [SerializeField]
-    private GameObject ground1;
-    [SerializeField]
-    private GameObject ground2;
-    [SerializeField]
-    private GameObject ground3;
+    private List<GameObject> ground;
 
     bool facingRight;
 
@@ -149,18 +147,15 @@ public class Character : MonoBehaviour
 			if (col.transform.position.y < transform.position.y) {
 				onGround = true;
 				climbing = false;
-                if (col.gameObject == ground1)
-                {
-                    GetComponent<AIInformation>().Floor = 1;
-                }
-                else if (col.gameObject == ground2)
-                {
-                    GetComponent<AIInformation>().Floor = 2;
-                }
-                else if (col.gameObject == ground3)
-                {
-                    GetComponent<AIInformation>().Floor = 3;
-                }
+				for (int i = 0; i < 3; i++)
+				{
+					Physics.IgnoreCollision(GetComponent<Collider>(), this.ground[i].GetComponent<Collider>(), false);
+					GetComponent<Rigidbody>().useGravity = true;
+					if (col.gameObject == ground[i])
+					{
+						GetComponent<AIInformation>().Floor = i + 1;
+					}
+				}
             }
         }
     }
