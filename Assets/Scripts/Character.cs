@@ -25,8 +25,9 @@ public class Character : MonoBehaviour
     bool onGround;
 
     Animator anim;
+    AudioSource audioSource;
 
-	public Transform ladder;
+    public Transform ladder;
 
     void Awake()
     {
@@ -39,7 +40,8 @@ public class Character : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-		playerLayer = LayerMask.NameToLayer("Player");
+        audioSource = GetComponentInChildren<AudioSource>();
+        playerLayer = LayerMask.NameToLayer("Player");
 		groundLayer = LayerMask.NameToLayer ("Ground");
 		//print (playerLayer.value);
         facingRight = true;
@@ -72,6 +74,17 @@ public class Character : MonoBehaviour
         {
             //change the character animation by moving speed
             anim.SetFloat("Speed", Mathf.Abs(movingSpeed));
+            if (Mathf.Abs(movingSpeed) > 0)
+            {
+                Debug.Log("Playyyy");
+                if(!audioSource.isPlaying)
+                    audioSource.PlayOneShot(audioSource.clip);
+            }
+            else
+            {
+                audioSource.Stop();
+            }
+                
             //move the character
             //only change its velocity on x axis
             transform.position += new Vector3(movingSpeed * maxSpeed, GetComponent<Rigidbody>().velocity.y * Time.deltaTime, 0);

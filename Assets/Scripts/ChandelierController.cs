@@ -28,6 +28,7 @@ public class ChandelierController : MonoBehaviour {
         if (enable && other.gameObject.tag == "Player")
         {
             hitting++;
+            animation.SetInteger("hit", hitting);
         }
     }
 
