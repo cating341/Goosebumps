@@ -18,6 +18,6 @@ public class PreviewGameController : MonoBehaviour {
     public void GameStart()
     {
         player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -3.92f);
-        Application.LoadLevel(1); 
+        Application.LoadLevel(2); 
     }
 }

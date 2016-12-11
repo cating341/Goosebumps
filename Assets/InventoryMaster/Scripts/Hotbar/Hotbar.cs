@@ -92,7 +92,7 @@ public class Hotbar : MonoBehaviour
 			}
         }
 
-		if (Input.GetKeyDown (KeyCode.Z) && selectedItem) 
+		if (Input.GetKeyDown (KeyCode.R) && selectedItem) 
 		{
 			float y = 0;
 			string tag = selectedItem.GetComponent<ItemOnObject> ().item.itemModel.tag;

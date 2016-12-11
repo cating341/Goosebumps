@@ -78,20 +78,22 @@ public class MySceneManager : MonoBehaviour {
         Debug.Log(scene.name + " " + scene.buildIndex );
         Debug.Log(mode);
 
-        sceneIndex = scene.buildIndex;
+        sceneIndex = scene.buildIndex -1;
 
-        if (scene.buildIndex == 1) {  // if not preview, mean game start!
+        if (scene.buildIndex == 2) {  // if not preview, mean game start!
             foreach (GameObject g in gearList)
             {
                 Destroy(g.GetComponent<PickUpItem>());
             }
             player.GetComponent<Character>().setFloor();
         }
-        else if (scene.buildIndex == 0) { // reload preview scene
+        else if (scene.buildIndex == 1) { // reload preview scene
             player = GameObject.Find("Player");
+            
             foreach(GameObject g in gearList){
-                gearList.Remove(g);
-            } 
+                Destroy(g);
+            }
+            gearList.Clear();
         }
     }
      
