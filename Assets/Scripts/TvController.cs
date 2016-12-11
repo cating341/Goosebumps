@@ -10,6 +10,7 @@ public class TvController : MonoBehaviour {
 	void Start () {
         audioSource = GetComponent<AudioSource>();
         animation = GetComponent<Animator>();
+        GetComponent<AIInformation>().Floor = 1;
 	}
 	
 	// Update is called once per frame
@@ -33,6 +34,7 @@ public class TvController : MonoBehaviour {
 
         if (other.gameObject.tag == "Player" && Input.GetKey("z"))
         {
+            GameObject.Find("monster").GetComponent<MonsterControl>().NewAttraction(gameObject);
             TrunOnTV();
         }
     }

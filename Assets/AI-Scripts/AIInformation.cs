@@ -3,7 +3,6 @@ using System.Collections;
 
 public class AIInformation : MonoBehaviour {
     
-    [SerializeField]
     private int floor;
     public int Floor
     {

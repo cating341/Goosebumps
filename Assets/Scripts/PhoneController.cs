@@ -11,6 +11,8 @@ public class PhoneController : MonoBehaviour {
 	void Start () {
         audioSource = GetComponent<AudioSource>();
         animation = GetComponent<Animator>();
+        if (gameObject.name == "Phone_red")
+            GetComponent<AIInformation>().Floor = 3;
 	}
 	
 	// Update is called once per frame

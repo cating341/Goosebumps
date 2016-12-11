@@ -18,19 +18,6 @@ public class Character : MonoBehaviour
     [SerializeField]
     private GameObject ground3;
 
-    private int floor;
-    public int Floor
-    {
-        get
-        {
-            return this.floor;
-        }
-        set
-        {
-            this.floor = value;
-        }
-    }
-
     bool facingRight;
 
 
@@ -133,19 +120,19 @@ public class Character : MonoBehaviour
 			if (col.transform.position.y < transform.position.y) {
 				onGround = true;
 				climbing = false;
-			}
-        }
-        if (col.gameObject == ground1)
-        {
-            this.Floor = 1;
-        }
-        else if (col.gameObject == ground2)
-        {
-            this.Floor = 2;
-        }
-        else if (col.gameObject == ground3)
-        {
-            this.Floor = 3;
+                if (col.gameObject == ground1)
+                {
+                    GetComponent<AIInformation>().Floor = 1;
+                }
+                else if (col.gameObject == ground2)
+                {
+                    GetComponent<AIInformation>().Floor = 2;
+                }
+                else if (col.gameObject == ground3)
+                {
+                    GetComponent<AIInformation>().Floor = 3;
+                }
+            }
         }
     }
 

@@ -6,18 +6,15 @@ using System.Collections.Generic;
 public class MonsterControl : MonoBehaviour {
 
     [SerializeField]
-    private GameObject ground1;
+    private List<GameObject> ground;
     [SerializeField]
-    private GameObject ground2;
-    [SerializeField]
-    private GameObject ground3;
+    private List<GameObject> ladder;
     [SerializeField]
     private GameObject player;
 
     private Monster monster;
-    private int upDown;
-    private string ladder1name = "LadderClimbable1";
-    private string ladder2name = "LadderClimbable2";
+
+    private int climbingLadder;
 
     private Queue<GameObject> attractions;
 
@@ -35,138 +32,147 @@ public class MonsterControl : MonoBehaviour {
 
     void FixedUpdate()
     {
-        monster.MoveHor(FindChasingTarget());
+        monster.MoveHor(ChaseTarget());
     }
 
-    private Vector3 FindChasingTarget()
+    private Vector3 ChaseTarget()
     {
-        CheckUpDown();
-        Vector3 target = new Vector3();
-        if (this.upDown != 0)
+        GameObject target = DetermineTarget();
+        Vector3 currentFloorTargetPosition = new Vector3();
+        int upDown = CheckUpDown(target);
+        if (upDown != 0)
         {
-            target = FindLadder();
+            this.climbingLadder = FindLadder(upDown);
+            if (this.climbingLadder >= 0)
+                currentFloorTargetPosition = this.ladder[this.climbingLadder].transform.position;
         }
         else
         {
-            target = this.player.transform.position;
+            this.climbingLadder = -1;
+            currentFloorTargetPosition = target.transform.position;
         }
-        return target;
+        return currentFloorTargetPosition;
     }
 
-    private Vector3 FindLadder()
+    private int FindLadder(int upDown)
     {
-        Vector3 ladderPosition = new Vector3();
-        int floor = this.monster.Floor;
-        if (this.upDown == 1)
+        if ((upDown == 1 && this.monster.Floor == 1) || (upDown == -1 && this.monster.Floor == 2))
         {
-            if (floor == 1)
-            {
-                ladderPosition = GameObject.Find(ladder1name).transform.position;
-            }
-            else if (floor == 2)
-            {
-                ladderPosition = GameObject.Find(ladder2name).transform.position;
-            }
+            return 0;
         }
-        else
+        else if((upDown == 1 && this.monster.Floor == 2) || (upDown == -1 && this.monster.Floor == 3))
         {
-            if (floor == 3)
-            {
-                ladderPosition = GameObject.Find(ladder2name).transform.position;
-            }
-            else if (floor == 2)
-            {
-                ladderPosition = GameObject.Find(ladder1name).transform.position;
-            }
+            return 1;
         }
-        return ladderPosition;
+        return -1;
     }
 
-    private void CheckUpDown()
+    private GameObject DetermineTarget()
     {
-        int targetFloor = new int();
         if (this.attractions.Count == 0)
         {
-            targetFloor = this.player.GetComponent<Character> ().Floor;
+            return this.player;
         }
         else
         {
-            targetFloor = this.attractions.Peek().GetComponent<AIInformation> ().Floor;
+            while( !CheckAvailable(this.attractions.Peek()))
+            {
+                this.attractions.Dequeue();
+                print(this.attractions.Count);
+            }
+            print("thissss " + this.attractions.Count);
+            return this.attractions.Count > 0 ? this.attractions.Peek() : this.player;
         }
-        int floor = this.monster.Floor;
-        if (floor > targetFloor)
+    }
+
+    private bool CheckAvailable(GameObject peek)
+    {
+        if (peek.tag == "Phone")
         {
-            this.upDown = -1;
+            if (!peek.GetComponent<Animator>().GetBool("ring"))
+            {
+                return false;
+            }
         }
-        else if (floor < targetFloor)
+        else if(peek.name == "TV")
         {
-            this.upDown = 1;
+            if (!peek.GetComponent<Animator>().GetBool("on"))
+            {
+                return false;
+            }
         }
-        else
+        else if(peek.name == "Alarm clock")
         {
-            this.upDown = 0;
+            if (!peek.GetComponent<Animator>().GetBool("ring"))
+            {
+                return false;
+            }
         }
+        return true;
+    }
+
+    private int CheckUpDown(GameObject target)
+    {
+        if (this.monster.Floor > target.GetComponent<AIInformation>().Floor)
+        {
+            return -1;
+        }
+        else if (this.monster.Floor < target.GetComponent<AIInformation>().Floor)
+        {
+            return 1;
+        }
+        return 0;
     }
     
     void OnTriggerStay(Collider col)
     {
-        if (col.gameObject.tag == "Ladder")
+        if (climbingLadder >= 0)
         {
-            if (this.upDown != 0)
+            if (col.gameObject == this.ladder[this.climbingLadder])
             {
-                GetComponent<Rigidbody>().useGravity = false;
-                Collider ground = new Collider();
-                if ((this.upDown == 1 && col.gameObject.name == ladder1name && this.monster.Floor != 2) 
-                    || (this.upDown == -1 && col.gameObject.name == ladder1name && this.monster.Floor != 1))
+                int upDown = CheckUpDown(DetermineTarget());
+                if ((upDown == 1 && this.monster.transform.position.y < this.ground[climbingLadder + 1].transform.position.y)
+                    || (upDown == -1))
                 {
-                    ground = ground2.GetComponent<Collider>();
-                    Physics.IgnoreCollision(GetComponent<Collider>(), ground);
-                    this.monster.Climb(this.upDown, col);
-                }
-                else if ((this.upDown == 1 && col.gameObject.name == ladder2name && this.monster.Floor != 3) 
-                    || (this.upDown == -1 && col.gameObject.name == ladder2name && this.monster.Floor != 2))
-                {
-                    ground = ground3.GetComponent<Collider>();
-                    Physics.IgnoreCollision(GetComponent<Collider>(), ground);
-                    this.monster.Climb(this.upDown, col);
+                    this.monster.Climb(upDown, col);
+                    Physics.IgnoreCollision(GetComponent<Collider>(), this.ground[climbingLadder + 1].GetComponent<Collider>());
+                    GetComponent<Rigidbody>().useGravity = false;
                 }
             }
         }
+        
     }
 
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "Ladder")
+        if (climbingLadder >= 0)
         {
-            Physics.IgnoreCollision(GetComponent<Collider>(), ground2.GetComponent<Collider>(), false);
-            Physics.IgnoreCollision(GetComponent<Collider>(), ground3.GetComponent<Collider>(), false);
-            GetComponent<Rigidbody>().useGravity = true;
+            if (col.gameObject == this.ladder[climbingLadder])
+            {
+                Physics.IgnoreCollision(GetComponent<Collider>(), this.ground[climbingLadder + 1].GetComponent<Collider>(), false);
+                GetComponent<Rigidbody>().useGravity = true;
+            }
+            
         }
-
     }
     
-
     void OnCollisionEnter(Collision col)
     {
-        print(col.gameObject.name);
         if (col.gameObject.tag == "Ground")
         {
             if (col.transform.position.y < transform.position.y)
             {
                 this.monster.OnGround = true;
-                this.monster.Climbing = false;
-            }
-            if (col.gameObject == ground1)
-            {
-                this.monster.Floor = 1;
-            }
-            else if (col.gameObject == ground2)
-            {
-                this.monster.Floor = 2;
-            }
-            else if (col.gameObject == ground3)
-            {
-                this.monster.Floor = 3;
+
+                for (int i = 0; i < 3; i++)
+                {
+                    Physics.IgnoreCollision(GetComponent<Collider>(), this.ground[i].GetComponent<Collider>(), false);
+                    GetComponent<Rigidbody>().useGravity = true;
+                    if (col.gameObject == ground[i])
+                    {
+                        this.monster.Floor = i + 1;
+                    }
+                }
             }
         }
     }
@@ -174,6 +180,10 @@ public class MonsterControl : MonoBehaviour {
     public void NewAttraction(GameObject obj)
     {
         this.attractions.Enqueue(obj);
-        print(attractions.Peek());
+    }
+
+    public void Froze()
+    {
+
     }
 }
