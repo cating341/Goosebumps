@@ -1556,6 +1556,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae6075767c06f54ca07df759d65a4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ground:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  ladder:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114000012719135504
 MonoBehaviour:
   m_ObjectHideFlags: 1

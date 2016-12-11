@@ -3,14 +3,17 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class WardrobeController : MonoBehaviour {
-    public Image playerImage;
+    
     private AudioSource audioSource;
     private Animator animation;
     private bool enable = true, hide = false;
 
+    GameObject player;
+
     void Start () {
         audioSource = GetComponent<AudioSource>();
         animation = GetComponentInChildren<Animator>();
+        player = GameObject.Find("Player");
     }
 
 	void Update () {
@@ -31,7 +34,9 @@ public class WardrobeController : MonoBehaviour {
                 else
                 {
                     PlaySoundEffect();
-                    playerImage.GetComponent<SpriteRenderer>().enabled = true;
+                    //player.GetComponent<SpriteRenderer>().enabled = true;
+                    player.transform.position -= new Vector3(0, 0, 2.0f);
+                    player.GetComponent<Character>().EnablePlayerMove();
                     Invoke("ReEnable", 3.0f);
                 }
             }
@@ -47,7 +52,8 @@ public class WardrobeController : MonoBehaviour {
     {
         enable = true;
         hide = true;
-        playerImage.GetComponent<SpriteRenderer>().enabled = false;
+        player.transform.position += new Vector3(0, 0, 2.0f);
+        player.GetComponent<Character>().DisablePlayerMove();
     }
 
     void ReEnable()

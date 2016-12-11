@@ -26,6 +26,11 @@ public class MySceneManager : MonoBehaviour {
         gearList.Add(g);
     }
 
+    public void removeFromGearList(GameObject g)
+    {
+        gearList.Remove(g);
+    }
+
     void OnEnable()
     {
         //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
@@ -44,7 +49,10 @@ public class MySceneManager : MonoBehaviour {
         Debug.Log(scene.name + " " + scene.buildIndex );
         Debug.Log(mode);
         if (scene.buildIndex != 0) {  // if not preview, mean game start!
-
+            foreach (GameObject g in gearList)
+            {
+                g.GetComponent<PickUpItem>().enabled = false;
+            } 
         }
         else if (scene.buildIndex == 0) { // reload preview scene
             foreach(GameObject g in gearList){
