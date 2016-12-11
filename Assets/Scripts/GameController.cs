@@ -37,6 +37,7 @@ public class GameController : MonoBehaviour {
 
     public void GameRestart()
     {
+        GameObject.Find("SceneManager").GetComponent<MySceneManager>().removeAllFromSceceList();
         Application.LoadLevel(0);
     }
 

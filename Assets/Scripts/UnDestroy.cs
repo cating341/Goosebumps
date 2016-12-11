@@ -7,13 +7,14 @@ public class UnDestroy : MonoBehaviour {
     void Awake()
     {
 
-        if (ins == null)
-        {
-            ins = this;
-            GameObject.DontDestroyOnLoad(gameObject); 
-        }
-        else if (ins != this)
-            Destroy(gameObject);
+        //if (ins == null)
+        //{
+        //    ins = this;
+        //    GameObject.DontDestroyOnLoad(gameObject); 
+        //}
+        //else if (ins != this)
+        //    Destroy(gameObject);
+        GameObject.Find("SceneManager").GetComponent<MySceneManager>().addToSceneList(this.gameObject);
         
     }
 

@@ -7,11 +7,23 @@ public class MySceneManager : MonoBehaviour {
      
     GameObject gameController;
     List<GameObject> gearList = new List<GameObject>();
+    List<GameObject> sceneList = new List<GameObject>();
     GameObject player;
+
+    bool flag = false;
+    public static MySceneManager ins;
+    void Awake() {
+        if (ins == null)
+        {
+            ins = this;
+            GameObject.DontDestroyOnLoad(gameObject);
+        }
+        else if (ins != this)
+            Destroy(gameObject);
+    }
 
 	// Use this for initialization
 	void Start () {
-        GameObject.DontDestroyOnLoad(gameObject);
         gameController = GameObject.Find("GameHandle");
         player = GameObject.Find("Player");
 	}
@@ -30,6 +42,20 @@ public class MySceneManager : MonoBehaviour {
     public void removeFromGearList(GameObject g)
     {
         gearList.Remove(g);
+    }
+
+    public void addToSceneList(GameObject g)
+    {
+        GameObject.DontDestroyOnLoad(g);
+        sceneList.Add(g);
+    }
+
+    public void removeAllFromSceceList( )
+    {
+        foreach (GameObject g in sceneList)
+        {
+            Destroy(g);
+        }
     }
 
     void OnEnable()
@@ -58,6 +84,12 @@ public class MySceneManager : MonoBehaviour {
             player.GetComponent<Character>().setFloor();
         }
         else if (scene.buildIndex == 0) { // reload preview scene
+            if (flag)
+            {
+                flag = false;
+                player.GetComponent<Character>().setFloor();
+                
+            }
             foreach(GameObject g in gearList){
                 Destroy(g);
             } 
