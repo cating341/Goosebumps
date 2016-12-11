@@ -68,7 +68,7 @@ public class Character : MonoBehaviour
     public void Move(float movingSpeed, bool jump, float upSpeed)
     {
         //left / right moving actived only when the character is on the ground or air control is premitted
-        if (onGround || airControl)
+        if (grounded || airControl)
         {
             //change the character animation by moving speed
             anim.SetFloat("Speed", Mathf.Abs(movingSpeed));
@@ -86,7 +86,7 @@ public class Character : MonoBehaviour
         }
 
         //let character jump when it's on the ground and player hits jump button
-        if (onGround && jump)
+        if (grounded && jump)
         {
             anim.SetBool("onGround", false);
 
@@ -94,6 +94,22 @@ public class Character : MonoBehaviour
             GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
         }
        
+    }
+
+    public void Jump()
+    {
+        anim.SetBool("onGround", false);
+        GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
+    }
+
+    public void DisablePlayerMove()
+    {
+        GetComponent<CharacterControl>().enableMove = false;
+    }
+
+    public void EnablePlayerMove()
+    {
+        GetComponent<CharacterControl>().enableMove = true;
     }
 		
 

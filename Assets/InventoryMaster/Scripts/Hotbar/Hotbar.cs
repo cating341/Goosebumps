@@ -19,6 +19,8 @@ public class Hotbar : MonoBehaviour
 	private ItemDataBaseList itemDataBase;
 	Transform selectedItem;
 
+    GameObject sceneManager;
+
 //	public delegate void ItemDelegate();
 //	public static event ItemDelegate updateInventoryList;
 
@@ -65,6 +67,7 @@ public class Hotbar : MonoBehaviour
 			itemDataBase = (ItemDataBaseList)Resources.Load("ItemDatabase");
 		}
 		_player = GameObject.FindGameObjectWithTag("Player");
+        sceneManager = GameObject.Find("SceneManager");
 	}
 
 
@@ -129,5 +132,8 @@ public class Hotbar : MonoBehaviour
 			Destroy (selectedItem.gameObject);
 		}
 		inv.OnUpdateItemList();
+
+        // SceneManager
+        sceneManager.GetComponent<MySceneManager>().addToGearList(dropItem);
 	}
 }
