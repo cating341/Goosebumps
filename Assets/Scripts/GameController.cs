@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour {
             currentTimer += Time.deltaTime;
             if (timer > 1.0f)
             {
-                timerText.GetComponent<Text>().text = ((int)currentTimer).ToString();
+                timerText.GetComponent<Text>().text = ((int)currentTimer).ToString() + " sec";
                 timer = 0;
             }
         

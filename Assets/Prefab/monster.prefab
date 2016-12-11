@@ -1340,7 +1340,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012870984950}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 8.95, y: 4.34, z: -3.98}
+  m_LocalPosition: {x: 8.95, y: 4.34, z: -3.594}
   m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children:
@@ -1526,8 +1526,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.5, z: 0.2}
-  m_Center: {x: 0, y: 0.27, z: 0}
+  m_Size: {x: 0.3, y: 0.5, z: 0.41074875}
+  m_Center: {x: 0, y: 0.27000004, z: -0.023202633}
 --- !u!95 &95000013890714674
 Animator:
   serializedVersion: 3
@@ -1556,13 +1556,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae6075767c06f54ca07df759d65a4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ground:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ladder:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &114000012719135504
 MonoBehaviour:
   m_ObjectHideFlags: 1
