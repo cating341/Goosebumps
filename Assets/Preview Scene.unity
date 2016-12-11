@@ -452,11 +452,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114000010315261816, guid: a414e06a6c53a418389e50c687ae3186,
-        type: 2}
-      propertyPath: ground.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4000013949618068, guid: a414e06a6c53a418389e50c687ae3186, type: 2}
       propertyPath: m_LocalPosition.x
       value: -7.5
@@ -509,11 +504,6 @@ Prefab:
       propertyPath: ground.Array.data[2]
       value: 
       objectReference: {fileID: 1309370367}
-    - target: {fileID: 54000010428570734, guid: a414e06a6c53a418389e50c687ae3186,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a414e06a6c53a418389e50c687ae3186, type: 2}
   m_IsPrefabParent: 0
@@ -522,7 +512,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000012285829334, guid: a414e06a6c53a418389e50c687ae3186,
     type: 2}
   m_PrefabInternal: {fileID: 496509560}
---- !u!114 &496509571
+--- !u!114 &496509562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -530,7 +520,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 496509561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
+  m_Script: {fileID: 11500000, guid: f4f2b6b802878d34db7c1b35f37328d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &500639729
@@ -1766,6 +1756,10 @@ Prefab:
       propertyPath: ladder.Array.data[1]
       value: 
       objectReference: {fileID: 1075141614}
+    - target: {fileID: 1000012870984950, guid: bd6fb601bbc314e18bdfd8aa47bba41e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd6fb601bbc314e18bdfd8aa47bba41e, type: 2}
   m_IsPrefabParent: 0
@@ -2904,11 +2898,6 @@ Prefab:
     - target: {fileID: 4000011941219676, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
       propertyPath: m_RootOrder
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000011313354328, guid: fb4f55dcc6f08be46bd810e586448482,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}

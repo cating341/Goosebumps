@@ -35,6 +35,7 @@ public class Character : MonoBehaviour
     void Awake()
     {
         //get references
+        setFloor();
         groundCheck = transform.Find("GroundCheck");
         anim = transform.Find("Canvas/Image").GetComponent<Animator>();
         
@@ -157,6 +158,15 @@ public class Character : MonoBehaviour
 				}
             }
         }
+        else if (col.gameObject.tag == "Monster")
+        {
+            anim.SetBool("dead", true);
+            Invoke("OpenCanvas", 0.5f);
+        }
+    }
+
+    void OpenCanvas() {
+        GameObject.Find("GameHandle").GetComponent<GameController>().GameOver();
     }
 
     public void setFloor() {
