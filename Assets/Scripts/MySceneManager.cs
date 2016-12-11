@@ -85,10 +85,10 @@ public class MySceneManager : MonoBehaviour {
             {
                 Destroy(g.GetComponent<PickUpItem>());
             }
-
             player.GetComponent<Character>().setFloor();
         }
         else if (scene.buildIndex == 0) { // reload preview scene
+            player = GameObject.Find("Player");
             foreach(GameObject g in gearList){
                 gearList.Remove(g);
             } 

@@ -122,6 +122,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014037370174}
+  - 114: {fileID: 114000010521850286}
   m_Layer: 0
   m_Name: Inventories
   m_TagString: Untagged
@@ -290,12 +291,9 @@ GameObject:
   - 224: {fileID: 224000012491989554}
   - 222: {fileID: 222000011584301614}
   - 114: {fileID: 114000013267245956}
-  - 114: {fileID: 114000011116261232}
   - 114: {fileID: 114000012690371908}
   - 114: {fileID: 114000011201887508}
   - 114: {fileID: 114000012273542380}
-  - 212: {fileID: 212000010912692722}
-  - 114: {fileID: 114000013957281482}
   m_Layer: 0
   m_Name: Panel - Hotbar(Clone)
   m_TagString: Hotbar
@@ -587,6 +585,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114000010521850286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011470096190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f2b6b802878d34db7c1b35f37328d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010782361176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -662,17 +671,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
---- !u!114 &114000011116261232
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013323640558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000011126654798
 MonoBehaviour:
   m_ObjectHideFlags: 1
