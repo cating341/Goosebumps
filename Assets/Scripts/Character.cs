@@ -164,7 +164,6 @@ public class Character : MonoBehaviour
         }
         else if (col.gameObject.tag == "Monster")
         {
-            print("oh nooooooooooooooooooo");
             anim.SetBool("dead", true);
             Invoke("OpenCanvas", 0.5f);
         }

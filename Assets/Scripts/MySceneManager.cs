@@ -90,7 +90,7 @@ public class MySceneManager : MonoBehaviour {
         }
         else if (scene.buildIndex == 0) { // reload preview scene
             foreach(GameObject g in gearList){
-                Destroy(g);
+                gearList.Remove(g);
             } 
         }
     }
