@@ -13,7 +13,6 @@ public class Character : MonoBehaviour
 	public bool climbing = false;
 	public bool grounded = true;
 
-    [SerializeField]
     private List<GameObject> ground;
 
     bool facingRight;
@@ -51,6 +50,10 @@ public class Character : MonoBehaviour
         facingRight = true;
         groundRadius = 0.1f;
         onGround = false;
+		this.ground = new List<GameObject> ();
+		this.ground.Add (GameObject.Find ("Floor"));
+		this.ground.Add (GameObject.Find ("Floor (1)"));
+		this.ground.Add (GameObject.Find ("Floor (2)"));
     }
 
     void FixedUpdate()

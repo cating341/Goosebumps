@@ -7,10 +7,12 @@ public class RefrigeratorController : MonoBehaviour {
     int health ;
     Animator animation;
 	private GameObject hittingThis;
+	private bool attacking;
 	// Use this for initialization
 	void Start () {
         health = maxHealth;
         animation = GetComponent<Animator>();
+		this.attacking = false;
 	}
 	
 	// Update is called once per frame
@@ -35,8 +37,9 @@ public class RefrigeratorController : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other.gameObject);
-        if (other.gameObject.tag == "Monster")
+		if (other.gameObject.tag == "Monster" && !this.attacking)
         {
+			this.attacking = true;
 			this.hittingThis = other.gameObject;
 			other.gameObject.GetComponent<Monster> ().Disabled = true;
 			other.gameObject.GetComponent<Animator> ().SetBool ("attack", true);
@@ -45,7 +48,6 @@ public class RefrigeratorController : MonoBehaviour {
     }
 
 	private void Damage(){
-		print ("hi");
 		TakeDamage ();
 		Invoke ("Damage", 2f);
 	}

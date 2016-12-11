@@ -5,9 +5,7 @@ using System.Collections.Generic;
 
 public class MonsterControl : MonoBehaviour {
 
-    [SerializeField]
     private List<GameObject> ground;
-    [SerializeField]
     private List<GameObject> ladder;
 
 	private GameObject player;
@@ -17,13 +15,25 @@ public class MonsterControl : MonoBehaviour {
     private int climbingLadder;
 
     private Queue<GameObject> attractions;
+	private String ground1name = "Floor";
+	private String ground2name = "Floor (1)";
+	private String ground3name = "Floor (2)";
+	private String ladder1name = "LadderClimbable1";
+	private String ladder2name = "LadderClimbable2";
 
     // Use this for initialization
     void Start()
     {
+		this.ground = new List<GameObject> ();
+		this.ladder = new List<GameObject> ();
         this.monster = GetComponent<Monster>();
         this.attractions = new Queue<GameObject> ();
 		this.player = GameObject.Find ("Player");
+		this.ground.Add (GameObject.Find (ground1name));
+		this.ground.Add (GameObject.Find (ground2name));
+		this.ground.Add (GameObject.Find (ground3name));
+		this.ladder.Add (GameObject.Find (ladder1name));
+		this.ladder.Add (GameObject.Find (ladder2name));
 	}
 	
 	// Update is called once per frame

@@ -3,10 +3,12 @@ using System.Collections;
 
 public class Monster : MonoBehaviour {
 
-    private float maxSpeed = 0;
+
+    private float maxSpeed = 0.05f;
 
     private int upDown;
     private float climbSpeed = 0.1f;
+	private bool dead;
 
     private int floor;
     public int Floor
@@ -51,11 +53,22 @@ public class Monster : MonoBehaviour {
         this.upDown = 0;
         this.anim = GetComponent<Animator>();
         this.OnGround = false;
+		this.dead = false;
     }
 
 	void Update() {
-		
+		print (GetComponent<Animator> ().GetBool ("dead"));
+		if (GetComponent<Animator> ().GetBool ("dead") && !this.dead) {
+			this.dead = true;
+			print ("hey");
+			Invoke ("DestroyMe", 4.0f);
+		}
 	}	
+
+	private void DestroyMe() {
+		print ("hi");
+		Destroy (gameObject);
+	}
 
     public void MoveHor(Vector3 target)
     {
