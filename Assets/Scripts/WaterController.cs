@@ -41,10 +41,11 @@ public class WaterController : MonoBehaviour {
         }
 		else if(other.gameObject.tag == "Monster")
         {
-			if (tempController.GetTemp () < ICE_TEMP)
-				other.gameObject.GetComponent<Monster> ().Disabled = true;
+			if (tempController.GetTemp () < ICE_TEMP) {
+				other.gameObject.GetComponent<Monster> ().NewDisability ("water", true);
+			}
 			else {
-				other.gameObject.GetComponent<Monster> ().Disabled = false;
+				other.gameObject.GetComponent<Monster> ().NewDisability ("water", false);
 			}
         }
     }

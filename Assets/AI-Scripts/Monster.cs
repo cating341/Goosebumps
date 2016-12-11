@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Monster : MonoBehaviour {
 
@@ -9,6 +10,8 @@ public class Monster : MonoBehaviour {
     private int upDown;
     private float climbSpeed = 0.1f;
 	private bool dead;
+
+	private Dictionary<string, bool> disabledList;
 
     private int floor;
     public int Floor
@@ -36,17 +39,6 @@ public class Monster : MonoBehaviour {
         }
     }
 
-	private bool disabled;
-	public bool Disabled 
-	{
-		get {
-			return this.disabled;
-		}
-		set {
-			this.disabled = value;
-		}
-	}
-
     Animator anim;
     void Start ()
     {
@@ -62,6 +54,7 @@ public class Monster : MonoBehaviour {
         {
             this.maxSpeed = 0.05f;
         }
+		this.disabledList = new Dictionary<string, bool> ();
     }
 
 	void Update() {
@@ -73,8 +66,18 @@ public class Monster : MonoBehaviour {
 		}
 	}	
 
+	public bool CheckDisability() {
+		bool disabled = false;
+		foreach (KeyValuePair<string, bool> item in this.disabledList) {
+			if (item.Value) {
+				disabled = true;
+				break;
+			}
+		}
+		return disabled;
+	}
+
 	private void DestroyMe() {
-		print ("hi");
 		Destroy (gameObject);
 	}
 
@@ -82,8 +85,8 @@ public class Monster : MonoBehaviour {
     {
         float xDifference = target.x - transform.position.x;
         float way = Mathf.Abs(xDifference) < 0.5 ? 0 : xDifference / Mathf.Abs(xDifference);
-        //this.Climbing = Mathf.Abs(xDifference) < 0.5 ? true : false;
-		if (this.OnGround && !this.Disabled)
+
+		if (this.OnGround && !CheckDisability())
         {
             this.anim.SetFloat("speed", Mathf.Abs(way));
 			MonsterMovement (way);
@@ -93,7 +96,7 @@ public class Monster : MonoBehaviour {
 
     public void Climb(int upDown, Collider ladder)
     {
-		if (!this.Disabled)
+		if (!CheckDisability())
         {
             transform.position = new Vector3(ladder.transform.position.x, transform.position.y + climbSpeed * upDown, transform.position.z);
         }
@@ -112,5 +115,9 @@ public class Monster : MonoBehaviour {
 
 	private void MonsterMovement(float way) {
 		transform.position += new Vector3(way * maxSpeed, GetComponent<Rigidbody>().velocity.y * Time.deltaTime, 0);
+	}
+
+	public void NewDisability(string key, bool value) {
+		this.disabledList[key] = value;
 	}
 }
