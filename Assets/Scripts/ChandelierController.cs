@@ -42,6 +42,7 @@ public class ChandelierController : MonoBehaviour {
             numCanvas.SetActive(true);
             hitting--;
             numText.GetComponent<Text>().text = hitting.ToString();
+            animation.SetInteger("hit", hitting);
         }
     }
 
