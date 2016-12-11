@@ -246,7 +246,6 @@ GameObject:
   - 82: {fileID: 82000013402943738}
   - 114: {fileID: 114000012846524294}
   - 114: {fileID: 114000013886476186}
-  - 114: {fileID: 114000010325906838}
   m_Layer: 0
   m_Name: Alarm clock
   m_TagString: Untagged
@@ -406,17 +405,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114000010325906838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013768751258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000010648542600
 MonoBehaviour:
   m_ObjectHideFlags: 1

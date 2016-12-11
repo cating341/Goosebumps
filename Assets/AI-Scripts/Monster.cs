@@ -4,7 +4,7 @@ using System.Collections;
 public class Monster : MonoBehaviour {
 
 
-    private float maxSpeed = 0.05f;
+    private float maxSpeed;
 
     private int upDown;
     private float climbSpeed = 0.1f;
@@ -54,6 +54,14 @@ public class Monster : MonoBehaviour {
         this.anim = GetComponent<Animator>();
         this.OnGround = false;
 		this.dead = false;
+        if (GameObject.Find("SceneManager").GetComponent<MySceneManager>().sceneIndex == 0)
+        {
+            this.maxSpeed = 0;
+        }
+        else
+        {
+            this.maxSpeed = 0.05f;
+        }
     }
 
 	void Update() {

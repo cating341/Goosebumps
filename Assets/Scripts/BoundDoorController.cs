@@ -14,11 +14,11 @@ public class BoundDoorController : MonoBehaviour
 	
 	}
 
-    void OnTriggerEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Monster")
-        {
-            Destroy(gameObject);
-        } 
-    }
+    //void OnTriggerEnter(Collision collision)
+    //{
+    //    //if (collision.gameObject.tag == "Monster")
+    //    //{
+    //    //    Destroy(gameObject);
+    //    //} 
+    //}
 }

@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class MySceneManager : MonoBehaviour {
-     
+
+    public int sceneIndex;
+
     GameObject gameController;
     List<GameObject> gearList = new List<GameObject>();
     List<GameObject> sceneList = new List<GameObject>();
@@ -75,7 +77,10 @@ public class MySceneManager : MonoBehaviour {
         Debug.Log("Level Loaded");
         Debug.Log(scene.name + " " + scene.buildIndex );
         Debug.Log(mode);
-        if (scene.buildIndex != 0) {  // if not preview, mean game start!
+
+        sceneIndex = scene.buildIndex;
+
+        if (scene.buildIndex == 1) {  // if not preview, mean game start!
             foreach (GameObject g in gearList)
             {
                 Destroy(g.GetComponent<PickUpItem>());
@@ -84,12 +89,6 @@ public class MySceneManager : MonoBehaviour {
             player.GetComponent<Character>().setFloor();
         }
         else if (scene.buildIndex == 0) { // reload preview scene
-            if (flag)
-            {
-                flag = false;
-                player.GetComponent<Character>().setFloor();
-                
-            }
             foreach(GameObject g in gearList){
                 Destroy(g);
             } 
