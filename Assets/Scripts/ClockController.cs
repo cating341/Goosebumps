@@ -17,7 +17,7 @@ public class ClockController : MonoBehaviour {
         ClockCanvas.SetActive(false);
         animation = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-
+        GetComponent<AIInformation>().Floor = 3;
 	}
 	
 	// Update is called once per frame
@@ -63,7 +63,8 @@ public class ClockController : MonoBehaviour {
 
     void ClockRing() {
         animation.SetBool("ring", true);
-        audioSource.Play(); 
+        audioSource.Play();
+        GameObject.Find("monster").GetComponent<MonsterControl>().NewAttraction(gameObject);
         Invoke("StopAnimation", 5.0f);
     }
 
