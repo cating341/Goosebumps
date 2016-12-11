@@ -8,6 +8,8 @@ public class ChandelierController : MonoBehaviour {
     public Text numText;
 
     private Animator animation;
+	private GameObject hitMonster;
+
     int hitting = 5;
     bool enable = true; 
 	// Use this for initialization
@@ -44,7 +46,20 @@ public class ChandelierController : MonoBehaviour {
             numText.GetComponent<Text>().text = hitting.ToString();
             animation.SetInteger("hit", hitting);
         }
+		else if (!enable && other.gameObject.tag == "Monster"){
+			this.hitMonster = other.gameObject;
+			this.hitMonster.GetComponent<Monster> ().Disabled = true;
+			this.hitMonster.GetComponent<Animator> ().SetBool ("faint", true);
+			Invoke ("WakeUp", 5f);
+		}
     }
+
+	void WakeUp(){
+		this.hitMonster.GetComponent<Monster> ().Disabled = false;
+		this.hitMonster.GetComponent<Animator> ().SetBool ("faint", false);
+		Destroy (gameObject);
+
+	}
 
     void OnTriggerExit(Collider other)
     {
