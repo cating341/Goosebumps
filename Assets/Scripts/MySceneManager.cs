@@ -12,7 +12,8 @@ public class MySceneManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         GameObject.DontDestroyOnLoad(gameObject);
-        gameController = GameObject.Find("GameHandle"); 
+        gameController = GameObject.Find("GameHandle");
+        player = GameObject.Find("Player");
 	}
 	
 	// Update is called once per frame
@@ -52,7 +53,9 @@ public class MySceneManager : MonoBehaviour {
             foreach (GameObject g in gearList)
             {
                 g.GetComponent<PickUpItem>().enabled = false;
-            } 
+            }
+
+            player.GetComponent<Character>().setFloor();
         }
         else if (scene.buildIndex == 0) { // reload preview scene
             foreach(GameObject g in gearList){

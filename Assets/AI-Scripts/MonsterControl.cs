@@ -75,12 +75,16 @@ public class MonsterControl : MonoBehaviour {
         }
         else
         {
-            while( !CheckAvailable(this.attractions.Peek()))
+
+            while (this.attractions.Count > 0)
             {
-                this.attractions.Dequeue();
-                print(this.attractions.Count);
+                if (!CheckAvailable(this.attractions.Peek())){
+                    this.attractions.Dequeue();
+                }
+                else {
+                    break;
+                }
             }
-            print("thissss " + this.attractions.Count);
             return this.attractions.Count > 0 ? this.attractions.Peek() : this.player;
         }
     }
