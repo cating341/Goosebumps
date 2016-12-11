@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class TempController : MonoBehaviour {
 
     public RectTransform tempBar;
+    public Image tempBackground;
+    public Sprite[] tempBackgroundSprite;
 
-    public float maxTemp = 73.0f;
+    public float maxTemp = 88.0f;
     public float speed = 2;
     private const float minTemp = 2.0f;
     private float middleTemp ;
@@ -17,9 +20,10 @@ public class TempController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         currentState = 2;
+        tempBackground.sprite = tempBackgroundSprite[1];
         middleTemp = (maxTemp + minTemp) / 2;
         currentTemp = middleTemp;
-        tempBar.sizeDelta = new Vector2(currentTemp * (120 / middleTemp / 2), tempBar.sizeDelta.y);
+        tempBar.sizeDelta = new Vector2(currentTemp, tempBar.sizeDelta.y);
 	}
 	
 	// Update is called once per frame
@@ -35,7 +39,7 @@ public class TempController : MonoBehaviour {
                 currentTemp = (currentTemp < middleTemp) ? currentTemp + speed : currentTemp;
             }
             timer = 0;
-            tempBar.sizeDelta = new Vector2(currentTemp * (120 / middleTemp / 2), tempBar.sizeDelta.y);
+            tempBar.sizeDelta = new Vector2(currentTemp, tempBar.sizeDelta.y);
         }
         
 
@@ -43,12 +47,14 @@ public class TempController : MonoBehaviour {
 	}
 
     public void IncreaseTemp() {
-        currentState = (currentState == 3) ? 3 : currentState + 1; 
+        currentState = (currentState == 3) ? 3 : currentState + 1;
+        tempBackground.sprite = tempBackgroundSprite[currentState-1];
     }
 
     public void DecreaseTemp()
     {
         currentState = (currentState == 1) ? 1 : currentState - 1;
+        tempBackground.sprite = tempBackgroundSprite[currentState - 1];
     }
      
     public float GetTemp()
