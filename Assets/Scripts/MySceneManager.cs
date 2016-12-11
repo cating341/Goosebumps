@@ -52,7 +52,7 @@ public class MySceneManager : MonoBehaviour {
         if (scene.buildIndex != 0) {  // if not preview, mean game start!
             foreach (GameObject g in gearList)
             {
-                g.GetComponent<PickUpItem>().enabled = false;
+                Destroy(g.GetComponent<PickUpItem>());
             }
 
             player.GetComponent<Character>().setFloor();

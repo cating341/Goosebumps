@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Monster : MonoBehaviour {
 
-    private float maxSpeed = 0.05f;
+    private float maxSpeed = 0;
 
     private int upDown;
     private float climbSpeed = 0.1f;

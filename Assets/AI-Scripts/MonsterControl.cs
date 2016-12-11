@@ -138,7 +138,7 @@ public class MonsterControl : MonoBehaviour {
     {
         if (climbingLadder >= 0)
         {
-            if (col.gameObject == this.ladder[this.climbingLadder])
+            if (col.gameObject == this.ladder[this.climbingLadder] && col.GetComponent<Ladder>().NormalLadder.activeSelf)
             {
                 int upDown = CheckUpDown(DetermineTarget());
                 if ((upDown == 1 && this.monster.transform.position.y < this.ground[climbingLadder + 1].transform.position.y)

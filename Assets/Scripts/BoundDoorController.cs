@@ -14,9 +14,9 @@ public class BoundDoorController : MonoBehaviour
 	
 	}
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Monster")
         {
             Destroy(gameObject);
         } 
