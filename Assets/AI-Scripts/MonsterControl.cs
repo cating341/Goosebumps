@@ -38,7 +38,7 @@ public class MonsterControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (this.monster.Disabled || this.attractions.Count > 0 || GameObject.Find("SceneManager").GetComponent<MySceneManager>().sceneIndex == 0) {
+		if (this.monster.CheckDisability() || this.attractions.Count > 0 || GameObject.Find("SceneManager").GetComponent<MySceneManager>().sceneIndex == 0) {
 			Physics.IgnoreCollision (GameObject.Find ("Player").GetComponent<Collider> (), GetComponent<Collider> ());
 		} else {
 			Physics.IgnoreCollision (GameObject.Find ("Player").GetComponent<Collider> (), GetComponent<Collider> (), false);

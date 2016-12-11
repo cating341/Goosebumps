@@ -41,8 +41,8 @@ public class RefrigeratorController : MonoBehaviour {
         {
 			this.attacking = true;
 			this.hittingThis = other.gameObject;
-			other.gameObject.GetComponent<Monster> ().Disabled = true;
-			other.gameObject.GetComponent<Animator> ().SetBool ("attack", true);
+			this.hittingThis.GetComponent<Monster> ().NewDisability ("refrig", true);
+			this.hittingThis.GetComponent<Animator> ().SetBool ("attack", true);
 			Damage ();
         }
     }
@@ -56,7 +56,7 @@ public class RefrigeratorController : MonoBehaviour {
         if (this.hittingThis)
         {
             this.hittingThis.GetComponent<Animator>().SetBool("attack", false);
-            this.hittingThis.GetComponent<Monster>().Disabled = false;
+			this.hittingThis.GetComponent<Monster> ().NewDisability ("refrig", false);
         }
 	}
 }
