@@ -39,6 +39,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempBar: {fileID: 0}
+  tempBackground: {fileID: 0}
+  tempBackgroundSprite:
+  - {fileID: 21300002, guid: 748fc172c3f260643a4dc3afc9dc730e, type: 3}
+  - {fileID: 21300004, guid: 748fc172c3f260643a4dc3afc9dc730e, type: 3}
+  - {fileID: 21300008, guid: 748fc172c3f260643a4dc3afc9dc730e, type: 3}
+  maxTemp: 88
+  speed: 4
 --- !u!224 &224000010331895566
 RectTransform:
   m_ObjectHideFlags: 1

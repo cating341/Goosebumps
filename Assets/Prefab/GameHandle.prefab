@@ -53,5 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 0}
   totalTimerText: {fileID: 0}
-  mainCanvas: {fileID: 0}
   gameoverCanvas: {fileID: 0}

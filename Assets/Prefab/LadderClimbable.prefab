@@ -256,7 +256,7 @@ MonoBehaviour:
   Temp: {fileID: 0}
   NormalLadder: {fileID: 1000011291479528}
   IceLadder: {fileID: 1000013308757086}
-  ICE_TEMP: 13
+  ICE_TEMP: 16
 --- !u!212 &212000011070018600
 SpriteRenderer:
   m_ObjectHideFlags: 1

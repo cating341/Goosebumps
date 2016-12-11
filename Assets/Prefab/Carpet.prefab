@@ -214,7 +214,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Temp: {fileID: 0}
-  HEAT_TEMP: 40
+  HEAT_TEMP: 75
   fireEffect: {fileID: 8300000, guid: b421470cd558efa48b54c60debd59321, type: 3}
 --- !u!114 &114000013080869952
 MonoBehaviour:
