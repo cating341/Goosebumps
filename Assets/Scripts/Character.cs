@@ -159,4 +159,10 @@ public class Character : MonoBehaviour
         }
     }
 
+    public void setFloor() {
+        ground[0] = GameObject.Find("Floor");
+        ground[1] = GameObject.Find("Floor (1)");
+        ground[2] = GameObject.Find("Floor (2)");
+    }
+
 }

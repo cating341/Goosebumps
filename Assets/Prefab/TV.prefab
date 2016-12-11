@@ -44,6 +44,7 @@ GameObject:
   - 95: {fileID: 95000013773847782}
   - 114: {fileID: 114000013428548864}
   - 82: {fileID: 82000011509869470}
+  - 114: {fileID: 114000011503029398}
   m_Layer: 0
   m_Name: TV
   m_TagString: Untagged
@@ -76,7 +77,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011475091264}
   m_LocalRotation: {x: -0, y: -0, z: 0.0000000055879354, w: 1}
-  m_LocalPosition: {x: -6.74, y: -3.49, z: -0.4678528}
+  m_LocalPosition: {x: -6.19, y: -3.49, z: -0.34}
   m_LocalScale: {x: 0.9155641, y: 0.9155633, z: 0.9155633}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -140,11 +141,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 1ff20c325c21a5846b89812b7e9695b6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.282
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -193,7 +194,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -222,6 +223,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000011503029398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011475091264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012631757452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,7 +309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501809c6b0222d3418f2b4ca1935f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TVsound: {fileID: 0}
 --- !u!114 &114000014179720146
 MonoBehaviour:
   m_ObjectHideFlags: 1

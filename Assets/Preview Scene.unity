@@ -701,22 +701,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010487733986, guid: 177c92bf5b901db44b075854bd3edb5b,
     type: 2}
   m_PrefabInternal: {fileID: 267533013}
---- !u!1 &330611150 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000011475091264, guid: 65d8933a5e6956b409f0221b8623f685,
-    type: 2}
-  m_PrefabInternal: {fileID: 838869054}
---- !u!114 &330611157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 330611150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &338053952
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,22 +895,6 @@ Light:
   m_BounceIntensity: 2.39
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &452583163 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000011828495314, guid: e008379690c52274eb2165ae3e2e1fd8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1282095156}
---- !u!114 &452583169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 452583163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &482422848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,36 +1910,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013428548864, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: TVsound
-      value: 
-      objectReference: {fileID: 8300000, guid: a08194a6dc917d64086474afcd16f6e5, type: 3}
-    - target: {fileID: 82000011509869470, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.282
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000011509869470, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000011509869470, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000011509869470, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 1ff20c325c21a5846b89812b7e9695b6, type: 3}
-    - target: {fileID: 82000011509869470, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65d8933a5e6956b409f0221b8623f685, type: 2}
   m_IsPrefabParent: 0
@@ -2176,7 +2114,7 @@ MonoBehaviour:
   lineColor0: {r: 1, g: 0, b: 0, a: 1}
   lineColor1: {r: 1, g: 0.93103445, b: 0, a: 1}
   lineColor2: {r: 0, g: 0, b: 1, a: 1}
-  flipY: 0
+  flipY: 1
   additiveRendering: 1
   alphaCutoff: 0.5
 --- !u!81 &908830998
@@ -5274,19 +5212,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2084762442}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2124606057 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000010798956440, guid: 76b9208c314d04443875456c9632c2c7,
-    type: 2}
-  m_PrefabInternal: {fileID: 742035513}
---- !u!114 &2124606063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2124606057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

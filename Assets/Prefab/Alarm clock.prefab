@@ -245,7 +245,8 @@ GameObject:
   - 95: {fileID: 95000011502368536}
   - 82: {fileID: 82000013402943738}
   - 114: {fileID: 114000012846524294}
-  - 114: {fileID: 114000010325906838}
+  - 114: {fileID: 114000013886476186}
+
   m_Layer: 0
   m_Name: Alarm clock
   m_TagString: Untagged
@@ -763,6 +764,17 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114000013886476186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013768751258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013958207904
 MonoBehaviour:
   m_ObjectHideFlags: 1
