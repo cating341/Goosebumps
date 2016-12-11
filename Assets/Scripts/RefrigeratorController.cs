@@ -51,7 +51,10 @@ public class RefrigeratorController : MonoBehaviour {
 	}
 
 	void OnDestroy() {
-		this.hittingThis.GetComponent<Animator> ().SetBool ("attack", false);
-		this.hittingThis.GetComponent<Monster> ().Disabled = false;
+        if (this.hittingThis)
+        {
+            this.hittingThis.GetComponent<Animator>().SetBool("attack", false);
+            this.hittingThis.GetComponent<Monster>().Disabled = false;
+        }
 	}
 }
