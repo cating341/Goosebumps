@@ -48,9 +48,9 @@ public class CarpetController : MonoBehaviour {
     void OnTriggerStay(Collider other)
     {
        
-        if (other.gameObject.tag == "Player" && anim.GetBool("fire"))
+        if (other.gameObject.tag == "Monster" && anim.GetBool("fire"))
         {
-            Debug.Log("Onfire!! hurt!!");
+            
         }
     }
 }

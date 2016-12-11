@@ -9,6 +9,7 @@ public class MonsterControl : MonoBehaviour {
     private List<GameObject> ground;
     [SerializeField]
     private List<GameObject> ladder;
+
 	private GameObject player;
 
     private Monster monster;
@@ -27,7 +28,11 @@ public class MonsterControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (this.monster.Disabled || this.attractions.Count > 0) {
+			Physics.IgnoreCollision (GameObject.Find ("Player").GetComponent<Collider> (), GetComponent<Collider> ());
+		} else {
+			Physics.IgnoreCollision (GameObject.Find ("Player").GetComponent<Collider> (), GetComponent<Collider> (), false);
+		}
 	}
 
     void FixedUpdate()
@@ -84,6 +89,7 @@ public class MonsterControl : MonoBehaviour {
                 else {
                     break;
                 }
+
             }
             return this.attractions.Count > 0 ? this.attractions.Peek() : this.player;
         }
@@ -156,7 +162,6 @@ public class MonsterControl : MonoBehaviour {
                 Physics.IgnoreCollision(GetComponent<Collider>(), this.ground[climbingLadder + 1].GetComponent<Collider>(), false);
                 GetComponent<Rigidbody>().useGravity = true;
             }
-            
         }
     }
     

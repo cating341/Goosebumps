@@ -79,7 +79,6 @@ public class Character : MonoBehaviour
             anim.SetFloat("Speed", Mathf.Abs(movingSpeed));
             if (Mathf.Abs(movingSpeed) > 0)
             {
-                Debug.Log("Playyyy");
                 if(!audioSource.isPlaying)
                     audioSource.PlayOneShot(audioSource.clip);
             }

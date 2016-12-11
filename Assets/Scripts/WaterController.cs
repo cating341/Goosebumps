@@ -39,9 +39,13 @@ public class WaterController : MonoBehaviour {
         {
             Debug.Log("ICEEEE!! hurt!!");
         }
-        else if(other.gameObject.tag == "Monster" && tempController.GetTemp() < ICE_TEMP)
+		else if(other.gameObject.tag == "Monster")
         {
-            other.gameObject.GetComponent<Monster>().Disabled = true;
+			if (tempController.GetTemp () < ICE_TEMP)
+				other.gameObject.GetComponent<Monster> ().Disabled = true;
+			else {
+				other.gameObject.GetComponent<Monster> ().Disabled = false;
+			}
         }
     }
 }
