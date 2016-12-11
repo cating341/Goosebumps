@@ -13,11 +13,13 @@ public class CarpetController : MonoBehaviour {
     int heatCount = 0;
     float timer;
     AudioSource audioSource;
+
+	private GameObject killedMonster;
 	// Use this for initialization
 	void Start () {
         tempController = Temp.GetComponent<TempController>();
         anim = GetComponentInChildren<Animator>();
-        audioSource = GetComponent<AudioSource>(); 
+        audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -47,10 +49,11 @@ public class CarpetController : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-       
-        if (other.gameObject.tag == "Monster" && anim.GetBool("fire"))
+		if (other.gameObject.tag == "Monster" && anim.GetBool("fire") && !this.killedMonster)
         {
-            
+			this.killedMonster = other.gameObject;
+			this.killedMonster.GetComponent<Monster> ().Disabled = true;
+			this.killedMonster.GetComponent<Animator> ().SetBool ("dead", true);
         }
     }
 }
