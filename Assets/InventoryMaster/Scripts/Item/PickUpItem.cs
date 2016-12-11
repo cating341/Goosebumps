@@ -5,11 +5,14 @@ public class PickUpItem : MonoBehaviour
     public Item item;
     private Inventory _inventory;
     private GameObject _player;
+
+    GameObject sceneManager;
     // Use this for initialization
 
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
+        sceneManager = GameObject.Find("SceneManager");
         if (_player != null)
             _inventory = _player.GetComponent<PlayerInventory>().inventory.GetComponent<Inventory>();
     }
@@ -23,6 +26,7 @@ public class PickUpItem : MonoBehaviour
 			float distance = Mathf.Abs(this.gameObject.transform.position.x - _player.transform.position.x);
             if (distance <= 0.5)
             {
+                sceneManager.GetComponent<MySceneManager>().removeFromGearList(this.gameObject);
                 bool check = _inventory.checkIfItemAllreadyExist(item.itemID, item.itemValue);
                 if (check)
                     Destroy(this.gameObject);

@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections; 
-public class PlayerUnDestroy : MonoBehaviour {
+public class UnDestroy : MonoBehaviour {
 
-    public static PlayerUnDestroy ins;
+    UnDestroy ins;
 
     void Awake()
     {

@@ -34,9 +34,9 @@ public class RefrigeratorController : MonoBehaviour {
     //void OnTriggerEnter(Collider other)
     //{
     //    //Debug.Log(other.gameObject);
-    //    if (other.gameObject.tag == "Player" )
+    //    if (other.gameObject.tag == "Player")
     //    {
-    //        TakeDamage();   
+    //        TakeDamage();
     //    }
     //}
 }
