@@ -64,7 +64,6 @@ public class Ladder : MonoBehaviour {
         //print(col.gameObject.name + " exit");
         if (col.gameObject.tag == "Player" && NormalLadder.active) 
 		{
-			print ("exit");
 			col.GetComponent<Character> ().climbing = false;
 			col.gameObject.GetComponent<Rigidbody> ().useGravity = true;
 		}

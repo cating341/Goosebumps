@@ -37,12 +37,12 @@ public class RefrigeratorController : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other.gameObject);
-		if (other.gameObject.tag == "Monster" && !this.attacking)
+		if (other.gameObject.tag == "Monster" && !attacking)
         {
-			this.attacking = true;
-			this.hittingThis = other.gameObject;
-			this.hittingThis.GetComponent<Monster> ().NewDisability ("refrig", true);
-			this.hittingThis.GetComponent<Animator> ().SetBool ("attack", true);
+			attacking = true;
+			hittingThis = other.gameObject;
+			hittingThis.GetComponent<BasicProperties> ().NewDisability ("refrig", true);
+			hittingThis.GetComponent<Animator> ().SetBool ("attack", true);
 			Damage ();
         }
     }
@@ -55,8 +55,8 @@ public class RefrigeratorController : MonoBehaviour {
 	void OnDestroy() {
         if (this.hittingThis)
         {
-            this.hittingThis.GetComponent<Animator>().SetBool("attack", false);
-			this.hittingThis.GetComponent<Monster> ().NewDisability ("refrig", false);
+            hittingThis.GetComponent<Animator>().SetBool("attack", false);
+			hittingThis.GetComponent<BasicProperties> ().NewDisability ("refrig", false);
         }
 	}
 }

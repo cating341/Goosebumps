@@ -58,10 +58,8 @@ public class Monster : MonoBehaviour {
     }
 
 	void Update() {
-		print (GetComponent<Animator> ().GetBool ("dead"));
 		if (GetComponent<Animator> ().GetBool ("dead") && !this.dead) {
 			this.dead = true;
-			print ("hey");
 			Invoke ("DestroyMe", 4.0f);
 		}
 	}	
@@ -118,6 +116,7 @@ public class Monster : MonoBehaviour {
 	}
 
 	public void NewDisability(string key, bool value) {
-		this.disabledList[key] = value;
+		print (key);
+		disabledList[key] = value;
 	}
 }
