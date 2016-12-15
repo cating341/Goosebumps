@@ -42,10 +42,10 @@ public class WaterController : MonoBehaviour {
 		else if(other.gameObject.tag == "Monster")
         {
 			if (tempController.GetTemp () < ICE_TEMP) {
-				other.gameObject.GetComponent<Monster> ().NewDisability ("water", true);
+				other.gameObject.GetComponent<BasicProperties> ().NewDisability ("water", true);
 			}
 			else {
-				other.gameObject.GetComponent<Monster> ().NewDisability ("water", false);
+				other.gameObject.GetComponent<BasicProperties> ().NewDisability ("water", false);
 			}
         }
     }

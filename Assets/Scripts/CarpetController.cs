@@ -52,7 +52,7 @@ public class CarpetController : MonoBehaviour {
 		if (other.gameObject.tag == "Monster" && anim.GetBool("fire") && !this.killedMonster)
         {
 			this.killedMonster = other.gameObject;
-			this.killedMonster.GetComponent<Monster> ().NewDisability ("carpet", true);
+			this.killedMonster.GetComponent<BasicProperties> ().NewDisability ("carpet", true);
 			this.killedMonster.GetComponent<Animator> ().SetBool ("dead", true);
         }
     }
