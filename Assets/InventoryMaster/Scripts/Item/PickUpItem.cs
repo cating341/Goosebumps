@@ -22,9 +22,11 @@ public class PickUpItem : MonoBehaviour
     {
         if (_inventory != null && Input.GetKeyDown(KeyCode.E))
         {
+			float distance = Vector2.Distance (new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y), new Vector2(_player.transform.position.x, _player.transform.position.y));
 //            float distance = Vector3.Distance(this.gameObject.transform.position, _player.transform.position);
-			float distance = Mathf.Abs(this.gameObject.transform.position.x - _player.transform.position.x);
-            if (distance <= 0.5)
+//			float distance = Mathf.Abs(this.gameObject.transform.position.x - _player.transform.position.x);
+			print("distance: " + distance);
+            if (distance <= 1.3)
             {
                 sceneManager.GetComponent<MySceneManager>().removeFromGearList(this.gameObject);
                 bool check = _inventory.checkIfItemAllreadyExist(item.itemID, item.itemValue);
