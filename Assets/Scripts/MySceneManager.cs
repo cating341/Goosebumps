@@ -5,14 +5,17 @@ using System.Collections.Generic;
 
 public class MySceneManager : MonoBehaviour {
 
-    public int sceneIndex;
+    public string currentSceneName;
 
-    GameObject gameController;
     List<GameObject> gearList = new List<GameObject>();
     List<GameObject> sceneList = new List<GameObject>();
     GameObject player;
 
-    bool flag = false;
+	public  string GAMESCENE1 = "GameScene-chap1";
+	public  string GAMESCENE2 = "GameScene-chap2";
+	public  string PREVIEW1 = "PreviewScene-chap1";
+	public  string PREVIEW2 = "PreviewScene-chap2";
+
     public static MySceneManager ins;
     void Awake() {
         if (ins == null)
@@ -26,7 +29,7 @@ public class MySceneManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gameController = GameObject.Find("GameHandle");
+        //gameController = GameObject.Find("GameHandle");
         player = GameObject.Find("Player");
 	}
 	
@@ -78,16 +81,16 @@ public class MySceneManager : MonoBehaviour {
         Debug.Log(scene.name + " " + scene.buildIndex );
         Debug.Log(mode);
 
-        sceneIndex = scene.buildIndex -1;
+		currentSceneName = scene.name;
 
-        if (scene.buildIndex == 2) {  // if not preview, mean game start!
+		if (currentSceneName == GAMESCENE1 || currentSceneName == GAMESCENE2) {  // if not preview, mean game start!
             foreach (GameObject g in gearList)
             {
                 Destroy(g.GetComponent<PickUpItem>());
             }
             player.GetComponent<Character>().setFloor();
         }
-        else if (scene.buildIndex == 1) { // reload preview scene
+		else if (currentSceneName == PREVIEW1 || currentSceneName == PREVIEW2) { // reload preview scene
             player = GameObject.Find("Player");
             
             foreach(GameObject g in gearList){
@@ -96,5 +99,19 @@ public class MySceneManager : MonoBehaviour {
             gearList.Clear();
         }
     }
+
+	public bool GameSceneIsPreview(){
+		if (currentSceneName == PREVIEW1 || currentSceneName == PREVIEW2) { // reload preview scene
+			return true;
+		}else 
+			return false;
+	}
+
+	public bool GameSceneIsGame(){
+		if (currentSceneName == GAMESCENE1 || currentSceneName == GAMESCENE2) { // reload preview scene
+			return true;
+		}else 
+			return false;
+	}
      
 }

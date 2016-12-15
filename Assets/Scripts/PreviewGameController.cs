@@ -18,6 +18,10 @@ public class PreviewGameController : MonoBehaviour {
     public void GameStart()
     {
         player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -3.92f);
-        Application.LoadLevel(2); 
+		player.GetComponent<Character>().EnablePlayerMove();
+		if(GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW1 )
+			Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE1);
+		else if(GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW2 )
+			Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE2);
     }
 }

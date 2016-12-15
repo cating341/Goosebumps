@@ -139,7 +139,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294964991
+    m_Bits: 4294960895
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -995,38 +995,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013428548864, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: TVsound
-      value: 
-      objectReference: {fileID: 8300000, guid: a08194a6dc917d64086474afcd16f6e5, type: 3}
-    - target: {fileID: 82000011509869470, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.282
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000011509869470, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000011509869470, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000011509869470, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 1ff20c325c21a5846b89812b7e9695b6, type: 3}
-    - target: {fileID: 82000011509869470, guid: 65d8933a5e6956b409f0221b8623f685,
-        type: 2}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114000011503029398, guid: 65d8933a5e6956b409f0221b8623f685, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65d8933a5e6956b409f0221b8623f685, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &838869055 stripped
@@ -1034,22 +1003,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010316505198, guid: 65d8933a5e6956b409f0221b8623f685,
     type: 2}
   m_PrefabInternal: {fileID: 838869054}
---- !u!1 &838869056 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000011475091264, guid: 65d8933a5e6956b409f0221b8623f685,
-    type: 2}
-  m_PrefabInternal: {fileID: 838869054}
---- !u!114 &838869057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 838869056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &908830994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,6 +1784,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -2.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4000012611937322, guid: 0d4beb33cfc1fd44496a5959742cfc5c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 7.98
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d4beb33cfc1fd44496a5959742cfc5c, type: 2}
   m_IsPrefabParent: 0
@@ -2293,7 +2250,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53bfec4b8cf843d4e98b5c9e3860c9a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 0
+  currentSceneName: 
+  GAMESCENE1: GameScene-chap1
+  GAMESCENE2: GameScene-chap2
+  PREVIEW1: PreviewScene-chap1
+  PREVIEW2: PreviewScene-chap2
 --- !u!1 &1775995321
 GameObject:
   m_ObjectHideFlags: 0

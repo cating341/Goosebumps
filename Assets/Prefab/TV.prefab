@@ -44,7 +44,7 @@ GameObject:
   - 95: {fileID: 95000013773847782}
   - 114: {fileID: 114000013428548864}
   - 82: {fileID: 82000011509869470}
-  - 114: {fileID: 114000011503029398}
+  - 114: {fileID: 114000011910895386}
   m_Layer: 0
   m_Name: TV
   m_TagString: Untagged
@@ -130,8 +130,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6764109, y: 2.2104402, z: 2.331922}
-  m_Center: {x: 0.14560127, y: -0.108346224, z: -1.012192}
+  m_Size: {x: 1.6764109, y: 2.2104402, z: 2.6617541}
+  m_Center: {x: 0.14559832, y: -0.10834732, z: -1.1771083}
 --- !u!82 &82000011509869470
 AudioSource:
   m_ObjectHideFlags: 1
@@ -223,7 +223,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000011503029398
+--- !u!114 &114000011910895386
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

@@ -4435,18 +4435,6 @@ Prefab:
       propertyPath: m_Name
       value: Background
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013712485614, guid: 0d4beb33cfc1fd44496a5959742cfc5c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 63.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013712485614, guid: 0d4beb33cfc1fd44496a5959742cfc5c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -149.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013712485614, guid: 0d4beb33cfc1fd44496a5959742cfc5c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -2.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d4beb33cfc1fd44496a5959742cfc5c, type: 2}
   m_IsPrefabParent: 0
@@ -5128,6 +5116,16 @@ Prefab:
       propertyPath: ladder.Array.data[1]
       value: 
       objectReference: {fileID: 751700492}
+    - target: {fileID: 65000012337340428, guid: bd6fb601bbc314e18bdfd8aa47bba41e,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 0.29716712
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000012337340428, guid: bd6fb601bbc314e18bdfd8aa47bba41e,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 0.03358815
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd6fb601bbc314e18bdfd8aa47bba41e, type: 2}
   m_IsPrefabParent: 0

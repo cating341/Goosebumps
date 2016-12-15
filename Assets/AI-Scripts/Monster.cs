@@ -46,7 +46,7 @@ public class Monster : MonoBehaviour {
         this.anim = GetComponent<Animator>();
         this.OnGround = false;
 		this.dead = false;
-        if (GameObject.Find("SceneManager").GetComponent<MySceneManager>().sceneIndex == 0)
+		if (GameObject.Find("SceneManager").GetComponent<MySceneManager>().GameSceneIsPreview())
         {
             this.maxSpeed = 0;
         }

@@ -12,6 +12,7 @@ public class ChandelierController : MonoBehaviour {
 
     int hitting = 5;
     bool enable = true; 
+	bool jumpflag = false;
 	// Use this for initialization
 	void Start () {
         animation = GetComponent<Animator>();
@@ -34,17 +35,21 @@ public class ChandelierController : MonoBehaviour {
         if (enable && other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Z))
         {
             other.gameObject.GetComponent<Character>().Jump();
+			jumpflag = true;
         }
     }
 
     void OnTriggerEnter(Collider other)
     { 
-        if (enable && other.gameObject.tag == "Player")
+		if (enable && other.gameObject.tag == "Player")
         {
             numCanvas.SetActive(true);
-            hitting--;
-            numText.GetComponent<Text>().text = hitting.ToString();
-            animation.SetInteger("hit", hitting);
+			if (jumpflag) {
+				hitting--;
+				numText.GetComponent<Text> ().text = hitting.ToString ();
+				animation.SetInteger ("hit", hitting);
+				jumpflag = false;
+			}
         }
 		else if (!enable && other.gameObject.tag == "Monster"){
 			this.hitMonster = other.gameObject;
