@@ -58,7 +58,6 @@ public class Monster : MonoBehaviour {
     }
 
 	void Update() {
-		print (GetComponent<Animator> ().GetBool ("dead"));
 		if (GetComponent<Animator> ().GetBool ("dead") && !this.dead) {
 			this.dead = true;
 			print ("hey");

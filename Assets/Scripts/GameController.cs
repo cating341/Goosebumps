@@ -16,8 +16,8 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         gameoverCanvas.SetActive(false);
-		Instantiate (this.monster);
-		this.monster.transform.position = new Vector3 (5.95f, 4.34f, -3.594f);
+//		Instantiate (this.monster);
+//		this.monster.transform.position = new Vector3 (5.95f, 4.34f, -3.594f);
 	}
 	
 	// Update is called once per frame
