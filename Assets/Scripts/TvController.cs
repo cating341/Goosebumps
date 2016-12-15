@@ -34,7 +34,11 @@ public class TvController : MonoBehaviour {
 
         if (other.gameObject.tag == "Player" && Input.GetKey("z"))
         {
-            GameObject.Find("monster").GetComponent<MonsterControl>().NewAttraction(gameObject);
+
+			GameObject[] monsters = GameObject.FindGameObjectsWithTag ("Monster");
+			foreach (GameObject monster in monsters) {
+				monster.GetComponent<BasicProperties> ().NewAttraction (gameObject);
+			}	
             TrunOnTV();
         }
     }

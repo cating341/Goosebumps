@@ -44,7 +44,10 @@ public class PhoneController : MonoBehaviour {
             audioSource.Play();
             enable = false;
             animation.SetBool("ring", true);
-            GameObject.Find("monster").GetComponent<MonsterControl>().NewAttraction(gameObject);
+			GameObject[] monsters = GameObject.FindGameObjectsWithTag ("Monster");
+			foreach (GameObject monster in monsters) {
+				monster.GetComponent<BasicProperties> ().NewAttraction (gameObject);
+			}
             Invoke("ReEnable", 5.0f);
         } 
     }

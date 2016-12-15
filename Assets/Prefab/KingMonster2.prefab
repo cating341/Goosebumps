@@ -1149,13 +1149,16 @@ GameObject:
   - 95: {fileID: 95000010061323310}
   - 54: {fileID: 54000013814658176}
   - 65: {fileID: 65000010920784108}
-  m_Layer: 0
-  m_Name: KingMonster
-  m_TagString: Untagged
+  - 195: {fileID: 195000011589656702}
+  - 114: {fileID: 114000014272083828}
+  - 114: {fileID: 114000012378565964}
+  m_Layer: 12
+  m_Name: KingMonster2
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000013864813468
 GameObject:
   m_ObjectHideFlags: 1
@@ -1861,7 +1864,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013864685208}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -4.8973126, y: -0.05, z: -3.46}
+  m_LocalPosition: {x: -4.8973126, y: 4.48, z: -3.46}
   m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children:
@@ -2448,6 +2451,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000012378565964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013864685208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbb12ec0edeb42c2893fc6afb875b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000014272083828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013864685208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b83a3ede30d745caaaf571728a96106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137000010772340590
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2596,3 +2621,23 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.68995976, y: 0.499477, z: -0.016286612}
     m_Extent: {x: 0.4754627, y: 0.4534501, z: 0.38383365}
   m_DirtyAABB: 0
+--- !u!195 &195000011589656702
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013864685208}
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
