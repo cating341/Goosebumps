@@ -67,6 +67,7 @@ public class Character : MonoBehaviour
 	void Update() 
 	{
 		grounded = Physics.CheckSphere (groundCheck.position, groundRadius, 1 << groundLayer.value);
+        print("grounded: " + grounded);
 		if (ladder && transform.position.y < ladder.position.y && grounded)
 			Physics.IgnoreLayerCollision (playerLayer.value, groundLayer.value, false);
 		else
@@ -91,9 +92,10 @@ public class Character : MonoBehaviour
             {
                 audioSource.Stop();
             }
-                
+
             //move the character
             //only change its velocity on x axis
+            //transform.GetComponent<Rigidbody>().velocity = new Vector3(movingSpeed * maxSpeed, GetComponent<Rigidbody>().velocity.y, 0);
             transform.position += new Vector3(movingSpeed * maxSpeed, GetComponent<Rigidbody>().velocity.y * Time.deltaTime, 0);
             // GetComponent<Rigidbody>().velocity = new Vector2(movingSpeed * maxSpeed, GetComponent<Rigidbody>().velocity.y);
 
@@ -108,10 +110,7 @@ public class Character : MonoBehaviour
         //let character jump when it's on the ground and player hits jump button
         if (grounded && jump)
         {
-            anim.SetBool("onGround", false);
-
-            //make character jump by adding force
-            GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
+            Jump();
         }
        
     }
@@ -153,7 +152,7 @@ public class Character : MonoBehaviour
 				climbing = false;
 				for (int i = 0; i < 3; i++)
 				{
-					Physics.IgnoreCollision(GetComponent<Collider>(), this.ground[i].GetComponent<Collider>(), false);
+					//Physics.IgnoreCollision(GetComponent<Collider>(), this.ground[i].GetComponent<Collider>(), false);
 					GetComponent<Rigidbody>().useGravity = true;
 					if (col.gameObject == ground[i])
 					{
