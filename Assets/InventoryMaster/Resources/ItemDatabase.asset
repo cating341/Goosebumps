@@ -75,7 +75,7 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: Banana peel
+  - itemName: BananaPeel
     itemID: 5
     itemDesc: 
     itemIcon: {fileID: 21300000, guid: d0437c567c7b72e44aa4547cf8b31bd5, type: 3}
@@ -113,20 +113,8 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: New Item
-    itemID: 8
-    itemDesc: 
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
-    itemValue: 1
-    itemType: 0
-    itemWeight: 0
-    maxStack: 1
-    indexItemInList: 999
-    rarity: 0
-    itemAttributes: []
   - itemName: Phone Blue
-    itemID: 9
+    itemID: 8
     itemDesc: 
     itemIcon: {fileID: 21300002, guid: 48a57dfe8c1f5fa4a96d75ef130f1884, type: 3}
     itemModel: {fileID: 1000010798956440, guid: 76b9208c314d04443875456c9632c2c7,
@@ -139,7 +127,7 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   - itemName: Phone Red
-    itemID: 10
+    itemID: 9
     itemDesc: 
     itemIcon: {fileID: 21300000, guid: 48a57dfe8c1f5fa4a96d75ef130f1884, type: 3}
     itemModel: {fileID: 1000011828495314, guid: e008379690c52274eb2165ae3e2e1fd8,
@@ -151,20 +139,8 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: New Item
-    itemID: 11
-    itemDesc: 
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
-    itemValue: 1
-    itemType: 0
-    itemWeight: 0
-    maxStack: 1
-    indexItemInList: 999
-    rarity: 0
-    itemAttributes: []
   - itemName: BoundDoor
-    itemID: 12
+    itemID: 10
     itemDesc: 
     itemIcon: {fileID: 21300000, guid: e4acd0262e9d9304a80de2808387fff9, type: 3}
     itemModel: {fileID: 1000013597605284, guid: fb4f55dcc6f08be46bd810e586448482,
@@ -176,8 +152,21 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
+  - itemName: bloomStone
+    itemID: 11
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: 2afbc2242cd43d944b1f8845ef4dcc9f, type: 3}
+    itemModel: {fileID: 1000011757875774, guid: 1343ac001fd356a47a4ec2489dca8727,
+      type: 2}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 10
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
   - itemName: New Item
-    itemID: 13
+    itemID: 12
     itemDesc: 
     itemIcon: {fileID: 0}
     itemModel: {fileID: 0}

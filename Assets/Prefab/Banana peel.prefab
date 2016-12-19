@@ -39,9 +39,10 @@ GameObject:
   - 4: {fileID: 4000013907684376}
   - 33: {fileID: 33000010376315230}
   - 65: {fileID: 65000012259358084}
+  - 114: {fileID: 114000011097726318}
   m_Layer: 0
   m_Name: Banana peel
-  m_TagString: Untagged
+  m_TagString: BananaPeel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011736186784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.81, y: -1.7, z: -2.86}
+  m_LocalPosition: {x: -0.86, y: -0.86, z: -2.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -95,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1080681, y: 0.6402402, z: 1}
-  m_Center: {x: -0.038025856, y: 0.08928037, z: 0}
+  m_Size: {x: 1.1080681, y: 0.6402402, z: 2.6331396}
+  m_Center: {x: -0.038025856, y: 0.08928037, z: 0.2746204}
 --- !u!114 &114000010232083962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,6 +114,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114000011097726318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011736186784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b188d271b3a7d14aa5d8fd7c4bcbda6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013265646868
 MonoBehaviour:
   m_ObjectHideFlags: 1
