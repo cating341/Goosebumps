@@ -19,7 +19,7 @@ TagManager:
   - Panel
   - Item
   - ItemIcon
-  - boundwall
+  - BoundDoor
   - Refrigerator
   layers:
   - Default
