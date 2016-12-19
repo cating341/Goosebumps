@@ -106,6 +106,9 @@ public class Hotbar : MonoBehaviour
             case "Refrigerator":
                 y = 0.37f;
                 break;
+            case "BoundDoor":
+                y = 0.8f;
+                break;
 			default:
 				break;
 			}
