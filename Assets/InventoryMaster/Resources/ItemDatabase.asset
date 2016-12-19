@@ -33,7 +33,7 @@ MonoBehaviour:
     itemValue: 1
     itemType: 0
     itemWeight: 0
-    maxStack: 1
+    maxStack: 10
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
