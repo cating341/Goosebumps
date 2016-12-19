@@ -109,6 +109,9 @@ public class Hotbar : MonoBehaviour
             case "BoundDoor":
                 y = 0.8f;
                 break;
+            case "BananaPeel":
+                y = -0.7f;
+                break;
 			default:
 				break;
 			}

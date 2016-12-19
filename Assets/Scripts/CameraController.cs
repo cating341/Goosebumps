@@ -5,7 +5,7 @@ public class CameraController : MonoBehaviour {
     public GameObject player;
 
 	private float[] gamescene1 = {-4.58f, 3.53f, -0.32f, 3.3f};
-	private float[] gamescene2 = {-7.17f, 5.49f, -0.32f, 4.66f};
+	private float[] gamescene2 = {-7.17f, 5.49f, -0.32f, 6.0f};
 
 	float[] thisGameScece;
 	// Use this for initialization
@@ -34,9 +34,9 @@ public class CameraController : MonoBehaviour {
 	}
 
 	public void undateCameraParameters(string i){
-		if (i == GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().PREVIEW1)
+        if (i == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW1 || i == GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE1)
 			thisGameScece = gamescene1;
-		else if (i == GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().PREVIEW2)
+        else if (i == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW2 || i == GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE2)
 			thisGameScece = gamescene2;
 		else 
 			thisGameScece = gamescene1;
