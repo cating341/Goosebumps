@@ -88,11 +88,12 @@ public class MySceneManager : MonoBehaviour {
             {
                 Destroy(g.GetComponent<PickUpItem>());
             }
+
             player.GetComponent<Character>().setFloor();
         }
 		else if (currentSceneName == PREVIEW1 || currentSceneName == PREVIEW2) { // reload preview scene
             player = GameObject.Find("Player");
-            
+			Camera.main.GetComponent<CameraController> ().undateCameraParameters (currentSceneName);
             foreach(GameObject g in gearList){
                 Destroy(g);
             }
