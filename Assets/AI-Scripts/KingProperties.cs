@@ -20,10 +20,7 @@ public class KingProperties : MonoBehaviour {
 	}
 
 	private Vector3 GetTargetPosition() {
-		if (basicProperties.GetAttractionPeek ()) {
-			return basicProperties.GetAttractionPeek ().transform.position;
-		}
-		return player.transform.position;
+		return basicProperties.GetAttractionPeek () ? basicProperties.GetAttractionPeek ().transform.position : player.transform.position;
 	}
 
 	private int CheckUpDown() {

@@ -34,7 +34,7 @@ public class BasicProperties : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		CheckClimb ();
+//		CheckClimb ();
 	}
 
 	public void NavigateMonster(Vector3 tar) {
