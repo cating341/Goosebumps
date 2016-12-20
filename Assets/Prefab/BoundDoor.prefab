@@ -26,7 +26,7 @@ GameObject:
   - 114: {fileID: 114000011594970192}
   m_Layer: 11
   m_Name: BoundDoor
-  m_TagString: boundwall
+  m_TagString: BoundDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

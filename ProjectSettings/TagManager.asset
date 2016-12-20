@@ -21,7 +21,6 @@ TagManager:
   - ItemIcon
   - BoundDoor
   - Refrigerator
-  - boundwall
   - bloomStone
   - BananaPeel
   layers:
