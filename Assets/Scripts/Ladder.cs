@@ -9,29 +9,24 @@ public class Ladder : MonoBehaviour {
     public float ICE_TEMP = 13.0f;
 
     private TempController tempController;
-    private float pre_temp;
 	// Use this for initialization
 	void Start () {
-        Temp = GameObject.Find("TempHandle");
-        tempController = Temp.GetComponent<TempController>();
-        pre_temp = tempController.GetTemp();
+       
         IceLadder.SetActive(false);
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (pre_temp != tempController.GetTemp())
+	void Update () { 
+
+        if (GameObject.Find("TempHandle").GetComponent<TempController>().GetTemp() < ICE_TEMP)
         {
-            pre_temp = tempController.GetTemp();
-            if (tempController.GetTemp() < ICE_TEMP)
-            {
-                IceLadder.SetActive(true); NormalLadder.SetActive(false);
-            }
-            else
-            {
-                NormalLadder.SetActive(true); IceLadder.SetActive(false);
-            }
+            IceLadder.SetActive(true); NormalLadder.SetActive(false);
         }
+        else
+        {
+            NormalLadder.SetActive(true); IceLadder.SetActive(false);
+        }
+        
 	}
     
 	void OnTriggerStay(Collider col) 

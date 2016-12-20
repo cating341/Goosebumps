@@ -84,12 +84,20 @@ public class MySceneManager : MonoBehaviour {
 		currentSceneName = scene.name;
 
 		if (currentSceneName == GAMESCENE1 || currentSceneName == GAMESCENE2) {  // if not preview, mean game start!
+            GameObject.Find("GameHandle").GetComponent<GameController>().DisableLadders(); 
+            int laddercount = 0;
             foreach (GameObject g in gearList)
             {
-                Destroy(g.GetComponent<PickUpItem>());
+                if(g.tag == "Ladder"){
+                    GameObject.Find("GameHandle").GetComponent<GameController>().SetTheLadders(laddercount, g);
+                    laddercount++;
+                    g.SetActive(false);
+                }
+                else Destroy(g.GetComponent<PickUpItem>());
             }
+            
             Camera.main.GetComponent<CameraController>().undateCameraParameters(currentSceneName);
-            player.GetComponent<Character>().setFloor();
+           // player.GetComponent<Character>().setFloor();
         }
 		else if (currentSceneName == PREVIEW1 || currentSceneName == PREVIEW2) { // reload preview scene
             player = GameObject.Find("Player");
@@ -100,6 +108,7 @@ public class MySceneManager : MonoBehaviour {
             gearList.Clear();
         }
     }
+    
 
 	public bool GameSceneIsPreview(){
 		if (currentSceneName == PREVIEW1 || currentSceneName == PREVIEW2) { // reload preview scene
