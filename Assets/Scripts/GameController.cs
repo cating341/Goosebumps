@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour {
     public GameObject timerText;
     public GameObject totalTimerText; 
     public GameObject gameoverCanvas;
+    public GameObject[] bakingLadders;
 
 	[SerializeField]
 	private GameObject monster;
@@ -17,7 +18,8 @@ public class GameController : MonoBehaviour {
 	void Start () {
         gameoverCanvas.SetActive(false);
 //		Instantiate (this.monster);
-//		this.monster.transform.position = new Vector3 (5.95f, 4.34f, -3.594f);
+//		this.monster.transform.position = new Vector3 (5.95f, 4.34f, -3.594f); 
+        
 	}
 	
 	// Update is called once per frame
@@ -50,5 +52,16 @@ public class GameController : MonoBehaviour {
         Application.Quit();
     }
 
+    public void SetTheLadders(int count, GameObject g)
+    { 
+        bakingLadders[count].transform.position = g.transform.position;
+        bakingLadders[count].SetActive(true); 
+    }
 
+    public void DisableLadders() {
+        foreach (GameObject ladder in bakingLadders)
+        {
+            ladder.SetActive(false);
+        }
+    }
 }

@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player = GameObject.Find("Player");
-		thisGameScece = gamescene2;
+		thisGameScece = gamescene1;
 	}
 	
 	// Update is called once per frame
