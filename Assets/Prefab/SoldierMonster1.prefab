@@ -459,7 +459,7 @@ GameObject:
   - 136: {fileID: 136000011619086032}
   - 54: {fileID: 54000010450684210}
   m_Layer: 0
-  m_Name: Mummy_char
+  m_Name: SoldierMonster1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
