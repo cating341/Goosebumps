@@ -6,7 +6,7 @@ public class SoldierProperties : MonoBehaviour {
 	private NavMeshAgent agent;
 	private GameObject player;
 	private BasicProperties basicProperties;
-	private float sceneWide = 10.1f;
+	private float sceneWide = 10.8f;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -17,6 +17,9 @@ public class SoldierProperties : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		basicProperties.NavigateMonster (GetTargetPosition());
+		GameObject attraction = basicProperties.GetAttractionPeek ();
+		Physics.IgnoreCollision (GetComponent<Collider> (), player.GetComponent<Collider> ()
+			, basicProperties.CheckDisability() || (attraction && attraction.GetComponent<AIInformation> ().Floor == GetComponent<AIInformation> ().Floor));
 	}
 
 	private Vector3 GetTargetPosition() {
