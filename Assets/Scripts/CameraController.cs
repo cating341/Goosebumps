@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player = GameObject.Find("Player");
-		thisGameScece = gamescene1;
+		//thisGameScece = gamescene1;
 	}
 	
 	// Update is called once per frame
@@ -34,6 +34,7 @@ public class CameraController : MonoBehaviour {
 	}
 
 	public void undateCameraParameters(string i){
+		Debug.Log (i.ToString () == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW2);
         if (i == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW1 || i == GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE1)
 			thisGameScece = gamescene1;
         else if (i == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW2 || i == GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE2)
