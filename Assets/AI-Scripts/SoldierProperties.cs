@@ -12,15 +12,19 @@ public class SoldierProperties : MonoBehaviour {
 		player = GameObject.Find ("Player");
 		agent = GetComponent<NavMeshAgent> ();
 		basicProperties = GetComponent<BasicProperties> ();
-		basicProperties.NavigateMonster (GetTargetPosition());
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		basicProperties.NavigateMonster (GetTargetPosition());
 	}
 
 	private Vector3 GetTargetPosition() {
-		if (Vector3.Distance (new Vector3 (sceneWide, transform.position.y, transform.position.z), transform.position) < 0.5) {
+		GameObject attraction = basicProperties.GetAttractionPeek ();
+		if (attraction && attraction.GetComponent<AIInformation> ().Floor == GetComponent<AIInformation> ().Floor) {
+			return attraction.transform.position;
+		}
+		if (Vector3.Distance (new Vector3 (sceneWide, transform.position.y, transform.position.z), transform.position) < 0.3) {
 			sceneWide = sceneWide * -1;
 		}
 		return new Vector3(sceneWide, transform.position.y, transform.position.z);
