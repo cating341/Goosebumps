@@ -30,6 +30,7 @@ public class BasicProperties : MonoBehaviour {
 		ground.Add (GameObject.Find ("Floor"));
 		ground.Add (GameObject.Find ("Floor (1)"));
 		ground.Add (GameObject.Find ("Floor (2)"));
+		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("SoldierMonster"), true);
 	}
 	
 	// Update is called once per frame

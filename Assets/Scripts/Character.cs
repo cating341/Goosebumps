@@ -67,7 +67,6 @@ public class Character : MonoBehaviour
 	void Update() 
 	{
 		grounded = Physics.CheckSphere (groundCheck.position, groundRadius, 1 << groundLayer.value);
-        print("grounded: " + grounded);
 		if (ladder && transform.position.y < ladder.position.y && grounded)
 			Physics.IgnoreLayerCollision (playerLayer.value, groundLayer.value, false);
 		else

@@ -456,11 +456,16 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010614182446}
-  - 136: {fileID: 136000011619086032}
   - 54: {fileID: 54000010450684210}
-  m_Layer: 0
+  - 65: {fileID: 65000012221369650}
+  - 195: {fileID: 195000011995546154}
+  - 95: {fileID: 95000011530697240}
+  - 114: {fileID: 114000012133054584}
+  - 114: {fileID: 114000014019687662}
+  - 114: {fileID: 114000010932397978}
+  m_Layer: 13
   m_Name: SoldierMonster1
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -623,8 +628,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013189985598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4675078, y: -0.055884108, z: -3.7354283}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.4675078, y: -3.47, z: -3.7354283}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011717108622}
@@ -1133,6 +1138,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &65000012221369650
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013189985598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.9, z: 0.5}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!95 &95000010455020494
 Animator:
   serializedVersion: 3
@@ -1150,19 +1167,56 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!136 &136000011619086032
-CapsuleCollider:
+--- !u!95 &95000011530697240
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013189985598}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc532961d3b9a25448044d00762b06b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010932397978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013189985598}
   m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 0.85
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.41, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012133054584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013189985598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0a435fe5eb0453180df76241068e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000014019687662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013189985598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbb12ec0edeb42c2893fc6afb875b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137000011223798452
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1226,3 +1280,23 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.23475748, y: -0.000000014901161, z: 0.044023216}
     m_Extent: {x: 0.42057306, y: 0.31571865, z: 0.24732369}
   m_DirtyAABB: 0
+--- !u!195 &195000011995546154
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013189985598}
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 800
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.5
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
