@@ -495,6 +495,7 @@ GameObject:
   - 114: {fileID: 311066132}
   - 114: {fileID: 311066131}
   - 114: {fileID: 311066130}
+  - 114: {fileID: 311066137}
   m_Layer: 0
   m_Name: Item(Clone)
   m_TagString: Item
@@ -634,6 +635,17 @@ MonoBehaviour:
     indexItemInList: 2
     rarity: 0
     itemAttributes: []
+--- !u!114 &311066137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311066128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 559af2dd49c264015b804cc49ea044c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &396034143 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400170, guid: c789d25886289d547af6b0c17aec7bed, type: 3}
