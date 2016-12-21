@@ -11,6 +11,8 @@ public class BasicProperties : MonoBehaviour {
 	private List<GameObject> ground;
 	private Dictionary<string, bool> disabledList;
 	private Queue<GameObject> attractions;
+	private float ICE_TEMP = 13.0f;
+
 	private int floor;
 	public int Floor {
 		get {
@@ -101,12 +103,9 @@ public class BasicProperties : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col)
 	{
-		if (col.gameObject.tag == "Ground")
-		{
-			for (int i = 0; i < 3; i++)
-			{
-				if (col.gameObject == ground[i])
-				{
+		if (col.gameObject.tag == "Ground") {
+			for (int i = 0; i < 3; i++) {
+				if (col.gameObject == ground [i]) {
 					Floor = i + 1;
 				}
 			}
@@ -121,7 +120,7 @@ public class BasicProperties : MonoBehaviour {
 
 	private void CheckClimb() {
 		OffMeshLinkData ladder = agent.currentOffMeshLinkData;
-		if (ladder.activated) {
+		if (ladder.activated && GameObject.Find("TempHandle").GetComponent<TempController>().GetTemp() >= ICE_TEMP) {
 			GetComponent<Rigidbody> ().useGravity = false;
 			transform.eulerAngles = new Vector3(0, 0, 0);
 			float upDown = ladder.endPos.y > ladder.startPos.y ? 1f : -1f;
