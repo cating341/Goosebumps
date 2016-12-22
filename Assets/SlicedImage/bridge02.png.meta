@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 5640798b72bf902469d84c278d8769ca
-timeCreated: 1482386655
+guid: 32832b8788859aa459c8cdea9ab3c856
+timeCreated: 1482416163
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: bridge02_0
+    21300002: bridge02_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,20 +40,46 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 180
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: bridge02_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 447
+        width: 934
+        height: 278
+      alignment: 9
+      pivot: {x: 0.0009856336, y: 0.0953165}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bridge02_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 76
+        width: 954
+        height: 298
+      alignment: 9
+      pivot: {x: 0.0010799012, y: 0.1017335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
