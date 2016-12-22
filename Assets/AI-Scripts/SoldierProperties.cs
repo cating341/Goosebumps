@@ -32,4 +32,8 @@ public class SoldierProperties : MonoBehaviour {
 		}
 		return new Vector3(sceneWide, transform.position.y, transform.position.z);
 	}
+
+	public void TurnWay() {
+		sceneWide = sceneWide * -1;
+	}
 }
