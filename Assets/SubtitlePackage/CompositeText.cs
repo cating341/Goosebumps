@@ -2,8 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
-using SmartLocalization;
-using com.jerrch.rpg;
+//using SmartLocalization;
+//using com.jerrch.rpg;
 public class CompositeText : MonoBehaviour {
 
 	public string prefix;
@@ -37,24 +37,24 @@ public class CompositeText : MonoBehaviour {
 	}
 	void Start()
 	{
-		LanguageManager.Instance.OnChangeLanguage += OnLanguegeChanged;
+//		LanguageManager.Instance.OnChangeLanguage += OnLanguegeChanged;
 	}
 	public bool romanChOnly = true; 
-	void OnLanguegeChanged(LanguageManager languageManager)
-	{
-		text = _textValue;
-		Font font = ori_font;
-		if(!romanChOnly&&languageManager.CurrentlyLoadedCulture.languageCode=="zh-TW")
-		{
-			font = FontManager.instance.GetChineseFont();
-		}
-		
-		foreach(Text t in texts)
-		{
-			t.font = font;
-			//t.font = 
-		}
-	}
+//	void OnLanguegeChanged(LanguageManager languageManager)
+//	{
+//		text = _textValue;
+//		Font font = ori_font;
+//		if(!romanChOnly&&languageManager.CurrentlyLoadedCulture.languageCode=="zh-TW")
+//		{
+//			font = FontManager.instance.GetChineseFont();
+//		}
+//		
+//		foreach(Text t in texts)
+//		{
+//			t.font = font;
+//			//t.font = 
+//		}
+//	}
 
 	public string _textValue;
 	public string text{
@@ -76,7 +76,7 @@ public class CompositeText : MonoBehaviour {
 
 	string GetLocalText(string key)
 	{
-		string text = LanguageManager.Instance.GetTextValue(key);
+//		string text = LanguageManager.Instance.GetTextValue(key);
 		if(text!=null)
 		return text;
 		else 
@@ -132,7 +132,7 @@ public class CompositeText : MonoBehaviour {
 		foreach(Text t in texts)
 		{
 			//print("pop text");
-			t.text = LanguageManager.Instance.GetTextValue(str);
+//			t.text = LanguageManager.Instance.GetTextValue(str);
 			t.DOFade(0,0);
 			pop(t);
 		}
@@ -162,8 +162,8 @@ public class CompositeText : MonoBehaviour {
 			{
 				string newString = "";
 					if(prefix!="")
-						newString = LanguageManager.Instance.GetTextValue(prefix);
-					newString += (int)i + LanguageManager.Instance.GetTextValue(postfix);
+//						newString = LanguageManager.Instance.GetTextValue(prefix);
+//					newString += (int)i + LanguageManager.Instance.GetTextValue(postfix);
 					t.text = newString;
 			}
 			yield return new WaitForSeconds(0.05f);

@@ -17,7 +17,7 @@ public class PreviewGameController : MonoBehaviour {
 
     public void GameStart()
     {
-        player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -3.92f);
+        player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -5.0f);
 		player.GetComponent<Character>().EnablePlayerMove();
 		if(GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW1 )
 			Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE1);

@@ -24,6 +24,7 @@ TagManager:
   - bloomStone
   - BananaPeel
   - Seed
+  - Potion
   layers:
   - Default
   - TransparentFX

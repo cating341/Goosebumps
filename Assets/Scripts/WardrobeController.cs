@@ -31,8 +31,10 @@ public class WardrobeController : MonoBehaviour {
 					ScratchYouOut ();
 				}
 			}
-		} else if (other.gameObject.name == "KingMonster1" && hide) {
+		} else if (other.gameObject.name == "KingMonster1" && hide ) {
 			ScratchYouOut ();
+			hide = false;
+
 		}
     }
     void PlaySoundEffect()
@@ -45,6 +47,7 @@ public class WardrobeController : MonoBehaviour {
 		PlaySoundEffect ();
 		//player.GetComponent<SpriteRenderer>().enabled = true;
 		player.transform.position -= new Vector3 (0, 0, 2.0f);
+
 		player.GetComponent<Character> ().EnablePlayerMove ();
 		Invoke ("ReEnable", 3.0f);
 	}
