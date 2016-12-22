@@ -99,28 +99,26 @@ public class Hotbar : MonoBehaviour
 			switch (tag) {
 			case "Ladder":
 				y = 1.02f; 
-                putItem(selectedItem, y);
 				break;
 			case "Door":
 				y = -1.2f;
-                putItem(selectedItem, y);
 				break;
             case "Refrigerator":
                 y = 0.37f;
-                putItem(selectedItem, y);
                 break;
             case "BoundDoor":
                 y = 0.8f;
                 break;
             case "BananaPeel":
                 y = -0.7f;
-                putItem(selectedItem, y);
                 break;
+			case "Seed":
+				y = 0.1f;
+				break;
 			default:
-                putItem(selectedItem, y);
 				break;
 			}
-			
+			putItem(selectedItem, y);
 		}
     }
 

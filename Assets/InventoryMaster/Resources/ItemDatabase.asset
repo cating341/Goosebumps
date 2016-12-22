@@ -177,3 +177,16 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
+  - itemName: Seed
+    itemID: 13
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: 1ba40bb065de0f54cb2f68c2d2dc50e9, type: 3}
+    itemModel: {fileID: 1000012848428728, guid: 5a4c2811c3748cb4b8aaccf06d64dc00,
+      type: 2}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 10
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
