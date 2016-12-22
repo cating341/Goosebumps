@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: 0aa0ad9eb67a83d45a9789ed2f3be9a7
-timeCreated: 1482386702
+guid: bbc6f0fbb6c69bc43953294c8106de3a
+timeCreated: 1482389316
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bridge_0
-    21300002: bridge_1
+    21300000: magic_3
+    21300002: magic_5
+    21300004: magic_6
+    21300006: magic_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -43,10 +45,10 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.46533635, y: 0.36509275}
-  spriteBorder: {x: 90, y: 42, z: 143, w: 108}
-  spritePixelsToUnits: 150
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 200
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -55,28 +57,54 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bridge_0
+      name: magic_3
       rect:
         serializedVersion: 2
-        x: 84
-        y: 159
-        width: 343
-        height: 131
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 654
+        y: 25
+        width: 310
+        height: 356
+      alignment: 9
+      pivot: {x: 0.4810155, y: 0.015634472}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bridge_1
+      name: magic_5
       rect:
         serializedVersion: 2
-        x: 76
-        y: 7
-        width: 366
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 386
+        y: 21
+        width: 192
+        height: 327
+      alignment: 9
+      pivot: {x: 0.61954147, y: 0.015872104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: magic_6
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 24
+        width: 156
+        height: 237
+      alignment: 9
+      pivot: {x: 0.4962275, y: 0.028196827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: magic_7
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 24
+        width: 156
+        height: 237
+      alignment: 9
+      pivot: {x: 0.50377244, y: 0.02571365}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
