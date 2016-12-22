@@ -18,7 +18,7 @@ public class CharacterControl : MonoBehaviour
     void Update()
     {
         //get jump input by "jump" button set in input setting
-        if (Input.GetButtonDown("Jump")) jump = true;
+//        if (Input.GetButtonDown("Jump")) jump = true;
     }
 
     void FixedUpdate()
