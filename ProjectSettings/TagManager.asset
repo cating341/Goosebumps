@@ -23,7 +23,8 @@ TagManager:
   - Refrigerator
   - bloomStone
   - BananaPeel
-  - boundwall
+  - Seed
+  - Potion
   layers:
   - Default
   - TransparentFX
