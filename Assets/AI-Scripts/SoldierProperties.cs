@@ -19,12 +19,12 @@ public class SoldierProperties : MonoBehaviour {
 		basicProperties.NavigateMonster (GetTargetPosition());
 		GameObject attraction = basicProperties.GetAttractionPeek ();
 		Physics.IgnoreCollision (GetComponent<Collider> (), player.GetComponent<Collider> ()
-			, basicProperties.CheckDisability() || (attraction && attraction.GetComponent<AIInformation> ().Floor == GetComponent<AIInformation> ().Floor));
+			, basicProperties.CheckDisability() || (attraction && attraction.GetComponent<AIInformation> ().floor == GetComponent<AIInformation> ().floor));
 	}
 
 	private Vector3 GetTargetPosition() {
 		GameObject attraction = basicProperties.GetAttractionPeek ();
-		if (attraction && attraction.GetComponent<AIInformation> ().Floor == GetComponent<AIInformation> ().Floor) {
+		if (attraction && attraction.GetComponent<AIInformation> ().floor == GetComponent<AIInformation> ().floor) {
 			return attraction.transform.position;
 		}
 		if (Vector3.Distance (new Vector3 (sceneWide, transform.position.y, transform.position.z), transform.position) < 0.3) {

@@ -182,6 +182,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013435647106, guid: 76b9208c314d04443875456c9632c2c7,
+        type: 2}
+      propertyPath: floor
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76b9208c314d04443875456c9632c2c7, type: 2}
   m_IsPrefabParent: 0
@@ -400,6 +405,11 @@ Prefab:
         type: 2}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011910895386, guid: 65d8933a5e6956b409f0221b8623f685,
+        type: 2}
+      propertyPath: floor
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65d8933a5e6956b409f0221b8623f685, type: 2}
@@ -1523,6 +1533,11 @@ Prefab:
     - target: {fileID: 4000012994687824, guid: e008379690c52274eb2165ae3e2e1fd8, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012906026110, guid: e008379690c52274eb2165ae3e2e1fd8,
+        type: 2}
+      propertyPath: floor
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e008379690c52274eb2165ae3e2e1fd8, type: 2}
@@ -2732,6 +2747,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013189985598, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010932397978, guid: 8b16d17c6fe56074daffd91c2699fb1a,
+        type: 2}
+      propertyPath: floor
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4270,11 +4290,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013189985598, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_Name
-      value: SoldierMonster1-2
+      value: SoldierMonster1-3
       objectReference: {fileID: 0}
     - target: {fileID: 1000013189985598, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010932397978, guid: 8b16d17c6fe56074daffd91c2699fb1a,
+        type: 2}
+      propertyPath: floor
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
@@ -8485,6 +8510,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013886476186, guid: 2cf74311c85949f4da5f5a79c663df8a,
+        type: 2}
+      propertyPath: floor
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf74311c85949f4da5f5a79c663df8a, type: 2}

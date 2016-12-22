@@ -8,30 +8,17 @@ using System.Collections.Generic;
 public class BasicProperties : MonoBehaviour {
 
 	private NavMeshAgent agent;
-	private List<GameObject> ground;
+	private GameObject[] grounds;
 	private Dictionary<string, bool> disabledList;
 	private Queue<GameObject> attractions;
 	private float ICE_TEMP = 13.0f;
-
-	private int floor;
-	public int Floor {
-		get {
-			return this.floor;
-		}
-		set {
-			this.floor = value;
-		}
-	}
 
 	// Use this for initialization
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
 		disabledList = new Dictionary<string, bool> ();
 		attractions = new Queue<GameObject> ();
-		ground = new List<GameObject> ();
-		ground.Add (GameObject.Find ("Floor"));
-		ground.Add (GameObject.Find ("Floor (1)"));
-		ground.Add (GameObject.Find ("Floor (2)"));
+		grounds = GameObject.FindGameObjectsWithTag ("Ground");
 		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("SoldierMonster"), true);
 	}
 	
@@ -104,17 +91,13 @@ public class BasicProperties : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.tag == "Ground") {
-			for (int i = 0; i < 3; i++) {
-				if (col.gameObject == ground [i]) {
-					Floor = i + 1;
-				}
-			}
+			
 		}
 	}
 
 	private void IgnoreGround(bool ignore){
-		for (int i = 0; i < ground.Count; i++) {
-			Physics.IgnoreCollision (GetComponent<Collider>(), ground [i].GetComponent<Collider>(), ignore);
+		foreach (GameObject ground in grounds) {
+			Physics.IgnoreCollision (GetComponent<Collider>(), ground.GetComponent<Collider>(), ignore);
 		}
 	}
 
