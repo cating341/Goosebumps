@@ -17,7 +17,7 @@ public class ClockController : MonoBehaviour {
         ClockCanvas.SetActive(false);
         animation = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        GetComponent<AIInformation>().Floor = 3;
+//        GetComponent<AIInformation>().floor = 3;
 	}
 	
 	// Update is called once per frame

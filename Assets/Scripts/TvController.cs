@@ -10,7 +10,7 @@ public class TvController : MonoBehaviour {
 	void Start () {
         audioSource = GetComponent<AudioSource>();
         animation = GetComponent<Animator>();
-        GetComponent<AIInformation>().Floor = 1;
+//        GetComponent<AIInformation>().Floor = 1;
 	}
 	
 	// Update is called once per frame

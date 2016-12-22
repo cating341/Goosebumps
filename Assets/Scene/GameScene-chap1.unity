@@ -182,6 +182,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013435647106, guid: 76b9208c314d04443875456c9632c2c7,
+        type: 2}
+      propertyPath: floor
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76b9208c314d04443875456c9632c2c7, type: 2}
   m_IsPrefabParent: 0
@@ -400,6 +405,11 @@ Prefab:
         type: 2}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011910895386, guid: 65d8933a5e6956b409f0221b8623f685,
+        type: 2}
+      propertyPath: floor
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65d8933a5e6956b409f0221b8623f685, type: 2}
@@ -1523,6 +1533,11 @@ Prefab:
     - target: {fileID: 4000012994687824, guid: e008379690c52274eb2165ae3e2e1fd8, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012906026110, guid: e008379690c52274eb2165ae3e2e1fd8,
+        type: 2}
+      propertyPath: floor
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e008379690c52274eb2165ae3e2e1fd8, type: 2}
@@ -2685,6 +2700,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013189985598, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010932397978, guid: 8b16d17c6fe56074daffd91c2699fb1a,
+        type: 2}
+      propertyPath: floor
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4238,11 +4258,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013189985598, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_Name
-      value: SoldierMonster1-2
+      value: SoldierMonster1-3
       objectReference: {fileID: 0}
     - target: {fileID: 1000013189985598, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010932397978, guid: 8b16d17c6fe56074daffd91c2699fb1a,
+        type: 2}
+      propertyPath: floor
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
@@ -5562,6 +5587,7 @@ RectTransform:
   - {fileID: 1844599349}
   - {fileID: 1425410062}
   - {fileID: 756004624}
+  - {fileID: 1296805177}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6460,6 +6486,57 @@ Light:
   m_BounceIntensity: 0.68
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &1296805176
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1111081155}
+    m_Modifications:
+    - target: {fileID: 4000011941219676, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011941219676, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011941219676, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011941219676, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011941219676, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011941219676, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011941219676, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011941219676, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013597605284, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
+      propertyPath: m_Name
+      value: BoundDoor (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1296805177 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011941219676, guid: fb4f55dcc6f08be46bd810e586448482,
+    type: 2}
+  m_PrefabInternal: {fileID: 1296805176}
 --- !u!1001 &1313224032
 Prefab:
   m_ObjectHideFlags: 0
@@ -8453,6 +8530,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013886476186, guid: 2cf74311c85949f4da5f5a79c663df8a,
+        type: 2}
+      propertyPath: floor
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf74311c85949f4da5f5a79c663df8a, type: 2}

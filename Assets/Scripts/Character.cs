@@ -153,10 +153,6 @@ public class Character : MonoBehaviour
 				{
 					//Physics.IgnoreCollision(GetComponent<Collider>(), this.ground[i].GetComponent<Collider>(), false);
 					GetComponent<Rigidbody>().useGravity = true;
-					if (col.gameObject == ground[i])
-					{
-						GetComponent<AIInformation>().Floor = i + 1;
-					}
 				}
             }
         }
