@@ -44,7 +44,12 @@ public class GameController : MonoBehaviour {
     public void GameRestart()
     {
         GameObject.Find("SceneManager").GetComponent<MySceneManager>().removeAllFromSceceList();
-        Application.LoadLevel(1);
+		if(GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE1 )
+			Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW1);
+		else if(GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE2 )
+			Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW2);
+		
+
     }
 
     public void Exit()
