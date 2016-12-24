@@ -2698,56 +2698,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1001 &633793486
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -7.262046
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -3.735428
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013212959702, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_Name
-      value: SoldierMonster1-1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 65000011071942314, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-    - {fileID: 114000013968048648, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-    - {fileID: 114000011174347416, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-    - {fileID: 114000011850771314, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &636496580
 GameObject:
   m_ObjectHideFlags: 0
@@ -4686,61 +4636,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1240378323}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1250864330
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 3.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -3.735428
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011093160972, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013212959702, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-      propertyPath: m_Name
-      value: SoldierMonster1-3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011850771314, guid: 8b16d17c6fe56074daffd91c2699fb1a,
-        type: 2}
-      propertyPath: floor
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 65000011071942314, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-    - {fileID: 114000013968048648, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-    - {fileID: 114000011174347416, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-    - {fileID: 114000011850771314, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1260568614
 GameObject:
   m_ObjectHideFlags: 0

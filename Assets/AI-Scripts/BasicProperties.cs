@@ -33,7 +33,7 @@ public class BasicProperties : MonoBehaviour {
 		} else {
 			agent.SetDestination (tar);
 		}
-		GetComponent<Animator> ().SetFloat ("speed", agent.velocity.sqrMagnitude);
+		GetComponentInChildren<Animator> ().SetFloat ("speed", agent.velocity.sqrMagnitude);
 	}
 
 	public void NewDisability(string key, bool value) {
@@ -66,21 +66,21 @@ public class BasicProperties : MonoBehaviour {
 	private bool CheckDequeue(GameObject peek) {
 		if (peek.tag == "Phone")
 		{
-			if (!peek.GetComponent<Animator>().GetBool("ring"))
+			if (!peek.GetComponentInChildren<Animator>().GetBool("ring"))
 			{
 				return true;
 			}
 		}
 		else if(peek.name == "TV")
 		{
-			if (!peek.GetComponent<Animator>().GetBool("on"))
+			if (!peek.GetComponentInChildren<Animator>().GetBool("on"))
 			{
 				return true;
 			}
 		}
 		else if(peek.name == "Alarm clock")
 		{
-			if (!peek.GetComponent<Animator>().GetBool("ring"))
+			if (!peek.GetComponentInChildren<Animator>().GetBool("ring"))
 			{
 				return true;
 			}

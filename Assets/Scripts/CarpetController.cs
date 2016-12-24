@@ -53,7 +53,7 @@ public class CarpetController : MonoBehaviour {
         {
 			this.killedMonster = other.gameObject;
 			this.killedMonster.GetComponent<BasicProperties> ().NewDisability ("carpet", true);
-			this.killedMonster.GetComponent<Animator> ().SetBool ("dead", true);
+			this.killedMonster.GetComponentInChildren<Animator> ().SetBool ("dead", true);
         }
     }
 }

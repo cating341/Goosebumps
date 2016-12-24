@@ -42,7 +42,7 @@ public class RefrigeratorController : MonoBehaviour {
 			attacking = true;
 			hittingThis = other.gameObject;
 			hittingThis.GetComponent<BasicProperties> ().NewDisability ("refrig", true);
-			hittingThis.GetComponent<Animator> ().SetBool ("attack", true);
+			hittingThis.GetComponentInChildren<Animator> ().SetBool ("attack", true);
 			Damage ();
         }
     }
@@ -55,7 +55,7 @@ public class RefrigeratorController : MonoBehaviour {
 	void OnDestroy() {
         if (this.hittingThis)
         {
-            hittingThis.GetComponent<Animator>().SetBool("attack", false);
+			hittingThis.GetComponentInChildren<Animator>().SetBool("attack", false);
 			hittingThis.GetComponent<BasicProperties> ().NewDisability ("refrig", false);
         }
 	}
