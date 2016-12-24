@@ -129,4 +129,8 @@ public class BasicProperties : MonoBehaviour {
 	public Queue<GameObject> GetAttractions(){
 		return attractions;
 	}
+
+	public float GetRemainingDistance() {
+		return agent.remainingDistance;
+	}
 }

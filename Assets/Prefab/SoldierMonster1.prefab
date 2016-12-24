@@ -432,6 +432,7 @@ GameObject:
   - 114: {fileID: 114000013968048648}
   - 114: {fileID: 114000011174347416}
   - 114: {fileID: 114000011850771314}
+  - 95: {fileID: 95000011180117256}
   m_Layer: 13
   m_Name: SoldierMonster1
   m_TagString: Monster
@@ -1187,6 +1188,23 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010242528832}
   m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc532961d3b9a25448044d00762b06b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95000011180117256
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013212959702}
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: fc532961d3b9a25448044d00762b06b8, type: 2}
   m_CullingMode: 0

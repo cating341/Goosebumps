@@ -2741,7 +2741,11 @@ Prefab:
       propertyPath: m_Name
       value: SoldierMonster1-1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65000011071942314, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
+    - {fileID: 114000013968048648, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
+    - {fileID: 114000011174347416, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
+    - {fileID: 114000011850771314, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &636496580
@@ -4730,7 +4734,11 @@ Prefab:
       propertyPath: floor
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65000011071942314, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
+    - {fileID: 114000013968048648, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
+    - {fileID: 114000011174347416, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
+    - {fileID: 114000011850771314, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1260568614
