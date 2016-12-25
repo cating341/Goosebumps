@@ -3875,7 +3875,6 @@ GameObject:
   - 20: {fileID: 908830995}
   - 92: {fileID: 908831000}
   - 124: {fileID: 908830999}
-  - 81: {fileID: 908830998}
   - 114: {fileID: 908830997}
   - 114: {fileID: 908830996}
   - 114: {fileID: 908831002}
@@ -3953,13 +3952,6 @@ MonoBehaviour:
   flipY: 1
   additiveRendering: 1
   alphaCutoff: 0.5
---- !u!81 &908830998
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 908830994}
-  m_Enabled: 1
 --- !u!124 &908830999
 Behaviour:
   m_ObjectHideFlags: 0
@@ -6723,10 +6715,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSceneName: 
+  GAMESCENE0: GameScene-chap0
   GAMESCENE1: GameScene-chap1
   GAMESCENE2: GameScene-chap2
+  GAMESCENE3: GameScene-chap3
   PREVIEW1: PreviewScene-chap1
   PREVIEW2: PreviewScene-chap2
+  TRANS1: TransitionSceneCh1
+  TRANS2: PreviewScene-chap2
 --- !u!1 &1720392148
 GameObject:
   m_ObjectHideFlags: 0

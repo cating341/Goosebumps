@@ -15,7 +15,7 @@ public class OpenScenceController : MonoBehaviour {
 
     public void StartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("PreviewScene-chap1", UnityEngine.SceneManagement.LoadSceneMode.Single);
+        Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().TRANS0);
 
     }
 

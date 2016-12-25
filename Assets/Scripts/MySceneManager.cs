@@ -17,6 +17,10 @@ public class MySceneManager : MonoBehaviour {
     public  string GAMESCENE3 = "GameScene-chap3";
 	public  string PREVIEW1 = "PreviewScene-chap1";
 	public  string PREVIEW2 = "PreviewScene-chap2";
+    public string TRANS0 = "TransitionSceneCh0";
+    public string TRANS1 = "TransitionSceneCh1";
+    public string TRANS2 = "TransitionSceneCh2";
+    //TransitionSceneCh1
 
     public static MySceneManager ins;
     void Awake() {
