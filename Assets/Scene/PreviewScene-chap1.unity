@@ -1285,6 +1285,10 @@ Prefab:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013189985598, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65000012221369650, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
     - {fileID: 114000012133054584, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
@@ -2014,6 +2018,10 @@ Prefab:
     - target: {fileID: 1000010659440548, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_Layer
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013189985598, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65000012221369650, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
@@ -6721,6 +6729,7 @@ MonoBehaviour:
   GAMESCENE3: GameScene-chap3
   PREVIEW1: PreviewScene-chap1
   PREVIEW2: PreviewScene-chap2
+  TRANS0: TransitionSceneCh0
   TRANS1: TransitionSceneCh1
   TRANS2: PreviewScene-chap2
 --- !u!1 &1720392148
@@ -8996,6 +9005,10 @@ Prefab:
     - target: {fileID: 1000011730644694, guid: 0cc87352f1c12d346978584eaf575a66, type: 2}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011730644694, guid: 0cc87352f1c12d346978584eaf575a66, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cc87352f1c12d346978584eaf575a66, type: 2}
