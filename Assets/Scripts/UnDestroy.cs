@@ -5,22 +5,13 @@ public class UnDestroy : MonoBehaviour {
     UnDestroy ins;
 
     void Awake()
-    {
-
-        //if (ins == null)
-        //{
-        //    ins = this;
-        //    GameObject.DontDestroyOnLoad(gameObject); 
-        //}
-        //else if (ins != this)
-        //    Destroy(gameObject);
-        GameObject.Find("SceneManager").GetComponent<MySceneManager>().addToSceneList(this.gameObject);
-        
+    { 
     }
 
 	// Use this for initialization
 	void Start () {
-	
+        GameObject.Find("SceneManager").GetComponent<MySceneManager>().addToSceneList(this.gameObject);
+        print(gameObject.name);
 	}
 	
 	// Update is called once per frame

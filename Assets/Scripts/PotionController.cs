@@ -15,7 +15,7 @@ public class PotionController : MonoBehaviour {
 		if (GameObject.Find("TempHandle").GetComponent<TempController>().GetTemp() > HEAT_TEMP && !animation.GetBool("explode"))
 		{
 			animation.SetBool("explode", true);
-            Invoke("PlaySound", 1.5f);
+            Invoke("PlaySound", 1.3f);
 			Invoke ("DestroyObject", 2.8f);
 		}
 	}

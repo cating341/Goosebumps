@@ -18,12 +18,10 @@ public class TransitionController : MonoBehaviour {
 	void Update () {
 		if (Input.GetButtonDown ("Fire1")) {
 			if (ct.isCompleted == false) {
-				print ("Fire");
 				animateString ();
                 gameObject.GetComponent<AudioSource>().Play();
 			} else {
 				// TBD:
-				print("Change to next scene");
 				StartGame();
 
 			}
