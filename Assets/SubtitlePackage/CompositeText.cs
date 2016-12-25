@@ -39,6 +39,11 @@ public class CompositeText : MonoBehaviour {
 	{
 //		LanguageManager.Instance.OnChangeLanguage += OnLanguegeChanged;
 	}
+
+	void Update() 
+	{
+		
+	}
 	public bool romanChOnly = true; 
 //	void OnLanguegeChanged(LanguageManager languageManager)
 //	{
@@ -77,9 +82,9 @@ public class CompositeText : MonoBehaviour {
 	string GetLocalText(string key)
 	{
 //		string text = LanguageManager.Instance.GetTextValue(key);
-		if(text!=null)
-		return text;
-		else 
+//		if(text!=null)
+//		return text;
+//		else 
 		return key;
 	}
 
@@ -95,6 +100,7 @@ public class CompositeText : MonoBehaviour {
 	public bool isTyping = false;
 	public void DOText(string str)
 	{
+		print ("Doing text");
 		_textValue = GetLocalText(str);
 		if(isTyping == false)
 		{

@@ -15,6 +15,8 @@ public class AnimatableCanvas : MonoBehaviour {
         {
             gameObject.AddComponent<CanvasGroup>();
         }
+
+
 	}
     
     
