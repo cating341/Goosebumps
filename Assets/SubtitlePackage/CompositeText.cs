@@ -98,8 +98,11 @@ public class CompositeText : MonoBehaviour {
 	}
 
 	public bool isTyping = false;
+	public bool isCompleted = false;
+
 	public void DOText(string str)
 	{
+		isCompleted = false;
 		print ("Doing text");
 		_textValue = GetLocalText(str);
 		if(isTyping == false)
@@ -113,6 +116,7 @@ public class CompositeText : MonoBehaviour {
 				t.DOText(_textValue,duration,true).OnComplete(()=>
 				{
 					isTyping = false;
+					isCompleted = true;
 				});
 			}
 		}
@@ -122,6 +126,8 @@ public class CompositeText : MonoBehaviour {
 		}
 		
 	}
+
+
 	public void CompleteText()
 	{
 		foreach(Text t in texts)
@@ -131,7 +137,17 @@ public class CompositeText : MonoBehaviour {
 				t.text = _textValue;
 			}
 			isTyping = false;
+		isCompleted = true;
 	}
+
+	public void FinishedText()
+	{
+		foreach(Text t in texts)
+		{
+			pop (t);
+		}
+	}
+
 	public void PopText(string str)
 	{
 		

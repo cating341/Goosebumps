@@ -18,7 +18,7 @@ public class AnimatableCanvas : MonoBehaviour {
 
 
 	}
-    
+
     
 	
     public virtual void hide(OnCompleteDelegate completeEvent=null)

@@ -31,15 +31,14 @@ public class Ladder : MonoBehaviour {
     
 	void OnTriggerStay(Collider col) 
 	{
-        //print(col.gameObject.name + " stay");
-        if (col.gameObject.tag == "Player" && Input.GetKey(KeyCode.W) && NormalLadder.active)
+		if (col.gameObject.tag == "Player" && Input.GetAxisRaw("Vertical") == 1 && NormalLadder.active)
         {
 			col.GetComponent<Character> ().climbing = true;
 			col.gameObject.GetComponent<Rigidbody> ().useGravity = false;
 			col.transform.position = new Vector3 (transform.position.x, col.transform.position.y, col.transform.position.z);
 			col.transform.position += new Vector3 (0, climbSpeed, 0);
         }
-        else if (col.gameObject.tag == "Player" && Input.GetKey(KeyCode.S) && NormalLadder.active)
+		else if (col.gameObject.tag == "Player" && Input.GetAxisRaw("Vertical") == -1 && NormalLadder.active)
         {
             col.GetComponent<Character>().climbing = true;
             col.GetComponent<Character>().ladder = this.transform;
