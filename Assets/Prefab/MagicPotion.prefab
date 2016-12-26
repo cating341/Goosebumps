@@ -21,6 +21,8 @@ GameObject:
   - 4: {fileID: 4000011694827152}
   - 82: {fileID: 82000010399134370}
   - 114: {fileID: 114000013371369300}
+  - 114: {fileID: 114000012369052734}
+  - 65: {fileID: 65000013682927274}
   m_Layer: 0
   m_Name: MagicPotion
   m_TagString: Potion
@@ -72,13 +74,25 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010902836516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.31, y: 2.71, z: -2.4}
+  m_LocalPosition: {x: 4.31, y: 2.71, z: -1.837}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224000013892215238}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!65 &65000013682927274
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010902836516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.150094, z: 2.1809678}
+  m_Center: {x: 0, y: 0.6032171, z: -0.061890244}
 --- !u!82 &82000010399134370
 AudioSource:
   m_ObjectHideFlags: 1
@@ -191,6 +205,17 @@ MonoBehaviour:
   eraseRenderer: 0
   originalLayer: 0
   originalMaterial: {fileID: 0}
+--- !u!114 &114000012369052734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010902836516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc7be0460846614b9ec95ae0984b026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012660793478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HEAT_TEMP: 75
+  bombSound: {fileID: 8300000, guid: b57a5b81c8663e14bbf70a3cc6ff01ad, type: 3}
 --- !u!114 &114000013837039970
 MonoBehaviour:
   m_ObjectHideFlags: 1
