@@ -113,6 +113,14 @@ public class MySceneManager : MonoBehaviour {
             }
             gearList.Clear();
         }
+        else if (currentSceneName == GAMESCENE3) {
+            Camera.main.GetComponent<CameraController>().undateCameraParameters(currentSceneName);
+            foreach (GameObject g in gearList)
+            {
+                Destroy(g);
+            }
+            gearList.Clear();
+        }
     }
     
 

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour {
     public GameObject player;
-
+    public GameObject[] SplineOriPos;
 	private float[] gamescene1 = {-4.58f, 3.53f, -0.32f, 3.3f};
 	private float[] gamescene2 = {-7.17f, 5.49f, -0.32f, 6.0f};
 
@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour {
 	void Start () {
         player = GameObject.Find("Player");
 		//thisGameScece = gamescene1;
+       // Invoke("CameraMovement", 5.0f);
 	}
 	
 	// Update is called once per frame
@@ -32,6 +33,13 @@ public class CameraController : MonoBehaviour {
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, player.transform.position.y, -15.97f);
         
 	}
+
+    public void CameraMovement() {
+        gameObject.GetComponentInChildren<SplineController>().SplineRoot = GameObject.Find("Spline Root"); 
+        SplineOriPos[0].gameObject.transform.position = gameObject.transform.position;
+        SplineOriPos[1].gameObject.transform.position = gameObject.transform.position;
+        gameObject.GetComponentInChildren<SplineController>().enabled = true;
+    }
 
 	public void undateCameraParameters(string i){
 		Debug.Log (i.ToString () == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW2);
