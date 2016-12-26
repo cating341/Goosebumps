@@ -19,7 +19,8 @@ public class Chap2KingProperties : MonoBehaviour {
 	}
 
 	private void teleport(){
-		transform.position = new Vector3 (transform.position.x, player.transform.position.y, transform.position.z);
+        if (player)
+		    transform.position = new Vector3 (transform.position.x, player.transform.position.y, transform.position.z);
 		Invoke ("teleport", 2.0f);
 	}
 }
