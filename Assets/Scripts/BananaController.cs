@@ -24,7 +24,7 @@ public class BananaController : MonoBehaviour {
 				stepped = true;
 				steppedMonster = other.gameObject;
 				steppedMonster.GetComponent<BasicProperties> ().NewDisability ("faint", true);
-				steppedMonster.GetComponent<Animator> ().SetBool ("faint", true);
+				steppedMonster.GetComponentInChildren<Animator> ().SetBool ("faint", true);
 				Invoke ("WakeUp", 3f);
 			}
             Debug.Log("Trigger banana event");
@@ -33,7 +33,7 @@ public class BananaController : MonoBehaviour {
 
 	private void WakeUp() {
 		steppedMonster.GetComponent<BasicProperties> ().NewDisability ("faint", false);
-		steppedMonster.GetComponent<Animator> ().SetBool ("faint", false);
+		steppedMonster.GetComponentInChildren<Animator> ().SetBool ("faint", false);
 		Destroy (gameObject);
 	}
 }

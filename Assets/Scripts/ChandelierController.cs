@@ -54,14 +54,14 @@ public class ChandelierController : MonoBehaviour {
 		else if (!enable && other.gameObject.tag == "Monster"){
 			this.hitMonster = other.gameObject;
 			this.hitMonster.GetComponent<BasicProperties> ().NewDisability ("faint", true);
-			this.hitMonster.GetComponent<Animator> ().SetBool ("faint", true);
+			this.hitMonster.GetComponentInChildren<Animator> ().SetBool ("faint", true);
 			Invoke ("WakeUp", 5f);
 		}
     }
 
 	void WakeUp(){
 		this.hitMonster.GetComponent<BasicProperties> ().NewDisability ("faint", false);
-		this.hitMonster.GetComponent<Animator> ().SetBool ("faint", false);
+		this.hitMonster.GetComponentInChildren<Animator> ().SetBool ("faint", false);
 		Destroy (gameObject);
 
 	}
