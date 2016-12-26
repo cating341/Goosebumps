@@ -157,7 +157,8 @@ public class Character : MonoBehaviour
             }
         }
         else if (col.gameObject.tag == "Monster")
-        {
+		{
+			col.gameObject.GetComponent<BasicProperties> ().NewDisability ("player", true);
             anim.SetBool("dead", true);
             Invoke("OpenCanvas", 0.5f);
         }
