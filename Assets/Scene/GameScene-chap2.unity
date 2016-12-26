@@ -1350,62 +1350,6 @@ Prefab:
       propertyPath: m_Name
       value: Background-02 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1000014146419306, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000011428936410, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000011771019582, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010688670336, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013271835214, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013001205114, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012622588396, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000011428936410, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_TagString
-      value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010688670336, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_TagString
-      value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000014146419306, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_TagString
-      value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000011771019582, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_TagString
-      value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013271835214, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_TagString
-      value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013001205114, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_TagString
-      value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012622588396, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
-      propertyPath: m_TagString
-      value: Ground
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
   m_IsPrefabParent: 0
