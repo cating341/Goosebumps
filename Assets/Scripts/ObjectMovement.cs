@@ -20,7 +20,10 @@ public class ObjectMovement : MonoBehaviour {
         
         if (other.gameObject.tag == "Player" && Input.GetKey("z") )
         {
-            gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+            if (gameObject.tag == "Potion")
+                gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y-0.86f, gameObject.transform.position.z);
+            else
+                gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
         }
     }
 

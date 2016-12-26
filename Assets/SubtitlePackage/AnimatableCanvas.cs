@@ -15,8 +15,10 @@ public class AnimatableCanvas : MonoBehaviour {
         {
             gameObject.AddComponent<CanvasGroup>();
         }
+
+
 	}
-    
+
     
 	
     public virtual void hide(OnCompleteDelegate completeEvent=null)
