@@ -133,4 +133,5 @@ public class BasicProperties : MonoBehaviour {
 	public float GetRemainingDistance() {
 		return agent.remainingDistance;
 	}
+		
 }

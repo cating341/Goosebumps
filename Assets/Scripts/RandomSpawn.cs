@@ -34,7 +34,6 @@ public class RandomSpawn : MonoBehaviour {
 	}
 
 	bool isOverlapInDistance(Vector3 pos, float dis) {
-		print ("loop");
 		Collider[] cols = Physics.OverlapSphere (pos, dis);
 		foreach (Collider col in cols) {
 			if (col.tag == prefab.tag) {
