@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 
 public class Character : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Character : MonoBehaviour
     public bool airControl = true;
 	public bool climbing = false;
 	public bool grounded = true;
+
 
     private List<GameObject> ground;
 
@@ -28,6 +30,8 @@ public class Character : MonoBehaviour
 
     Animator anim;
     AudioSource audioSource;
+	AudioSource se;
+	public AudioClip marioSE;
 
     public Transform ladder;
 
@@ -39,8 +43,9 @@ public class Character : MonoBehaviour
 
     // Use this for initialization
     void Start()
-    {
-        audioSource = GetComponentInChildren<AudioSource>();
+	{
+		se = GetComponent<AudioSource> ();
+		audioSource = GameObject.Find("Player/Canvas").GetComponent<AudioSource>();
         playerLayer = LayerMask.NameToLayer("Player");
 		groundLayer = LayerMask.NameToLayer ("Ground");
 		//print (playerLayer.value);
@@ -173,5 +178,46 @@ public class Character : MonoBehaviour
         //ground[1] = GameObject.Find("Floor (1)");
         //ground[2] = GameObject.Find("Floor (2)");
     }
+
+	Character setTranslucent() {
+		GetComponentInChildren<SpriteRenderer> ().DOFade (0.5f, 0.5f);
+		return this;
+	}
+
+	void setInvincible() {
+		
+		GameObject[] monsters = GameObject.FindGameObjectsWithTag ("Monster");
+		foreach (GameObject monster in monsters) {
+			if (monster.GetComponent<BasicProperties> () == null) {
+				return;
+			}
+			monster.GetComponent<BasicProperties> ().NewAttraction (this.gameObject);
+		}	
+	}
+
+	void setNormal() {
+		GetComponentInChildren<SpriteRenderer> ().DOFade (1.0f, 0.5f);
+		GameObject[] monsters = GameObject.FindGameObjectsWithTag ("Monster");
+		foreach (GameObject monster in monsters) {
+			if (monster.GetComponent<BasicProperties> () == null) {
+				return;
+			}
+			monster.GetComponent<BasicProperties> ().GetAttractions ().Clear ();
+		}
+		print ("Normal now!");
+	}
+
+	public IEnumerator WispPossessed(float t) {
+		setTranslucent ();
+		setInvincible ();
+		se.Play ();
+		yield return new WaitForSeconds (t);
+		se.Stop ();
+		setNormal ();
+	}
+
+	public void StartWispPossessed(float t) {
+		StartCoroutine (WispPossessed (t));
+	}
 
 }
