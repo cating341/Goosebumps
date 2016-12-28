@@ -5,9 +5,13 @@ public class GameSceneAinmation : MonoBehaviour {
 
     public Animator PanelAni;
     public Animator TextAni;
+
+	GameObject player;
 	// Use this for initialization
 	void Start () {
-        Invoke("StartCameraMovement", 5.0f);
+        Invoke("StartCameraMovement", 7.0f);
+		player = GameObject.Find ("Player");
+		Invoke ("StartPlayerMovement", 1.0f);
 	}
 	
 	// Update is called once per frame
@@ -24,4 +28,11 @@ public class GameSceneAinmation : MonoBehaviour {
         PanelAni.SetBool("start", true);
         TextAni.SetBool("start", true);
     }
+
+	void StartPlayerMovement(){
+		player.GetComponentInChildren<Animator> ().SetBool ("startEnding", true);
+
+	}
+
 }
+
