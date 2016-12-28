@@ -2,12 +2,16 @@
 using System.Collections;
 
 public class RandomSpawn : MonoBehaviour {
-	public GameObject prefab;
+	public GameObject[] prefab;
+	public float[] distance;
+	public float[] intervals;
 	GameObject[] grounds;
 	// Use this for initialization
 	void Start () {
 		grounds = GameObject.FindGameObjectsWithTag ("Ground");
-		randomSpawn ();
+		for (int i = 0; i < prefab.Length; i++) {
+			StartCoroutine(randomSpawn (i));
+		}
 	}
 	
 	// Update is called once per frame
@@ -15,7 +19,7 @@ public class RandomSpawn : MonoBehaviour {
 		
 	}
 
-	void randomSpawn() {
+	IEnumerator randomSpawn(int index) {
 		
 		Vector3 pos;
 
@@ -23,20 +27,22 @@ public class RandomSpawn : MonoBehaviour {
 		float minX = grounds [groundIndex].GetComponent<Collider> ().bounds.min.x;
 		float maxX = grounds [groundIndex].GetComponent<Collider> ().bounds.max.x;
 		float maxY = grounds [groundIndex].GetComponent<Collider> ().bounds.max.y;
-		pos = new Vector3 (Random.Range (minX, maxY), maxY + 0.05f, -4.0f);
-		
-		if (isOverlapInDistance (pos, 5.0f)) {
-			Invoke("randomSpawn", 1.0f);
+		pos = new Vector3 (Random.Range (minX, maxY), maxY + 0.2f, -4.0f);
+	
+		if (isOverlapInDistance (pos, 5.0f, index)) {
+			yield return new WaitForSeconds (0.5f);
+			yield return StartCoroutine (randomSpawn (index));
 		} else {
-			Instantiate (prefab, pos, Quaternion.identity);
-			Invoke("randomSpawn", 2.0f);
+			Instantiate (prefab[index], pos, Quaternion.identity);
+			yield return new WaitForSeconds (intervals [index]);
+			yield return StartCoroutine (randomSpawn (index));
 		}
 	}
 
-	bool isOverlapInDistance(Vector3 pos, float dis) {
+	bool isOverlapInDistance(Vector3 pos, float dis, int index) {
 		Collider[] cols = Physics.OverlapSphere (pos, dis);
 		foreach (Collider col in cols) {
-			if (col.tag == prefab.tag) {
+			if (col.tag == prefab[index].tag) {
 				return true;
 			}
 		}

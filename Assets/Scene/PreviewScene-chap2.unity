@@ -2877,7 +2877,7 @@ MonoBehaviour:
   lineColor0: {r: 1, g: 0, b: 0, a: 1}
   lineColor1: {r: 1, g: 0.93103445, b: 0, a: 1}
   lineColor2: {r: 0, g: 0, b: 1, a: 1}
-  flipY: 1
+  flipY: 0
   additiveRendering: 1
   alphaCutoff: 0.5
 --- !u!114 &908830998
@@ -4369,6 +4369,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f2b6b802878d34db7c1b35f37328d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1415986917
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012961164224, guid: f7d10b194b27d4fea9287a4f70c90e56, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.7074696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012961164224, guid: f7d10b194b27d4fea9287a4f70c90e56, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.2807264
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012961164224, guid: f7d10b194b27d4fea9287a4f70c90e56, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012961164224, guid: f7d10b194b27d4fea9287a4f70c90e56, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012961164224, guid: f7d10b194b27d4fea9287a4f70c90e56, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012961164224, guid: f7d10b194b27d4fea9287a4f70c90e56, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012961164224, guid: f7d10b194b27d4fea9287a4f70c90e56, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012961164224, guid: f7d10b194b27d4fea9287a4f70c90e56, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f7d10b194b27d4fea9287a4f70c90e56, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1422244029
 GameObject:
   m_ObjectHideFlags: 0
