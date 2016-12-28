@@ -25,6 +25,7 @@ TagManager:
   - BananaPeel
   - Seed
   - Potion
+  - Wisp
   layers:
   - Default
   - TransparentFX
