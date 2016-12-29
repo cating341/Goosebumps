@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using DG.Tweening;
+
 public class GameController : MonoBehaviour {
 
     public GameObject timerText;
     public GameObject totalTimerText; 
+	public GameObject risingText;
     public GameObject gameoverCanvas;
     public GameObject nextChapBtn;
     public GameObject[] bakingLadders;
+	public GameObject panel;
      
 
     float MAXTIMER = 18;
@@ -36,7 +40,20 @@ public class GameController : MonoBehaviour {
                 timer = 0;
             }
         
-	} 
+	}
+
+	public void AddPoint(float pt) {
+		this.currentTimer += pt;
+
+		GameObject risingScore = (GameObject)Instantiate (risingText, new Vector3 (-12.62742f, 4.577878f, -18.89f), Quaternion.identity);
+
+		risingScore.transform.SetParent (panel.transform);
+		risingScore.transform.localPosition = new Vector3 (-12.62742f, 4.577878f, -18.89f);
+		risingScore.transform.localScale = new Vector3 (1, 1, 1);
+		risingScore.GetComponent<RisingText> ().setup (20, 0.5f, 1);
+
+
+	}
 
     public void GameOver()
     {

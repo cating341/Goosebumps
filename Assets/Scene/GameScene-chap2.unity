@@ -1795,6 +1795,17 @@ Prefab:
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
+        type: 2}
+      propertyPath: risingText
+      value: 
+      objectReference: {fileID: 1000013320689768, guid: fc6fefa993af9444eb034537f21f28b5,
+        type: 2}
+    - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
+        type: 2}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 521889343}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81d217a00e354d846af9d22e3cb81fb6, type: 2}
   m_IsPrefabParent: 0
