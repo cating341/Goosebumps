@@ -161,7 +161,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -174,7 +174,827 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature_girl|girl_attack
+      takeName: Armature_girl|girl_attack
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_girl
+        weight: 1
+      - path: Armature_girl/GENERAL
+        weight: 1
+      - path: Armature_girl/GENERAL/body
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L/finger_b_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L/finger_b_2.L/finger_b_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L/finger_bol_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L/finger_bol_2.L/finger_bol_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L/finger_m_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L/finger_m_2.L/finger_m_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L/finger_s_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L/finger_s_2.L/finger_s_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L/finger_y_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L/finger_y_2.L/finger_y_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R/finger_b_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R/finger_b_2.R/finger_b_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R/finger_bol_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R/finger_bol_2.R/finger_bol_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R/finger_m_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R/finger_m_2.R/finger_m_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R/finger_s_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R/finger_s_2.R/finger_s_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R/finger_y_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R/finger_y_2.R/finger_y_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.L/eye.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.R/eye.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L/hear.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L/hear.L/hear.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R/hear.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R/hear.R/hear.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Mouth.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Mouth.R/Mouth.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L/Foot.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R/Foot.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L/Leg_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L/Leg_2.L/Leg_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R/Leg_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R/Leg_2.R/Leg_2.R_end
+        weight: 1
+      - path: girl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature_girl|girl_dead
+      takeName: Armature_girl|girl_dead
+      firstFrame: 0
+      lastFrame: 106
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_girl
+        weight: 1
+      - path: Armature_girl/GENERAL
+        weight: 1
+      - path: Armature_girl/GENERAL/body
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L/finger_b_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L/finger_b_2.L/finger_b_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L/finger_bol_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L/finger_bol_2.L/finger_bol_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L/finger_m_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L/finger_m_2.L/finger_m_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L/finger_s_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L/finger_s_2.L/finger_s_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L/finger_y_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L/finger_y_2.L/finger_y_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R/finger_b_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R/finger_b_2.R/finger_b_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R/finger_bol_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R/finger_bol_2.R/finger_bol_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R/finger_m_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R/finger_m_2.R/finger_m_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R/finger_s_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R/finger_s_2.R/finger_s_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R/finger_y_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R/finger_y_2.R/finger_y_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.L/eye.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.R/eye.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L/hear.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L/hear.L/hear.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R/hear.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R/hear.R/hear.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Mouth.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Mouth.R/Mouth.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L/Foot.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R/Foot.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L/Leg_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L/Leg_2.L/Leg_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R/Leg_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R/Leg_2.R/Leg_2.R_end
+        weight: 1
+      - path: girl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature_girl|girl_idle
+      takeName: Armature_girl|girl_idle
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_girl
+        weight: 1
+      - path: Armature_girl/GENERAL
+        weight: 1
+      - path: Armature_girl/GENERAL/body
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L/finger_b_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L/finger_b_2.L/finger_b_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L/finger_bol_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L/finger_bol_2.L/finger_bol_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L/finger_m_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L/finger_m_2.L/finger_m_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L/finger_s_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L/finger_s_2.L/finger_s_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L/finger_y_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L/finger_y_2.L/finger_y_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R/finger_b_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R/finger_b_2.R/finger_b_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R/finger_bol_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R/finger_bol_2.R/finger_bol_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R/finger_m_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R/finger_m_2.R/finger_m_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R/finger_s_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R/finger_s_2.R/finger_s_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R/finger_y_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R/finger_y_2.R/finger_y_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.L/eye.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.R/eye.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L/hear.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L/hear.L/hear.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R/hear.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R/hear.R/hear.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Mouth.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Mouth.R/Mouth.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L/Foot.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R/Foot.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L/Leg_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L/Leg_2.L/Leg_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R/Leg_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R/Leg_2.R/Leg_2.R_end
+        weight: 1
+      - path: girl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature_girl|girl_jump
+      takeName: Armature_girl|girl_jump
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_girl
+        weight: 1
+      - path: Armature_girl/GENERAL
+        weight: 1
+      - path: Armature_girl/GENERAL/body
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L/finger_b_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L/finger_b_2.L/finger_b_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L/finger_bol_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L/finger_bol_2.L/finger_bol_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L/finger_m_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L/finger_m_2.L/finger_m_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L/finger_s_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L/finger_s_2.L/finger_s_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L/finger_y_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L/finger_y_2.L/finger_y_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R/finger_b_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R/finger_b_2.R/finger_b_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R/finger_bol_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R/finger_bol_2.R/finger_bol_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R/finger_m_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R/finger_m_2.R/finger_m_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R/finger_s_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R/finger_s_2.R/finger_s_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R/finger_y_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R/finger_y_2.R/finger_y_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.L/eye.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.R/eye.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L/hear.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L/hear.L/hear.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R/hear.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R/hear.R/hear.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Mouth.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Mouth.R/Mouth.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L/Foot.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R/Foot.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L/Leg_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L/Leg_2.L/Leg_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R/Leg_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R/Leg_2.R/Leg_2.R_end
+        weight: 1
+      - path: girl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature_girl|girl_run
+      takeName: Armature_girl|girl_run
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_girl
+        weight: 1
+      - path: Armature_girl/GENERAL
+        weight: 1
+      - path: Armature_girl/GENERAL/body
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L/finger_b_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_b_1.L/finger_b_2.L/finger_b_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L/finger_bol_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_bol_1.L/finger_bol_2.L/finger_bol_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L/finger_m_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_m_1.L/finger_m_2.L/finger_m_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L/finger_s_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_s_1.L/finger_s_2.L/finger_s_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L/finger_y_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.L/Hand_2.L/Hand_3.L/finger_y_1.L/finger_y_2.L/finger_y_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R/finger_b_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_b_1.R/finger_b_2.R/finger_b_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R/finger_bol_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_bol_1.R/finger_bol_2.R/finger_bol_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R/finger_m_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_m_1.R/finger_m_2.R/finger_m_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R/finger_s_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_s_1.R/finger_s_2.R/finger_s_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R/finger_y_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Hand.R/Hand_2.R/Hand_3.R/finger_y_1.R/finger_y_2.R/finger_y_2.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.L/eye.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/eye.R/eye.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L/hear.L
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.L/hear.L/hear.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R/hear.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Hear.R/hear.R/hear.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Mouth.R
+        weight: 1
+      - path: Armature_girl/GENERAL/body/body_2/Head/Mouth.R/Mouth.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L/Foot.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R/Foot.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Leg_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L/Leg_2.L
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.L/Leg_2.L/Leg_2.L_end
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R/Leg_2.R
+        weight: 1
+      - path: Armature_girl/GENERAL/Taz/Leg.R/Leg_2.R/Leg_2.R_end
+        weight: 1
+      - path: girl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
