@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 88.727
+      value: 86.97
       objectReference: {fileID: 0}
     - target: {fileID: 4000012339541516, guid: aaaa750352e23194aaa556b9246789a3, type: 2}
       propertyPath: m_LocalRotation.x
@@ -193,7 +193,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &59828169
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -256,7 +256,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &213931975
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &496765644
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -510,7 +510,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &527990996
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +522,7 @@ GameObject:
   - 33: {fileID: 527990999}
   - 65: {fileID: 527990998}
   - 23: {fileID: 527990997}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +765,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1644603313}
   m_RootOrder: 0
-
 --- !u!1 &848565255
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,8 +793,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 1443728389}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -836,7 +835,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 848565255}
 --- !u!1 &1115377191
 GameObject:
-
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1000011260861726, guid: a414e06a6c53a418389e50c687ae3186,
     type: 2}
@@ -1096,7 +1094,7 @@ Transform:
   - {fileID: 213931976}
   - {fileID: 1774769547}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1596201068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1187,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1629576409}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FourthFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1209,7 +1207,7 @@ Transform:
   m_Children:
   - {fileID: 2134651897}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &1642199334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1216,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1642199335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThirdFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1236,7 @@ Transform:
   m_Children:
   - {fileID: 527991000}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &1644603312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,7 +1268,7 @@ Transform:
   - {fileID: 1596201072}
   - {fileID: 1603335413}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1001 &1646730958
 Prefab:
   m_ObjectHideFlags: 0
@@ -1586,6 +1584,7 @@ MonoBehaviour:
   airControl: 1
   climbing: 0
   grounded: 1
+  marioSE: {fileID: 0}
   ladder: {fileID: 0}
 --- !u!114 &2002294703
 MonoBehaviour:
@@ -1757,7 +1756,7 @@ GameObject:
   - 33: {fileID: 2134651896}
   - 65: {fileID: 2134651895}
   - 23: {fileID: 2134651894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

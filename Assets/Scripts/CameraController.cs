@@ -25,7 +25,7 @@ public class CameraController : MonoBehaviour {
             //Debug.Log(gameObject.transform.position);
             thisGameScece = new float[] { -3.4f, -3.4f, 6.67354f, 6.67354f };
         }
-        else 
+		else if(thisGameScece != gamescene3)
         {
             if (player.transform.position.x <= thisGameScece[0])
                 gameObject.transform.position = new Vector3(thisGameScece[0], gameObject.transform.position.y, -15.97f);

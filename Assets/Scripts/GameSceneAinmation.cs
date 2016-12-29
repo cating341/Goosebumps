@@ -9,7 +9,7 @@ public class GameSceneAinmation : MonoBehaviour {
 	GameObject player;
 	// Use this for initialization
 	void Start () {
-        Invoke("StartCameraMovement", 7.0f);
+        Invoke("StartCameraMovement", 10.0f);
 		player = GameObject.Find ("Player");
 		Invoke ("StartPlayerMovement", 1.0f);
 	}
