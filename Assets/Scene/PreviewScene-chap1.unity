@@ -2262,7 +2262,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013949618068, guid: a414e06a6c53a418389e50c687ae3186, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.04
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: 4000013949618068, guid: a414e06a6c53a418389e50c687ae3186, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3839,18 +3839,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 1000013015462648, guid: b101ae54a94da4d468ffd7d4bf3410d5, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013015462648, guid: b101ae54a94da4d468ffd7d4bf3410d5, type: 2}
-      propertyPath: m_Name
-      value: KingMonster1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 65000010682715010, guid: b101ae54a94da4d468ffd7d4bf3410d5, type: 2}
-    - {fileID: 114000010190441934, guid: b101ae54a94da4d468ffd7d4bf3410d5, type: 2}
-    - {fileID: 114000011625815434, guid: b101ae54a94da4d468ffd7d4bf3410d5, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b101ae54a94da4d468ffd7d4bf3410d5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &830351080
@@ -4209,6 +4198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 496509561}
+  SplineOriPos: []
 --- !u!114 &908830997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4227,7 +4217,7 @@ MonoBehaviour:
   lineColor0: {r: 1, g: 0, b: 0, a: 1}
   lineColor1: {r: 1, g: 0.93103445, b: 0, a: 1}
   lineColor2: {r: 0, g: 0, b: 1, a: 1}
-  flipY: 1
+  flipY: 0
   additiveRendering: 1
   alphaCutoff: 0.5
 --- !u!124 &908830999

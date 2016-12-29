@@ -102,16 +102,16 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	private void CheckClimb() {
+		print (GetComponent<Rigidbody> ().velocity);
 		OffMeshLinkData ladder = agent.currentOffMeshLinkData;
 		if (ladder.activated && GameObject.Find("TempHandle").GetComponent<TempController>().GetTemp() >= ICE_TEMP) {
-			GetComponent<Rigidbody> ().useGravity = false;
+//			GetComponent<Rigidbody> ().useGravity = false;
 			transform.eulerAngles = new Vector3(0, 0, 0);
 			float upDown = ladder.endPos.y > ladder.startPos.y ? 1f : -1f;
 			transform.position = new Vector3 (ladder.endPos.x, transform.position.y + 0.1f * upDown, transform.position.z);
 			IgnoreGround (true);
 			if (Mathf.Abs (transform.position.y - ladder.startPos.y) > Mathf.Abs (ladder.endPos.y - ladder.startPos.y)) {
 				agent.CompleteOffMeshLink ();
-				GetComponent<Rigidbody> ().useGravity = true;
 				IgnoreGround (false);
 			}
 		}
@@ -133,5 +133,4 @@ public class BasicProperties : MonoBehaviour {
 	public float GetRemainingDistance() {
 		return agent.remainingDistance;
 	}
-		
 }
