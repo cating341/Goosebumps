@@ -2737,6 +2737,11 @@ Prefab:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 931758887}
+    - target: {fileID: 212000011400355860, guid: a414e06a6c53a418389e50c687ae3186,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.428
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a414e06a6c53a418389e50c687ae3186, type: 2}
   m_IsPrefabParent: 0
