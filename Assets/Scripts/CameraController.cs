@@ -51,6 +51,7 @@ public class CameraController : MonoBehaviour {
             SplineOriPos[i].gameObject.transform.position = gameObject.transform.position; 
 
         gameObject.GetComponentInChildren<SplineController>().enabled = true;
+		gameObject.GetComponentInChildren<SplineInterpolator>().enabled = true;
     }
 
 	public void undateCameraParameters(string i){
