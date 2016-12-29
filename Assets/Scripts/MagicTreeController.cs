@@ -21,6 +21,7 @@ public class MagicTreeController : MonoBehaviour {
         count++;
         if (count >= MAXSTONE && enable)
         {
+            Camera.main.GetComponent<CameraController>().CameraMovement();
             TreeBridge.SetActive(true);
             enable = false;
         }
