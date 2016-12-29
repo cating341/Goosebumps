@@ -2442,22 +2442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f2b6b802878d34db7c1b35f37328d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &760442989 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013221882944, guid: 81d217a00e354d846af9d22e3cb81fb6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1376787627}
---- !u!114 &760442990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 760442989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa2aa4e357d68b741a17fd7d740825a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &765180164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,7 +2724,7 @@ Prefab:
     - target: {fileID: 212000011400355860, guid: a414e06a6c53a418389e50c687ae3186,
         type: 2}
       propertyPath: m_Color.a
-      value: 0.428
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a414e06a6c53a418389e50c687ae3186, type: 2}
@@ -4044,44 +4028,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
-        type: 2}
-      propertyPath: timerText
-      value: 
-      objectReference: {fileID: 1452485276}
-    - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
-        type: 2}
-      propertyPath: totalTimerText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
-        type: 2}
-      propertyPath: mainCanvas
-      value: 
-      objectReference: {fileID: 721168533}
-    - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
-        type: 2}
-      propertyPath: gameoverCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 82000014182201244, guid: 81d217a00e354d846af9d22e3cb81fb6,
         type: 2}
       propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000014182201244, guid: 81d217a00e354d846af9d22e3cb81fb6,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 86294aa51e3c29c4798260068f4d88b3, type: 3}
-    - target: {fileID: 82000014182201244, guid: 81d217a00e354d846af9d22e3cb81fb6,
-        type: 2}
-      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -4823,11 +4772,6 @@ Prefab:
 --- !u!224 &1452485275 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224000011660553550, guid: 8e7de89935fe0c346963e953aaea755e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1452485274}
---- !u!1 &1452485276 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000014040912218, guid: 8e7de89935fe0c346963e953aaea755e,
     type: 2}
   m_PrefabInternal: {fileID: 1452485274}
 --- !u!1 &1493260403
@@ -5949,7 +5893,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 760442990}
+      - m_Target: {fileID: 1939168181}
         m_MethodName: GameStart
         m_Mode: 1
         m_Arguments:
@@ -6637,6 +6581,22 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1927247638}
   m_Script: {fileID: 11500000, guid: 9dba8c123e8d84c48a66ceba90f5e132, type: 3}
+--- !u!1 &1939168180 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013221882944, guid: 81d217a00e354d846af9d22e3cb81fb6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1376787627}
+--- !u!114 &1939168181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939168180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2aa4e357d68b741a17fd7d740825a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1956385855
 GameObject:
   m_ObjectHideFlags: 0
