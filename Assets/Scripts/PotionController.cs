@@ -5,9 +5,11 @@ public class PotionController : MonoBehaviour {
 	public float HEAT_TEMP = 70.0f;
     public AudioClip bombSound;
 	Animator animation;
+    bool bombstate;
 	// Use this for initialization
 	void Start () {
 		animation = gameObject.GetComponentInChildren<Animator> ();
+        bombstate = false;
 	}
 	
 	// Update is called once per frame
@@ -30,5 +32,17 @@ public class PotionController : MonoBehaviour {
         gameObject.GetComponent<AudioSource>().volume = 1.0f;
         gameObject.GetComponent<AudioSource>().maxDistance = 50.0f;
         gameObject.GetComponent<AudioSource>().PlayOneShot(bombSound);
+        bombstate = true;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Monster" && bombstate)
+        {
+            if(other.gameObject.layer == LayerMask.NameToLayer("KingMonster")){
+                other.gameObject.GetComponent<Chap2KingProperties>().TakeDamage();
+            }
+        }
+    }
+    
 }

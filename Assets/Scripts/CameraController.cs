@@ -48,12 +48,14 @@ public class CameraController : MonoBehaviour {
         gameObject.GetComponentInChildren<SplineController>().SplineRoot = GameObject.Find("Spline Root");
         movementEnable = true;
         for (int i = 0; i < SplineOriPos.Length;i ++ )
-            SplineOriPos[i].gameObject.transform.position = gameObject.transform.position; 
+            SplineOriPos[i].gameObject.transform.position = gameObject.transform.position;
 
-        gameObject.GetComponentInChildren<SplineController>().enabled = true;
-		gameObject.GetComponentInChildren<SplineInterpolator>().enabled = true;
+        gameObject.GetComponentInChildren<SplineController>().FollowSpline();
+		//gameObject.GetComponentInChildren<SplineInterpolator>().enabled = true;
+        
     }
 
+  
 	public void undateCameraParameters(string i){
 		Debug.Log (i.ToString () == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW2);
         if (i == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW1 || i == GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE1)

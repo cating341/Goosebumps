@@ -102,7 +102,7 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	private void CheckClimb() {
-		print (GetComponent<Rigidbody> ().velocity);
+		//print (GetComponent<Rigidbody> ().velocity);
 		OffMeshLinkData ladder = agent.currentOffMeshLinkData;
 		if (ladder.activated && GameObject.Find("TempHandle").GetComponent<TempController>().GetTemp() >= ICE_TEMP) {
 //			GetComponent<Rigidbody> ().useGravity = false;
