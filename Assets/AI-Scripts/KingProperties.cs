@@ -16,7 +16,7 @@ public class KingProperties : MonoBehaviour {
 	void Update () {
 		basicProperties.NavigateMonster (GetTargetPosition());
 		Physics.IgnoreCollision (GetComponent<Collider> (), player.GetComponent<Collider> ()
-			, basicProperties.CheckDisability() || basicProperties.GetAttractions ().Count > 0);
+			, basicProperties.CheckDisability() || basicProperties.GetAttractions ().Count > 0 || player.GetComponent<Character>().isInvincible);
 	}
 
 	private Vector3 GetTargetPosition() {

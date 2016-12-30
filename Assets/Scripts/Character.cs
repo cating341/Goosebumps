@@ -13,7 +13,7 @@ public class Character : MonoBehaviour
     public bool airControl = true;
 	public bool climbing = false;
 	public bool grounded = true;
-
+	public bool isInvincible = false;
 
     private List<GameObject> ground;
 
@@ -185,25 +185,12 @@ public class Character : MonoBehaviour
 	}
 
 	void setInvincible() {
-		
-		GameObject[] monsters = GameObject.FindGameObjectsWithTag ("Monster");
-		foreach (GameObject monster in monsters) {
-			if (monster.GetComponent<BasicProperties> () == null) {
-				return;
-			}
-			monster.GetComponent<BasicProperties> ().NewAttraction (this.gameObject);
-		}	
+		isInvincible = true;
 	}
 
 	void setNormal() {
 		GetComponentInChildren<SpriteRenderer> ().DOFade (1.0f, 0.5f);
-		GameObject[] monsters = GameObject.FindGameObjectsWithTag ("Monster");
-		foreach (GameObject monster in monsters) {
-			if (monster.GetComponent<BasicProperties> () == null) {
-				return;
-			}
-			monster.GetComponent<BasicProperties> ().GetAttractions ().Clear ();
-		}
+		isInvincible = false;
 		print ("Normal now!");
 	}
 

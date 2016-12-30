@@ -65,24 +65,16 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	private bool CheckDequeue(GameObject peek) {
-		if (peek.tag == "Phone")
-		{
-			if (!peek.GetComponentInChildren<Animator>().GetBool("ring"))
-			{
+		if (peek.tag == "Phone") {
+			if (!peek.GetComponentInChildren<Animator> ().GetBool ("ring")) {
 				return true;
 			}
-		}
-		else if(peek.name == "TV")
-		{
-			if (!peek.GetComponentInChildren<Animator>().GetBool("on"))
-			{
+		} else if (peek.name == "TV") {
+			if (!peek.GetComponentInChildren<Animator> ().GetBool ("on")) {
 				return true;
 			}
-		}
-		else if(peek.name == "Alarm clock")
-		{
-			if (!peek.GetComponentInChildren<Animator>().GetBool("ring"))
-			{
+		} else if (peek.name == "Alarm clock") {
+			if (!peek.GetComponentInChildren<Animator> ().GetBool ("ring")) {
 				return true;
 			}
 		}
