@@ -24,7 +24,7 @@ public class MagicTreeController : MonoBehaviour {
             TreeBridge.SetActive(true);
             count = 0;
             if (GameObject.Find("KingMonster2") ) 
-                GameObject.Find("KingMonster2").GetComponent<Chap2KingProperties>().setStartToDestroyed();
+				GameObject.Find("KingMonster2").GetComponent<PotionDamage>().setStartToDestroyed();
         }
     }
 }

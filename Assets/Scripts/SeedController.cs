@@ -37,14 +37,14 @@ public class SeedController : MonoBehaviour {
 
 	public void TakeDamage() {
 		health--;
+		hittingThis.GetComponentInChildren<Animator> ().SetBool ("attack", true);
 		animation.SetBool("hurt", true);
-
 		Invoke("StopAni", 1.3f);
 	}
 
 	void StopAni() {
 		animation.SetBool("hurt", false); 
-		attacking = false; 
+		hittingThis.GetComponentInChildren<Animator>().SetBool("attack", false);
 		if (health <= 0)
 		{
 			Destroy(gameObject);
@@ -53,22 +53,26 @@ public class SeedController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.tag == "Player" && isTree && !attacking)
+		if (other.gameObject.tag == "Monster" && isTree && !attacking)
 		{
-			/*
-			this.killedMonster = other.gameObject;
-			this.killedMonster.GetComponent<BasicProperties> ().NewDisability ("carpet", true);
-			this.killedMonster.GetComponent<Animator> ().SetBool ("dead", true);
-			*/
 			attacking = true;
-			/*hittingThis = other.gameObject;
-			hittingThis.GetComponent<BasicProperties> ().NewDisability ("refrig", true);
-			hittingThis.GetComponent<Animator> ().SetBool ("attack", true);*/
+
+			hittingThis = other.gameObject;
+			hittingThis.GetComponent<BasicProperties> ().NewDisability ("tree", true);
+
 			Damage ();
 		}
 	}
 	private void Damage(){
 		TakeDamage ();
-		//Invoke ("Damage", 2f);
+		Invoke ("Damage", 2f);
+	}
+
+	void OnDestroy() {
+		if (this.hittingThis)
+		{
+			hittingThis.GetComponentInChildren<Animator>().SetBool("attack", false);
+			hittingThis.GetComponent<BasicProperties> ().NewDisability ("tree", false);
+		}
 	}
 }

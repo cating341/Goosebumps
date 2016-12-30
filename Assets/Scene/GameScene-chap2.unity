@@ -639,6 +639,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83f5f69f7be4a44d7b306c4f3a348b1c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &144655275 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013666297456, guid: 83f5f69f7be4a44d7b306c4f3a348b1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 144655274}
+--- !u!114 &144655276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144655275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f7a4893eb2f4baaa3070c331e02141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBeDestroyed: 1
+  maxHealth: 5
 --- !u!1 &219504443
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,8 +868,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114000013024018484, guid: 83f5f69f7be4a44d7b306c4f3a348b1c,
         type: 2}
-      propertyPath: rightBound
-      value: 0
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114000010318004816, guid: 83f5f69f7be4a44d7b306c4f3a348b1c,
         type: 2}
@@ -4373,6 +4391,24 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1 &1709653017 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012031158902, guid: 7c91113bf75644919854e940d57f56a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1709653009}
+--- !u!114 &1709653018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709653017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f7a4893eb2f4baaa3070c331e02141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBeDestroyed: 0
+  maxHealth: 1
 --- !u!1 &1758509821
 GameObject:
   m_ObjectHideFlags: 0
