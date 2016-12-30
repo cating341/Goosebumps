@@ -717,6 +717,7 @@ GameObject:
   - 114: {fileID: 114000013306397072}
   - 114: {fileID: 114000013024018484}
   - 114: {fileID: 114000010318004816}
+  - 114: {fileID: 114000012300863804}
   m_Layer: 13
   m_Name: SoldierMonster2
   m_TagString: Monster
@@ -1101,7 +1102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013666297456}
   m_LocalRotation: {x: -0, y: 0.9989628, z: -0, w: 0.045534216}
-  m_LocalPosition: {x: -13.09, y: -0.64, z: -5.01}
+  m_LocalPosition: {x: -6.7, y: 8.12, z: -5.01}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_LocalEulerAnglesHint: {x: 0, y: 174.92801, z: 0}
   m_Children:
@@ -2046,6 +2047,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floor: 2
+--- !u!114 &114000012300863804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013666297456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f7a4893eb2f4baaa3070c331e02141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBeDestroyed: 1
 --- !u!114 &114000013024018484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2058,7 +2071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftBound: -13
-  rightBound: 13
+  rightBound: 0
 --- !u!114 &114000013306397072
 MonoBehaviour:
   m_ObjectHideFlags: 1

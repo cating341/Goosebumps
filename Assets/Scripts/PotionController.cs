@@ -35,13 +35,13 @@ public class PotionController : MonoBehaviour {
         bombstate = true;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Monster" && bombstate)
         {
-            if(other.gameObject.layer == LayerMask.NameToLayer("KingMonster")){
-                other.gameObject.GetComponent<Chap2KingProperties>().TakeDamage();
-            }
+            //if(other.gameObject.layer == LayerMask.NameToLayer("KingMonster")){
+				other.gameObject.GetComponentInParent <PotionDamage>().TakeDamage();
+			
         }
     }
     
