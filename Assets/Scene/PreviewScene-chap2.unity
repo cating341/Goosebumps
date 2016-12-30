@@ -2615,16 +2615,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013838788480, guid: a414e06a6c53a418389e50c687ae3186,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f0ca59191cb34b3e9365d4979cafb32, type: 2}
     - target: {fileID: 114000012450443774, guid: a414e06a6c53a418389e50c687ae3186,
         type: 2}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 931758887}
-    - target: {fileID: 212000011400355860, guid: a414e06a6c53a418389e50c687ae3186,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a414e06a6c53a418389e50c687ae3186, type: 2}
   m_IsPrefabParent: 0

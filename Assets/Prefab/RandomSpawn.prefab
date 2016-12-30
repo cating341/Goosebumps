@@ -58,5 +58,5 @@ MonoBehaviour:
   - 5
   - 5
   intervals:
-  - 2
-  - 2
+  - 10
+  - 8
