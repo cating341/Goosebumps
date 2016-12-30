@@ -22,7 +22,7 @@ GameObject:
   - 82: {fileID: 82000010399134370}
   - 114: {fileID: 114000013371369300}
   - 114: {fileID: 114000012369052734}
-  - 65: {fileID: 65000013682927274}
+  - 135: {fileID: 135000012989624508}
   m_Layer: 0
   m_Name: MagicPotion
   m_TagString: Potion
@@ -74,25 +74,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010902836516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.31, y: 2.71, z: -1.837}
+  m_LocalPosition: {x: 4.71, y: 3.4, z: -1.837}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224000013892215238}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!65 &65000013682927274
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010902836516}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.150094, z: 2.1809678}
-  m_Center: {x: 0, y: 0.6032171, z: -0.061890244}
 --- !u!82 &82000010399134370
 AudioSource:
   m_ObjectHideFlags: 1
@@ -266,6 +254,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!135 &135000012989624508
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010902836516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.66
+  m_Center: {x: 0, y: 1.17, z: 0}
 --- !u!212 &212000010405651238
 SpriteRenderer:
   m_ObjectHideFlags: 1

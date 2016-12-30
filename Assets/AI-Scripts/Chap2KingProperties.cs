@@ -6,6 +6,12 @@ public class Chap2KingProperties : MonoBehaviour {
 	private GameObject player;
 	private NavMeshAgent agent;
 	private BasicProperties basicProperties;
+
+    bool canBeDestroyed = false;
+    const int maxHealth = 1;
+    int health = maxHealth;
+
+
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -35,4 +41,39 @@ public class Chap2KingProperties : MonoBehaviour {
 //		agent.Resume ();
 
 	}
+
+    public void setStartToDestroyed() {
+        canBeDestroyed = true;
+    }
+
+    public void TakeDamage() {
+        if (canBeDestroyed) {
+            health--; 
+            
+            if (health <= 0)
+            {
+                canBeDestroyed = false;
+                Debug.Log("deaddeaddead!!!!!!!!!!!!!!!");
+                gameObject.GetComponent<BasicProperties>().NewDisability("faint", true);
+                gameObject.GetComponentInChildren<Animator>().SetBool("dead", true);
+                Invoke("Destroyed", 6.0f);
+            }
+            else {
+                gameObject.GetComponent<BasicProperties>().NewDisability("faint", true);
+                gameObject.GetComponentInChildren<Animator>().SetBool("faint", true);
+                Invoke("WakeUp", 2f);
+                Debug.Log("health " + health);
+            }
+        }
+    }
+
+    private void WakeUp()
+    {
+        gameObject.GetComponent<BasicProperties>().NewDisability("faint", false);
+        gameObject.GetComponentInChildren<Animator>().SetBool("faint", false);
+    }
+
+    void Destroyed() {
+        Destroy(gameObject);
+    }
 }

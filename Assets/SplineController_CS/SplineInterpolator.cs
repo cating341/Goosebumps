@@ -29,7 +29,7 @@ public class SplineInterpolator : MonoBehaviour
 
 
 
-	void Awake()
+	void Start()
 	{
 		Reset();
 	}
@@ -42,7 +42,7 @@ public class SplineInterpolator : MonoBehaviour
 		mState = mode == eWrapMode.ONCE ? "Once" : "Loop";
 		mRotations = bRotations;
 		mOnEndCallback = endCallback;
-
+        
 		SetInput();
 	}
 
@@ -166,7 +166,8 @@ public class SplineInterpolator : MonoBehaviour
 				else
 				{
 					mCurrentIdx = 1;
-					mCurrentTime = 0;
+					mCurrentTime = 0; 
+                    mState = "Stopped";
 				}
 			}
 		}
