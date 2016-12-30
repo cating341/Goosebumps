@@ -4,6 +4,9 @@ using System.Collections;
 
 public class WardrobeController : MonoBehaviour {
     
+	public Transform outpos;
+	public Transform inpos;
+
     private AudioSource audioSource;
     private Animator animation;
     private bool enable = true, hide = false;
@@ -46,7 +49,7 @@ public class WardrobeController : MonoBehaviour {
 	private void ScratchYouOut() {
 		PlaySoundEffect ();
 		//player.GetComponent<SpriteRenderer>().enabled = true;
-		player.transform.position -= new Vector3 (0, 0, 2.0f);
+		player.transform.position = new Vector3 (outpos.position.x , player.transform.position.y, outpos.position.z);
 
 		player.GetComponent<Character> ().EnablePlayerMove ();
 		Invoke ("ReEnable", 3.0f);
@@ -56,7 +59,7 @@ public class WardrobeController : MonoBehaviour {
     {
         enable = true;
         hide = true;
-        player.transform.position += new Vector3(0, 0, 2.0f);
+		player.transform.position = new Vector3 (inpos.position.x , player.transform.position.y, inpos.position.z);
         player.GetComponent<Character>().DisablePlayerMove();
     }
 

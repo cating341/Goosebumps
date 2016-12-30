@@ -15,7 +15,8 @@ public class TransitionController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		animateCanvas = GameObject.Find ("AnimateCanvas");
-        anim = GameObject.Find("BackgroundCanvas").GetComponent<Animator>();
+		if (GameObject.Find("BackgroundCanvas") != null)
+        	anim = GameObject.Find("BackgroundCanvas").GetComponent<Animator>();
         ct = animateCanvas.GetComponent<CompositeText> ();
 		ct.color = Color.white;
 		//Invoke ("animateString", 1.0f);

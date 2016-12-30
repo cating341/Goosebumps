@@ -55,8 +55,8 @@ MonoBehaviour:
   - {fileID: 1000010902836516, guid: 078ec040e35b33544829261745967888, type: 2}
   - {fileID: 1000012701365914, guid: 161152e8c17508a42a80fc3b100c7eff, type: 2}
   distance:
-  - 5
-  - 5
+  - 4
+  - 4
   intervals:
   - 10
-  - 8
+  - 5
