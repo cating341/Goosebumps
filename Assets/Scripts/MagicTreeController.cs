@@ -6,7 +6,6 @@ public class MagicTreeController : MonoBehaviour {
     public int MAXSTONE = 5;
     public GameObject TreeBridge;
     int count = 0;
-    bool enable = true;
 	// Use this for initialization
 	void Start () {
         TreeBridge.SetActive(false);
@@ -19,11 +18,13 @@ public class MagicTreeController : MonoBehaviour {
 
     public void LightTheStone() {
         count++;
-        if (count >= MAXSTONE && enable)
+        if (count >= MAXSTONE )
         {
             Camera.main.GetComponent<CameraController>().CameraMovement();
             TreeBridge.SetActive(true);
-            enable = false;
+            count = 0;
+            if (GameObject.Find("KingMonster2") ) 
+                GameObject.Find("KingMonster2").GetComponent<Chap2KingProperties>().setStartToDestroyed();
         }
     }
 }

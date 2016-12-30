@@ -26,8 +26,7 @@ public class BananaController : MonoBehaviour {
 				steppedMonster.GetComponent<BasicProperties> ().NewDisability ("faint", true);
 				steppedMonster.GetComponentInChildren<Animator> ().SetBool ("faint", true);
 				Invoke ("WakeUp", 3f);
-			}
-            Debug.Log("Trigger banana event");
+			} 
         }
     }
 
