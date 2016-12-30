@@ -19,7 +19,6 @@ public class SoldierProperties : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (transform.position.x);
 		basicProperties.NavigateMonster (GetTargetPosition());
 		GameObject attraction = basicProperties.GetAttractionPeek ();
 		Physics.IgnoreCollision (GetComponent<Collider> (), player.GetComponent<Collider> ()
