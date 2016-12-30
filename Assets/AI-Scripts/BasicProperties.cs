@@ -13,6 +13,9 @@ public class BasicProperties : MonoBehaviour {
 	private Queue<GameObject> attractions;
 	private float ICE_TEMP = 13.0f;
 
+	private bool iceBreaking;
+	private bool iceBroken;
+
 	// Use this for initialization
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
@@ -20,6 +23,8 @@ public class BasicProperties : MonoBehaviour {
 		attractions = new Queue<GameObject> ();
 		grounds = GameObject.FindGameObjectsWithTag ("Ground");
 		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("SoldierMonster"), true);
+		iceBreaking = false;
+		iceBroken = true;
 	}
 	
 	// Update is called once per frame
@@ -104,17 +109,31 @@ public class BasicProperties : MonoBehaviour {
 
 	private void CheckClimb() {
 		OffMeshLinkData ladder = agent.currentOffMeshLinkData;
-		if (ladder.activated && GameObject.Find("TempHandle").GetComponent<TempController>().GetTemp() >= ICE_TEMP) {
+		if (ladder.activated) {
 //			GetComponent<Rigidbody> ().useGravity = false;
-			transform.eulerAngles = new Vector3(0, 0, 0);
-			float upDown = ladder.endPos.y > ladder.startPos.y ? 1f : -1f;
-			transform.position = new Vector3 (ladder.endPos.x, transform.position.y + 0.1f * upDown, transform.position.z);
-			IgnoreGround (true);
-			if (Mathf.Abs (transform.position.y - ladder.startPos.y) > Mathf.Abs (ladder.endPos.y - ladder.startPos.y)) {
-				agent.CompleteOffMeshLink ();
-				IgnoreGround (false);
+			if (GameObject.Find ("TempHandle").GetComponent<TempController> ().GetTemp () < ICE_TEMP && !iceBreaking) {
+				GetComponent<Animator> ().SetBool ("attack", true);
+				iceBreaking = true;
+				iceBroken = false;
+				Invoke ("BreakIce", 3f);
+			} else if (iceBroken) {
+				transform.eulerAngles = new Vector3(0, 0, 0);
+				float upDown = ladder.endPos.y > ladder.startPos.y ? 1f : -1f;
+				transform.position = new Vector3 (ladder.endPos.x, transform.position.y + 0.1f * upDown, transform.position.z);
+				IgnoreGround (true);
+				if (Mathf.Abs (transform.position.y - ladder.startPos.y) > Mathf.Abs (ladder.endPos.y - ladder.startPos.y)) {
+					agent.CompleteOffMeshLink ();
+					iceBreaking = false;
+					IgnoreGround (false);
+				}
 			}
+
 		}
+	}
+
+	private void BreakIce() {
+		GetComponent<Animator> ().SetBool ("attack", false);
+		iceBroken = true;
 	}
 
 	public bool CheckDisability() {
