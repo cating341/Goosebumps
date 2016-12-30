@@ -22,7 +22,7 @@ public class SoldierProperties : MonoBehaviour {
 		basicProperties.NavigateMonster (GetTargetPosition());
 		GameObject attraction = basicProperties.GetAttractionPeek ();
 		Physics.IgnoreCollision (GetComponent<Collider> (), player.GetComponent<Collider> ()
-			, basicProperties.CheckDisability() || (attraction && attraction.name != "Player" && attraction.GetComponent<AIInformation> ().floor == GetComponent<AIInformation> ().floor));
+			, basicProperties.CheckDisability() || (attraction && attraction.name != "Player" && attraction.GetComponent<AIInformation> ().floor == GetComponent<AIInformation> ().floor) || player.GetComponent<Character>().isInvincible);
 	}
 
 	private Vector3 GetTargetPosition() {
