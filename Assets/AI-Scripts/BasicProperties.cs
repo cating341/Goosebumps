@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -24,7 +24,8 @@ public class BasicProperties : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		CheckClimb ();
+//		if (gameObject.layer == LayerMask.NameToLayer ("KingMonster"))
+			CheckClimb ();
 	}
 
 	public void NavigateMonster(Vector3 tar) {
@@ -102,7 +103,6 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	private void CheckClimb() {
-		//print (GetComponent<Rigidbody> ().velocity);
 		OffMeshLinkData ladder = agent.currentOffMeshLinkData;
 		if (ladder.activated && GameObject.Find("TempHandle").GetComponent<TempController>().GetTemp() >= ICE_TEMP) {
 //			GetComponent<Rigidbody> ().useGravity = false;

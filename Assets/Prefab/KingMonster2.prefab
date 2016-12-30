@@ -552,7 +552,7 @@ GameObject:
   - 114: {fileID: 114000012291532982}
   - 114: {fileID: 114000013001344392}
   m_Layer: 12
-  m_Name: KingMonster2 1
+  m_Name: KingMonster2
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -22,14 +22,4 @@ public class KingProperties : MonoBehaviour {
 	private Vector3 GetTargetPosition() {
 		return basicProperties.GetAttractionPeek () ? basicProperties.GetAttractionPeek ().transform.position : player.transform.position;
 	}
-
-//	private int CheckUpDown() {
-//		if (basicProperties.Floor > player.GetComponent<AIInformation> ().Floor) {
-//			return -1;
-//		} else if (basicProperties.Floor < player.GetComponent<AIInformation> ().Floor) {
-//			return 1;
-//		} else {
-//			return 0;
-//		}
-//	}
 }
