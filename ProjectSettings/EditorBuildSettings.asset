@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scene/TransitionSceneCh1.unity
   - enabled: 1
     path: Assets/Scene/TransitionSceneCh0.unity
+  - enabled: 1
+    path: Assets/Scene/GameScene-chap3.unity
