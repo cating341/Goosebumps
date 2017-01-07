@@ -5,6 +5,7 @@ public class PotionDamage : MonoBehaviour {
 
 	public bool canBeDestroyed = false;
 	public int maxHealth = 1;
+	public bool canBeMinus = true;
 	int health;
 
 	bool flag = true;
@@ -25,7 +26,7 @@ public class PotionDamage : MonoBehaviour {
 
 	public void TakeDamage() {
 		if (canBeDestroyed && flag) {
-			health--; 
+			if(canBeMinus) health--; 
 			flag = false;
 			Invoke ("reEnable", 3.0f);
 			if (health <= 0)

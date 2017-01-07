@@ -2059,6 +2059,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeDestroyed: 1
+  maxHealth: 1
+  canBeMinus: 0
 --- !u!114 &114000013024018484
 MonoBehaviour:
   m_ObjectHideFlags: 1
