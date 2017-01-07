@@ -20,14 +20,18 @@ public class GameSceneAinmation : MonoBehaviour {
 
     public void StartCameraMovement() {
         Camera.main.GetComponent<CameraController>().CameraMovement();
-        Invoke("StartTextFadeIn", 8.0f);
+        Invoke("StartPanelFadeIn", 10.0f);
+		Invoke("StartTextFadeIn", 12.5f);
     }
 
-    public void StartTextFadeIn()
+	public void StartPanelFadeIn()
     {
         PanelAni.SetBool("start", true);
-        TextAni.SetBool("start", true);
     }
+
+	public void StartTextFadeIn(){
+		TextAni.SetBool("start", true);
+	}
 
 	void StartPlayerMovement(){
 		player.GetComponentInChildren<Animator> ().SetBool ("startEnding", true);
