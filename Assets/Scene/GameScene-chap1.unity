@@ -1642,7 +1642,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013219449362, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010121745452, guid: 8b16d17c6fe56074daffd91c2699fb1a,
         type: 2}
@@ -3886,6 +3886,11 @@ Prefab:
       objectReference: {fileID: 227478575}
     - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
         type: 2}
+      propertyPath: nextChapBtn
+      value: 
+      objectReference: {fileID: 1639722791}
+    - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
+        type: 2}
       propertyPath: bakingLadders.Array.data[0]
       value: 
       objectReference: {fileID: 530243488}
@@ -3894,26 +3899,11 @@ Prefab:
       propertyPath: bakingLadders.Array.data[1]
       value: 
       objectReference: {fileID: 623837802}
-    - target: {fileID: 82000014182201244, guid: 81d217a00e354d846af9d22e3cb81fb6,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000014182201244, guid: 81d217a00e354d846af9d22e3cb81fb6,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 702256ac0e12240a1a639042dcdc2fe3, type: 3}
-    - target: {fileID: 82000014182201244, guid: 81d217a00e354d846af9d22e3cb81fb6,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.495
-      objectReference: {fileID: 0}
     - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
         type: 2}
-      propertyPath: nextChapBtn
-      value: 
-      objectReference: {fileID: 1639722791}
+      propertyPath: kingMonsterAppear
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81d217a00e354d846af9d22e3cb81fb6, type: 2}
   m_IsPrefabParent: 0
@@ -7248,7 +7238,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013219449362, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
@@ -7916,7 +7906,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013015462648, guid: b101ae54a94da4d468ffd7d4bf3410d5, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 54000011920095304, guid: b101ae54a94da4d468ffd7d4bf3410d5,
         type: 2}
@@ -11592,7 +11582,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013219449362, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010121745452, guid: 8b16d17c6fe56074daffd91c2699fb1a,
         type: 2}
