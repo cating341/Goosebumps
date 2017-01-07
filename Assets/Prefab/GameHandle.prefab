@@ -50,9 +50,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 86294aa51e3c29c4798260068f4d88b3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 702256ac0e12240a1a639042dcdc2fe3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.495
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -103,7 +103,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -128,8 +128,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 0}
   totalTimerText: {fileID: 0}
+  risingText: {fileID: 0}
   gameoverCanvas: {fileID: 0}
+  nextChapBtn: {fileID: 0}
   bakingLadders:
   - {fileID: 0}
   - {fileID: 0}
-  monster: {fileID: 0}
+  panel: {fileID: 0}
+  kingMonster: {fileID: 1000013015462648, guid: b101ae54a94da4d468ffd7d4bf3410d5,
+    type: 2}
+  kingMonsterAppear: 5

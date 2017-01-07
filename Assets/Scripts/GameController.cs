@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour {
     public GameObject nextChapBtn;
     public GameObject[] bakingLadders;
 	public GameObject panel;
+
+	public GameObject kingMonster;
+	public float kingMonsterAppear;
      
 
     float MAXTIMER = 18;
@@ -24,7 +27,7 @@ public class GameController : MonoBehaviour {
         gameoverCanvas.SetActive(false);
         gameOver = false;
         nextChapBtn.SetActive(false); 
-        
+		Invoke ("InstantiateKingMonster", kingMonsterAppear);
 	}
 	
 	// Update is called once per frame
@@ -101,4 +104,8 @@ public class GameController : MonoBehaviour {
             ladder.SetActive(false);
         }
     }
+
+	private void InstantiateKingMonster() {
+		Instantiate (kingMonster);
+	}
 }

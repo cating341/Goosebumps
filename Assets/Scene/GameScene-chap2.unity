@@ -1987,6 +1987,17 @@ Prefab:
       propertyPath: panel
       value: 
       objectReference: {fileID: 521889343}
+    - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
+        type: 2}
+      propertyPath: kingMonster
+      value: 
+      objectReference: {fileID: 1000012031158902, guid: 7c91113bf75644919854e940d57f56a0,
+        type: 2}
+    - target: {fileID: 114000011860567178, guid: 81d217a00e354d846af9d22e3cb81fb6,
+        type: 2}
+      propertyPath: kingMonsterAppear
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81d217a00e354d846af9d22e3cb81fb6, type: 2}
   m_IsPrefabParent: 0
@@ -4259,6 +4270,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000012031158902, guid: 7c91113bf75644919854e940d57f56a0, type: 2}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012031158902, guid: 7c91113bf75644919854e940d57f56a0, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
