@@ -12,12 +12,15 @@ public class GameController : MonoBehaviour {
     public GameObject nextChapBtn;
     public GameObject[] bakingLadders;
 	public GameObject panel;
+    public GameObject namePanel;
+    public Text nameInputText;
 
 	public GameObject kingMonster;
 	public float kingMonsterAppear;
-     
 
-    float MAXTIMER = 18;
+    string playerName;
+
+    float MAXTIMER = 1;
     float timer = 0;
     float currentTimer = 0;
     bool gameOver = false;
@@ -62,6 +65,7 @@ public class GameController : MonoBehaviour {
     {
         gameOver = true;
         gameoverCanvas.SetActive(true);
+        namePanel.SetActive(true);
         totalTimerText.GetComponent<Text>().text = ((int)currentTimer).ToString();
         if (currentTimer > MAXTIMER) 
             nextChapBtn.SetActive(true);
@@ -91,6 +95,16 @@ public class GameController : MonoBehaviour {
     {
         Application.Quit();
     }
+
+    public void GetPlayerName()
+    {
+        playerName = nameInputText.text;
+        if (playerName.Equals(""))
+            playerName = "Player";
+        namePanel.SetActive(false);
+        Debug.Log("player name : " + playerName);
+    }
+
 
     public void SetTheLadders(int count, GameObject g)
     { 
