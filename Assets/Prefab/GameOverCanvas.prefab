@@ -247,7 +247,7 @@ GameObject:
   - 222: {fileID: 222000014044995840}
   - 114: {fileID: 114000013316885772}
   m_Layer: 5
-  m_Name: mianpanel
+  m_Name: mainpanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
