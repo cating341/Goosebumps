@@ -17,6 +17,9 @@ public class GameController : MonoBehaviour {
 	public Text Rank;
 	public Text Name;
 	public Text Score;
+	public Text myRank;
+	public Text myName;
+	public Text myScore;
 	public GameObject kingMonster;
 	public float kingMonsterAppear;
 
@@ -133,12 +136,19 @@ public class GameController : MonoBehaviour {
     }
 
 	private void SetLeaderBoard(LeaderBoard lb) {
-		Rank.text += "\n" + lb.myRate.ToString ();
-		foreach (playerInfo playerInfo in lb.leaderboard) {
-			Name.text += "\n" + playerInfo.name;
-			Score.text += "\n" + playerInfo.score.ToString ();
-			Debug.Log (playerInfo.name + ": " + playerInfo.score);
+		myRank.text = lb.myRate.ToString ();
+		int SHOW_RANK_NUM = 5;
+		if (lb.leaderboard.Count < 5) {
+			SHOW_RANK_NUM = lb.leaderboard.Count;
 		}
+		for (int i = 0; i < SHOW_RANK_NUM; i++) {
+			playerInfo playerInfo = lb.leaderboard [i];
+			Name.text += playerInfo.name + "\n";
+			Score.text += playerInfo.score.ToString () + "\n";
+//			Debug.Log (playerInfo.name + ": " + playerInfo.score);
+		}
+		myName.text = playerName + "\n";
+		myScore.text = (int)currentTimer + "\n";
 	}
 
 
