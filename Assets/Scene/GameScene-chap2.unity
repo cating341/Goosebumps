@@ -1909,9 +1909,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb4f55dcc6f08be46bd810e586448482, type: 2}
   m_IsPrefabParent: 0
-
 --- !u!1 &702466663
-
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1000010312660142, guid: 7ffb40bf4e30bea4fa589dd668554c7b,
@@ -2048,7 +2046,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 715132597}
   - 114: {fileID: 715132596}
-  - 82: {fileID: 715132595}
   - 82: {fileID: 715132594}
   m_Layer: 0
   m_Name: GameHandle
@@ -2069,81 +2066,6 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 86294aa51e3c29c4798260068f4d88b3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
---- !u!82 &715132595
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 82000014182201244, guid: 81d217a00e354d846af9d22e3cb81fb6,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 715132593}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 702256ac0e12240a1a639042dcdc2fe3, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.495
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2231,7 +2153,7 @@ MonoBehaviour:
   nameInputText: {fileID: 2088229905}
   kingMonster: {fileID: 1000012031158902, guid: 7c91113bf75644919854e940d57f56a0,
     type: 2}
-  kingMonsterAppear: 30
+  kingMonsterAppear: 10
 --- !u!4 &715132597
 Transform:
   m_ObjectHideFlags: 0
