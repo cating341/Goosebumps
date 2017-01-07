@@ -4,10 +4,14 @@ using System.Collections.Generic;
 
 public class LeaderBoardController : MonoBehaviour {
 	public string url = "http://ballonhouse.com:3000/goosebumps/leaderboard";
-
+	GameController gameController;
 	// Use this for initialization
 	void Start () {
-		StartCoroutine (SendScore (10, "an"));
+		if (GameObject.Find ("GameHandle") != null) {
+			gameController = GameObject.Find ("GameHandle").GetComponent<GameController> ();
+		} else {
+			Debug.Log ("Can't find GameHandle");
+		}
 	}
 
 	IEnumerator GetLeaderBoard() {
@@ -20,18 +24,19 @@ public class LeaderBoardController : MonoBehaviour {
 		}
 	}
 
-	IEnumerator SendScore (int score, string name) {
+	public IEnumerator SendScore (int score, string name, OnPostComplete callback) {
 		WWWForm data = new WWWForm ();
 		data.AddField ("score", score);
 		data.AddField ("name", name);
 		WWW wwwPost = new WWW(url, data);
 		yield return wwwPost;
 		if (wwwPost.error == null) {
-			Debug.Log (wwwPost.text);
+//			Debug.Log (wwwPost.text);
 			LeaderBoard lb = JsonUtility.FromJson<LeaderBoard> (wwwPost.text);
-			foreach (playerInfo playerInfo in lb.leaderboard) {
-				Debug.Log (playerInfo.name + ": " + playerInfo.score);
-			}
+//			foreach (playerInfo playerInfo in lb.leaderboard) {
+//				Debug.Log (playerInfo.name + ": " + playerInfo.score);
+//			}
+			callback (lb);
 			Debug.Log ("My rate: " + lb.myRate);
 		} else {
 			Debug.Log("ERROR: " + wwwPost.error);
@@ -42,6 +47,7 @@ public class LeaderBoardController : MonoBehaviour {
 	void Update () {
 	
 	}
-
-
+		
 }
+
+public delegate void OnPostComplete(LeaderBoard lb);

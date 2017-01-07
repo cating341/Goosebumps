@@ -14,11 +14,17 @@ public class GameController : MonoBehaviour {
 	public GameObject panel;
     public GameObject namePanel;
     public Text nameInputText;
-
+	public Text Rank;
+	public Text Name;
+	public Text Score;
+	public Text myRank;
+	public Text myName;
+	public Text myScore;
 	public GameObject kingMonster;
 	public float kingMonsterAppear;
 
     string playerName;
+	LeaderBoardController leaderBoardController;
 
     float MAXTIMER = 1;
     float timer = 0;
@@ -28,6 +34,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		leaderBoardController = GetComponent<LeaderBoardController> ();
         gameoverCanvas.SetActive(false);
         gameOver = false;
         nextChapBtn.SetActive(false); 
@@ -82,12 +89,14 @@ public class GameController : MonoBehaviour {
 
     public void GameOver()
     {
-        gameOver = true;
-        gameoverCanvas.SetActive(true);
-        namePanel.SetActive(true);
-        totalTimerText.GetComponent<Text>().text = ((int)currentTimer).ToString();
-        if (currentTimer > MAXTIMER) 
-            nextChapBtn.SetActive(true);
+		if (!gameOver) {
+			gameOver = true;
+			gameoverCanvas.SetActive (true);
+			namePanel.SetActive (true);
+			totalTimerText.GetComponent<Text> ().text = ((int)currentTimer).ToString ();
+			if (currentTimer > MAXTIMER)
+				nextChapBtn.SetActive (true);
+		}
             
     }
 
@@ -115,14 +124,32 @@ public class GameController : MonoBehaviour {
         Application.Quit();
     }
 
-    public void GetPlayerName()
+    public void SendScoreBtnClick()
     {
         playerName = nameInputText.text;
         if (playerName.Equals(""))
             playerName = "Player";
         namePanel.SetActive(false);
-        Debug.Log("player name : " + playerName);
+		StartCoroutine (leaderBoardController.SendScore ((int)currentTimer, playerName, (lb) => {
+			SetLeaderBoard(lb);
+		}));
     }
+
+	private void SetLeaderBoard(LeaderBoard lb) {
+		myRank.text = lb.myRate.ToString ();
+		int SHOW_RANK_NUM = 5;
+		if (lb.leaderboard.Count < 5) {
+			SHOW_RANK_NUM = lb.leaderboard.Count;
+		}
+		for (int i = 0; i < SHOW_RANK_NUM; i++) {
+			playerInfo playerInfo = lb.leaderboard [i];
+			Name.text += playerInfo.name + "\n";
+			Score.text += playerInfo.score.ToString () + "\n";
+//			Debug.Log (playerInfo.name + ": " + playerInfo.score);
+		}
+		myName.text = playerName + "\n";
+		myScore.text = (int)currentTimer + "\n";
+	}
 
 
     public void SetTheLadders(int count, GameObject g)
