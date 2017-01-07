@@ -12,6 +12,7 @@ public class GameSceneAinmation : MonoBehaviour {
         Invoke("StartCameraMovement", 10.0f);
 		player = GameObject.Find ("Player");
 		Invoke ("StartPlayerMovement", 1.0f);
+		player.GetComponent<Character> ().DisablePlayerMove ();
 	}
 	
 	// Update is called once per frame

@@ -829,6 +829,7 @@ MonoBehaviour:
   airControl: 1
   climbing: 0
   grounded: 1
+  isInvincible: 0
   marioSE: {fileID: 8300000, guid: 9fbe9ca3326544c6a83236caeaed98fd, type: 3}
   ladder: {fileID: 0}
 --- !u!114 &323801390

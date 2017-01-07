@@ -24,4 +24,14 @@ public class PreviewGameController : MonoBehaviour {
 		else if(GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW2 )
 			Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE2);
     }
+
+	// disable monster
+	public void disableMonster(){
+		GameObject.Find ("Player").GetComponent<Character> ().DisablePlayerMove ();
+		Invoke ("enableMonster", 5.0f);
+	}
+
+	void enableMonster(){
+		GameObject.Find ("Player").GetComponent<Character> ().EnablePlayerMove ();
+	}
 }

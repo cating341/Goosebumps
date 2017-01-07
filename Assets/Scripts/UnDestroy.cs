@@ -11,7 +11,7 @@ public class UnDestroy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         GameObject.Find("SceneManager").GetComponent<MySceneManager>().addToSceneList(this.gameObject);
-        print(gameObject.name);
+        //print(gameObject.name);
 	}
 	
 	// Update is called once per frame

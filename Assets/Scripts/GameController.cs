@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour {
     float timer = 0;
     float currentTimer = 0;
     bool gameOver = false;
+	bool canBeDestroyed = false;
 
 	// Use this for initialization
 	void Start () {
@@ -45,7 +46,25 @@ public class GameController : MonoBehaviour {
                 timerText.GetComponent<Text>().text = ((int)currentTimer).ToString() + " sec";
                 timer = 0;
             }
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			PauseGame ();
+		}
         
+	}
+
+	void PauseGame(){
+		Time.timeScale = (Time.timeScale == 0)? 1: 0;
+	}
+
+	// disable monster
+	public void disableMonster(){
+		GameObject.Find ("Player").GetComponent<Character> ().DisablePlayerMove ();
+		Invoke ("enableMonster", 5.0f);
+	}
+
+	void enableMonster(){
+		GameObject.Find ("Player").GetComponent<Character> ().EnablePlayerMove ();
 	}
 
 	public void AddPoint(float pt) {
@@ -120,6 +139,13 @@ public class GameController : MonoBehaviour {
     }
 
 	private void InstantiateKingMonster() {
-		Instantiate (kingMonster);
+		GameObject obj = (GameObject) Instantiate (kingMonster);
+		if (canBeDestroyed)
+			obj.GetComponent<PotionDamage> ().setStartToDestroyed ();
+
+	}
+
+	public void setKingMonsterDestroy(){
+		canBeDestroyed = true;
 	}
 }
