@@ -21,10 +21,18 @@ public class MagicTreeController : MonoBehaviour {
         if (count >= MAXSTONE )
         {
             Camera.main.GetComponent<CameraController>().CameraMovement();
+			if (GameObject.Find ("GameHandle").GetComponent<GameController>() ){
+				GameObject.Find ("GameHandle").GetComponent<GameController> ().setKingMonsterDestroy ();
+				GameObject.Find ("GameHandle").GetComponent<GameController> ().disableMonster ();
+			} else {
+				GameObject.Find ("GameHandle").GetComponent<PreviewGameController> ().disableMonster ();
+			}
+
             TreeBridge.SetActive(true);
             count = 0;
-            if (GameObject.Find("KingMonster2") ) 
-				GameObject.Find("KingMonster2").GetComponent<PotionDamage>().setStartToDestroyed();
+			if (GameObject.Find("KingMonster2(Clone)") ) 
+				GameObject.Find("KingMonster2(Clone)").GetComponent<PotionDamage>().setStartToDestroyed();
+			
         }
     }
 }
