@@ -403,7 +403,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013666297456, guid: 83f5f69f7be4a44d7b306c4f3a348b1c, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013024018484, guid: 83f5f69f7be4a44d7b306c4f3a348b1c,
         type: 2}
@@ -541,7 +541,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013666297456, guid: 83f5f69f7be4a44d7b306c4f3a348b1c, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013024018484, guid: 83f5f69f7be4a44d7b306c4f3a348b1c,
         type: 2}
@@ -1506,6 +1506,8 @@ MonoBehaviour:
   kingMonster: {fileID: 1000012031158902, guid: 7c91113bf75644919854e940d57f56a0,
     type: 2}
   kingMonsterAppear: 5
+  soldierMonster: {fileID: 1000013666297456, guid: 83f5f69f7be4a44d7b306c4f3a348b1c,
+    type: 2}
 --- !u!4 &715132597
 Transform:
   m_ObjectHideFlags: 0
@@ -3568,7 +3570,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013666297456, guid: 83f5f69f7be4a44d7b306c4f3a348b1c, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83f5f69f7be4a44d7b306c4f3a348b1c, type: 2}

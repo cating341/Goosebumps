@@ -71,11 +71,13 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	public GameObject GetAttractionPeek(){
-		while (attractions.Count > 0) {
-			if (CheckDequeue (attractions.Peek ())) {
-				attractions.Dequeue ();
-			} else {
-				return attractions.Peek ();
+		if (attractions != null) {
+			while (attractions.Count > 0) {
+				if (CheckDequeue (attractions.Peek ())) {
+					attractions.Dequeue ();
+				} else {
+					return attractions.Peek ();
+				}
 			}
 		}
 		return null;
