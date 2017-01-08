@@ -130,7 +130,8 @@ public class GameController : MonoBehaviour {
         if (playerName.Equals(""))
             playerName = "Player";
         namePanel.SetActive(false);
-		StartCoroutine (leaderBoardController.SendScore ((int)currentTimer, playerName, (lb) => {
+		int level = GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().GetLevel ();
+		StartCoroutine (leaderBoardController.SendScore ((int)currentTimer, playerName, level, (lb) => {
 			SetLeaderBoard(lb);
 		}));
     }

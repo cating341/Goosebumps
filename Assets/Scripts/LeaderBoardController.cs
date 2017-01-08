@@ -24,10 +24,11 @@ public class LeaderBoardController : MonoBehaviour {
 		}
 	}
 
-	public IEnumerator SendScore (int score, string name, OnPostComplete callback) {
+	public IEnumerator SendScore (int score, string name, int level, OnPostComplete callback) {
 		WWWForm data = new WWWForm ();
 		data.AddField ("score", score);
 		data.AddField ("name", name);
+		data.AddField ("level", level);
 		WWW wwwPost = new WWW(url, data);
 		yield return wwwPost;
 		if (wwwPost.error == null) {
