@@ -128,6 +128,7 @@ public class BasicProperties : MonoBehaviour {
 					agent.CompleteOffMeshLink ();
 					iceBreaking = false;
 					IgnoreGround (false);
+					print ("hehehe");
 				}
 			}
 
@@ -142,7 +143,6 @@ public class BasicProperties : MonoBehaviour {
 	public bool CheckDisability() {
 		foreach (KeyValuePair<string, bool> item in disabledList) {
 			if (item.Value) {
-				print ("iced");
 				return true;
 			}
 		}
