@@ -17,6 +17,8 @@ public class GameSceneAinmation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () { 
+		if(player.GetComponent<CharacterControl>().enableMove)
+			player.GetComponent<Character> ().DisablePlayerMove ();
 	}
 
     public void StartCameraMovement() {
