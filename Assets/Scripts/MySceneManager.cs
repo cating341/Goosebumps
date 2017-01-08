@@ -9,7 +9,7 @@ public class MySceneManager : MonoBehaviour {
 
     List<GameObject> gearList = new List<GameObject>();
     List<GameObject> sceneList = new List<GameObject>();
-    GameObject player;
+//    GameObject player;
 
     public  string GAMESCENE0 = "GameScene-chap0";
 	public  string GAMESCENE1 = "GameScene-chap1";
@@ -20,7 +20,10 @@ public class MySceneManager : MonoBehaviour {
     public string TRANS0 = "TransitionSceneCh0";
     public string TRANS1 = "TransitionSceneCh1";
     public string TRANS2 = "TransitionSceneCh2";
+	public string START = "StartScene";
     //TransitionSceneCh1
+	 
+	int difficulty = 0; // 0: simple, 1: normal, 2: hard
 
     public static MySceneManager ins;
     void Awake() {
@@ -36,7 +39,7 @@ public class MySceneManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //gameController = GameObject.Find("GameHandle");
-        player = GameObject.Find("Player");
+        //player = GameObject.Find("Player");
 	}
 	
 	// Update is called once per frame
@@ -90,37 +93,31 @@ public class MySceneManager : MonoBehaviour {
 		currentSceneName = scene.name;
 
 		if (currentSceneName == GAMESCENE1 || currentSceneName == GAMESCENE2) {  // if not preview, mean game start!
-            GameObject.Find("GameHandle").GetComponent<GameController>().DisableLadders(); 
-            int laddercount = 0;
-            foreach (GameObject g in gearList)
-            {
-                if(g.tag == "Ladder"){
-                    GameObject.Find("GameHandle").GetComponent<GameController>().SetTheLadders(laddercount, g);
-                    laddercount++;
-                    g.SetActive(false);
-                }
-                else Destroy(g.GetComponent<PickUpItem>());
-            }
+			GameObject.Find ("GameHandle").GetComponent<GameController> ().DisableLadders (); 
+			int laddercount = 0;
+			foreach (GameObject g in gearList) {
+				if (g.tag == "Ladder") {
+					GameObject.Find ("GameHandle").GetComponent<GameController> ().SetTheLadders (laddercount, g);
+					laddercount++;
+					g.SetActive (false);
+				} else
+					Destroy (g.GetComponent<PickUpItem> ());
+			}
             
-            Camera.main.GetComponent<CameraController>().undateCameraParameters(currentSceneName);
-           // player.GetComponent<Character>().setFloor();
-        }
-		else if (currentSceneName == PREVIEW1 || currentSceneName == PREVIEW2) { // reload preview scene
-            player = GameObject.Find("Player");
 			Camera.main.GetComponent<CameraController> ().undateCameraParameters (currentSceneName);
-            foreach(GameObject g in gearList){
-                Destroy(g);
-            }
-            gearList.Clear();
-        }
-        else if (currentSceneName == GAMESCENE3) {
-            Camera.main.GetComponent<CameraController>().undateCameraParameters(currentSceneName);
-            foreach (GameObject g in gearList)
-            {
-                Destroy(g);
-            }
-            gearList.Clear();
-        }
+			// player.GetComponent<Character>().setFloor();
+		} else if (currentSceneName == PREVIEW1 || currentSceneName == PREVIEW2 || currentSceneName == GAMESCENE3) { // reload preview scene
+			Camera.main.GetComponent<CameraController> ().undateCameraParameters (currentSceneName);
+			foreach (GameObject g in gearList) {
+				Destroy (g);
+			}
+			gearList.Clear ();
+		} else if (currentSceneName == START) {
+			foreach (GameObject g in gearList) {
+				Destroy (g);
+			}
+			gearList.Clear ();
+		}
     }
     
 
@@ -147,4 +144,13 @@ public class MySceneManager : MonoBehaviour {
 		return level;
 	}
      
+
+	public void SelectDifficulty(int index){
+		difficulty = index;
+		//print (difficulty);
+	}
+
+	public int getDifficulty(){
+		return difficulty;
+	}
 }

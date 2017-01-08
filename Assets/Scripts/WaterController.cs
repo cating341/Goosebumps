@@ -35,12 +35,7 @@ public class WaterController : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-
-        if (other.gameObject.tag == "Player" && tempController.GetTemp() < ICE_TEMP)
-        {
-//            Debug.Log("ICEEEE!! hurt!!");
-        }
-		else if(other.gameObject.tag == "Monster")
+        if(other.gameObject.tag == "Monster")
         {
 			if (tempController.GetTemp () < ICE_TEMP) {
 				other.gameObject.GetComponent<BasicProperties> ().NewDisability ("water", true);

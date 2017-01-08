@@ -119,6 +119,11 @@ public class GameController : MonoBehaviour {
 
     }
 
+	public void BackToStartScene(){
+		GameObject.Find("SceneManager").GetComponent<MySceneManager>().removeAllFromSceceList();
+		Application.LoadLevel (GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().START);
+	}
+
     public void Exit()
     {
         Application.Quit();
