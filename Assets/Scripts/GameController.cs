@@ -22,6 +22,9 @@ public class GameController : MonoBehaviour {
 	public Text myScore;
 	public GameObject kingMonster;
 	public float kingMonsterAppear;
+	public GameObject soldierMonster;
+	private Vector3[] soldierMonster1Pos;
+	private Vector3[] soldierMonster2Pos;
 
     string playerName;
 	LeaderBoardController leaderBoardController;
@@ -37,8 +40,8 @@ public class GameController : MonoBehaviour {
 		leaderBoardController = GetComponent<LeaderBoardController> ();
         gameoverCanvas.SetActive(false);
         gameOver = false;
-        nextChapBtn.SetActive(false); 
-		Invoke ("InstantiateKingMonster", kingMonsterAppear);
+        nextChapBtn.SetActive(false);
+		InstantiateMonsters ();
 	}
 	
 	// Update is called once per frame
@@ -58,6 +61,20 @@ public class GameController : MonoBehaviour {
 			PauseGame ();
 		}
         
+	}
+
+	private void InstantiateMonsters() {
+		soldierMonster1Pos = new []{new Vector3(-0.23f, 0.21f, -3.735428f), new Vector3(-7.262046f, -3.47f, -3.735428f), new Vector3(5.01f, 4.63f, -3.96f)};
+		soldierMonster2Pos = new []{ new Vector3 (-13.09f, -0.64f, -5.01f), new Vector3 (-2.56f, 3.68f, -5.01f), new Vector3 (-6.7f, 8.12f, -5.01f) };
+		Invoke ("InstantiateKingMonster", kingMonsterAppear);
+		int level = GameObject.Find("SceneManager").GetComponent<MySceneManager>().GetLevel();
+		int difficulty = GameObject.Find("SceneManager").GetComponent<MySceneManager>().getDifficulty();
+		for (int i = 0; i < difficulty + 1; i++) {
+			if (level == 1)
+				Instantiate (soldierMonster, soldierMonster1Pos [i], soldierMonster.transform.rotation);
+			else if (level == 2) 
+				Instantiate (soldierMonster, soldierMonster2Pos [i], soldierMonster.transform.rotation);
+		}
 	}
 
 	void PauseGame(){
