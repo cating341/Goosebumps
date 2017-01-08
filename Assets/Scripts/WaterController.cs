@@ -28,6 +28,7 @@ public class WaterController : MonoBehaviour {
             else
             {
                 Water.SetActive(true); Ice.SetActive(false);
+				Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"), false);
             }
         }
 	}

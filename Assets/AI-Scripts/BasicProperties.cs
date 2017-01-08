@@ -46,7 +46,8 @@ public class BasicProperties : MonoBehaviour {
 		if (key == "carpet") {
 			Invoke ("DestroyMe", 4.0f);
 		} else if (key == "water") {
-			if (!disabledList.ContainsKey(key) || !disabledList [key]) {
+			if ((!disabledList.ContainsKey(key) || !disabledList [key]) && value) {
+				GetComponentInChildren<Animator> ().SetBool ("attack", true);
 				Invoke ("BreakBathroomIce", 3f);
 			}
 //			Invoke("Break")
@@ -55,9 +56,9 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	private void BreakBathroomIce() {
-		print ("break ice");
-		Physics.IgnoreCollision (GetComponent<Collider> (), GameObject.FindGameObjectsWithTag ("Water") [0].GetComponent<Collider> ());
+		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"));
 		disabledList ["water"] = false;
+		GetComponentInChildren<Animator> ().SetBool ("attack", false);
 	}
 
 	private void DestroyMe() {
@@ -95,13 +96,6 @@ public class BasicProperties : MonoBehaviour {
 			}
 		}
 		return false;
-	}
-
-	void OnCollisionEnter(Collision col)
-	{
-		if (col.gameObject.tag == "Ground") {
-			
-		}
 	}
 
 	private void IgnoreGround(bool ignore){
