@@ -22,7 +22,7 @@ GameObject:
   - 33: {fileID: 33000012270407760}
   - 65: {fileID: 65000012309538438}
   - 114: {fileID: 114000013724993732}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water2
   m_TagString: Water
   m_Icon: {fileID: 0}

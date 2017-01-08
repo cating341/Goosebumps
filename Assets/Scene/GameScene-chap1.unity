@@ -1459,7 +1459,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013219449362, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010121745452, guid: 8b16d17c6fe56074daffd91c2699fb1a,
         type: 2}
@@ -3868,6 +3868,10 @@ Prefab:
       propertyPath: Temp
       value: 
       objectReference: {fileID: 942866985}
+    - target: {fileID: 1000012440434914, guid: e696fbb7626344bea9fef3f1bced7594, type: 2}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e696fbb7626344bea9fef3f1bced7594, type: 2}
   m_IsPrefabParent: 0
@@ -5654,7 +5658,7 @@ MonoBehaviour:
   myScore: {fileID: 483946707}
   kingMonster: {fileID: 1000013015462648, guid: b101ae54a94da4d468ffd7d4bf3410d5,
     type: 2}
-  kingMonsterAppear: 30
+  kingMonsterAppear: 3
 --- !u!1 &1153976277 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013380918064, guid: d5caceff9d562493a869d00e1658d1a4,
@@ -6621,7 +6625,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013219449362, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
@@ -7221,7 +7225,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013015462648, guid: b101ae54a94da4d468ffd7d4bf3410d5, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 54000011920095304, guid: b101ae54a94da4d468ffd7d4bf3410d5,
         type: 2}
@@ -10745,7 +10749,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013219449362, guid: 8b16d17c6fe56074daffd91c2699fb1a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010121745452, guid: 8b16d17c6fe56074daffd91c2699fb1a,
         type: 2}
