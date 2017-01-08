@@ -151,11 +151,11 @@ public class BasicProperties : MonoBehaviour {
 		return agent.remainingDistance;
 	}
 
-	public float Pause() {
+	public void Pause() {
 		agent.Stop ();
 	}
 
-	public float Resume() {
+	public void Resume() {
 		agent.Resume ();
 	}
 }
