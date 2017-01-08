@@ -43,10 +43,21 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	public void NewDisability(string key, bool value) {
-		disabledList[key] = value;
 		if (key == "carpet") {
 			Invoke ("DestroyMe", 4.0f);
+		} else if (key == "water") {
+			if (!disabledList.ContainsKey(key) || !disabledList [key]) {
+				Invoke ("BreakBathroomIce", 3f);
+			}
+//			Invoke("Break")
 		}
+		disabledList[key] = value;
+	}
+
+	private void BreakBathroomIce() {
+		print ("break ice");
+		Physics.IgnoreCollision (GetComponent<Collider> (), GameObject.FindGameObjectsWithTag ("Water") [0].GetComponent<Collider> ());
+		disabledList ["water"] = false;
 	}
 
 	private void DestroyMe() {
@@ -104,7 +115,7 @@ public class BasicProperties : MonoBehaviour {
 		if (ladder.activated) {
 //			GetComponent<Rigidbody> ().useGravity = false;
 			if (GameObject.Find ("TempHandle").GetComponent<TempController> ().GetTemp () < ICE_TEMP && !iceBreaking) {
-				GetComponent<Animator> ().SetBool ("attack", true);
+				GetComponentInChildren<Animator> ().SetBool ("attack", true);
 				iceBreaking = true;
 				iceBroken = false;
 				Invoke ("BreakIce", 3f);
@@ -124,13 +135,14 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	private void BreakIce() {
-		GetComponent<Animator> ().SetBool ("attack", false);
+		GetComponentInChildren<Animator> ().SetBool ("attack", false);
 		iceBroken = true;
 	}
 
 	public bool CheckDisability() {
 		foreach (KeyValuePair<string, bool> item in disabledList) {
 			if (item.Value) {
+				print ("iced");
 				return true;
 			}
 		}

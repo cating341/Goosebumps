@@ -37,7 +37,7 @@ public class WaterController : MonoBehaviour {
 
         if (other.gameObject.tag == "Player" && tempController.GetTemp() < ICE_TEMP)
         {
-            Debug.Log("ICEEEE!! hurt!!");
+//            Debug.Log("ICEEEE!! hurt!!");
         }
 		else if(other.gameObject.tag == "Monster")
         {
