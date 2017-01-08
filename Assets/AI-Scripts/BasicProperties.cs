@@ -150,4 +150,12 @@ public class BasicProperties : MonoBehaviour {
 	public float GetRemainingDistance() {
 		return agent.remainingDistance;
 	}
+
+	public float Pause() {
+		agent.Stop ();
+	}
+
+	public float Resume() {
+		agent.Resume ();
+	}
 }
