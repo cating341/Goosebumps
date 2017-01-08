@@ -21,6 +21,8 @@ public class MySceneManager : MonoBehaviour {
     public string TRANS1 = "TransitionSceneCh1";
     public string TRANS2 = "TransitionSceneCh2";
     //TransitionSceneCh1
+	 
+	int difficulty = 0; // 0: simple, 1: normal, 2: hard
 
     public static MySceneManager ins;
     void Awake() {
@@ -138,4 +140,13 @@ public class MySceneManager : MonoBehaviour {
 			return false;
 	}
      
+
+	public void SelectDifficulty(int index){
+		difficulty = index;
+		//print (difficulty);
+	}
+
+	public int getDifficulty(){
+		return difficulty;
+	}
 }
