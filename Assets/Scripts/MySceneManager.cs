@@ -23,7 +23,7 @@ public class MySceneManager : MonoBehaviour {
 	public string START = "StartScene";
     //TransitionSceneCh1
 	 
-	int difficulty = 0; // 0: simple, 1: normal, 2: hard
+	public int difficulty = 0; // 0: simple, 1: normal, 2: hard
 
     public static MySceneManager ins;
     void Awake() {

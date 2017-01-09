@@ -187,7 +187,8 @@ public class GameController : MonoBehaviour {
             playerName = "Player";
         namePanel.SetActive(false);
 		int level = GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().GetLevel ();
-		StartCoroutine (leaderBoardController.SendScore ((int)currentTimer, playerName, level, (lb) => {
+		int difficulty = GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().getDifficulty ();
+		StartCoroutine (leaderBoardController.SendScore ((int)currentTimer, playerName, level, difficulty, (lb) => {
 			SetLeaderBoard(lb);
 		}));
     }
