@@ -69,7 +69,8 @@ public class GameController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			PauseGame ();
 		}
-        
+
+
 	}
 
 	private void InstantiateMonsters() {

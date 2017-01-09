@@ -23,6 +23,12 @@ public class CharacterControl : MonoBehaviour
 
     void FixedUpdate()
     {
+		if (UserControl.IncreaseTemp) {
+			GameObject.Find ("TempHandle").GetComponent<TempController> ().IncreaseTemp ();
+		}
+		if (UserControl.DecreaseTemp) {
+			GameObject.Find ("TempHandle").GetComponent<TempController> ().DecreaseTemp ();
+		}
         //get input by Axis set in input setting
         if (enableMove)
             movingSpeed = Input.GetAxis("Horizontal");
