@@ -23,13 +23,13 @@ public class UserControl {
 
 	public static bool IncreaseTemp {
 		get {
-			return Input.GetButtonDown ("Fire1");
+			return Input.GetButtonUp ("Fire1");
 		}
 	}
 
 	public static bool DecreaseTemp {
 		get {
-			return Input.GetButtonDown ("Fire2");
+			return Input.GetButtonUp ("Fire2");
 		}
 	}
 }
