@@ -124,7 +124,6 @@ public class BasicProperties : MonoBehaviour {
 					agent.CompleteOffMeshLink ();
 					iceBreaking = false;
 					IgnoreGround (false);
-					print ("hehehe");
 				}
 			}
 
