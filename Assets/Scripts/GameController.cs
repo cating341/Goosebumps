@@ -3,6 +3,15 @@ using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
 
+public struct SoldierPosition {
+	public Vector3 instPos;
+	public Vector2 bound;
+	public SoldierPosition(Vector3 instPos, Vector2 bound) {
+		this.instPos = instPos;
+		this.bound = bound;
+	}
+}
+
 public class GameController : MonoBehaviour {
 
     public GameObject timerText;
@@ -23,8 +32,6 @@ public class GameController : MonoBehaviour {
 	public GameObject kingMonster;
 	public float kingMonsterAppear;
 	public GameObject soldierMonster;
-	private Vector3[] soldierMonster1Pos;
-	private Vector3[] soldierMonster2Pos;
 
     string playerName;
 	LeaderBoardController leaderBoardController;
@@ -64,18 +71,32 @@ public class GameController : MonoBehaviour {
 	}
 
 	private void InstantiateMonsters() {
-		soldierMonster1Pos = new []{new Vector3(-7.262046f, -3.47f, -3.735428f), new Vector3(-0.23f, 0.21f, -3.735428f), new Vector3(5.01f, 4.63f, -3.96f)};
-		soldierMonster2Pos = new []{ new Vector3 (-13.09f, -0.64f, -5.01f), new Vector3 (-2.56f, 3.68f, -5.01f), new Vector3 (-6.7f, 8.12f, -5.01f) };
-//		Invoke ("InstantiateKingMonster", kingMonsterAppear);
+		Invoke ("InstantiateKingMonster", kingMonsterAppear);
+		SoldierPosition[] soldier1Pos = new SoldierPosition[] {
+			new SoldierPosition(new Vector3(-7.262046f, -3.47f, -3.735428f), new Vector2(-10.8f, 10.8f)),
+			new SoldierPosition(new Vector3(-0.23f, 0.21f, -3.735428f), new Vector2(-10.8f, 10.8f)),
+			new SoldierPosition(new Vector3(5.01f, 4.63f, -3.96f), new Vector2(-10.8f, 10.8f))
+		};
+		SoldierPosition[] soldier2Pos = new SoldierPosition[] {
+			new SoldierPosition (new Vector3 (-13.09f, -0.64f, -5.01f), new Vector2 (-13f, 10f)), 
+			new SoldierPosition (new Vector3 (-2.56f, 3.68f, -5.01f), new Vector2 (-13f, 13f)),
+			new SoldierPosition (new Vector3 (-6.7f, 8.12f, -5.01f), new Vector2 (-13f, 0f))
+		};
 		int level = GameObject.Find("SceneManager").GetComponent<MySceneManager>().GetLevel();
 		int difficulty = GameObject.Find("SceneManager").GetComponent<MySceneManager>().getDifficulty();
 		for (int i = 0; i < difficulty + 1; i++) {
 			GameObject newMonster = new GameObject();
-			if (level == 1)
-				newMonster = (GameObject) Instantiate (soldierMonster, soldierMonster1Pos [i], soldierMonster.transform.rotation);
-			else if (level == 2) 
-				newMonster = (GameObject) Instantiate (soldierMonster, soldierMonster2Pos [i], soldierMonster.transform.rotation);
-			newMonster.GetComponent<AIInformation> ().floor = i + 1;
+			if (level == 1) {
+				newMonster = (GameObject)Instantiate (soldierMonster, soldier1Pos [i].instPos, soldierMonster.transform.rotation);
+				newMonster.GetComponent<AIInformation> ().floor = i + 1;
+				newMonster.GetComponent<SoldierProperties> ().leftBound = soldier1Pos [i].bound.x;
+				newMonster.GetComponent<SoldierProperties> ().rightBound = soldier1Pos [i].bound.y;
+			} else if (level == 2) {
+				newMonster = (GameObject) Instantiate (soldierMonster, soldier2Pos [i].instPos, soldierMonster.transform.rotation);
+				newMonster.GetComponent<AIInformation> ().floor = i + 1;
+				newMonster.GetComponent<SoldierProperties> ().leftBound = soldier2Pos [i].bound.x;
+				newMonster.GetComponent<SoldierProperties> ().rightBound = soldier2Pos [i].bound.y;
+			}
 		}
 	}
 
