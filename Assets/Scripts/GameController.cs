@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Collections.Generic;
 
 public struct SoldierPosition {
 	public Vector3 instPos;
@@ -41,6 +42,7 @@ public class GameController : MonoBehaviour {
     float currentTimer = 0;
     bool gameOver = false;
 	bool canBeDestroyed = false;
+	List<GameObject> rebornList = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () {
@@ -228,5 +230,22 @@ public class GameController : MonoBehaviour {
 
 	public void setKingMonsterDestroy(){
 		canBeDestroyed = true;
+	}
+
+	public void ReBornMonster(GameObject monster){
+		GameObject newObj;
+		if (monster.layer == LayerMask.NameToLayer ("KingMonster")) {
+			newObj = kingMonster;
+		} else {
+			newObj = soldierMonster;
+		}
+		rebornList.Add (newObj);
+		Invoke ("ExecuteReBorn", 15.0f);
+	}
+
+	void ExecuteReBorn(){
+		GameObject obj = rebornList [0];
+		Instantiate (obj, new Vector3(-7.262046f, -3.47f, -3.735428f), Quaternion.identity);
+		rebornList.RemoveAt (0);
 	}
 }

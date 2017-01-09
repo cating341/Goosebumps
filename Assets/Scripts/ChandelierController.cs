@@ -52,6 +52,7 @@ public class ChandelierController : MonoBehaviour {
 			}
         }
 		else if (!enable && other.gameObject.tag == "Monster"){
+			GameObject.Find ("GameHandle").GetComponent<GameController> ().AddPoint (50);
 			this.hitMonster = other.gameObject;
 			this.hitMonster.GetComponent<BasicProperties> ().NewDisability ("faint", true);
 			this.hitMonster.GetComponentInChildren<Animator> ().SetBool ("faint", true);
