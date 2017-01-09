@@ -132,7 +132,7 @@ public class GameController : MonoBehaviour {
 		risingScore.transform.SetParent (panel.transform);
 		risingScore.transform.localPosition = new Vector3 (-12.62742f, 4.577878f, -18.89f);
 		risingScore.transform.localScale = new Vector3 (1, 1, 1);
-		risingScore.GetComponent<RisingText> ().setup (20, 0.5f, 1);
+		risingScore.GetComponent<RisingText> ().setup ((int)pt, 0.5f, 1);
 
 
 	}
