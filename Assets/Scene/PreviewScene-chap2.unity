@@ -828,7 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     itemName: BoundDoor
-    itemID: 12
+    itemID: 10
     itemDesc: 
     itemIcon: {fileID: 21300000, guid: e4acd0262e9d9304a80de2808387fff9, type: 3}
     itemModel: {fileID: 1000013597605284, guid: fb4f55dcc6f08be46bd810e586448482,
