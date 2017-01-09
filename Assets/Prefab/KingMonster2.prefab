@@ -548,7 +548,7 @@ GameObject:
   - 114: {fileID: 114000011178393634}
   m_Layer: 12
   m_Name: KingMonster2
-  m_TagString: Monster
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

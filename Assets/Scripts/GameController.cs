@@ -2,6 +2,16 @@
 using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Collections.Generic;
+
+public struct SoldierPosition {
+	public Vector3 instPos;
+	public Vector2 bound;
+	public SoldierPosition(Vector3 instPos, Vector2 bound) {
+		this.instPos = instPos;
+		this.bound = bound;
+	}
+}
 
 public class GameController : MonoBehaviour {
 
@@ -22,6 +32,7 @@ public class GameController : MonoBehaviour {
 	public Text myScore;
 	public GameObject kingMonster;
 	public float kingMonsterAppear;
+	public GameObject soldierMonster;
 
     string playerName;
 	LeaderBoardController leaderBoardController;
@@ -31,14 +42,15 @@ public class GameController : MonoBehaviour {
     float currentTimer = 0;
     bool gameOver = false;
 	bool canBeDestroyed = false;
+	List<GameObject> rebornList = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () {
 		leaderBoardController = GetComponent<LeaderBoardController> ();
         gameoverCanvas.SetActive(false);
         gameOver = false;
-        nextChapBtn.SetActive(false); 
-		Invoke ("InstantiateKingMonster", kingMonsterAppear);
+        nextChapBtn.SetActive(false);
+		InstantiateMonsters ();
 	}
 	
 	// Update is called once per frame
@@ -57,7 +69,38 @@ public class GameController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			PauseGame ();
 		}
-        
+
+
+	}
+
+	private void InstantiateMonsters() {
+		Invoke ("InstantiateKingMonster", kingMonsterAppear);
+		SoldierPosition[] soldier1Pos = new SoldierPosition[] {
+			new SoldierPosition(new Vector3(-7.262046f, -3.47f, -3.735428f), new Vector2(-10.8f, 10.8f)),
+			new SoldierPosition(new Vector3(-0.23f, 0.21f, -3.735428f), new Vector2(-10.8f, 10.8f)),
+			new SoldierPosition(new Vector3(5.01f, 4.63f, -3.96f), new Vector2(-10.8f, 10.8f))
+		};
+		SoldierPosition[] soldier2Pos = new SoldierPosition[] {
+			new SoldierPosition (new Vector3 (-13.09f, -0.64f, -5.01f), new Vector2 (-13f, 10f)), 
+			new SoldierPosition (new Vector3 (-2.56f, 3.68f, -5.01f), new Vector2 (-13f, 13f)),
+			new SoldierPosition (new Vector3 (-6.7f, 8.12f, -5.01f), new Vector2 (-13f, 0f))
+		};
+		int level = GameObject.Find("SceneManager").GetComponent<MySceneManager>().GetLevel();
+		int difficulty = GameObject.Find("SceneManager").GetComponent<MySceneManager>().getDifficulty();
+		for (int i = 0; i < difficulty + 1; i++) {
+			GameObject newMonster = new GameObject();
+			if (level == 1) {
+				newMonster = (GameObject)Instantiate (soldierMonster, soldier1Pos [i].instPos, soldierMonster.transform.rotation);
+				newMonster.GetComponent<AIInformation> ().floor = i + 1;
+				newMonster.GetComponent<SoldierProperties> ().leftBound = soldier1Pos [i].bound.x;
+				newMonster.GetComponent<SoldierProperties> ().rightBound = soldier1Pos [i].bound.y;
+			} else if (level == 2) {
+				newMonster = (GameObject) Instantiate (soldierMonster, soldier2Pos [i].instPos, soldierMonster.transform.rotation);
+				newMonster.GetComponent<AIInformation> ().floor = i + 1;
+				newMonster.GetComponent<SoldierProperties> ().leftBound = soldier2Pos [i].bound.x;
+				newMonster.GetComponent<SoldierProperties> ().rightBound = soldier2Pos [i].bound.y;
+			}
+		}
 	}
 
 	void PauseGame(){
@@ -67,11 +110,19 @@ public class GameController : MonoBehaviour {
 	// disable monster
 	public void disableMonster(){
 		GameObject.Find ("Player").GetComponent<Character> ().DisablePlayerMove ();
+		GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
+		foreach(GameObject m in monsters){
+			m.GetComponent<BasicProperties> ().Pause ();
+		}
 		Invoke ("enableMonster", 5.0f);
 	}
 
 	void enableMonster(){
 		GameObject.Find ("Player").GetComponent<Character> ().EnablePlayerMove ();
+		GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
+		foreach(GameObject m in monsters){
+			m.GetComponent<BasicProperties> ().Resume ();
+		}
 	}
 
 	public void AddPoint(float pt) {
@@ -82,7 +133,7 @@ public class GameController : MonoBehaviour {
 		risingScore.transform.SetParent (panel.transform);
 		risingScore.transform.localPosition = new Vector3 (-12.62742f, 4.577878f, -18.89f);
 		risingScore.transform.localScale = new Vector3 (1, 1, 1);
-		risingScore.GetComponent<RisingText> ().setup (20, 0.5f, 1);
+		risingScore.GetComponent<RisingText> ().setup ((int)pt, 0.5f, 1);
 
 
 	}
@@ -181,5 +232,22 @@ public class GameController : MonoBehaviour {
 
 	public void setKingMonsterDestroy(){
 		canBeDestroyed = true;
+	}
+
+	public void ReBornMonster(GameObject monster){
+		GameObject newObj;
+		if (monster.layer == LayerMask.NameToLayer ("KingMonster")) {
+			newObj = kingMonster;
+		} else {
+			newObj = soldierMonster;
+		}
+		rebornList.Add (newObj);
+		Invoke ("ExecuteReBorn", 15.0f);
+	}
+
+	void ExecuteReBorn(){
+		GameObject obj = rebornList [0];
+		Instantiate (obj, new Vector3(-7.262046f, -3.47f, -3.735428f), Quaternion.identity);
+		rebornList.RemoveAt (0);
 	}
 }
