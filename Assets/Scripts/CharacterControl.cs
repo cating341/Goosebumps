@@ -18,11 +18,9 @@ public class CharacterControl : MonoBehaviour
     void Update()
     {
 		if (UserControl.IncreaseTemp) {
-			print ("temp ++");
 			GameObject.Find ("TempHandle").GetComponent<TempController> ().IncreaseTemp ();
 		}
 		if (UserControl.DecreaseTemp) {
-			print("temp --");
 			GameObject.Find ("TempHandle").GetComponent<TempController> ().DecreaseTemp ();
 		}
         //get jump input by "jump" button set in input setting
