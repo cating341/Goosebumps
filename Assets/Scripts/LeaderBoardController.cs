@@ -14,17 +14,19 @@ public class LeaderBoardController : MonoBehaviour {
 		}
 	}
 
-	IEnumerator GetLeaderBoard() {
-		WWW www = new WWW(url);
+	public IEnumerator GetLeaderBoard(int chapter, int difficulty, OnComplete cb) {
+		WWW www = new WWW(url + "/" + chapter.ToString() + "/" + difficulty.ToString());
 		yield return www;
 		if (www.error == null) {
-			Debug.Log (www.text);		
+			Debug.Log (www.text);
+			LeaderBoard lb = JsonUtility.FromJson<LeaderBoard> (www.text);
+			cb (lb);
 		} else {
 			Debug.Log("ERROR: " + www.error);
 		}
 	}
 
-	public IEnumerator SendScore (int score, string name, int level, int difficulty, OnPostComplete callback) {
+	public IEnumerator SendScore (int score, string name, int level, int difficulty, OnComplete callback) {
 		WWWForm data = new WWWForm ();
 		data.AddField ("score", score);
 		data.AddField ("name", name);
@@ -52,4 +54,4 @@ public class LeaderBoardController : MonoBehaviour {
 		
 }
 
-public delegate void OnPostComplete(LeaderBoard lb);
+public delegate void OnComplete(LeaderBoard lb);
