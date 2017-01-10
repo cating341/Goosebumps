@@ -118,8 +118,11 @@ public class GameController : MonoBehaviour {
 		GameObject.Find ("Player").GetComponent<Character> ().DisablePlayerMove ();
 		GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
 		foreach(GameObject m in monsters){
+			Debug.Log (m.name);
+			m.GetComponent<BasicProperties>().NewDisability("faint", true);
 			m.GetComponent<BasicProperties> ().Pause ();
 		}
+
 		Invoke ("enableMonster", 5.0f);
 	}
 
@@ -127,6 +130,7 @@ public class GameController : MonoBehaviour {
 		GameObject.Find ("Player").GetComponent<Character> ().EnablePlayerMove ();
 		GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
 		foreach(GameObject m in monsters){
+			m.GetComponent<BasicProperties>().NewDisability("faint", false);
 			m.GetComponent<BasicProperties> ().Resume ();
 		}
 	}
