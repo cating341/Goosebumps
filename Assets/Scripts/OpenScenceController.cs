@@ -5,6 +5,7 @@ public class OpenScenceController : MonoBehaviour {
 
 	public GameObject SelectScene;
 	public GameObject StartScene;
+	public GameObject RankCanvas;
 	public GameObject[] gameview;
 
 	int maxSceneCount = 2;
@@ -13,6 +14,7 @@ public class OpenScenceController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		SelectScene.SetActive (false);
+		RankCanvas.SetActive (false);
 		maxSceneCount = gameview.Length - 1;
 	}
 	
@@ -51,12 +53,17 @@ public class OpenScenceController : MonoBehaviour {
 		SelectScene.SetActive (true);
 		StartScene.SetActive (false);
 	}
-
+ 
+	public void PopUpRankingCanvas(){
+		RankCanvas.SetActive (true);
+		StartScene.SetActive (false);
+	} 
     public void BackToStartScene()
     {
         SelectScene.SetActive(false);
         StartScene.SetActive(true);
     }
+
 
 	public void SelectGame(int index){
 		gameview [currentSelect].GetComponent<OutlineCustom> ().eraseRenderer = true;
