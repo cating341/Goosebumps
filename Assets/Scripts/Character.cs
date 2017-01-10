@@ -35,6 +35,8 @@ public class Character : MonoBehaviour
 
     public Transform ladder;
 
+	private Coroutine wispRoutine; 
+
     void Awake()
     {
         
@@ -204,7 +206,11 @@ public class Character : MonoBehaviour
 	}
 
 	public void StartWispPossessed(float t) {
-		StartCoroutine (WispPossessed (t));
+		if (wispRoutine != null)
+			StopCoroutine (wispRoutine);
+		wispRoutine = StartCoroutine (WispPossessed (t));
 	}
+
+
 
 }
