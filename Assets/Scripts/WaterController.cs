@@ -28,7 +28,12 @@ public class WaterController : MonoBehaviour {
             else
             {
                 Water.SetActive(true); Ice.SetActive(false);
-				Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"), false);
+				if (GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().GetLevel () == 1) {
+					Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Icecube"), false);
+					Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"), false);
+				} else if (GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().GetLevel () == 2) {
+					Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"), false);
+				}
             }
         }
 	}

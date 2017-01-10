@@ -26,6 +26,8 @@ TagManager:
   - Seed
   - Potion
   - Wisp
+  - boundwall
+  - Icecube
   layers:
   - Default
   - TransparentFX
@@ -43,7 +45,7 @@ TagManager:
   - SoldierMonster
   - 
   - Outline
-  - 
+  - Icecube
   - 
   - 
   - 

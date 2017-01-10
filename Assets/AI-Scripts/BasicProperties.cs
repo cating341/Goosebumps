@@ -29,14 +29,15 @@ public class BasicProperties : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		if (gameObject.layer == LayerMask.NameToLayer ("KingMonster"))
-			CheckClimb ();
+		CheckClimb ();
 	}
 
 	public void NavigateMonster(Vector3 tar) {
 		if (CheckDisability()) {
-			agent.SetDestination (agent.transform.position);
+			agent.Stop ();
+//			agent.SetDestination (agent.transform.position);
 		} else {
+			agent.Resume ();
 			agent.SetDestination (tar);
 		}
 		GetComponentInChildren<Animator> ().SetFloat ("speed", agent.velocity.sqrMagnitude);
@@ -56,7 +57,12 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	private void BreakBathroomIce() {
-		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"));
+		if (GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().GetLevel () == 1) {
+			Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"));
+			Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Icecube"));
+		}
+		else if (GameObject.Find("SceneManager").GetComponent<MySceneManager>().GetLevel() == 2)
+			Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"));
 		disabledList ["water"] = false;
 		GetComponentInChildren<Animator> ().SetBool ("attack", false);
 	}
