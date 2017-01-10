@@ -57,7 +57,12 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	private void BreakBathroomIce() {
-		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"));
+		if (GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().GetLevel () == 1) {
+			Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"));
+			Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Icecube"));
+		}
+		else if (GameObject.Find("SceneManager").GetComponent<MySceneManager>().GetLevel() == 2)
+			Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"));
 		disabledList ["water"] = false;
 		GetComponentInChildren<Animator> ().SetBool ("attack", false);
 	}

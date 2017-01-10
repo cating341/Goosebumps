@@ -3524,7 +3524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2aa4e357d68b741a17fd7d740825a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kingMonster: {fileID: 1000011751821892, guid: 16d32d34a7ebe4629a6f8d098bca87e6,
+  kingMonster: {fileID: 1000012257549714, guid: 16d32d34a7ebe4629a6f8d098bca87e6,
     type: 2}
   soldierMonster: {fileID: 1000012780306826, guid: 3ac987bbe05474b5dbd675c26fe7ab7b,
     type: 2}

@@ -3458,6 +3458,14 @@ Prefab:
       propertyPath: m_Layer
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011858374050, guid: e696fbb7626344bea9fef3f1bced7594, type: 2}
+      propertyPath: m_TagString
+      value: Icecube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011858374050, guid: e696fbb7626344bea9fef3f1bced7594, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e696fbb7626344bea9fef3f1bced7594, type: 2}
   m_IsPrefabParent: 0
