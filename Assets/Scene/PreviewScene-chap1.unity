@@ -3981,7 +3981,7 @@ MonoBehaviour:
   lineColor0: {r: 1, g: 0, b: 0, a: 1}
   lineColor1: {r: 1, g: 0.93103445, b: 0, a: 1}
   lineColor2: {r: 0, g: 0, b: 1, a: 1}
-  flipY: 0
+  flipY: 1
   additiveRendering: 1
   alphaCutoff: 0.5
 --- !u!124 &908830999
@@ -4034,7 +4034,7 @@ GameObject:
   - 33: {fileID: 921069254}
   - 65: {fileID: 921069253}
   - 23: {fileID: 921069252}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4049,8 +4049,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 921069250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05078727, y: 6.2, z: 7.359082}
-  m_LocalScale: {x: 24.51, y: 0.40823153, z: 1.1221881}
+  m_LocalPosition: {x: 0.05078727, y: 6.2, z: 7.01}
+  m_LocalScale: {x: 24.51, y: 0.40823153, z: 4.2761674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 278928823}
@@ -4589,16 +4589,14 @@ Prefab:
     - target: {fileID: 224000013699522458, guid: 2cf74311c85949f4da5f5a79c663df8a,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000011459968746, guid: 2cf74311c85949f4da5f5a79c663df8a,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114000013886476186, guid: 2cf74311c85949f4da5f5a79c663df8a, type: 2}
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf74311c85949f4da5f5a79c663df8a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1103655789 stripped
@@ -4606,23 +4604,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011963627054, guid: 2cf74311c85949f4da5f5a79c663df8a,
     type: 2}
   m_PrefabInternal: {fileID: 1103655788}
---- !u!1 &1103655790 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013768751258, guid: 2cf74311c85949f4da5f5a79c663df8a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1103655788}
---- !u!114 &1103655791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1103655790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floor: 0
 --- !u!1 &1123617831
 GameObject:
   m_ObjectHideFlags: 0
