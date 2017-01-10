@@ -225,8 +225,12 @@ public class GameController : MonoBehaviour {
 
 	private void InstantiateKingMonster() {
 		GameObject obj = (GameObject) Instantiate (kingMonster);
+		int level = GameObject.Find("SceneManager").GetComponent<MySceneManager>().GetLevel();
 		if (canBeDestroyed)
 			obj.GetComponent<PotionDamage> ().setStartToDestroyed ();
+
+		if (level == 2)
+			obj.GetComponent<PotionDamage> ().setHealth (GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().getDifficulty () + 1);
 
 	}
 
