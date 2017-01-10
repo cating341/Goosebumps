@@ -153,4 +153,16 @@ public class MySceneManager : MonoBehaviour {
 	public int getDifficulty(){
 		return difficulty;
 	}
+
+	public string getDifficultyStr() {
+		string str = "";
+		if (difficulty == 0) {
+			str = "easy";
+		} else if (difficulty == 1) {
+			str = "normal";
+		} else if (difficulty == 2) {
+			str = "hard";
+		}
+		return str;
+	}
 }

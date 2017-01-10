@@ -30,12 +30,15 @@ public class GameController : MonoBehaviour {
 	public Text myRank;
 	public Text myName;
 	public Text myScore;
+	public Text ChapterText;
+	public Text DifficultyText;
 	public GameObject kingMonster;
 	public float kingMonsterAppear;
 	public GameObject soldierMonster;
 
     string playerName;
 	LeaderBoardController leaderBoardController;
+	MySceneManager sceneManager;
 
     float MAXTIMER = 1;
     float timer = 0;
@@ -46,11 +49,13 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		sceneManager = GameObject.Find ("SceneManager").GetComponent<MySceneManager> ();
 		leaderBoardController = GetComponent<LeaderBoardController> ();
         gameoverCanvas.SetActive(false);
         gameOver = false;
         nextChapBtn.SetActive(false);
 		InstantiateMonsters ();
+
 	}
 	
 	// Update is called once per frame
@@ -85,8 +90,8 @@ public class GameController : MonoBehaviour {
 			new SoldierPosition (new Vector3 (-2.56f, 3.68f, -5.01f), new Vector2 (-13f, 13f)),
 			new SoldierPosition (new Vector3 (-6.7f, 8.12f, -5.01f), new Vector2 (-13f, 0f))
 		};
-		int level = GameObject.Find("SceneManager").GetComponent<MySceneManager>().GetLevel();
-		int difficulty = GameObject.Find("SceneManager").GetComponent<MySceneManager>().getDifficulty();
+		int level = sceneManager.GetLevel();
+		int difficulty = sceneManager.getDifficulty();
 		for (int i = 0; i < difficulty + 1; i++) {
 			GameObject newMonster = new GameObject();
 			if (level == 1) {
@@ -145,6 +150,8 @@ public class GameController : MonoBehaviour {
 			gameoverCanvas.SetActive (true);
 			namePanel.SetActive (true);
 			totalTimerText.GetComponent<Text> ().text = ((int)currentTimer).ToString ();
+			ChapterText.GetComponent<Text> ().text = "Chapter" + sceneManager.GetLevel ().ToString ();
+			DifficultyText.GetComponent<Text> ().text = sceneManager.getDifficultyStr ().ToUpper();
 			if (currentTimer > MAXTIMER)
 				nextChapBtn.SetActive (true);
 		}
@@ -153,25 +160,25 @@ public class GameController : MonoBehaviour {
 
     public void GotoNextChap()
     {
-        GameObject.Find("SceneManager").GetComponent<MySceneManager>().removeAllFromSceceList();
-        if (GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE1)
-            Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().TRANS1);
-        if (GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE2)
-            Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE3);
+        sceneManager.removeAllFromSceceList();
+        if (sceneManager.currentSceneName == sceneManager.GAMESCENE1)
+            Application.LoadLevel(sceneManager.TRANS1);
+        if (sceneManager.currentSceneName == sceneManager.GAMESCENE2)
+            Application.LoadLevel(sceneManager.GAMESCENE3);
     }
 
     public void GameRestart()
     {
-        GameObject.Find("SceneManager").GetComponent<MySceneManager>().removeAllFromSceceList();
-		if(GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE1 )
-			Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW1);
-		else if(GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE2 )
-			Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW2);
+        sceneManager.removeAllFromSceceList();
+		if(sceneManager.currentSceneName == sceneManager.GAMESCENE1 )
+			Application.LoadLevel(sceneManager.PREVIEW1);
+		else if(sceneManager.currentSceneName == sceneManager.GAMESCENE2 )
+			Application.LoadLevel(sceneManager.PREVIEW2);
 
     }
 
 	public void BackToStartScene(){
-		GameObject.Find("SceneManager").GetComponent<MySceneManager>().removeAllFromSceceList();
+		sceneManager.removeAllFromSceceList();
 		Application.LoadLevel (GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().START);
 	}
 
@@ -186,14 +193,15 @@ public class GameController : MonoBehaviour {
         if (playerName.Equals(""))
             playerName = "Player";
         namePanel.SetActive(false);
-		int level = GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().GetLevel ();
-		int difficulty = GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().getDifficulty ();
+		int level = sceneManager.GetLevel ();
+		int difficulty = sceneManager.getDifficulty ();
 		StartCoroutine (leaderBoardController.SendScore ((int)currentTimer, playerName, level, difficulty, (lb) => {
 			SetLeaderBoard(lb);
 		}));
     }
 
 	private void SetLeaderBoard(LeaderBoard lb) {
+
 		myRank.text = lb.myRate.ToString ();
 		int SHOW_RANK_NUM = 5;
 		if (lb.leaderboard.Count < 5) {
