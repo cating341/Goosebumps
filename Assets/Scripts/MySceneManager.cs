@@ -137,9 +137,9 @@ public class MySceneManager : MonoBehaviour {
 
 	public int GetLevel() {
 		int level = -1;
-		if (currentSceneName == GAMESCENE1)
+		if (currentSceneName == GAMESCENE1 || currentSceneName == PREVIEW1)
 			level = 1;
-		else if (currentSceneName == GAMESCENE2)
+		else if (currentSceneName == GAMESCENE2 || currentSceneName == PREVIEW2)
 			level = 2;
 		return level;
 	}
@@ -152,5 +152,17 @@ public class MySceneManager : MonoBehaviour {
 
 	public int getDifficulty(){
 		return difficulty;
+	}
+
+	public string getDifficultyStr() {
+		string str = "";
+		if (difficulty == 0) {
+			str = "easy";
+		} else if (difficulty == 1) {
+			str = "normal";
+		} else if (difficulty == 2) {
+			str = "hard";
+		}
+		return str;
 	}
 }
