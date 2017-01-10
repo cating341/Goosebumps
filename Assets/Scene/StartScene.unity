@@ -406,9 +406,7 @@ Prefab:
     - target: {fileID: 114000013718490912, guid: 7bab5704d64829949afa508e811bddf8,
         type: 2}
       propertyPath: m_Text
-      value: 'Easy
-
-'
+      value: Easy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7bab5704d64829949afa508e811bddf8, type: 2}
