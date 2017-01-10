@@ -137,9 +137,9 @@ public class MySceneManager : MonoBehaviour {
 
 	public int GetLevel() {
 		int level = -1;
-		if (currentSceneName == GAMESCENE1)
+		if (currentSceneName == GAMESCENE1 || currentSceneName == PREVIEW1)
 			level = 1;
-		else if (currentSceneName == GAMESCENE2)
+		else if (currentSceneName == GAMESCENE2 || currentSceneName == PREVIEW2)
 			level = 2;
 		return level;
 	}
