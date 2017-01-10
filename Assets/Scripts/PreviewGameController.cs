@@ -6,15 +6,18 @@ public class PreviewGameController : MonoBehaviour {
 	GameObject player;
 	public GameObject kingMonster;
 	public GameObject soldierMonster;
+	private bool instantiatedMonster;
 
 	// Use this for initialization
 	void Start () {
         player = GameObject.Find("Player");
+		instantiatedMonster = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (!Application.isLoadingLevel) {
+		if (!Application.isLoadingLevel && !instantiatedMonster) {
+			instantiatedMonster = true;
 			InstantiateMonsters ();
 		}
 	}
