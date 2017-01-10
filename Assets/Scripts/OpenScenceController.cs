@@ -11,6 +11,8 @@ public class OpenScenceController : MonoBehaviour {
 	int maxSceneCount = 2;
 	int currentSelect = 0;
 
+	int rankingChap = 1;
+	int rankingDifficulty = 0;
 	// Use this for initialization
 	void Start () {
 		SelectScene.SetActive (false);
@@ -60,6 +62,7 @@ public class OpenScenceController : MonoBehaviour {
 	} 
     public void BackToStartScene()
     {
+		RankCanvas.SetActive (false);
         SelectScene.SetActive(false);
         StartScene.SetActive(true);
     }
@@ -68,5 +71,13 @@ public class OpenScenceController : MonoBehaviour {
 	public void SelectGame(int index){
 		gameview [currentSelect].GetComponent<OutlineCustom> ().eraseRenderer = true;
 		currentSelect = index;
+	}
+
+	public void SetRankingChap(int index){
+		rankingChap = index;
+	}
+
+	public void SetRankingDifficulty(int index){
+		rankingDifficulty = index;
 	}
 }
