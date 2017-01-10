@@ -29,14 +29,15 @@ public class BasicProperties : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		if (gameObject.layer == LayerMask.NameToLayer ("KingMonster"))
-			CheckClimb ();
+		CheckClimb ();
 	}
 
 	public void NavigateMonster(Vector3 tar) {
 		if (CheckDisability()) {
-			agent.SetDestination (agent.transform.position);
+			agent.Stop ();
+//			agent.SetDestination (agent.transform.position);
 		} else {
+			agent.Resume ();
 			agent.SetDestination (tar);
 		}
 		GetComponentInChildren<Animator> ().SetFloat ("speed", agent.velocity.sqrMagnitude);

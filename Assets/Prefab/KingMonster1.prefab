@@ -140,9 +140,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014040163364}
   - 95: {fileID: 95000013271984846}
-  m_Layer: 0
+  - 195: {fileID: 195000012548184600}
+  - 65: {fileID: 65000011923797486}
+  - 114: {fileID: 114000011877518950}
+  - 114: {fileID: 114000012223950964}
+  - 54: {fileID: 54000013025411672}
+  m_Layer: 12
   m_Name: zombie anime
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -562,14 +567,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014264691656}
-  - 54: {fileID: 54000011920095304}
-  - 65: {fileID: 65000010682715010}
-  - 195: {fileID: 195000010867670512}
-  - 114: {fileID: 114000010190441934}
-  - 114: {fileID: 114000011625815434}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: KingMonster1
-  m_TagString: Monster
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1531,33 +1531,33 @@ Transform:
   - {fileID: 4000014040163364}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!54 &54000011920095304
+--- !u!54 &54000013025411672
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013015462648}
+  m_GameObject: {fileID: 1000010613272196}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 8000
-  m_UseGravity: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65000010682715010
+--- !u!65 &65000011923797486
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013015462648}
+  m_GameObject: {fileID: 1000010613272196}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.3, z: 1}
-  m_Center: {x: 0, y: 1.25, z: 0}
+  m_Size: {x: 0.2, y: 0.5, z: 0.24}
+  m_Center: {x: 0, y: 0.28, z: 0}
 --- !u!95 &95000013271984846
 Animator:
   serializedVersion: 3
@@ -1575,26 +1575,26 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000010190441934
+--- !u!114 &114000011877518950
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013015462648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b83a3ede30d745caaaf571728a96106, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114000011625815434
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013015462648}
+  m_GameObject: {fileID: 1000010613272196}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0dbb12ec0edeb42c2893fc6afb875b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012223950964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010613272196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b83a3ede30d745caaaf571728a96106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!137 &137000012388010046
@@ -1773,23 +1773,23 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.14297074, y: -0.0027172863, z: 0.28833616}
     m_Extent: {x: 0.009245053, y: 0.0696774, z: 0.028386772}
   m_DirtyAABB: 0
---- !u!195 &195000010867670512
+--- !u!195 &195000012548184600
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013015462648}
+  m_GameObject: {fileID: 1000010613272196}
   m_Enabled: 1
-  m_Radius: 0.35
+  m_Radius: 0.1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 800
+  m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.5
-  m_BaseOffset: 0
+  m_Height: 0.3
+  m_BaseOffset: -0.03
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
