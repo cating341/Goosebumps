@@ -2180,6 +2180,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000010046976760, guid: 7ffb40bf4e30bea4fa589dd668554c7b,
     type: 2}
   m_PrefabInternal: {fileID: 483946706}
+--- !u!114 &483946718 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000012570639866, guid: 7ffb40bf4e30bea4fa589dd668554c7b,
+    type: 2}
+  m_PrefabInternal: {fileID: 483946706}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &483946719 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011497836252, guid: 7ffb40bf4e30bea4fa589dd668554c7b,
+    type: 2}
+  m_PrefabInternal: {fileID: 483946706}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &488664174
 GameObject:
   m_ObjectHideFlags: 0
@@ -5238,6 +5250,8 @@ MonoBehaviour:
   myRank: {fileID: 483946709}
   myName: {fileID: 483946708}
   myScore: {fileID: 483946707}
+  ChapterText: {fileID: 483946719}
+  DifficultyText: {fileID: 483946718}
   kingMonster: {fileID: 1000013015462648, guid: b101ae54a94da4d468ffd7d4bf3410d5,
     type: 2}
   kingMonsterAppear: 3
