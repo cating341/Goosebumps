@@ -52,6 +52,12 @@ public class OpenScenceController : MonoBehaviour {
 		StartScene.SetActive (false);
 	}
 
+    public void BackToStartScene()
+    {
+        SelectScene.SetActive(false);
+        StartScene.SetActive(true);
+    }
+
 	public void SelectGame(int index){
 		gameview [currentSelect].GetComponent<OutlineCustom> ().eraseRenderer = true;
 		currentSelect = index;
