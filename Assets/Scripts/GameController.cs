@@ -46,9 +46,10 @@ public class GameController : MonoBehaviour {
     bool gameOver = false;
 	bool canBeDestroyed = false;
 	List<GameObject> rebornList = new List<GameObject>();
+    GameObject player;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		sceneManager = GameObject.Find ("SceneManager").GetComponent<MySceneManager> ();
 		leaderBoardController = GetComponent<LeaderBoardController> ();
         gameoverCanvas.SetActive(false);
@@ -146,7 +147,9 @@ public class GameController : MonoBehaviour {
     public void GameOver()
     {
 		if (!gameOver) {
-			gameOver = true;
+            player = GameObject.FindWithTag("Player");
+            player.GetComponent<Character>().DisablePlayerMove();
+            gameOver = true;
 			gameoverCanvas.SetActive (true);
 			namePanel.SetActive (true);
 			totalTimerText.GetComponent<Text> ().text = ((int)currentTimer).ToString ();

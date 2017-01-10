@@ -5640,7 +5640,7 @@ GameObject:
   - 33: {fileID: 1267986501}
   - 65: {fileID: 1267986500}
   - 23: {fileID: 1267986499}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5655,8 +5655,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1267986497}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05078727, y: 6.2, z: 7.359082}
-  m_LocalScale: {x: 24.51, y: 0.40823153, z: 1.1221881}
+  m_LocalPosition: {x: 0.05078727, y: 6.2, z: 6.56}
+  m_LocalScale: {x: 24.51, y: 0.40823153, z: 4.4098687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1317203035}
@@ -8333,6 +8333,41 @@ Prefab:
     - target: {fileID: 114000013886476186, guid: 2cf74311c85949f4da5f5a79c663df8a,
         type: 2}
       propertyPath: floor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000013402943738, guid: 2cf74311c85949f4da5f5a79c663df8a,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010648542600, guid: 2cf74311c85949f4da5f5a79c663df8a,
+        type: 2}
+      propertyPath: m_MinValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013699522458, guid: 2cf74311c85949f4da5f5a79c663df8a,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000011459968746, guid: 2cf74311c85949f4da5f5a79c663df8a,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000011459968746, guid: 2cf74311c85949f4da5f5a79c663df8a,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010648542600, guid: 2cf74311c85949f4da5f5a79c663df8a,
+        type: 2}
+      propertyPath: m_MaxValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010648542600, guid: 2cf74311c85949f4da5f5a79c663df8a,
+        type: 2}
+      propertyPath: m_Value
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
