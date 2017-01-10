@@ -115,4 +115,10 @@ public class OpenScenceController : MonoBehaviour {
 		Name.text = "";
 		Score.text = "";
 	}
+
+	public void SelectDifficulty(int index){
+		int difficulty = index;
+		GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().SelectDifficulty (index);
+		//print (difficulty);
+	}
 }
