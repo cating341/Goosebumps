@@ -43,10 +43,22 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	public void NewDisability(string key, bool value) {
-		disabledList[key] = value;
 		if (key == "carpet") {
 			Invoke ("DestroyMe", 4.0f);
+		} else if (key == "water") {
+			if ((!disabledList.ContainsKey(key) || !disabledList [key]) && value) {
+				GetComponentInChildren<Animator> ().SetBool ("attack", true);
+				Invoke ("BreakBathroomIce", 3f);
+			}
+//			Invoke("Break")
 		}
+		disabledList[key] = value;
+	}
+
+	private void BreakBathroomIce() {
+		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"));
+		disabledList ["water"] = false;
+		GetComponentInChildren<Animator> ().SetBool ("attack", false);
 	}
 
 	private void DestroyMe() {
@@ -59,11 +71,13 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	public GameObject GetAttractionPeek(){
-		while (attractions.Count > 0) {
-			if (CheckDequeue (attractions.Peek ())) {
-				attractions.Dequeue ();
-			} else {
-				return attractions.Peek ();
+		if (attractions != null) {
+			while (attractions.Count > 0) {
+				if (CheckDequeue (attractions.Peek ())) {
+					attractions.Dequeue ();
+				} else {
+					return attractions.Peek ();
+				}
 			}
 		}
 		return null;
@@ -86,13 +100,6 @@ public class BasicProperties : MonoBehaviour {
 		return false;
 	}
 
-	void OnCollisionEnter(Collision col)
-	{
-		if (col.gameObject.tag == "Ground") {
-			
-		}
-	}
-
 	private void IgnoreGround(bool ignore){
 		foreach (GameObject ground in grounds) {
 			Physics.IgnoreCollision (GetComponent<Collider>(), ground.GetComponent<Collider>(), ignore);
@@ -104,7 +111,7 @@ public class BasicProperties : MonoBehaviour {
 		if (ladder.activated) {
 //			GetComponent<Rigidbody> ().useGravity = false;
 			if (GameObject.Find ("TempHandle").GetComponent<TempController> ().GetTemp () < ICE_TEMP && !iceBreaking) {
-				GetComponent<Animator> ().SetBool ("attack", true);
+				GetComponentInChildren<Animator> ().SetBool ("attack", true);
 				iceBreaking = true;
 				iceBroken = false;
 				Invoke ("BreakIce", 3f);
@@ -124,7 +131,7 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	private void BreakIce() {
-		GetComponent<Animator> ().SetBool ("attack", false);
+		GetComponentInChildren<Animator> ().SetBool ("attack", false);
 		iceBroken = true;
 	}
 
@@ -143,5 +150,13 @@ public class BasicProperties : MonoBehaviour {
 
 	public float GetRemainingDistance() {
 		return agent.remainingDistance;
+	}
+
+	public void Pause() {
+		agent.Stop ();
+	}
+
+	public void Resume() {
+		agent.Resume ();
 	}
 }

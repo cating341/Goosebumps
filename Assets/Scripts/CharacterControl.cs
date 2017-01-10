@@ -17,12 +17,19 @@ public class CharacterControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if (UserControl.IncreaseTemp) {
+			GameObject.Find ("TempHandle").GetComponent<TempController> ().IncreaseTemp ();
+		}
+		if (UserControl.DecreaseTemp) {
+			GameObject.Find ("TempHandle").GetComponent<TempController> ().DecreaseTemp ();
+		}
         //get jump input by "jump" button set in input setting
 //        if (Input.GetButtonDown("Jump")) jump = true;
     }
 
     void FixedUpdate()
     {
+		
         //get input by Axis set in input setting
         if (enableMove)
             movingSpeed = Input.GetAxis("Horizontal");

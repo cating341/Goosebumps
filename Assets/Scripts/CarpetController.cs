@@ -51,9 +51,13 @@ public class CarpetController : MonoBehaviour {
     {
 		if (other.gameObject.tag == "Monster" && anim.GetBool("fire") && !this.killedMonster)
         {
+			GameObject.Find("GameHandle").GetComponent<GameController>().AddPoint(150);
+			GameObject.Find ("GameHandle").GetComponent<GameController> ().ReBornMonster (other.gameObject);
 			this.killedMonster = other.gameObject;
 			this.killedMonster.GetComponent<BasicProperties> ().NewDisability ("carpet", true);
 			this.killedMonster.GetComponentInChildren<Animator> ().SetBool ("dead", true);
+
+
         }
     }
 }

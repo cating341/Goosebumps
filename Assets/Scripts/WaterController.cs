@@ -28,18 +28,14 @@ public class WaterController : MonoBehaviour {
             else
             {
                 Water.SetActive(true); Ice.SetActive(false);
+				Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("Water"), false);
             }
         }
 	}
 
     void OnTriggerStay(Collider other)
     {
-
-        if (other.gameObject.tag == "Player" && tempController.GetTemp() < ICE_TEMP)
-        {
-            Debug.Log("ICEEEE!! hurt!!");
-        }
-		else if(other.gameObject.tag == "Monster")
+        if(other.gameObject.tag == "Monster")
         {
 			if (tempController.GetTemp () < ICE_TEMP) {
 				other.gameObject.GetComponent<BasicProperties> ().NewDisability ("water", true);

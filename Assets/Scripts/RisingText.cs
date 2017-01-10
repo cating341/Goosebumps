@@ -21,8 +21,11 @@ public class RisingText : MonoBehaviour
 	// "rise speed" is how fast it will rise over time.
 	public void setup(int points, float duration, float rise_speed)
 	{
-		if (text != null)
-			text.text = points.ToString();        
+//		if (text != null) {
+//			text.text = points.ToString (); 
+//			print ("Text start");
+//		}
+		GetComponent<Text> ().text = "+" + points.ToString ();
 		life_loss = 1f / duration;
 		crds_delta = new Vector3(0f, rise_speed, 0f);        
 	}
@@ -34,6 +37,7 @@ public class RisingText : MonoBehaviour
 		cam = Camera.main;
 		crds_delta = new Vector3(0f, 1f, 0f);
 		life_loss = 0.5f;
+
 	}
 
 	void Update () 

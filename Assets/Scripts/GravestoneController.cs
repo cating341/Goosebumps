@@ -20,25 +20,27 @@ public class GravestoneController : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     { 
-        if (other.gameObject.tag == "Monster" && shine)
-        {
-            monsterTrigger = true;
-            steppedMonster = other.gameObject;
-            steppedMonster.GetComponent<BasicProperties>().NewDisability("faint", true);
-            steppedMonster.GetComponentInChildren<Animator>().SetBool("faint", true);
-
-            Debug.Log("Trigger shine gravestone event");
-        }
+       
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && Input.GetKey("z"))
+        if (other.gameObject.tag == "Player" && Input.GetKeyDown("z"))
         {
             shine = true;
             anim.SetBool("shine", true);
             Invoke("WakeUp", 3f);
         }
+
+		if (other.gameObject.tag == "Monster" && shine)
+		{
+			monsterTrigger = true;
+			steppedMonster = other.gameObject;
+			steppedMonster.GetComponent<BasicProperties>().NewDisability("faint", true);
+			steppedMonster.GetComponentInChildren<Animator>().SetBool("faint", true);
+			shine = false;
+			Debug.Log("Trigger shine gravestone event");
+		}
     }
 
     private void WakeUp()

@@ -4,14 +4,13 @@ using System.Collections;
 public class PotionDamage : MonoBehaviour {
 
 	public bool canBeDestroyed = false;
-	public int maxHealth = 1;
+	const int maxHealth = 1;
 	public bool canBeMinus = true;
-	int health;
+	int health = maxHealth;
 
 	bool flag = true;
 	// Use this for initialization
 	void Start () {
-		health = maxHealth;
 	}
 	
 	// Update is called once per frame
@@ -26,7 +25,11 @@ public class PotionDamage : MonoBehaviour {
 
 	public void TakeDamage() {
 		if (canBeDestroyed && flag) {
-			if(canBeMinus) health--; 
+			if (canBeMinus) {
+				health--;
+				Debug.Log(gameObject.name +" health " + health);
+			}
+
 			flag = false;
 			Invoke ("reEnable", 3.0f);
 			if (health <= 0)
@@ -36,14 +39,20 @@ public class PotionDamage : MonoBehaviour {
 				gameObject.GetComponentInChildren<BasicProperties>().NewDisability("faint", true);
 				gameObject.GetComponentInChildren<Animator>().SetBool("dead", true);
 				Invoke("Destroyed", 6.0f);
+				GameObject.Find("GameHandle").GetComponent<GameController>().AddPoint (100.0f);
 			}
 			else {
 				gameObject.GetComponentInChildren<BasicProperties>().NewDisability("faint", true);
 				gameObject.GetComponentInChildren<Animator>().SetBool("faint", true);
 				Invoke("WakeUp", 3f);
-				Debug.Log("health " + health);
 			}
 		}
+	}
+
+
+	public void setHealth(int settingHealth){
+		health = settingHealth;
+		Debug.Log (gameObject.name + " health set to " + health);
 	}
 
 	void reEnable(){
