@@ -42,8 +42,8 @@ public class BasicProperties : MonoBehaviour {
 
 	public void NavigateMonster(Vector3 tar) {
 		if (CheckDisability() || pausing) {
+			agent.SetDestination (agent.transform.position);
 			agent.Stop ();
-//			agent.SetDestination (agent.transform.position);
 		} else {
 			agent.Resume ();
 			agent.SetDestination (tar);
