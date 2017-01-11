@@ -16,6 +16,8 @@ public class BasicProperties : MonoBehaviour {
 	private bool iceBreaking;
 	private bool iceBroken;
 
+	private bool pausing;
+
 	// Use this for initialization
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
@@ -25,15 +27,21 @@ public class BasicProperties : MonoBehaviour {
 		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("KingMonster"), LayerMask.NameToLayer ("SoldierMonster"), true);
 		iceBreaking = false;
 		iceBroken = true;
+		pausing = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		CheckClimb ();
+		if (Input.GetKeyDown (KeyCode.P)) {
+			Pause ();
+		} else if (Input.GetKeyDown (KeyCode.R)) {
+			Resume ();
+		}
 	}
 
 	public void NavigateMonster(Vector3 tar) {
-		if (CheckDisability()) {
+		if (CheckDisability() || pausing) {
 			agent.Stop ();
 //			agent.SetDestination (agent.transform.position);
 		} else {
@@ -159,10 +167,12 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	public void Pause() {
-		agent.Stop ();
+		pausing = true;
+//		agent.Stop ();
 	}
 
 	public void Resume() {
-		agent.Resume ();
+		pausing = false;
+//		agent.Resume ();
 	}
 }
