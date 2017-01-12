@@ -429,6 +429,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000012724349388, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010449614172, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010191434328, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224000010457912450, guid: 136bb544da7554d93aa2cb58cbc9058f,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -685,6 +700,86 @@ Prefab:
         type: 2}
       propertyPath: m_FontData.m_LineSpacing
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012724349388, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012724349388, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012724349388, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetRankingDifficulty
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012724349388, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012724349388, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012724349388, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010449614172, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetRankingDifficulty
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010449614172, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010449614172, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010449614172, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010449614172, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010191434328, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetRankingDifficulty
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010191434328, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010191434328, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010191434328, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010191434328, guid: 136bb544da7554d93aa2cb58cbc9058f,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 136bb544da7554d93aa2cb58cbc9058f, type: 2}
@@ -1060,6 +1155,41 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000011283185582, guid: 7bab5704d64829949afa508e811bddf8,
     type: 2}
   m_PrefabInternal: {fileID: 564005471}
+--- !u!1 &1209935017 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013330594324, guid: 136bb544da7554d93aa2cb58cbc9058f,
+    type: 2}
+  m_PrefabInternal: {fileID: 705292077}
+--- !u!114 &1209935018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209935017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1214172425}
+          m_MethodName: SetRankingDifficulty
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1214172424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1253,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   url: http://ballonhouse.com:3000/goosebumps/leaderboard
+--- !u!1 &1294938612 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000014066470330, guid: 136bb544da7554d93aa2cb58cbc9058f,
+    type: 2}
+  m_PrefabInternal: {fileID: 705292077}
+--- !u!114 &1294938613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1294938612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1214172425}
+          m_MethodName: SetRankingDifficulty
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1460284723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1356,41 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1460284723}
+--- !u!1 &1525297219 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011958516936, guid: 136bb544da7554d93aa2cb58cbc9058f,
+    type: 2}
+  m_PrefabInternal: {fileID: 705292077}
+--- !u!114 &1525297220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1525297219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1214172425}
+          m_MethodName: SetRankingDifficulty
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1569032087 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000012162198420, guid: 7bab5704d64829949afa508e811bddf8,
