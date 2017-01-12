@@ -72,9 +72,11 @@ public class ClockController : MonoBehaviour {
     void ClockRing() {
         animation.SetBool("ring", true);
 		audioSource.Play();
-		GameObject[] monsters = GameObject.FindGameObjectsWithTag ("Monster");
-		foreach (GameObject monster in monsters) {
-			monster.GetComponent<BasicProperties> ().NewAttraction (gameObject);
+		if (GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().GameSceneIsGame ()) {
+			GameObject[] monsters = GameObject.FindGameObjectsWithTag ("Monster");
+			foreach (GameObject monster in monsters) {
+				monster.GetComponent<BasicProperties> ().NewAttraction (gameObject);
+			}
 		}
 
         Invoke("StopAnimation", 5.0f);
