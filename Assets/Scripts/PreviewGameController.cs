@@ -46,6 +46,8 @@ public class PreviewGameController : MonoBehaviour {
 				newMonster = (GameObject)Instantiate (soldierMonster, soldier2Pos [i].instPos, soldierMonster.transform.rotation);
 			}
 		}
+		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("Player"), LayerMask.NameToLayer ("KingMonster"));
+		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("Player"), LayerMask.NameToLayer ("SoldierMonster"));
 	}
 
     public void GameStart()

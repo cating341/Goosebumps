@@ -2462,8 +2462,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.5, z: 1.3}
-  m_Center: {x: 0, y: 1.8, z: 0.2}
+  m_Size: {x: 1.4, y: 2, z: 1.2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &95000013605283116
 Animator:
   serializedVersion: 3
@@ -2493,7 +2493,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeDestroyed: 0
-  maxHealth: 1
   canBeMinus: 1
 --- !u!114 &114000011863939502
 MonoBehaviour:

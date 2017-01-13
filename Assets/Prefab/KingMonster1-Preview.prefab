@@ -713,6 +713,7 @@ GameObject:
   - 4: {fileID: 4000010483390164}
   - 95: {fileID: 95000011122666666}
   - 54: {fileID: 54000010320273734}
+  - 65: {fileID: 65000011786091046}
   m_Layer: 12
   m_Name: zombie anime
   m_TagString: Monster
@@ -1542,6 +1543,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65000011786091046
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013944407600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15, y: 0.45, z: 0.15}
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!95 &95000011122666666
 Animator:
   serializedVersion: 3

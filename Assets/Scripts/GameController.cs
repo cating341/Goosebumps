@@ -107,6 +107,8 @@ public class GameController : MonoBehaviour {
 				newMonster.GetComponent<SoldierProperties> ().rightBound = soldier2Pos [i].bound.y;
 			}
 		}
+		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("Player"), LayerMask.NameToLayer ("KingMonster"), false);
+		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("Player"), LayerMask.NameToLayer ("SoldierMonster"), false);
 	}
 
 	void PauseGame(){
