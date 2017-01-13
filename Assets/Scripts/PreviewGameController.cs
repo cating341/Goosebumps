@@ -21,16 +21,7 @@ public class PreviewGameController : MonoBehaviour {
 			instantiatedMonster = true;
 			InstantiateMonsters ();
 		}
-		if (UserControl.GetGearsBack) {
-			foreach (GameObject g in sceneManager.gearList) {
-				Inventory inv = GameObject.FindGameObjectWithTag ("Hotbar").GetComponent<Inventory> ();
-				Item item = g.GetComponent<ItemRef> ().item;
-				inv.addItemToInventory(item.itemID, item.itemValue);
-				inv.updateItemList();
-				inv.stackableSettings();
-			}
-			sceneManager.removeAllFromGearList();
-		}
+
 
 
 	}

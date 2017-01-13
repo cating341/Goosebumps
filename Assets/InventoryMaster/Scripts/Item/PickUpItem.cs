@@ -23,8 +23,6 @@ public class PickUpItem : MonoBehaviour
 		if (_inventory != null && UserControl.PickupItem)
         {
 			float distance = Vector2.Distance (new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y), new Vector2(_player.transform.position.x, _player.transform.position.y));
-//            float distance = Vector3.Distance(this.gameObject.transform.position, _player.transform.position);
-//			float distance = Mathf.Abs(this.gameObject.transform.position.x - _player.transform.position.x);
 			print("distance: " + distance);
             if (distance <= 1.3)
             {
@@ -42,7 +40,22 @@ public class PickUpItem : MonoBehaviour
 
             }
         }
-
+		if (_inventory != null && UserControl.GetGearsBack) {
+			addItemToInv (item.itemID, item.itemValue);
+		}
     }
+
+	void addItemToInv (int id, int itemValue) {
+		sceneManager.GetComponent<MySceneManager>().removeFromGearList(this.gameObject);
+		bool check = _inventory.checkIfItemAllreadyExist(item.itemID, item.itemValue);
+		if (check)
+			Destroy (this.gameObject);
+		else if (_inventory.ItemsInInventory.Count < (_inventory.width * _inventory.height)) {
+			_inventory.addItemToInventory (id, itemValue);
+			_inventory.updateItemList ();
+			_inventory.stackableSettings ();
+			Destroy (this.gameObject);
+		}
+	}
 
 }
