@@ -147,7 +147,8 @@ public class Hotbar : MonoBehaviour
 		inv.OnUpdateItemList();
 
         // SceneManager
-        sceneManager.addToGearList(dropItem);
+		if (sceneManager.GameSceneIsPreview())
+        	sceneManager.addToGearList(dropItem);
 	}
 
 	void removeItem(Transform selectedItem) {
