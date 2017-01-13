@@ -951,6 +951,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011685107304}
   - 95: {fileID: 95000011820160186}
+  - 65: {fileID: 65000010442585626}
+  - 54: {fileID: 54000012483052640}
   m_Layer: 13
   m_Name: SoldierMonster2-Preview
   m_TagString: Monster
@@ -1984,6 +1986,33 @@ Transform:
   - {fileID: 4000013238452934}
   m_Father: {fileID: 4000011685107304}
   m_RootOrder: 0
+--- !u!54 &54000012483052640
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013858353416}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65000010442585626
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013858353416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 1.2, z: 0.5}
+  m_Center: {x: 0, y: 0.65, z: 0}
 --- !u!95 &95000011820160186
 Animator:
   serializedVersion: 3
