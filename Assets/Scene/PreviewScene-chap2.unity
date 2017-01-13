@@ -5456,7 +5456,7 @@ MonoBehaviour:
   TRANS1: TransitionSceneCh1
   TRANS2: TransitionSceneCh2
   START: StartScene
-  difficulty: 2
+  difficulty: 0
 --- !u!1 &1722596799
 GameObject:
   m_ObjectHideFlags: 0

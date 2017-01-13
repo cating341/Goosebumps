@@ -32,4 +32,10 @@ public class UserControl {
 			return Input.GetKeyDown (KeyCode.LeftControl);
 		}
 	}
+
+	public static bool GetGearsBack{
+		get{ 
+			return Input.GetKeyDown (KeyCode.B);
+		}
+	}
 }

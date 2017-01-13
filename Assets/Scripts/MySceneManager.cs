@@ -44,7 +44,7 @@ public class MySceneManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+		
 	}
 
     // For any gear that player put in the scene
@@ -57,6 +57,14 @@ public class MySceneManager : MonoBehaviour {
     {
         gearList.Remove(g);
     }
+
+	public void removeAllFromGearList(){
+		
+		foreach (GameObject g in gearList) {
+			Destroy (g);
+		}
+		gearList.Clear ();
+	}
 
     public void addToSceneList(GameObject g)
     {
@@ -108,15 +116,16 @@ public class MySceneManager : MonoBehaviour {
 			// player.GetComponent<Character>().setFloor();
 		} else if (currentSceneName == PREVIEW1 || currentSceneName == PREVIEW2 || currentSceneName == GAMESCENE3) { // reload preview scene
 			Camera.main.GetComponent<CameraController> ().undateCameraParameters (currentSceneName);
-			foreach (GameObject g in gearList) {
-				Destroy (g);
+			if (currentSceneName == GAMESCENE3)
+				removeAllFromGearList ();
+			else {
+				foreach (GameObject g in gearList) {
+					if (g.tag == "Ladder") 
+						g.SetActive (true);
+				}
 			}
-			gearList.Clear ();
 		} else if (currentSceneName == START) {
-			foreach (GameObject g in gearList) {
-				Destroy (g);
-			}
-			gearList.Clear ();
+			removeAllFromGearList ();
 		}
     }
     

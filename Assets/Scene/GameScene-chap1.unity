@@ -5445,7 +5445,7 @@ GameObject:
   - 33: {fileID: 1267986501}
   - 65: {fileID: 1267986500}
   - 23: {fileID: 1267986499}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

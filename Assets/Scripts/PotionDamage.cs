@@ -66,6 +66,7 @@ public class PotionDamage : MonoBehaviour {
 	}
 
 	void Destroyed() {
+		GameObject.Find ("GameHandle").GetComponent<GameController> ().ReBornMonster (gameObject);
 		Destroy(gameObject);
 	}
 }

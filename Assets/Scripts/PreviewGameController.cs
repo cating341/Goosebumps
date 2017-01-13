@@ -7,9 +7,10 @@ public class PreviewGameController : MonoBehaviour {
 	public GameObject kingMonster;
 	public GameObject soldierMonster;
 	private bool instantiatedMonster;
-
+	MySceneManager sceneManager;
 	// Use this for initialization
 	void Start () {
+		sceneManager = GameObject.Find ("SceneManager").GetComponent<MySceneManager> ();
         player = GameObject.Find("Player");
 		instantiatedMonster = false;
 	}
@@ -20,6 +21,11 @@ public class PreviewGameController : MonoBehaviour {
 			instantiatedMonster = true;
 			InstantiateMonsters ();
 		}
+		if (UserControl.GetGearsBack) {
+			sceneManager.removeAllFromGearList();
+		}
+
+
 	}
 
 	private void InstantiateMonsters() {
