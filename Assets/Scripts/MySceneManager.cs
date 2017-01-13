@@ -7,7 +7,7 @@ public class MySceneManager : MonoBehaviour {
 
     public string currentSceneName;
 
-    List<GameObject> gearList = new List<GameObject>();
+    public List<GameObject> gearList = new List<GameObject>();
     List<GameObject> sceneList = new List<GameObject>();
 //    GameObject player;
 
@@ -22,6 +22,8 @@ public class MySceneManager : MonoBehaviour {
     public string TRANS2 = "TransitionSceneCh2";
 	public string START = "StartScene";
     //TransitionSceneCh1
+
+	GameObject hotbar;
 	 
 	public int difficulty = 0; // 0: simple, 1: normal, 2: hard
 
@@ -38,6 +40,7 @@ public class MySceneManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
         //gameController = GameObject.Find("GameHandle");
         //player = GameObject.Find("Player");
 	}
@@ -97,7 +100,7 @@ public class MySceneManager : MonoBehaviour {
 //        Debug.Log("Level Loaded");
 //        Debug.Log(scene.name + " " + scene.buildIndex );
 //        Debug.Log(mode);
-
+		hotbar = GameObject.FindGameObjectWithTag ("Hotbar");
 		currentSceneName = scene.name;
 
 		if (currentSceneName == GAMESCENE1 || currentSceneName == GAMESCENE2) {  // if not preview, mean game start!
@@ -119,15 +122,23 @@ public class MySceneManager : MonoBehaviour {
 			if (currentSceneName == GAMESCENE3)
 				removeAllFromGearList ();
 			else {
-				foreach (GameObject g in gearList) {
-					if (g.tag == "Ladder") 
-						g.SetActive (true);
-				}
+				respawnGearInPreview ();
 			}
 		} else if (currentSceneName == START) {
 			removeAllFromGearList ();
 		}
     }
+
+	void respawnGearInPreview() {
+		foreach (GameObject g in gearList) {
+			Item i = g.GetComponent<ItemRef> ().item;
+			g.AddComponent<PickUpItem> ();
+			g.GetComponent<PickUpItem> ().item = i;
+			if (g.tag == "Ladder") 
+				g.SetActive (true);
+			hotbar.GetComponent<Hotbar> ().syncWithSceneItem (i);
+		}
+	}
     
 
 	public bool GameSceneIsPreview(){

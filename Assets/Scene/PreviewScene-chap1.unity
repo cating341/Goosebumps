@@ -4590,12 +4590,12 @@ Prefab:
     - target: {fileID: 224000013699522458, guid: 2cf74311c85949f4da5f5a79c663df8a,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224000011459968746, guid: 2cf74311c85949f4da5f5a79c663df8a,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf74311c85949f4da5f5a79c663df8a, type: 2}
@@ -6733,6 +6733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSceneName: 
+  gearList: []
   GAMESCENE0: GameScene-chap0
   GAMESCENE1: GameScene-chap1
   GAMESCENE2: GameScene-chap2
@@ -6743,6 +6744,7 @@ MonoBehaviour:
   TRANS1: TransitionSceneCh1
   TRANS2: PreviewScene-chap2
   START: StartScene
+  hotbar: {fileID: 931758887}
   difficulty: 1
 --- !u!1 &1720392148
 GameObject:
