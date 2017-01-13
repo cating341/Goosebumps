@@ -19,7 +19,9 @@ public class Hotbar : MonoBehaviour
 	private ItemDataBaseList itemDataBase;
 	Transform selectedItem;
 
-    GameObject sceneManager;
+
+
+	MySceneManager sceneManager;
 
 //	public delegate void ItemDelegate();
 //	public static event ItemDelegate updateInventoryList;
@@ -67,7 +69,7 @@ public class Hotbar : MonoBehaviour
 			itemDataBase = (ItemDataBaseList)Resources.Load("ItemDatabase");
 		}
 		_player = GameObject.FindGameObjectWithTag("Player");
-        sceneManager = GameObject.Find("SceneManager");
+		sceneManager = GameObject.Find ("SceneManager").GetComponent<MySceneManager> ();
 	}
 
 
@@ -130,22 +132,38 @@ public class Hotbar : MonoBehaviour
 
 	void putItem(Transform selectedItem, float offSetY)
 	{
+
 		GameObject dropItem = (GameObject)Instantiate(selectedItem.GetComponent<ItemOnObject>().item.itemModel);
+		Item item = itemDataBase.getItemByID (selectedItem.GetComponent<ItemOnObject> ().item.itemID);
 		dropItem.AddComponent<PickUpItem>();
-		dropItem.GetComponent<PickUpItem>().item = itemDataBase.getItemByID (selectedItem.GetComponent<ItemOnObject> ().item.itemID);
+		dropItem.GetComponent<PickUpItem> ().item = item;
+
+		dropItem.AddComponent<ItemRef> ();
+		dropItem.GetComponent<ItemRef> ().item = item;
 //		dropItem.GetComponent<PickUpItem>().item = selectedItem.GetComponent<ItemOnObject>().item;   
 		dropItem.transform.localPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + offSetY, _player.transform.localPosition.z+1.0f);
 		Inventory inv = GetComponent<Inventory> ();
+		removeItem (selectedItem);
+		inv.OnUpdateItemList();
 
+        // SceneManager
+		if (sceneManager.GameSceneIsPreview())
+        	sceneManager.addToGearList(dropItem);
+	}
+
+	void removeItem(Transform selectedItem) {
 		selectedItem.GetComponent<ItemOnObject> ().item.itemValue--;
-
 		if (selectedItem.GetComponent<ItemOnObject> ().item.itemValue == 0) {
 			selectedItem.GetComponentInParent<Outline> ().enabled = false;
 			Destroy (selectedItem.gameObject);
 		}
-		inv.OnUpdateItemList();
-
-        // SceneManager
-        sceneManager.GetComponent<MySceneManager>().addToGearList(dropItem);
 	}
+
+	public void syncWithSceneItem(Item i) {
+		Inventory inv = GetComponent<Inventory> ();
+		GameObject g = inv.getItemGameObjectByName (i);
+		removeItem (g.transform);
+	}
+
+
 }

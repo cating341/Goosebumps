@@ -354,7 +354,7 @@ GameObject:
   - 54: {fileID: 54000012213146890}
   - 65: {fileID: 65000013110824956}
   - 195: {fileID: 195000010529500390}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: KingMonster_model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

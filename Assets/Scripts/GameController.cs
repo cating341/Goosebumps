@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour {
     float currentTimer = 0;
     bool gameOver = false;
 	bool canBeDestroyed = false;
-	List<GameObject> rebornList = new List<GameObject>();
+	List<KeyValuePair<GameObject, Vector3>> rebornList = new List<KeyValuePair<GameObject, Vector3>>();
     GameObject player;
 
     // Use this for initialization
@@ -74,8 +74,10 @@ public class GameController : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			PauseGame ();
+		} else if (UserControl.GetGearsBack) {
+			// Remove gears
+			sceneManager.removeAllFromGearList();
 		}
-
 
 	}
 
@@ -170,6 +172,7 @@ public class GameController : MonoBehaviour {
     public void GotoNextChap()
     {
         sceneManager.removeAllFromSceceList();
+		sceneManager.removeAllFromGearList ();
         if (sceneManager.currentSceneName == sceneManager.GAMESCENE1)
             Application.LoadLevel(sceneManager.TRANS1);
         if (sceneManager.currentSceneName == sceneManager.GAMESCENE2)
@@ -188,7 +191,7 @@ public class GameController : MonoBehaviour {
 
 	public void BackToStartScene(){
 		sceneManager.removeAllFromSceceList();
-		Application.LoadLevel (GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().START);
+		Application.LoadLevel (sceneManager.START);
 	}
 
     public void Exit()
@@ -242,12 +245,12 @@ public class GameController : MonoBehaviour {
 
 	private void InstantiateKingMonster() {
 		GameObject obj = (GameObject) Instantiate (kingMonster);
-		int level = GameObject.Find("SceneManager").GetComponent<MySceneManager>().GetLevel();
+		int level = sceneManager.GetLevel();
 		if (canBeDestroyed)
 			obj.GetComponent<PotionDamage> ().setStartToDestroyed ();
 
 		if (level == 2)
-			obj.GetComponent<PotionDamage> ().setHealth (GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().getDifficulty () + 1);
+			obj.GetComponent<PotionDamage> ().setHealth (sceneManager.getDifficulty () + 1);
 
 	}
 
@@ -257,18 +260,30 @@ public class GameController : MonoBehaviour {
 
 	public void ReBornMonster(GameObject monster){
 		GameObject newObj;
+		Vector3 newPosition ;
+		int level = sceneManager.GetLevel();
+
 		if (monster.layer == LayerMask.NameToLayer ("KingMonster")) {
 			newObj = kingMonster;
 		} else {
 			newObj = soldierMonster;
 		}
-		rebornList.Add (newObj);
+
+		if (level == 1)
+			newPosition = new Vector3 (-7.262046f, -3.47f, -3.735428f);
+		else //if (level == 2)
+			newPosition = monster.transform.position;
+		
+		rebornList.Add (new KeyValuePair<GameObject, Vector3> (newObj, newPosition));
 		Invoke ("ExecuteReBorn", 15.0f);
 	}
 
 	void ExecuteReBorn(){
-		GameObject obj = rebornList [0];
-		Instantiate (obj, new Vector3(-7.262046f, -3.47f, -3.735428f), Quaternion.identity);
+		KeyValuePair<GameObject, Vector3> item = rebornList [0];
+		GameObject bornObj = (GameObject) Instantiate (item.Key, item.Value, Quaternion.identity);
+		if (canBeDestroyed && bornObj.GetComponent<PotionDamage> ())
+			bornObj.GetComponent<PotionDamage> ().setStartToDestroyed ();
+		
 		rebornList.RemoveAt (0);
 	}
 }
