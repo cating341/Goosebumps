@@ -988,7 +988,12 @@ Prefab:
       propertyPath: m_Center.y
       value: 0.164715
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1000011804025836, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114000012684603260, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &534950272 stripped

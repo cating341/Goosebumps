@@ -38,4 +38,12 @@ public class UserControl {
 			return Input.GetKeyDown (KeyCode.B);
 		}
 	}
+
+    public static bool PutAllGears
+    {
+        get
+        {
+            return Input.GetKeyDown(KeyCode.P);
+        }
+    }
 }

@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692558, g: 0.49678743, b: 0.57508624, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -582,7 +582,7 @@ Prefab:
     - target: {fileID: 224000014260161316, guid: 136bb544da7554d93aa2cb58cbc9058f,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.35799995
+      value: 0.358
       objectReference: {fileID: 0}
     - target: {fileID: 224000011641911130, guid: 136bb544da7554d93aa2cb58cbc9058f,
         type: 2}
@@ -950,6 +950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSceneName: 
+  gearList: []
   GAMESCENE0: GameScene-chap0
   GAMESCENE1: GameScene-chap1
   GAMESCENE2: GameScene-chap2
@@ -1217,7 +1218,7 @@ MonoBehaviour:
   lineColor0: {r: 1, g: 0, b: 0, a: 1}
   lineColor1: {r: 1, g: 0.9724138, b: 0, a: 1}
   lineColor2: {r: 0, g: 0, b: 1, a: 1}
-  flipY: 0
+  flipY: 1
   additiveRendering: 1
   alphaCutoff: 0.5
 --- !u!1 &1204049440 stripped

@@ -39,8 +39,8 @@ public class PreviewGameController : MonoBehaviour {
 			new SoldierPosition (new Vector3 (-2.56f, 3.68f, -5.01f), new Vector2 (-13f, 13f)),
 			new SoldierPosition (new Vector3 (-6.7f, 8.12f, -5.01f), new Vector2 (-13f, 0f))
 		};
-		int level = GameObject.Find("SceneManager").GetComponent<MySceneManager>().GetLevel();
-		int difficulty = GameObject.Find("SceneManager").GetComponent<MySceneManager>().getDifficulty();
+        int level = sceneManager.GetLevel();
+        int difficulty = sceneManager.getDifficulty();
 		print (level);
 		for (int i = 0; i < difficulty + 1; i++) {
 			GameObject newMonster = new GameObject();
@@ -58,10 +58,10 @@ public class PreviewGameController : MonoBehaviour {
     {
         player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -5.0f);
 		player.GetComponent<Character>().EnablePlayerMove();
-		if(GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW1 )
-			Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE1);
-		else if(GameObject.Find("SceneManager").GetComponent<MySceneManager>().currentSceneName == GameObject.Find("SceneManager").GetComponent<MySceneManager>().PREVIEW2 )
-			Application.LoadLevel(GameObject.Find("SceneManager").GetComponent<MySceneManager>().GAMESCENE2);
+        if (sceneManager.currentSceneName == sceneManager.PREVIEW1)
+            Application.LoadLevel(sceneManager.GAMESCENE1);
+        else if (sceneManager.currentSceneName == sceneManager.PREVIEW2)
+            Application.LoadLevel(sceneManager.GAMESCENE2);
     }
 
 	// disable monster

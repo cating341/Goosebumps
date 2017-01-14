@@ -107,12 +107,12 @@ public class MySceneManager : MonoBehaviour {
 			GameObject.Find ("GameHandle").GetComponent<GameController> ().DisableLadders (); 
 			int laddercount = 0;
 			foreach (GameObject g in gearList) {
+                Destroy(g.GetComponent<PickUpItem>());
 				if (g.tag == "Ladder") {
 					GameObject.Find ("GameHandle").GetComponent<GameController> ().SetTheLadders (laddercount, g);
 					laddercount++;
 					g.SetActive (false);
-				} else
-					Destroy (g.GetComponent<PickUpItem> ());
+				} 
 			}
             
 			Camera.main.GetComponent<CameraController> ().undateCameraParameters (currentSceneName);

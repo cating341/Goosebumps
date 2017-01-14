@@ -27,7 +27,7 @@ public class PotionDamage : MonoBehaviour {
 		if (canBeDestroyed && flag) {
 			if (canBeMinus) {
 				health--;
-				Debug.Log(gameObject.name +" health " + health);
+				//Debug.Log(gameObject.name +" health " + health);
 			}
 
 			flag = false;
@@ -52,7 +52,7 @@ public class PotionDamage : MonoBehaviour {
 
 	public void setHealth(int settingHealth){
 		health = settingHealth;
-		Debug.Log (gameObject.name + " health set to " + health);
+		//Debug.Log (gameObject.name + " health set to " + health);
 	}
 
 	void reEnable(){
