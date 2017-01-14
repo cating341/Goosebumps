@@ -23,6 +23,9 @@ public class Character : MonoBehaviour
 
 	LayerMask playerLayer;
 	LayerMask groundLayer;
+    LayerMask spriteLayer;
+
+    Transform spotLightCheck;
 
     Transform groundCheck;
     float groundRadius;
@@ -35,7 +38,8 @@ public class Character : MonoBehaviour
 
     public Transform ladder;
 
-	private Coroutine wispRoutine; 
+	private Coroutine wispRoutine;
+
 
     void Awake()
     {
@@ -50,6 +54,7 @@ public class Character : MonoBehaviour
 		audioSource = GameObject.Find("Player/Canvas").GetComponent<AudioSource>();
         playerLayer = LayerMask.NameToLayer("Player");
 		groundLayer = LayerMask.NameToLayer ("Ground");
+        spriteLayer = LayerMask.NameToLayer("Sprite");
 		//print (playerLayer.value);
         facingRight = true;
         groundRadius = 0.1f;
@@ -62,6 +67,8 @@ public class Character : MonoBehaviour
         //get references 
         groundCheck = transform.Find("GroundCheck");
         anim = transform.Find("Canvas/Image").GetComponent<Animator>();
+
+        spotLightCheck = transform.Find("SpotLight");
     }
 
     void FixedUpdate()
@@ -73,6 +80,12 @@ public class Character : MonoBehaviour
 
 	void Update() 
 	{
+        //Collider[] spriteColliders = Physics.OverlapSphere(spotLightCheck.position, 15.9f, 1 << spriteLayer.value);
+        //foreach (Collider col in spriteColliders)
+        //{
+        //    col.GetComponent<SpriteRenderer>().color = new Color(0.8f, 0.8f, 0.8f);
+        //}
+
 		grounded = Physics.CheckSphere (groundCheck.position, groundRadius, 1 << groundLayer.value);
 		if (ladder && transform.position.y < ladder.position.y && grounded)
 			Physics.IgnoreLayerCollision (playerLayer.value, groundLayer.value, false);

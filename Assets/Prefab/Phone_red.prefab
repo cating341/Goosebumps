@@ -42,7 +42,7 @@ GameObject:
   - 95: {fileID: 95000013999160616}
   - 82: {fileID: 82000011842284806}
   - 114: {fileID: 114000013758322388}
-  - 114: {fileID: 114000012906026110}
+  - 114: {fileID: 114000011541197970}
   m_Layer: 0
   m_Name: Phone_red
   m_TagString: Phone
@@ -62,7 +62,8 @@ GameObject:
   - 114: {fileID: 114000013062181418}
   - 212: {fileID: 212000013875540756}
   - 114: {fileID: 114000013299147758}
-  m_Layer: 5
+  - 114: {fileID: 114000013624107446}
+  m_Layer: 15
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,6 +215,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114000011541197970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011828495314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floor: 0
 --- !u!114 &114000011712938188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,17 +243,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114000012906026110
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011828495314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000013062181418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,6 +286,17 @@ MonoBehaviour:
   eraseRenderer: 0
   originalLayer: 0
   originalMaterial: {fileID: 0}
+--- !u!114 &114000013624107446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012475628908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aec30aa132cdd64abe73da858e7a793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013758322388
 MonoBehaviour:
   m_ObjectHideFlags: 1
