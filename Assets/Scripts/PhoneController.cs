@@ -23,7 +23,7 @@ public class PhoneController : MonoBehaviour {
     void OnTriggerStay(Collider other)
     {
         //Debug.Log(other.gameObject);
-        if (other.gameObject.tag == "Player" && Input.GetKeyDown("z"))
+        if (other.gameObject.tag == "Player" && UserControl.UseItem)
         {
             GameObject[] phones = GameObject.FindGameObjectsWithTag("Phone");
             foreach (GameObject phone in phones)

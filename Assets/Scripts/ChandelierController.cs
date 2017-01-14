@@ -32,7 +32,7 @@ public class ChandelierController : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     { 
-        if (enable && other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Z))
+        if (enable && other.gameObject.tag == "Player" && UserControl.UseItem)
         {
             other.gameObject.GetComponent<Character>().Jump();
 			jumpflag = true;

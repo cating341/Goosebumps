@@ -49,7 +49,6 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-
   - 4: {fileID: 4000012420719824}
   - 198: {fileID: 198000012629564232}
   - 199: {fileID: 199000013373643264}
@@ -222,7 +221,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011747578870}
-  - 95: {fileID: 95000013559918434}
   - 65: {fileID: 65000013847222436}
   - 114: {fileID: 114000010638116964}
   m_Layer: 0
@@ -405,6 +403,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
+
   m_Father: {fileID: 4000014287376430}
   m_RootOrder: 0
 --- !u!4 &4000012743151128
@@ -745,7 +744,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-
 --- !u!108 &108000010004244744
 Light:
   m_ObjectHideFlags: 1
@@ -780,7 +778,6 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1

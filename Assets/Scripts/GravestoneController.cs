@@ -25,7 +25,7 @@ public class GravestoneController : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && Input.GetKeyDown("z"))
+        if (other.gameObject.tag == "Player" && UserControl.UseItem)
         {
             shine = true;
             anim.SetBool("shine", true);

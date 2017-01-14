@@ -128,20 +128,32 @@ public class Hotbar : MonoBehaviour
         if (UserControl.PutAllGears) {
             if (sceneManager.GetLevel() == 1)
             {
-                selectedItem = transform.GetChild(1).GetChild(0).GetChild(0); //Door
-                putItem(selectedItem, 0, new Vector3(-9.5f, -0.4f, -3.1f));
-                putItem(selectedItem, 0, new Vector3(7.2f, -4.8f, -3.1f));
-                selectedItem = transform.GetChild(1).GetChild(2).GetChild(0); //Ladder
-                putItem(selectedItem, 0, new Vector3(-5.9f, 1.8f, -3.1f));
-                putItem(selectedItem, 0, new Vector3(-9.4f, -2.6f, -3.1f));
+                if (transform.GetChild(1).GetChild(0).childCount != 0)
+                {
+                    selectedItem = transform.GetChild(1).GetChild(0).GetChild(0); //Door
+                    putItem(selectedItem, 0, new Vector3(-9.5f, -0.4f, -3.1f));
+                    putItem(selectedItem, 0, new Vector3(7.2f, -4.8f, -3.1f));
+                }
+                if (transform.GetChild(1).GetChild(2).childCount != 0)
+                {
+                    selectedItem = transform.GetChild(1).GetChild(2).GetChild(0); //Ladder
+                    putItem(selectedItem, 0, new Vector3(-5.9f, 1.8f, -3.1f));
+                    putItem(selectedItem, 0, new Vector3(-9.4f, -2.6f, -3.1f));
+                }
             }
             else {
-                selectedItem = transform.GetChild(1).GetChild(0).GetChild(0); //Door
-                putItem(selectedItem, 0, new Vector3(11.2f, 3.1f, -3.5f));
-                putItem(selectedItem, 0, new Vector3(-13.0f, 2.9f, -3.5f));
-                selectedItem = transform.GetChild(1).GetChild(2).GetChild(0); //Ladder
-                putItem(selectedItem, 0, new Vector3(6.3f, 1.1f, -3.5f));
-                putItem(selectedItem, 0, new Vector3(-12.8f, 1.1f, -3.5f));
+                if (transform.GetChild(1).GetChild(0).childCount != 0)
+                {
+                    selectedItem = transform.GetChild(1).GetChild(0).GetChild(0); //Door
+                    putItem(selectedItem, 0, new Vector3(11.2f, 3.1f, -3.5f));
+                    putItem(selectedItem, 0, new Vector3(-13.0f, 2.9f, -3.5f));
+                }
+                if (transform.GetChild(1).GetChild(2).childCount != 0)
+                {
+                    selectedItem = transform.GetChild(1).GetChild(2).GetChild(0); //Ladder
+                    putItem(selectedItem, 0, new Vector3(6.3f, 1.1f, -3.5f));
+                    putItem(selectedItem, 0, new Vector3(-12.8f, 1.1f, -3.5f));
+                }
             }
         }
     }

@@ -5,9 +5,12 @@ using System.Collections;
 public class UserControl {
 	public static bool UseItem {
 		get {
-			return Input.GetKeyDown (KeyCode.Z);
+			return Input.GetKeyDown (KeyCode.Q);
 		}
 	}
+
+    public static KeyCode UseItemKey = KeyCode.Q;
+    
 
 	public static bool PickupItem {
 		get {

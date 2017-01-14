@@ -18,7 +18,7 @@ public class ObjectMovement : MonoBehaviour {
     void OnTriggerStay(Collider other)
     {
         
-        if (other.gameObject.tag == "Player" && Input.GetKey("z") )
+        if (other.gameObject.tag == "Player" && Input.GetKey(UserControl.UseItemKey) )
         {
             if (gameObject.tag == "Potion")
                 gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y-0.86f, gameObject.transform.position.z);

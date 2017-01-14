@@ -18,7 +18,7 @@ public class DoorController : MonoBehaviour {
     void OnTriggerStay(Collider other)
     {
         GameObject player = other.gameObject;
-		if (player.tag == "Player" && Input.GetKeyDown(KeyCode.Z))
+		if (player.tag == "Player" && UserControl.UseItem)
         {
 			//print ("enter door");
             GameObject[] doors = GameObject.FindGameObjectsWithTag("Door");
