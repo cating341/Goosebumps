@@ -10,7 +10,7 @@ public class ChandelierController : MonoBehaviour {
     private Animator animation;
 	private GameObject hitMonster;
 
-    int hitting = 5;
+    int hitting = 3;
     bool enable = true; 
 	bool jumpflag = false;
 	// Use this for initialization
@@ -51,8 +51,9 @@ public class ChandelierController : MonoBehaviour {
 				jumpflag = false;
 			}
         }
-		else if (!enable && other.gameObject.tag == "Monster" && !this.hitMonster){
-			GameObject.Find ("GameHandle").GetComponent<GameController> ().AddPoint (50);
+        else if (!enable && other.gameObject.tag == "Monster" && !this.hitMonster && GameObject.Find("SceneManager").GetComponent<MySceneManager>().GameSceneIsGame())
+        {
+            GameObject.Find ("GameHandle").GetComponent<GameController> ().AddPoint (50);
 			this.hitMonster = other.gameObject;
 			this.hitMonster.GetComponent<BasicProperties> ().NewDisability ("faint", true);
 			this.hitMonster.GetComponentInChildren<Animator> ().SetBool ("faint", true);

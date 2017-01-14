@@ -23,6 +23,7 @@ GameObject:
   - 114: {fileID: 114000013371369300}
   - 114: {fileID: 114000012369052734}
   - 135: {fileID: 135000012989624508}
+  - 95: {fileID: 95000010528048066}
   m_Layer: 0
   m_Name: MagicPotion
   m_TagString: Potion
@@ -58,8 +59,8 @@ GameObject:
   - 224: {fileID: 224000011746395664}
   - 222: {fileID: 222000011899477972}
   - 212: {fileID: 212000010405651238}
-  - 95: {fileID: 95000014099654870}
   - 114: {fileID: 114000010292312202}
+  - 114: {fileID: 114000010791638722}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -73,9 +74,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010902836516}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.71, y: 3.4, z: -1.837}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.44, y: -4.54, z: -1.8370001}
+  m_LocalScale: {x: 0.9799999, y: 0.9799999, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224000013892215238}
@@ -160,16 +161,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!95 &95000014099654870
+--- !u!95 &95000010528048066
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013034137022}
+  m_GameObject: {fileID: 1000010902836516}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 86df455792f74af44a2474e6a5941edc, type: 2}
+  m_Controller: {fileID: 9100000, guid: f6fc13c94801049438ea33e1bd054fc9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -193,6 +194,17 @@ MonoBehaviour:
   eraseRenderer: 0
   originalLayer: 0
   originalMaterial: {fileID: 0}
+--- !u!114 &114000010791638722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013034137022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aec30aa132cdd64abe73da858e7a793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012369052734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,7 +345,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.87, z: 0}
   m_Children: []
   m_Father: {fileID: 224000013892215238}
   m_RootOrder: 0

@@ -58,6 +58,7 @@ GameObject:
   - 222: {fileID: 222000013772771416}
   - 114: {fileID: 114000011079663758}
   - 212: {fileID: 212000010373611364}
+  - 114: {fileID: 114000014271424186}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -72,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011086272196}
   m_LocalRotation: {x: -0, y: -0, z: 0.0000000055879354, w: 1}
-  m_LocalPosition: {x: -10.76, y: -3.93, z: -0.2}
+  m_LocalPosition: {x: -10.62, y: -4.04, z: -0.2}
   m_LocalScale: {x: 0.6924864, y: 0.6924856, z: 0.6924856}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -191,6 +192,17 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114000014271424186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014023367078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aec30aa132cdd64abe73da858e7a793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000010373611364
 SpriteRenderer:
   m_ObjectHideFlags: 1
