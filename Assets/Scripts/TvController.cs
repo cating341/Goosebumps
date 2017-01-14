@@ -32,7 +32,7 @@ public class TvController : MonoBehaviour {
     void OnTriggerStay(Collider other)
     {
 
-        if (other.gameObject.tag == "Player" && Input.GetKey("z"))
+        if (other.gameObject.tag == "Player" && UserControl.UseItem)
         {
 
 			if (GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().GameSceneIsGame ()) {

@@ -37,7 +37,7 @@ public class RefrigeratorController : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other.gameObject);
-		if (other.gameObject.tag == "Monster" && !attacking)
+        if (other.gameObject.tag == "Monster" && !attacking && GameObject.Find("SceneManager").GetComponent<MySceneManager>().GameSceneIsGame())
         {
 			attacking = true;
 			hittingThis = other.gameObject;

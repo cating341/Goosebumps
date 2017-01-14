@@ -24,7 +24,7 @@ public class WardrobeController : MonoBehaviour {
 	}
     void OnTriggerStay(Collider other)
     {
-		if (other.gameObject.tag == "Player" && Input.GetKeyDown ("z")) {
+		if (other.gameObject.tag == "Player" && UserControl.UseItem) {
 			if (enable) {
 				enable = false;
 				if (!hide) {

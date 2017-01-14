@@ -52,12 +52,8 @@ GameObject:
   - 224: {fileID: 224000013199272638}
   - 222: {fileID: 222000014159718252}
   - 212: {fileID: 212000011400355860}
-
-  - 95: {fileID: 95000013585105726}
-  - 114: {fileID: 114000012785775518}
   m_Layer: 0
   m_Name: Image
-
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,7 +130,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011747578870}
-  - 95: {fileID: 95000013559918434}
   - 65: {fileID: 65000013847222436}
   - 114: {fileID: 114000010638116964}
   m_Layer: 0
@@ -220,7 +215,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 4.855, y: 0.060000002, z: 0.469}
   m_Children: []
   m_Father: {fileID: 4000013949618068}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &4000013949618068
 Transform:
   m_ObjectHideFlags: 1
@@ -485,7 +480,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-
 --- !u!108 &108000010004244744
 Light:
   m_ObjectHideFlags: 1
@@ -520,23 +514,6 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013244385162}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7da5c4e1028de404db5984db8d9b82ff, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000010315261816
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -54,7 +54,7 @@ public class ClockController : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && Input.GetKeyDown("z"))
+        if (other.gameObject.tag == "Player" && UserControl.UseItem)
         {
             SettingClockTimer();
         }

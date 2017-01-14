@@ -30,7 +30,7 @@ public class BloomStoneController : MonoBehaviour {
     void OnTriggerStay(Collider other)
     {
 
-        if (other.gameObject.tag == "Player" && Input.GetKeyDown("z") && enable)
+        if (other.gameObject.tag == "Player" && UserControl.UseItem && enable)
         {
 			if (gameHandle != null) {
 				gameHandle.AddPoint (20.0f);
