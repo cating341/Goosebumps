@@ -2256,11 +2256,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013838788480, guid: a414e06a6c53a418389e50c687ae3186,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 9f0ca59191cb34b3e9365d4979cafb32, type: 2}
     - target: {fileID: 114000012450443774, guid: a414e06a6c53a418389e50c687ae3186,
         type: 2}
       propertyPath: inventory
