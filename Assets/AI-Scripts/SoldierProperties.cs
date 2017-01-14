@@ -38,21 +38,22 @@ public class SoldierProperties : MonoBehaviour {
 		if (Vector3.Distance (new Vector3 (heading, transform.position.y, transform.position.z), transform.position) < 0.3) {
 			TurnWay ();
 		}
-		if (Mathf.Abs(transform.position.x - player.transform.position.x) < detectPlayerDist 
-			&& Mathf.Abs (transform.position.y - player.transform.position.y) < 3f) {
-			if ((heading == rightBound && player.transform.position.x > transform.position.x)
-			    || (heading == leftBound && player.transform.position.x < transform.position.x)) {
-				if (!detect) {
-					agent.speed = detectSpeed;
-				}
-				detect = true;
-			} else {
-				if (detect) {
-					agent.speed = normalSpeed;
-
-				}
-				detect = false;
+		if (Mathf.Abs (transform.position.x - player.transform.position.x) < detectPlayerDist
+		    && Mathf.Abs (transform.position.y - player.transform.position.y) < 3f 
+			&& ((heading == rightBound && player.transform.position.x > transform.position.x)
+				|| (heading == leftBound && player.transform.position.x < transform.position.x))) {
+			if (!detect) {
+				transform.FindChild ("Canvas").gameObject.SetActive (true);
+				agent.speed = detectSpeed;
 			}
+			detect = true;
+		} else {
+			if (detect) {
+				transform.FindChild ("Canvas").gameObject.SetActive (false);
+				agent.speed = normalSpeed;
+
+			}
+			detect = false;
 		}
 		return new Vector3(heading, transform.position.y, transform.position.z);
 	}
