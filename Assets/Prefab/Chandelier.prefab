@@ -77,7 +77,8 @@ GameObject:
   - 114: {fileID: 114000013528225644}
   - 212: {fileID: 212000010454562118}
   - 114: {fileID: 114000010373746758}
-  m_Layer: 5
+  - 114: {fileID: 114000014011470128}
+  m_Layer: 15
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +360,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 3
+--- !u!114 &114000014011470128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012376769930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aec30aa132cdd64abe73da858e7a793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000010454562118
 SpriteRenderer:
   m_ObjectHideFlags: 1

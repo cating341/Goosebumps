@@ -16,7 +16,7 @@ public class BoundDoorController : MonoBehaviour
 
 	void OnTriggerEnter(Collider collision)
     {
-		if (collision.gameObject.layer == LayerMask.NameToLayer( "SoldierMonster"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("SoldierMonster") && GameObject.Find("SceneManager").GetComponent<MySceneManager>().GameSceneIsGame())
         {
 			collision.gameObject.GetComponent<SoldierProperties> ().TurnWay ();
             Destroy(gameObject);

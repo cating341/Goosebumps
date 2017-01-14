@@ -37,7 +37,7 @@ public class PotionController : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Monster" && bombstate)
+        if (other.gameObject.tag == "Monster" && bombstate && GameObject.Find("SceneManager").GetComponent<MySceneManager>().GameSceneIsGame())
         {
             //if(other.gameObject.layer == LayerMask.NameToLayer("KingMonster")){
 				other.gameObject.GetComponentInParent <PotionDamage>().TakeDamage();

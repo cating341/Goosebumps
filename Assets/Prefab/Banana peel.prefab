@@ -23,6 +23,7 @@ GameObject:
   - 114: {fileID: 114000014153760882}
   - 212: {fileID: 212000012855957544}
   - 114: {fileID: 114000014242083394}
+  - 114: {fileID: 114000010164455372}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -73,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011736186784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.86, y: -0.86, z: -2.15}
+  m_LocalPosition: {x: -0.65, y: -0.57, z: -2.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -99,6 +100,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1080681, y: 0.6402402, z: 2.6331396}
   m_Center: {x: -0.038025856, y: 0.08928037, z: 0.2746204}
+--- !u!114 &114000010164455372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011411236802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aec30aa132cdd64abe73da858e7a793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010232083962
 MonoBehaviour:
   m_ObjectHideFlags: 1

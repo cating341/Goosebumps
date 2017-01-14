@@ -366,7 +366,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012760167864}
   - 54: {fileID: 54000013245912154}
-  - 195: {fileID: 195000011052948956}
   - 65: {fileID: 65000011986199250}
   m_Layer: 13
   m_Name: SoldierMonster1-Preview
@@ -1226,23 +1225,3 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.23475748, y: 0.000000059604645, z: 0.044023216}
     m_Extent: {x: 0.42057306, y: 0.31571856, z: 0.24732369}
   m_DirtyAABB: 0
---- !u!195 &195000011052948956
-NavMeshAgent:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012780306826}
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 800
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 0
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
