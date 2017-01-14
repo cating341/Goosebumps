@@ -28,6 +28,9 @@ TagManager:
   - Wisp
   - boundwall
   - Icecube
+  - Destructible
+  - hot
+  - cold
   layers:
   - Default
   - TransparentFX
