@@ -555,7 +555,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: press z to set the clock
+  m_Text: press q to set the clock
 --- !u!114 &114000011009465484
 MonoBehaviour:
   m_ObjectHideFlags: 1
