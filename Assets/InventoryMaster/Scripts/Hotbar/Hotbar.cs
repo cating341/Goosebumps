@@ -83,6 +83,7 @@ public class Hotbar : MonoBehaviour
 						selectedItem.GetComponentInParent<Outline> ().enabled = false;
 					}
 					selectedItem = transform.GetChild (1).GetChild (i).GetChild (0);
+                    
 					transform.GetChild (1).GetChild (i).gameObject.GetComponent<Outline> ().enabled = true;
 //                    if (transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ConsumeItem>().duplication != null && transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<ItemOnObject>().item.maxStack == 1)
 //                    {
@@ -120,8 +121,29 @@ public class Hotbar : MonoBehaviour
 			default:
 				break;
 			}
-			putItem(selectedItem, y);
+            
+			putItem(selectedItem, y, Vector3.zero);
 		}
+
+        if (UserControl.PutAllGears) {
+            if (sceneManager.GetLevel() == 1)
+            {
+                selectedItem = transform.GetChild(1).GetChild(0).GetChild(0); //Door
+                putItem(selectedItem, 0, new Vector3(-9.5f, -0.4f, -3.1f));
+                putItem(selectedItem, 0, new Vector3(7.2f, -4.8f, -3.1f));
+                selectedItem = transform.GetChild(1).GetChild(2).GetChild(0); //Ladder
+                putItem(selectedItem, 0, new Vector3(-5.9f, 1.8f, -3.1f));
+                putItem(selectedItem, 0, new Vector3(-9.4f, -2.6f, -3.1f));
+            }
+            else {
+                selectedItem = transform.GetChild(1).GetChild(0).GetChild(0); //Door
+                putItem(selectedItem, 0, new Vector3(11.2f, 3.1f, -3.5f));
+                putItem(selectedItem, 0, new Vector3(-13.0f, 2.9f, -3.5f));
+                selectedItem = transform.GetChild(1).GetChild(2).GetChild(0); //Ladder
+                putItem(selectedItem, 0, new Vector3(6.3f, 1.1f, -3.5f));
+                putItem(selectedItem, 0, new Vector3(-12.8f, 1.1f, -3.5f));
+            }
+        }
     }
 
     public int getSlotsInTotal()
@@ -130,7 +152,7 @@ public class Hotbar : MonoBehaviour
         return slotsInTotal = inv.width * inv.height;
     }
 
-	void putItem(Transform selectedItem, float offSetY)
+	void putItem(Transform selectedItem, float offSetY, Vector3 fixedPos)
 	{
 
 		GameObject dropItem = (GameObject)Instantiate(selectedItem.GetComponent<ItemOnObject>().item.itemModel);
@@ -141,8 +163,14 @@ public class Hotbar : MonoBehaviour
 		dropItem.AddComponent<ItemRef> ();
 		dropItem.GetComponent<ItemRef> ().item = item;
 //		dropItem.GetComponent<PickUpItem>().item = selectedItem.GetComponent<ItemOnObject>().item;   
-		dropItem.transform.localPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + offSetY, _player.transform.localPosition.z+1.0f);
-		Inventory inv = GetComponent<Inventory> ();
+		
+        /* Put the item to this position */
+        if (fixedPos == Vector3.zero)
+            dropItem.transform.localPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + offSetY, _player.transform.localPosition.z + 1.0f);
+        else
+            dropItem.transform.localPosition = fixedPos;
+        
+        Inventory inv = GetComponent<Inventory> ();
 		removeItem (selectedItem);
 		inv.OnUpdateItemList();
 

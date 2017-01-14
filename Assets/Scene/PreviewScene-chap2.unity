@@ -1158,7 +1158,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013403789646, guid: 519277e9129b74fbdad339785065279a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.723212
+      value: -1.32
       objectReference: {fileID: 0}
     - target: {fileID: 4000013403789646, guid: 519277e9129b74fbdad339785065279a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1756,7 +1756,12 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1000011804025836, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114000012684603260, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &721168533
@@ -2401,7 +2406,7 @@ MonoBehaviour:
   lineColor0: {r: 1, g: 0, b: 0, a: 1}
   lineColor1: {r: 1, g: 0.93103445, b: 0, a: 1}
   lineColor2: {r: 0, g: 0, b: 1, a: 1}
-  flipY: 0
+  flipY: 1
   additiveRendering: 1
   alphaCutoff: 0.5
 --- !u!114 &908830998
@@ -5056,6 +5061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSceneName: 
+  gearList: []
   GAMESCENE0: GameScene-chap0
   GAMESCENE1: GameScene-chap1
   GAMESCENE2: GameScene-chap2
