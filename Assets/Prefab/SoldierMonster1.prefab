@@ -1287,6 +1287,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftBound: -10.8
   rightBound: 10.8
+  detectPlayerDist: 5
+  detectSpeed: 5
+  normalSpeed: 3.5
 --- !u!114 &114000012278358270
 MonoBehaviour:
   m_ObjectHideFlags: 1
