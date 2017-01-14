@@ -41,10 +41,10 @@ public class Character : MonoBehaviour
 	private Coroutine wispRoutine;
 
 
+    public GameObject wisp;
+
     void Awake()
-    {
-        
-        
+    {      
     }
 
     // Use this for initialization
@@ -210,12 +210,14 @@ public class Character : MonoBehaviour
 	}
 
 	public IEnumerator WispPossessed(float t) {
+        wisp.SetActive(true);
 		setTranslucent ();
 		setInvincible ();
 		se.Play ();
 		yield return new WaitForSeconds (t);
 		se.Stop ();
 		setNormal ();
+        wisp.SetActive(false);
 	}
 
 	public void StartWispPossessed(float t) {
