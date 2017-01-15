@@ -82,16 +82,16 @@ public class GameController : MonoBehaviour {
 	}
 
 	private void InstantiateMonsters() {
-//		Invoke ("InstantiateKingMonster", kingMonsterAppear);
+		//Invoke ("InstantiateKingMonster", kingMonsterAppear);
 		SoldierPosition[] soldier1Pos = new SoldierPosition[] {
 			new SoldierPosition(new Vector3(-7.262046f, -3.47f, -3.735428f), new Vector2(-10.8f, 10.8f)),
 			new SoldierPosition(new Vector3(-0.23f, 0.21f, -3.735428f), new Vector2(-10.8f, 10.8f)),
 			new SoldierPosition(new Vector3(5.01f, 4.63f, -3.96f), new Vector2(-10.8f, 10.8f))
 		};
 		SoldierPosition[] soldier2Pos = new SoldierPosition[] {
-			new SoldierPosition (new Vector3 (-13.09f, -0.64f, -5.01f), new Vector2 (-13f, 10f)), 
-			new SoldierPosition (new Vector3 (-2.56f, 3.68f, -5.01f), new Vector2 (-13f, 13f)),
-			new SoldierPosition (new Vector3 (-6.7f, 8.12f, -5.01f), new Vector2 (-13f, 0f))
+			new SoldierPosition (new Vector3 (-13.09f, -0.64f, -4.01f), new Vector2 (-13f, 10f)), 
+			new SoldierPosition (new Vector3 (-2.56f, 3.68f, -4.01f), new Vector2 (-13f, 12f)),
+			new SoldierPosition (new Vector3 (-6.7f, 8.12f, -4.01f), new Vector2 (-13f, 0f))
 		};
 		int level = sceneManager.GetLevel();
 		int difficulty = sceneManager.getDifficulty();
@@ -281,8 +281,11 @@ public class GameController : MonoBehaviour {
 	void ExecuteReBorn(){
 		KeyValuePair<GameObject, Vector3> item = rebornList [0];
 		GameObject bornObj = (GameObject) Instantiate (item.Key, item.Value, Quaternion.identity);
-		if (canBeDestroyed && bornObj.GetComponent<PotionDamage> ())
-			bornObj.GetComponent<PotionDamage> ().setStartToDestroyed ();
+        if (canBeDestroyed && bornObj.GetComponent<PotionDamage>())
+        {
+            bornObj.GetComponent<PotionDamage>().setHealth(sceneManager.getDifficulty() + 1);
+            bornObj.GetComponent<PotionDamage>().setStartToDestroyed();
+        }
 		
 		rebornList.RemoveAt (0);
 	}

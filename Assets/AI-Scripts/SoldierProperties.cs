@@ -13,6 +13,7 @@ public class SoldierProperties : MonoBehaviour {
 	private bool detect;
 	public float detectSpeed = 5f;
 	public float normalSpeed = 3.5f;
+    public float fixedZ = -3.5f;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -62,7 +63,8 @@ public class SoldierProperties : MonoBehaviour {
 			}
 			detect = false;
 		}
-		return new Vector3(heading, transform.position.y, transform.position.z);
+        print("z: " + transform.position.z);
+		return new Vector3(heading, transform.position.y, fixedZ);
 	}
 
 	public void TurnWay(){
