@@ -122,7 +122,7 @@ public class BasicProperties : MonoBehaviour {
 
 	private void CheckClimb() {
 		OffMeshLinkData ladder = agent.currentOffMeshLinkData;
-		if (ladder.activated) {
+		if (ladder.activated && gameObject.layer == LayerMask.NameToLayer("KingMonster")) {
 //			GetComponent<Rigidbody> ().useGravity = false;
 			if (GameObject.Find ("TempHandle").GetComponent<TempController> ().GetTemp () < ICE_TEMP && !iceBreaking) {
 				GetComponentInChildren<Animator> ().SetBool ("attack", true);
