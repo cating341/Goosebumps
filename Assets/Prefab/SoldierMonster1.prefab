@@ -1285,11 +1285,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0a435fe5eb0453180df76241068e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftBound: -10.8
-  rightBound: 10.8
+  leftBound: -10
+  rightBound: 10
   detectPlayerDist: 5
   detectSpeed: 4.5
   normalSpeed: 2.5
+  fixedZ: -3.5
 --- !u!114 &114000012278358270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1387,7 +1388,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013219449362}
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.7
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
