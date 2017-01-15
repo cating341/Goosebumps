@@ -13,6 +13,7 @@ public class PreviewGameController : MonoBehaviour {
 		sceneManager = GameObject.Find ("SceneManager").GetComponent<MySceneManager> ();
         player = GameObject.Find("Player");
 		instantiatedMonster = false;
+      
 	}
 	
 	// Update is called once per frame
@@ -73,4 +74,18 @@ public class PreviewGameController : MonoBehaviour {
 	void enableMonster(){
 		GameObject.Find ("Player").GetComponent<Character> ().EnablePlayerMove ();
 	}
+
+    public void enableNightmare(bool isNightmare)
+    {
+        if (isNightmare)
+        {
+            GameObject.Find("Player").GetComponentInChildren<Light>().enabled = true;
+            GameObject.Find("Directional light").GetComponent<Light>().enabled = false;
+        }
+        else
+        {
+            GameObject.Find("Player").GetComponentInChildren<Light>().enabled = false;
+            GameObject.Find("Directional light").GetComponent<Light>().enabled = true;
+        }
+    }
 }

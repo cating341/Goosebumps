@@ -26,6 +26,7 @@ public class MySceneManager : MonoBehaviour {
 	GameObject hotbar;
 	 
 	public int difficulty = 0; // 0: simple, 1: normal, 2: hard
+    public bool isNightmare = false;
 
     public static MySceneManager ins;
     void Awake() {
@@ -104,7 +105,8 @@ public class MySceneManager : MonoBehaviour {
 		currentSceneName = scene.name;
 
 		if (currentSceneName == GAMESCENE1 || currentSceneName == GAMESCENE2) {  // if not preview, mean game start!
-			GameObject.Find ("GameHandle").GetComponent<GameController> ().DisableLadders (); 
+			GameObject.Find ("GameHandle").GetComponent<GameController> ().DisableLadders ();
+            GameObject.Find("GameHandle").GetComponent<GameController>().enableNightmare(isNightmare);
 			int laddercount = 0;
 			foreach (GameObject g in gearList) {
                 Destroy(g.GetComponent<PickUpItem>());
@@ -118,10 +120,12 @@ public class MySceneManager : MonoBehaviour {
 			Camera.main.GetComponent<CameraController> ().undateCameraParameters (currentSceneName);
 			// player.GetComponent<Character>().setFloor();
 		} else if (currentSceneName == PREVIEW1 || currentSceneName == PREVIEW2 || currentSceneName == GAMESCENE3) { // reload preview scene
+            
 			Camera.main.GetComponent<CameraController> ().undateCameraParameters (currentSceneName);
 			if (currentSceneName == GAMESCENE3)
 				removeAllFromGearList ();
 			else {
+                GameObject.Find("GameHandle").GetComponent<PreviewGameController>().enableNightmare(isNightmare);
 				respawnGearInPreview ();
 			}
 		} else if (currentSceneName == START) {
@@ -182,7 +186,11 @@ public class MySceneManager : MonoBehaviour {
 			str = "normal";
 		} else if (difficulty == 2) {
 			str = "hard";
-		}
+        }
 		return str;
 	}
+
+    public void isNightmareMode(bool b) {
+        isNightmare = b;
+    }
 }
