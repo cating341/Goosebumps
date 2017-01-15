@@ -20,7 +20,7 @@ public class BasicProperties : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		agent = GetComponent<NavMeshAgent> ();
+		agent = GetComponentInChildren<NavMeshAgent> ();
 		disabledList = new Dictionary<string, bool> ();
 		attractions = new Queue<GameObject> ();
 		grounds = GameObject.FindGameObjectsWithTag ("Ground");
@@ -150,6 +150,10 @@ public class BasicProperties : MonoBehaviour {
 	}
 
 	public bool CheckDisability() {
+        //if (disabledList == null)
+        //{
+        //    disabledList = new Dictionary<string, bool>();
+        //}
 		foreach (KeyValuePair<string, bool> item in disabledList) {
 			if (item.Value) {
 				return true;

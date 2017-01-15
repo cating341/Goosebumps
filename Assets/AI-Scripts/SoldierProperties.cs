@@ -6,10 +6,12 @@ public class SoldierProperties : MonoBehaviour {
 	private NavMeshAgent agent;
 	private GameObject player;
 	private BasicProperties basicProperties;
-	public float leftBound;
-	public float rightBound;
+	private float leftBound;
+	private float rightBound;
+    private float yBound;
+    private float zBound;
 	public float detectPlayerDist = 5f;
-	public float heading;
+	private float heading;
 	private bool detect;
 	public float detectSpeed = 5f;
 	public float normalSpeed = 3.5f;
@@ -17,7 +19,7 @@ public class SoldierProperties : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player");
-		agent = GetComponent<NavMeshAgent> ();
+        agent = GetComponentInChildren<NavMeshAgent>();
 		basicProperties = GetComponent<BasicProperties> ();
 //		heading = rightBound;
 		detect = false;
@@ -25,7 +27,8 @@ public class SoldierProperties : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (leftBound);
+        print(agent.speed);
+        print(GetTargetPosition());
 		basicProperties.NavigateMonster (GetTargetPosition());
 		GameObject attraction = basicProperties.GetAttractionPeek ();
 		Physics.IgnoreCollision (GetComponent<Collider> (), player.GetComponent<Collider> ()
@@ -49,7 +52,7 @@ public class SoldierProperties : MonoBehaviour {
 				if (GetComponentInChildren<Animator> ()) {
 					GetComponentInChildren<Animator> ().SetBool ("isRun", true);
 				}
-				transform.parent.FindChild ("Canvas").gameObject.SetActive (true);
+				transform.FindChild ("Canvas").gameObject.SetActive (true);
 				agent.speed = detectSpeed;
 			}
 			detect = true;
@@ -58,7 +61,7 @@ public class SoldierProperties : MonoBehaviour {
 				if (GetComponentInChildren<Animator> ()) {
 					GetComponentInChildren<Animator> ().SetBool ("isRun", false);
 				}
-				transform.parent.FindChild ("Canvas").gameObject.SetActive (false);
+				transform.FindChild ("Canvas").gameObject.SetActive (false);
 				agent.speed = normalSpeed;
 
 
@@ -66,7 +69,7 @@ public class SoldierProperties : MonoBehaviour {
 			detect = false;
 		}
 //        print("z: " + transform.position.z);
-		return new Vector3(heading, transform.position.y, fixedZ);
+		return new Vector3(heading, yBound, zBound);
 	}
 
 	public void TurnWay(){
@@ -75,4 +78,13 @@ public class SoldierProperties : MonoBehaviour {
 		else 
 			heading = leftBound;
 	}
+
+    public void InitiateValues(float leftBound, float rightBound, float yBound, float zBound)
+    {
+        this.leftBound = leftBound;
+        this.rightBound = rightBound;
+        this.yBound = yBound;
+        this.zBound = zBound;
+        heading = rightBound;
+    }
 }
