@@ -249,7 +249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &77324888
 Transform:
   m_ObjectHideFlags: 0
@@ -269,7 +269,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 77324887}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -991,6 +991,34 @@ Prefab:
     - target: {fileID: 1000011804025836, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012221842780, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.00069369
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012221842780, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.6095824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011605089266, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.0018002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011605089266, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.6095824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011605089266, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.080004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012221842780, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.10999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012221842780, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.16001
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000012684603260, guid: 3e412ed63de086d44b717228011bffa9, type: 2}
