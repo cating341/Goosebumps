@@ -84,9 +84,9 @@ public class GameController : MonoBehaviour {
 	private void InstantiateMonsters() {
 		//Invoke ("InstantiateKingMonster", kingMonsterAppear);
 		SoldierPosition[] soldier1Pos = new SoldierPosition[] {
-			new SoldierPosition(new Vector3(-7.262046f, -3.47f, -3.735428f), new Vector2(-10.8f, 10.8f)),
-			new SoldierPosition(new Vector3(-0.23f, 0.21f, -3.735428f), new Vector2(-10.8f, 10.8f)),
-			new SoldierPosition(new Vector3(5.01f, 4.63f, -3.96f), new Vector2(-10.8f, 10.8f))
+			new SoldierPosition(new Vector3(-7.262046f, -3.47f, -3.735428f), new Vector2(-13f, 13f)),
+			new SoldierPosition(new Vector3(-0.23f, 0.21f, -3.735428f), new Vector2(-13f, 13f)),
+			new SoldierPosition(new Vector3(5.01f, 4.63f, -3.96f), new Vector2(-13f, 13f))
 		};
 		SoldierPosition[] soldier2Pos = new SoldierPosition[] {
 			new SoldierPosition (new Vector3 (-13.09f, -0.64f, -4.01f), new Vector2 (-13f, 10f)), 
@@ -102,11 +102,15 @@ public class GameController : MonoBehaviour {
 				newMonster.GetComponent<AIInformation> ().floor = i + 1;
 				newMonster.GetComponent<SoldierProperties> ().leftBound = soldier1Pos [i].bound.x;
 				newMonster.GetComponent<SoldierProperties> ().rightBound = soldier1Pos [i].bound.y;
+				newMonster.GetComponent<SoldierProperties> ().heading = newMonster.GetComponent<SoldierProperties> ().rightBound;
+				print (newMonster.GetComponent<SoldierProperties> ().leftBound);
+//				print (newMonster.GetComponent<SoldierProperties> ().leftBound);
 			} else if (level == 2) {
 				newMonster = (GameObject) Instantiate (soldierMonster, soldier2Pos [i].instPos, soldierMonster.transform.rotation);
 				newMonster.GetComponent<AIInformation> ().floor = i + 1;
 				newMonster.GetComponent<SoldierProperties> ().leftBound = soldier2Pos [i].bound.x;
 				newMonster.GetComponent<SoldierProperties> ().rightBound = soldier2Pos [i].bound.y;
+				newMonster.GetComponent<SoldierProperties> ().heading = newMonster.GetComponent<SoldierProperties> ().rightBound;
 			}
 		}
 		Physics.IgnoreLayerCollision (LayerMask.NameToLayer ("Player"), LayerMask.NameToLayer ("KingMonster"), false);

@@ -9,7 +9,7 @@ public class SoldierProperties : MonoBehaviour {
 	public float leftBound;
 	public float rightBound;
 	public float detectPlayerDist = 5f;
-	private float heading;
+	public float heading;
 	private bool detect;
 	public float detectSpeed = 5f;
 	public float normalSpeed = 3.5f;
@@ -19,12 +19,13 @@ public class SoldierProperties : MonoBehaviour {
 		player = GameObject.Find ("Player");
 		agent = GetComponent<NavMeshAgent> ();
 		basicProperties = GetComponent<BasicProperties> ();
-		heading = rightBound;
+//		heading = rightBound;
 		detect = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		print (leftBound);
 		basicProperties.NavigateMonster (GetTargetPosition());
 		GameObject attraction = basicProperties.GetAttractionPeek ();
 		Physics.IgnoreCollision (GetComponent<Collider> (), player.GetComponent<Collider> ()
@@ -37,6 +38,7 @@ public class SoldierProperties : MonoBehaviour {
 			return attraction.transform.position;
 		}
 		if (Vector3.Distance (new Vector3 (heading, transform.position.y, transform.position.z), transform.position) < 0.3) {
+//			print (heading);
 			TurnWay ();
 		}
 		if (Mathf.Abs (transform.position.x - player.transform.position.x) < detectPlayerDist
@@ -47,7 +49,7 @@ public class SoldierProperties : MonoBehaviour {
 				if (GetComponentInChildren<Animator> ()) {
 					GetComponentInChildren<Animator> ().SetBool ("isRun", true);
 				}
-				transform.FindChild ("Canvas").gameObject.SetActive (true);
+				transform.parent.FindChild ("Canvas").gameObject.SetActive (true);
 				agent.speed = detectSpeed;
 			}
 			detect = true;
@@ -56,14 +58,14 @@ public class SoldierProperties : MonoBehaviour {
 				if (GetComponentInChildren<Animator> ()) {
 					GetComponentInChildren<Animator> ().SetBool ("isRun", false);
 				}
-				transform.FindChild ("Canvas").gameObject.SetActive (false);
+				transform.parent.FindChild ("Canvas").gameObject.SetActive (false);
 				agent.speed = normalSpeed;
 
 
 			}
 			detect = false;
 		}
-        print("z: " + transform.position.z);
+//        print("z: " + transform.position.z);
 		return new Vector3(heading, transform.position.y, fixedZ);
 	}
 
