@@ -56,7 +56,7 @@ public class PreviewGameController : MonoBehaviour {
 
     public void GameStart()
     {
-        player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -5.0f);
+        player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
 		player.GetComponent<Character>().EnablePlayerMove();
         if (sceneManager.currentSceneName == sceneManager.PREVIEW1)
             Application.LoadLevel(sceneManager.GAMESCENE1);
