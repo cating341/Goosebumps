@@ -2036,9 +2036,9 @@ Rigidbody:
   m_GameObject: {fileID: 1000013666297456}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 8000
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2156,11 +2156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0a435fe5eb0453180df76241068e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftBound: -13
-  rightBound: 10
   detectPlayerDist: 5
   detectSpeed: 4.5
-  normalSpeed: 2.5
+  normalSpeed: 3.5
   fixedZ: -3.5
 --- !u!114 &114000013214303936
 MonoBehaviour:
@@ -2298,7 +2296,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 800
+  m_AngularSpeed: 80000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1

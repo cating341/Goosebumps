@@ -24,6 +24,8 @@ public class SeedController : MonoBehaviour {
 		if (GameObject.Find("TempHandle").GetComponent<TempController>().GetTemp() > HEAT_TEMP && !isTree)
 		{
 			animation.SetBool("seed", true); 
+        }
+        if( !isTree){
 			if(animation.GetCurrentAnimatorStateInfo(0).IsName("tree")) {
 				TobeTree();
 			}
