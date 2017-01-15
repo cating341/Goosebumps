@@ -43,14 +43,21 @@ public class SoldierProperties : MonoBehaviour {
 			&& ((heading == rightBound && player.transform.position.x > transform.position.x)
 				|| (heading == leftBound && player.transform.position.x < transform.position.x))) {
 			if (!detect) {
+				if (GetComponentInChildren<Animator> ()) {
+					GetComponentInChildren<Animator> ().SetBool ("isRun", true);
+				}
 				transform.FindChild ("Canvas").gameObject.SetActive (true);
 				agent.speed = detectSpeed;
 			}
 			detect = true;
 		} else {
 			if (detect) {
+				if (GetComponentInChildren<Animator> ()) {
+					GetComponentInChildren<Animator> ().SetBool ("isRun", false);
+				}
 				transform.FindChild ("Canvas").gameObject.SetActive (false);
 				agent.speed = normalSpeed;
+
 
 			}
 			detect = false;
