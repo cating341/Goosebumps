@@ -32,12 +32,12 @@ public class BasicProperties : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		CheckClimb ();
-		if (Input.GetKeyDown (KeyCode.P)) {
-			Pause ();
-		} else if (Input.GetKeyDown (KeyCode.R)) {
-			Resume ();
-		}
+        CheckClimb();
+        //if (Input.GetKeyDown (KeyCode.P)) {
+        //    Pause ();
+        //} else if (Input.GetKeyDown (KeyCode.R)) {
+        //    Resume ();
+        //}
 	}
 
 	public void NavigateMonster(Vector3 tar) {

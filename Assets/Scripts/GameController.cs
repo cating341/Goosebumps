@@ -81,7 +81,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	private void InstantiateMonsters() {
-		//Invoke ("InstantiateKingMonster", kingMonsterAppear);
+		Invoke ("InstantiateKingMonster", kingMonsterAppear);
 		SoldierPosition[] soldier1Pos = new SoldierPosition[] {
 			new SoldierPosition(new Vector3(-7.262046f, -3.47f, -3.735428f), new Vector2(-10.8f, 10.8f)),
 			new SoldierPosition(new Vector3(-0.23f, 0.21f, -3.735428f), new Vector2(-10.8f, 10.8f)),
