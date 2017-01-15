@@ -14,7 +14,7 @@ public class SpriteBrightness : MonoBehaviour {
 	// Update is called once per frame
     void Update()
     {
-        if (gameObject && player)
+        if (gameObject && player && sceneManager.isNightmare)
         {
             float y = player.transform.position.y - gameObject.transform.position.y;
             if (sceneManager.GetLevel() == 1)

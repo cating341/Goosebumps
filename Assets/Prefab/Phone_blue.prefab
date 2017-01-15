@@ -25,6 +25,7 @@ GameObject:
   - 82: {fileID: 82000012312919646}
   - 114: {fileID: 114000010245552040}
   - 114: {fileID: 114000010773437498}
+  - 114: {fileID: 114000011650019712}
   m_Layer: 0
   m_Name: Phone_blue
   m_TagString: Phone
@@ -232,6 +233,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114000011650019712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010798956440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0152d2617d1cb694897490f1b3b56fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floor: 0
 --- !u!114 &114000012108376566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,7 +323,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: 48a57dfe8c1f5fa4a96d75ef130f1884, type: 3}
-  m_Color: {r: 0.125, g: 0.125, b: 0.125, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!222 &222000011176750508

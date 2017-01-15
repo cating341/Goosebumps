@@ -56,7 +56,6 @@ public class GameController : MonoBehaviour {
         gameOver = false;
         nextChapBtn.SetActive(false);
 		InstantiateMonsters ();
-
 	}
 	
 	// Update is called once per frame
@@ -82,7 +81,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	private void InstantiateMonsters() {
-		//Invoke ("InstantiateKingMonster", kingMonsterAppear);
+		Invoke ("InstantiateKingMonster", kingMonsterAppear);
 		SoldierPosition[] soldier1Pos = new SoldierPosition[] {
 			new SoldierPosition(new Vector3(-7.262046f, -3.47f, -3.735428f), new Vector2(-10.8f, 10.8f)),
 			new SoldierPosition(new Vector3(-0.23f, 0.21f, -3.735428f), new Vector2(-10.8f, 10.8f)),
@@ -289,4 +288,18 @@ public class GameController : MonoBehaviour {
 		
 		rebornList.RemoveAt (0);
 	}
+
+    public void enableNightmare(bool isNightmare)
+    {
+        if (isNightmare)
+        {
+            GameObject.Find("Player").GetComponentInChildren<Light>().enabled = true;
+            GameObject.Find("Directional light").GetComponent<Light>().enabled = false;
+        }
+        else
+        {
+            GameObject.Find("Player").GetComponentInChildren<Light>().enabled = false;
+            GameObject.Find("Directional light").GetComponent<Light>().enabled = true;
+        }
+    }
 }

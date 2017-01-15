@@ -25,6 +25,8 @@ public class OpenScenceController : MonoBehaviour {
 		RankCanvas.SetActive (false);
 		maxSceneCount = gameview.Length - 1;
 		leaderboardController = GetComponent<LeaderBoardController> ();
+        SelectDifficulty(0);
+        isNightmareMode(false);
 	}
 	
 	// Update is called once per frame
@@ -121,4 +123,9 @@ public class OpenScenceController : MonoBehaviour {
 		GameObject.Find ("SceneManager").GetComponent<MySceneManager> ().SelectDifficulty (index);
 		//print (difficulty);
 	}
+
+    public void isNightmareMode(bool b)
+    {
+        GameObject.Find("SceneManager").GetComponent<MySceneManager>().isNightmare = b;
+    }
 }
