@@ -286,6 +286,10 @@ public class GameController : MonoBehaviour {
 	void ExecuteReBorn(){
 		KeyValuePair<GameObject, Vector3> item = rebornList [0];
 		GameObject bornObj = (GameObject) Instantiate (item.Key, item.Value, Quaternion.identity);
+		if (bornObj.layer == LayerMask.NameToLayer ("SoldierMonster")) {
+			bornObj.GetComponentInChildren<AIInformation> ().floor = 1;
+			bornObj.GetComponentInChildren<SoldierProperties> ().InitiateValues (-10.8f, 10.8f, -3.47f, -3.735428f);
+		}
         if (canBeDestroyed && bornObj.GetComponent<PotionDamage>())
         {
             bornObj.GetComponent<PotionDamage>().setHealth(sceneManager.getDifficulty() + 1);
