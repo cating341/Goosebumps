@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineEffect: {fileID: 0}
-  color: 1
+  color: 0
   eraseRenderer: 0
   originalLayer: 0
   originalMaterial: {fileID: 0}
