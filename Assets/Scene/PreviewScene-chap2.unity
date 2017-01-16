@@ -2438,8 +2438,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sourceCamera: {fileID: 0}
   outlineCamera: {fileID: 0}
-  lineThickness: 1
-  lineIntensity: 0.6
+  lineThickness: 2
+  lineIntensity: 1
   lineColor0: {r: 1, g: 1, b: 1, a: 1}
   lineColor1: {r: 1, g: 0.93103445, b: 0, a: 1}
   lineColor2: {r: 0, g: 0, b: 1, a: 1}
